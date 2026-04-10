@@ -280,14 +280,28 @@ export interface ConditionThreshold {
   value: number;
 }
 
-// Common fields automatically added to all mod types
-interface ModBase {
-  per?: PerStackable;
-  cond?: Condition;
-  resolvedCond?: ResolvedCondition;
-  condThreshold?: ConditionThreshold;
-  src?: string;
-}
+// Common fields automatically added to all mod types.
+//
+// Invariant: `resolvedCond` is mutually exclusive with `per`, `cond`, and
+// `condThreshold`. ResolvedCond mods are pushed directly in
+// resolveModsForOffenseSkill and never flow through `filterModsByCond` /
+// `normalizeStackables` / the condThreshold gate, so combining them silently
+// skips the per-stackable or threshold logic. The union below makes the
+// combination a type error.
+type ModBase = { src?: string } & (
+  | {
+      resolvedCond?: undefined;
+      per?: PerStackable;
+      cond?: Condition;
+      condThreshold?: ConditionThreshold;
+    }
+  | {
+      resolvedCond: ResolvedCondition;
+      per?: undefined;
+      cond?: undefined;
+      condThreshold?: undefined;
+    }
+);
 
 // Unique fields for each mod type (excluding type, per, cond, src)
 interface ModDefinitions {

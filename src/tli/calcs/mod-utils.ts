@@ -89,11 +89,26 @@ export const condThresholdSatisfied = (
 
 export const hasValue = (mod: Mod): mod is ModWithValue => "value" in mod;
 
-// TODO: latent bug - mods with BOTH `cond` AND `per` would be handled incorrectly:
-// - filterModsByFrostbittenCond adds them un-normalized
-// - normalizeStackables adds them normalized (ignoring the condition)
-// Result: mod appears twice, or included when condition isn't met.
-// Currently no mods have both properties, but this should be fixed if any are added.
+// Runtime guard for the `resolvedCond` mutual-exclusion invariant enforced in
+// the ModBase type. `resolvedCond` mods are pushed directly from
+// resolveModsForOffenseSkill and never flow through `filterModsByCond`,
+// `normalizeStackables`, or the condThreshold gate. Combining resolvedCond
+// with `per` / `cond` / `condThreshold` silently skips those code paths and
+// produces wrong numbers. Returns true for valid mods; logs and drops invalid
+// ones. Callers may filter via `mods.filter(assertModInvariants)`.
+export const assertModInvariants = (mod: Mod): boolean => {
+  if (mod.resolvedCond === undefined) return true;
+  const bad: string[] = [];
+  if (mod.per !== undefined) bad.push("per");
+  if (mod.cond !== undefined) bad.push("cond");
+  if (mod.condThreshold !== undefined) bad.push("condThreshold");
+  if (bad.length === 0) return true;
+  console.error(
+    `Mod invariant violated: resolvedCond="${mod.resolvedCond}" cannot coexist with [${bad.join(", ")}] (type=${mod.type}, src=${mod.src ?? "?"}); dropping mod`,
+  );
+  return false;
+};
+
 export const normalizeStackables = (
   prenormalizedMods: Mod[],
   stackable: Stackable,

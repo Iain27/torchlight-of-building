@@ -65,6 +65,7 @@ import {
   type NumDmgValues,
 } from "./damage-calc";
 import {
+  assertModInvariants,
   calcEffMult,
   calculateAddn,
   collectMods,
@@ -990,7 +991,9 @@ const applyModFilters = (
   config: Configuration,
   derivedCtx: DerivedCtx,
 ): FilteredMods => {
-  const condFiltered = filterModsByCond(inputMods, loadout, config, derivedCtx);
+  // Drop (and log) mods that violate resolvedCond mutual-exclusion invariant.
+  const validMods = inputMods.filter(assertModInvariants);
+  const condFiltered = filterModsByCond(validMods, loadout, config, derivedCtx);
   const resolvedCondMods = condFiltered.filter(
     (m) => m.resolvedCond !== undefined,
   );
