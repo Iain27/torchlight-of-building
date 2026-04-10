@@ -17,6 +17,7 @@ import {
   type SupportSkillTemplate,
   type SupportTarget,
 } from "../data/skill/types";
+import { assertCount } from "./lib/assertions";
 import { readAllTlidbSkills, type TlidbSkillFile } from "./lib/tlidb";
 import { classifyWithRegex } from "./skill-kind-patterns";
 import { getParserForSkill } from "./skills";
@@ -47,14 +48,14 @@ const SKILL_TYPES = [
     listPath: "Active_Skill",
     outputDir: "active",
     tabId: "ActiveSkillTag",
-    expectedCount: 151,
+    expectedCount: 197,
   },
   {
     name: "Support",
     listPath: "Support_Skill",
     outputDir: "support",
     tabId: "SupportSkillTag",
-    expectedCount: 121,
+    expectedCount: 122,
   },
   {
     name: "Passive",
@@ -75,14 +76,14 @@ const SKILL_TYPES = [
     listPath: "Noble_Support_Skill",
     outputDir: "noble_support",
     tabId: "ExclusiveSupportSkillTag",
-    expectedCount: 141,
+    expectedCount: 146,
   },
   {
     name: "Magnificent Support",
     listPath: "Magnificent_Support_Skill",
     outputDir: "magnificent_support",
     tabId: "ExclusiveSupportSkillTag",
-    expectedCount: 131,
+    expectedCount: 135,
   },
 ] as const;
 
@@ -125,8 +126,9 @@ const extractSkillLinks = (html: string, tabId: string): string[] => {
   const tabStartRegex = new RegExp(`<div\\s+id="${tabId}"[^>]*>`);
   const tabMatch = html.match(tabStartRegex);
   if (tabMatch === null || tabMatch.index === undefined) {
-    console.warn(`Could not find tab with id="${tabId}"`);
-    return [];
+    throw new Error(
+      `Could not find tab with id="${tabId}" — upstream HTML structure changed.`,
+    );
   }
 
   const startIdx = tabMatch.index;
@@ -189,11 +191,11 @@ const collectSkillFetchTasks = async (
     `Found ${skillLinks.length} ${skillType.name} skills (expected: ${skillType.expectedCount})`,
   );
 
-  if (skillLinks.length !== skillType.expectedCount) {
-    console.warn(
-      `Warning: Count mismatch for ${skillType.name}: found ${skillLinks.length}, expected ${skillType.expectedCount}`,
-    );
-  }
+  assertCount(
+    `${skillType.name} skills`,
+    skillLinks.length,
+    skillType.expectedCount,
+  );
 
   return skillLinks.map((link) => {
     const decodedLink = decodeURIComponent(link);
@@ -226,9 +228,7 @@ const fetchSkillPages = async (): Promise<void> => {
     `\nCollected ${allTasks.length} skill pages to fetch (expected: ${expectedTotal})`,
   );
 
-  if (allTasks.length !== expectedTotal) {
-    console.warn(`Warning: Total count mismatch!`);
-  }
+  assertCount("all skill fetch tasks", allTasks.length, expectedTotal);
 
   // Fetch all skill pages with controlled concurrency
   let completed = 0;
@@ -676,13 +676,12 @@ const DIRECTORY_TO_SKILL_TYPE: Record<string, SkillTypeKey> = {
 // Tags that appear in tlidb HTML but are not actual skill tags
 const NON_SKILL_TAGS = new Set(["Support", "Activation Medium"]);
 
-const extractSkillFromTlidbHtml = (
-  file: TlidbSkillFile,
-): RawSkill | undefined => {
+const extractSkillFromTlidbHtml = (file: TlidbSkillFile): RawSkill => {
   const skillType = DIRECTORY_TO_SKILL_TYPE[file.category];
   if (!skillType) {
-    console.warn(`Unknown category: ${file.category}`);
-    return undefined;
+    throw new Error(
+      `Unknown skill category: "${file.category}" (file: ${file.fileName})`,
+    );
   }
 
   const $ = cheerio.load(file.html);
@@ -700,13 +699,18 @@ const extractSkillFromTlidbHtml = (
   }
 
   if (currentCard.length === 0) {
-    return undefined;
+    throw new Error(
+      `No skill card found in ${file.category}/${file.fileName} — ` +
+        `neither CURRENT_SEASON (${CURRENT_SEASON}) nor a non-previousItem card is present.`,
+    );
   }
 
   // Extract name from card-title
   const name = currentCard.find("h5.card-title").first().text().trim();
   if (!name) {
-    return undefined;
+    throw new Error(
+      `Missing card-title on skill card in ${file.category}/${file.fileName}`,
+    );
   }
 
   // Extract tags from span.tag elements, filtering out non-skill tags
@@ -1218,18 +1222,17 @@ const main = async (options: Options): Promise<void> => {
   const allFiles = await readAllTlidbSkills();
   console.log(`Found ${allFiles.length} skill files`);
 
+  const expectedTotalFiles = SKILL_TYPES.reduce(
+    (sum, t) => sum + t.expectedCount,
+    0,
+  );
+  assertCount("cached skill files", allFiles.length, expectedTotalFiles);
+
   console.log("Extracting skill data...");
   const rawData: RawSkill[] = [];
 
   for (const file of allFiles) {
-    const skill = extractSkillFromTlidbHtml(file);
-    if (skill) {
-      rawData.push(skill);
-    } else {
-      console.warn(
-        `Failed to extract skill from ${file.category}/${file.fileName}`,
-      );
-    }
+    rawData.push(extractSkillFromTlidbHtml(file));
   }
 
   console.log(`Extracted ${rawData.length} skills`);
@@ -1265,8 +1268,9 @@ const main = async (options: Options): Promise<void> => {
     const skillType = raw.type as SkillTypeKey;
 
     if (!(skillType in SKILL_TYPE_CONFIG)) {
-      console.warn(`Unknown skill type: ${skillType}`);
-      continue;
+      throw new Error(
+        `Unknown skill type "${skillType}" for skill "${raw.name}"`,
+      );
     }
 
     const config = SKILL_TYPE_CONFIG[skillType];

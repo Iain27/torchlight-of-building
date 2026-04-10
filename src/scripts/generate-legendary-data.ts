@@ -488,7 +488,6 @@ const main = async (options: Options): Promise<void> => {
   console.log(`Found ${htmlFiles.length} HTML files`);
 
   const legendaries: Legendary[] = [];
-  let skippedCount = 0;
 
   for (const filename of htmlFiles) {
     const filepath = join(LEGENDARY_GEAR_DIR, filename);
@@ -506,9 +505,10 @@ const main = async (options: Options): Promise<void> => {
     // Step 3: Merge with equipment data from gear type pages
     const equipmentInfo = equipmentMap.get(tlidbData.name);
     if (equipmentInfo === undefined) {
-      console.warn(`No equipment data found for: ${tlidbData.name} - skipping`);
-      skippedCount++;
-      continue;
+      throw new Error(
+        `No equipment data found for legendary "${tlidbData.name}" — ` +
+          `upstream gear type pages are missing this legendary.`,
+      );
     }
 
     legendaries.push({
@@ -518,9 +518,7 @@ const main = async (options: Options): Promise<void> => {
     });
   }
 
-  console.log(
-    `Extracted ${legendaries.length} legendaries (skipped ${skippedCount} without equipment data)`,
-  );
+  console.log(`Extracted ${legendaries.length} legendaries`);
 
   // Apply manual overrides
   console.log("Applying overrides...");

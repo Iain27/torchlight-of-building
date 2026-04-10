@@ -5,6 +5,19 @@ import * as cheerio from "cheerio";
 import { program } from "commander";
 import type { God, Talent, Tree, Type } from "../data/talent/types";
 import { Gods, Trees } from "../data/talent/types";
+import { assertCount } from "./lib/assertions";
+
+// Hardcoded from ground truth: 138 Core + 397 Micro + 288 Medium + 200 Legendary Medium
+const EXPECTED_TALENT_COUNTS = {
+  Core: 138,
+  Micro: 397,
+  Medium: 288,
+  "Legendary Medium": 200,
+} as const satisfies Record<Type, number>;
+const EXPECTED_TALENT_TOTAL = Object.values(EXPECTED_TALENT_COUNTS).reduce(
+  (a, b) => a + b,
+  0,
+);
 
 // ============================================================================
 // Fetching
@@ -141,8 +154,9 @@ const extractTalentData = (html: string): Talent[] => {
     const treeName = treeLink.text().trim() as Tree;
 
     if (!Trees.includes(treeName)) {
-      console.warn(`Unknown tree: "${treeName}", skipping entry`);
-      return;
+      throw new Error(
+        `Unknown tree: "${treeName}" — upstream tlidb talent trees have drifted.`,
+      );
     }
 
     // Determine god from tree
@@ -213,12 +227,28 @@ const main = async (options: Options): Promise<void> => {
   console.log(`Extracted ${items.length} talents`);
 
   // Log breakdown by type
-  const typeCounts = new Map<string, number>();
+  const typeCounts = new Map<Type, number>();
   for (const item of items) {
     typeCounts.set(item.type, (typeCounts.get(item.type) ?? 0) + 1);
   }
   for (const [type, count] of typeCounts) {
     console.log(`  ${type}: ${count}`);
+  }
+
+  // Hard assertions — upstream drift should stop the build.
+  assertCount("total talents", items.length, EXPECTED_TALENT_TOTAL);
+  const talentTypes: readonly Type[] = [
+    "Core",
+    "Micro",
+    "Medium",
+    "Legendary Medium",
+  ];
+  for (const type of talentTypes) {
+    assertCount(
+      `${type} talents`,
+      typeCounts.get(type) ?? 0,
+      EXPECTED_TALENT_COUNTS[type],
+    );
   }
 
   const outDir = join(process.cwd(), "src", "data", "talent");

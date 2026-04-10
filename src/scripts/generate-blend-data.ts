@@ -119,8 +119,9 @@ const extractBlendData = (html: string): Blend[] => {
     const type = parseBlendType(typeText);
 
     if (type === undefined) {
-      console.warn(`Unknown blend type: "${typeText}"`);
-      return;
+      throw new Error(
+        `Unknown blend type: "${typeText}" — upstream tlidb blending rituals have drifted.`,
+      );
     }
 
     let affix: string;

@@ -113,11 +113,19 @@ const parseProfessionTree = async (
 
     const classAttr = $circle.attr("class") || "";
     const typeMatch = classAttr.match(/talent_type(\d+)/);
-    if (!typeMatch) return;
+    if (!typeMatch) {
+      throw new Error(
+        `Talent circle in "${professionName}" missing talent_type class: ${classAttr}`,
+      );
+    }
 
     const typeNum = typeMatch[1];
     const type = TALENT_TYPE_MAP[typeNum];
-    if (!type) return;
+    if (!type) {
+      throw new Error(
+        `Unknown talent type number "${typeNum}" in tree "${professionName}" — TALENT_TYPE_MAP is stale.`,
+      );
+    }
 
     const imageX = cx - 32;
     const imageY = cy - 32;
@@ -232,31 +240,29 @@ const main = async (options: Options): Promise<void> => {
   console.log(`Parsing ${ALL_TREES.length} talent trees...\n`);
 
   const trees: TalentTreeData[] = [];
-  let successCount = 0;
 
   for (let i = 0; i < ALL_TREES.length; i++) {
     const treeName = ALL_TREES[i];
     console.log(`[${i + 1}/${ALL_TREES.length}] Parsing ${treeName}...`);
 
     if (!isTreeName(treeName)) {
-      console.error(`  Invalid tree name: ${treeName}`);
-      continue;
+      throw new Error(`Invalid tree name: ${treeName}`);
     }
 
-    try {
-      const tree = await parseProfessionTree(treeName);
-      trees.push(tree);
-      console.log(`  Found ${tree.nodes.length} nodes`);
-      successCount++;
-    } catch (error) {
-      console.error(`  Failed to parse ${treeName}:`, error);
+    const tree = await parseProfessionTree(treeName);
+    if (tree.nodes.length === 0) {
+      throw new Error(
+        `Tree "${treeName}" parsed with zero nodes — upstream HTML structure changed.`,
+      );
     }
+    trees.push(tree);
+    console.log(`  Found ${tree.nodes.length} nodes`);
   }
 
   // Sort by tree name for consistent output
   trees.sort((a, b) => a.name.localeCompare(b.name));
 
-  console.log(`\nExtracted ${successCount}/${ALL_TREES.length} talent trees`);
+  console.log(`\nExtracted ${trees.length}/${ALL_TREES.length} talent trees`);
 
   await mkdir(outDir, { recursive: true });
 
