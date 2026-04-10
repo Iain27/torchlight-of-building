@@ -304,30 +304,6 @@ export const SupportSkills = [
   },
   {
     type: "Support",
-    name: "Auto-Charge",
-    tags: ["Restoration"],
-    description: [
-      "Supports Restoration Skills.\nThe supported skill gains 0.5 Charging Progress every second.",
-      "The supported skill gains 0.5 Charging Progress every second.",
-    ],
-    supportTargets: [{ tags: ["Restoration"] }],
-    cannotSupportTargets: [],
-    manaCostMultiplierPct: 110,
-    templates: [
-      {
-        template:
-          "The supported skill gains {value} Charging Progress every second.",
-        levelValues: [
-          0.5, 0.525, 0.55, 0.575, 0.6, 0.625, 0.65, 0.675, 0.7, 0.725, 0.75,
-          0.775, 0.8, 0.825, 0.85, 0.875, 0.9, 0.925, 0.95, 0.975, 1, 1.025,
-          1.05, 1.075, 1.1, 1.125, 1.15, 1.175, 1.2, 1.225, 1.25, 1.275, 1.3,
-          1.325, 1.35, 1.375, 1.4, 1.425, 1.45, 1.475,
-        ],
-      },
-    ],
-  },
-  {
-    type: "Support",
     name: "Blind",
     tags: [],
     description: [
@@ -590,30 +566,6 @@ export const SupportSkills = [
   },
   {
     type: "Support",
-    name: "Critical Charge",
-    tags: ["Restoration"],
-    description: [
-      "Supports Restoration Skills.\nThe supported skill gains 10 Charging Progress when suffering a Severe Injury. Interval: 4s",
-      "The supported skill gains 10 Charging Progress when suffering a Severe Injury. Interval: 4s",
-    ],
-    supportTargets: [{ tags: ["Restoration"] }],
-    cannotSupportTargets: [],
-    manaCostMultiplierPct: 110,
-    templates: [
-      {
-        template:
-          "The supported skill gains {value} Charging Progress when suffering a Severe Injury. Interval: 4s",
-        levelValues: [
-          10, 10.3, 10.6, 10.9, 11.2, 11.5, 11.8, 12.1, 12.4, 12.7, 13, 13.3,
-          13.6, 13.9, 14.2, 14.5, 14.8, 15.1, 15.4, 15.7, 16, 16.2, 16.4, 16.6,
-          16.8, 17, 17.2, 17.4, 17.6, 17.8, 18, 18.2, 18.4, 18.6, 18.8, 19,
-          19.2, 19.4, 19.6, 19.8,
-        ],
-      },
-    ],
-  },
-  {
-    type: "Support",
     name: "Critical Strike Damage Increase",
     tags: [],
     description: [
@@ -870,6 +822,30 @@ export const SupportSkills = [
   },
   {
     type: "Support",
+    name: "Emergency Aid",
+    tags: ["Elixir"],
+    description: [
+      "Supports Elixir Skills.\nThe supported skill gains 10 Charging Progress when suffering a Severe Injury. Interval: 4s",
+      "The supported skill gains 10 Charging Progress when suffering a Severe Injury. Interval: 4s",
+    ],
+    supportTargets: [{ tags: ["Elixir"] }],
+    cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
+    templates: [
+      {
+        template:
+          "The supported skill gains {value} Charging Progress when suffering a Severe Injury. Interval: 4s",
+        levelValues: [
+          10, 10.3, 10.6, 10.9, 11.2, 11.5, 11.8, 12.1, 12.4, 12.7, 13, 13.3,
+          13.6, 13.9, 14.2, 14.5, 14.8, 15.1, 15.4, 15.7, 16, 16.2, 16.4, 16.6,
+          16.8, 17, 17.2, 17.4, 17.6, 17.8, 18, 18.2, 18.4, 18.6, 18.8, 19,
+          19.2, 19.4, 19.6, 19.8,
+        ],
+      },
+    ],
+  },
+  {
+    type: "Support",
     name: "Emergency Avoidance",
     tags: ["Mobility"],
     description: [
@@ -1005,20 +981,20 @@ export const SupportSkills = [
     name: "Fire Explosion",
     tags: ["Fire"],
     description: [
-      "Supports skills that deal damage.\n12.5% additional Fire Damage for the supported skill\n+4% additional Ignite Damage for the supported skill",
-      "12.5% additional Fire Damage for the supported skill\n+4% additional Ignite Damage for the supported skill",
+      "Supports skills that deal damage.\n15.5% additional Fire Damage for the supported skill\n若最近被辅助技能造成了伤害，+25 每秒施加加剧值",
+      "15.5% additional Fire Damage for the supported skill\n若最近被辅助技能造成了伤害，+25 每秒施加加剧值",
     ],
     supportTargets: ["deal_damage"],
     cannotSupportTargets: [],
     manaCostMultiplierPct: 110,
-    fixedAffixes: ["+4% additional Ignite Damage for the supported skill"],
+    fixedAffixes: ["若最近被辅助技能造成了伤害，+25 每秒施加加剧值"],
     templates: [
       {
         template: "{value}% additional Fire Damage for the supported skill",
         levelValues: [
-          12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19,
-          19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5, 25, 25.5, 26,
-          26.5, 27, 27.5, 28, 28.5, 29, 29.5, 30, 30.5, 31, 31.5, 32,
+          15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22,
+          22.5, 23, 23.5, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29,
+          29.5, 30, 30.5, 31, 31.5, 32, 32.5, 33, 33.5, 34, 34.5, 35,
         ],
       },
     ],
@@ -1097,15 +1073,15 @@ export const SupportSkills = [
     name: "Fragile Resurrection",
     tags: ["Restoration"],
     description: [
-      "Supports Restoration Skills.\n+40% Restoration effect for the supported skill\n-20% Restoration Duration for the supported skill\n+10% additional damage taken during the supported skill's restoration effect",
-      "+40% Restoration effect for the supported skill\n-20% Restoration Duration for the supported skill\n+10% additional damage taken during the supported skill's restoration effect",
+      "Supports Restoration Skills.\n+10% Restoration effect for the supported skill\n-26% Restoration Duration for the supported skill\n+10% additional damage taken during the supported skill's restoration effect",
+      "+10% Restoration effect for the supported skill\n-26% Restoration Duration for the supported skill\n+10% additional damage taken during the supported skill's restoration effect",
     ],
     supportTargets: [{ tags: ["Restoration"] }],
     cannotSupportTargets: [],
     manaCostMultiplierPct: 110,
     fixedAffixes: [
-      "+40% Restoration effect for the supported skill",
-      "-20% Restoration Duration for the supported skill",
+      "+10% Restoration effect for the supported skill",
+      "-26% Restoration Duration for the supported skill",
       "+10% additional damage taken during the supported skill's restoration effect",
     ],
   },
@@ -1387,6 +1363,30 @@ export const SupportSkills = [
   },
   {
     type: "Support",
+    name: "Hyper Metabolism",
+    tags: ["Elixir"],
+    description: [
+      "Supports Elixir Skills.\nThe supported skill gains 0.5 Charging Progress every second.",
+      "The supported skill gains 0.5 Charging Progress every second.",
+    ],
+    supportTargets: [{ tags: ["Elixir"] }],
+    cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
+    templates: [
+      {
+        template:
+          "The supported skill gains {value} Charging Progress every second.",
+        levelValues: [
+          0.5, 0.525, 0.55, 0.575, 0.6, 0.625, 0.65, 0.675, 0.7, 0.725, 0.75,
+          0.775, 0.8, 0.825, 0.85, 0.875, 0.9, 0.925, 0.95, 0.975, 1, 1.025,
+          1.05, 1.075, 1.1, 1.125, 1.15, 1.175, 1.2, 1.225, 1.25, 1.275, 1.3,
+          1.325, 1.35, 1.375, 1.4, 1.425, 1.45, 1.475,
+        ],
+      },
+    ],
+  },
+  {
+    type: "Support",
     name: "Improved Corrosion",
     tags: ["Erosion"],
     description: [
@@ -1586,56 +1586,23 @@ export const SupportSkills = [
     name: "Maniacal Army",
     tags: ["Summon", "Synthetic Troop"],
     description: [
-      "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.25% additional Damage, stacking up to 37.5% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-      "Gains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\n+1 to Max Summonable Minions for the supported skill",
+      "Supports skills that summon Synthetic Troops.\n被辅助技能召唤的召唤物造成伤害时，使角色自身每秒获得 15 点统御值，持续 5 秒，间隔 1 秒\n-11% additional damage for Minions summoned by the supported skill",
+      "被辅助技能召唤的召唤物造成伤害时，使角色自身每秒获得 15 点统御值，持续 5 秒，间隔 1 秒\n-11% additional damage for Minions summoned by the supported skill",
     ],
     supportTargets: ["summon_synthetic_troops"],
     cannotSupportTargets: [],
     manaCostMultiplierPct: 110,
+    fixedAffixes: [
+      "被辅助技能召唤的召唤物造成伤害时，使角色自身每秒获得 15 点统御值，持续 5 秒，间隔 1 秒",
+    ],
     templates: [
       {
-        template: "{value}",
+        template:
+          "{value}% additional damage for Minions summoned by the supported skill",
         levelValues: [
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.3% additional Damage, stacking up to 31.8% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.35% additional Damage, stacking up to 32.1% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.4% additional Damage, stacking up to 32.4% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.45% additional Damage, stacking up to 32.7% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.5% additional Damage, stacking up to +33% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.55% additional Damage, stacking up to 33.3% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.6% additional Damage, stacking up to 33.6% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.65% additional Damage, stacking up to 33.9% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.7% additional Damage, stacking up to 34.2% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.75% additional Damage, stacking up to 34.5% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.8% additional Damage, stacking up to 34.8% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.85% additional Damage, stacking up to 35.1% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.9% additional Damage, stacking up to 35.4% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 5.95% additional Damage, stacking up to 35.7% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, +6% additional Damage, stacking up to +36% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.05% additional Damage, stacking up to 36.3% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.1% additional Damage, stacking up to 36.6% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.15% additional Damage, stacking up to 36.9% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.2% additional Damage, stacking up to 37.2% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.25% additional Damage, stacking up to 37.5% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.3% additional Damage, stacking up to 37.8% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.35% additional Damage, stacking up to 38.1% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.4% additional Damage, stacking up to 38.4% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.45% additional Damage, stacking up to 38.7% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.5% additional Damage, stacking up to +39% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.55% additional Damage, stacking up to 39.3% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.6% additional Damage, stacking up to 39.6% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.65% additional Damage, stacking up to 39.9% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.7% additional Damage, stacking up to 40.2% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.75% additional Damage, stacking up to 40.5% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.8% additional Damage, stacking up to 40.8% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.85% additional Damage, stacking up to 41.1% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.9% additional Damage, stacking up to 41.4% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 6.95% additional Damage, stacking up to 41.7% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, +7% additional Damage, stacking up to +42% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 7.05% additional Damage, stacking up to 42.3% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 7.1% additional Damage, stacking up to 42.6% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 7.15% additional Damage, stacking up to 42.9% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 7.2% additional Damage, stacking up to 43.2% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
-          "Supports skills that summon Synthetic Troops.\n+1 to Max Summonable Minions for the supported skill\nGains a buff when Minions summoned by the supported skill land a Critical Strike. Lasts 4 s. Interval per Minion: 8 s\nWhile the buff lasts, 7.25% additional Damage, stacking up to 43.5% , for every 10 point(s) of Command the Summoner has\nWhile the buff is active, 3.5% Attack and Cast Speed for every 10 Command the summoner has, up to +21%",
+          -11, -10.5, -10, -9.5, -9, -8.5, -8, -7.5, -7, -6.5, -6, -5.5, -5,
+          -4.5, -4, -3.5, -3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5,
+          3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5,
         ],
       },
     ],
@@ -1670,8 +1637,8 @@ export const SupportSkills = [
     name: "Mass Effect",
     tags: ["Empower"],
     description: [
-      "Supports Empower Skills.\n+1 Max Charges for the supported skill\n10.5% effect for the status provided by the skill per Charge when you use the supported skill",
-      "+1 Max Charges for the supported skill\n10.5% effect for the status provided by the skill per Charge when you use the supported skill",
+      "Supports Empower Skills.\n+1 Max Charges for the supported skill\n10.5% effect for the supported skill for every +1 Charge",
+      "+1 Max Charges for the supported skill\n10.5% effect for the supported skill for every +1 Charge",
     ],
     supportTargets: [{ tags: ["Empower"] }],
     cannotSupportTargets: [],
@@ -1679,8 +1646,7 @@ export const SupportSkills = [
     fixedAffixes: ["+1 Max Charges for the supported skill"],
     templates: [
       {
-        template:
-          "{value}% effect for the status provided by the skill per Charge when you use the supported skill",
+        template: "{value}% effect for the supported skill for every +1 Charge",
         levelValues: [
           10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17,
           17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24,
@@ -1722,6 +1688,30 @@ export const SupportSkills = [
           10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5,
           17, 17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5,
           24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5,
+        ],
+      },
+    ],
+  },
+  {
+    type: "Support",
+    name: "Medicinal Buildup",
+    tags: ["Elixir"],
+    description: [
+      "Supports Elixir Skills.\n+1 Max Charges for the supported skill\nWhen casting the supported skill, gains 5% of the skill's Charging Progress",
+      "+1 Max Charges for the supported skill\nWhen casting the supported skill, gains 5% of the skill's Charging Progress",
+    ],
+    supportTargets: [{ tags: ["Elixir"] }],
+    cannotSupportTargets: [],
+    manaCostMultiplierPct: 110,
+    fixedAffixes: ["+1 Max Charges for the supported skill"],
+    templates: [
+      {
+        template:
+          "When casting the supported skill, gains {value}% of the skill's Charging Progress",
+        levelValues: [
+          5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5,
+          13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5,
+          20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5,
         ],
       },
     ],
@@ -2455,14 +2445,14 @@ export const SupportSkills = [
     name: "Projectile Split",
     tags: ["Projectile", "Parabolic"],
     description: [
-      "Supports Parabolic Projectile Skills.\nWhen casting the supported skill, +50% chance to +2 Split Quantity for the skill\n8.2% additional damage for the supported skill",
-      "When casting the supported skill, +50% chance to +2 Split Quantity for the skill\n8.2% additional damage for the supported skill",
+      "Supports Parabolic Projectile Skills.\nWhen casting the supported skill, +50% chance to +2 Split Quantity for that cast\n8.2% additional damage for the supported skill",
+      "When casting the supported skill, +50% chance to +2 Split Quantity for that cast\n8.2% additional damage for the supported skill",
     ],
     supportTargets: [{ tags: ["Parabolic", "Projectile"] }],
     cannotSupportTargets: [],
     manaCostMultiplierPct: 110,
     fixedAffixes: [
-      "When casting the supported skill, +50% chance to +2 Split Quantity for the skill",
+      "When casting the supported skill, +50% chance to +2 Split Quantity for that cast",
     ],
     templates: [
       {
@@ -2779,30 +2769,6 @@ export const SupportSkills = [
     fixedAffixes: [
       "+70% Restoration Duration for the supported skill",
       "The Restoration Effect from supported skills cannot be removed",
-    ],
-  },
-  {
-    type: "Support",
-    name: "Restoration Charge",
-    tags: ["Restoration"],
-    description: [
-      "Supports Restoration Skills.\n+1 Max Charges for the supported skill\nWhen casting the supported skill, gains 5% of the skill's Charging Progress",
-      "+1 Max Charges for the supported skill\nWhen casting the supported skill, gains 5% of the skill's Charging Progress",
-    ],
-    supportTargets: [{ tags: ["Restoration"] }],
-    cannotSupportTargets: [],
-    manaCostMultiplierPct: 110,
-    fixedAffixes: ["+1 Max Charges for the supported skill"],
-    templates: [
-      {
-        template:
-          "When casting the supported skill, gains {value}% of the skill's Charging Progress",
-        levelValues: [
-          5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5,
-          13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5,
-          20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5,
-        ],
-      },
     ],
   },
   {

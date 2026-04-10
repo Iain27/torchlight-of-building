@@ -77,8 +77,8 @@ export const NobleSupportSkills = [
     name: "Blazing Bullet: Dual Resonance (Noble)",
     tags: ["Fire"],
     description: [
-      "Supports Blazing Bullet.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe Projectile Quantity of the supported skill is fixed at 1\n+50% Projectile Size for the supported skill for every +1 Projectile Quantity\n+25% to the ratio of the supported skill's Projectile Size that is applied to additional Skill Area",
-      "The Projectile Quantity of the supported skill is fixed at 1\n+50% Projectile Size for the supported skill for every +1 Projectile Quantity\n+25% to the ratio of the supported skill's Projectile Size that is applied to additional Skill Area",
+      "Supports Blazing Bullet.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe Projectile Quantity of the supported skill is fixed at 1\n+30% Projectile Size for the supported skill for every +1 Projectile Quantity\n+25% to the ratio of the supported skill's Projectile Size that is applied to additional Skill Area",
+      "The Projectile Quantity of the supported skill is fixed at 1\n+30% Projectile Size for the supported skill for every +1 Projectile Quantity\n+25% to the ratio of the supported skill's Projectile Size that is applied to additional Skill Area",
       "When an explosion of the supported skill hits, there is a (54–57)% chance to generate a smaller secondary explosion at the enemy's location, which deals the same damage as the original explosion\nMultiple secondary explosions can hit the same enemy, and the Shotgun Effect falloff coefficient is 50%",
     ],
     supportTarget: "Blazing Bullet",
@@ -185,8 +185,8 @@ export const NobleSupportSkills = [
     name: "Chain Lightning: Lucky (Noble)",
     tags: ["Lightning"],
     description: [
-      "Supports Chain of Lightning.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n+1 Jump(s) for this skill when the supported skill defeats an enemy\nThe supported skill deals Lucky Damage",
-      "+1 Jump(s) for this skill when the supported skill defeats an enemy\nThe supported skill deals Lucky Damage",
+      "Supports Chain of Lightning.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n+1 Jump(s) for the skill when the supported skill defeats an enemy\nThe supported skill deals Lucky Damage",
+      "+1 Jump(s) for the skill when the supported skill defeats an enemy\nThe supported skill deals Lucky Damage",
       "(-7–-5)% additional damage for the supported skill",
     ],
     supportTarget: "Chain Lightning",
@@ -226,6 +226,18 @@ export const NobleSupportSkills = [
       "(-49.0–-48.0)% additional damage for the supported skill",
     ],
     supportTarget: "Charged Pummel",
+    manaCostMultiplierPct: 110,
+  },
+  {
+    type: "Support (Noble)",
+    name: "Chromatic Shot: Splendor (Noble)",
+    tags: ["Cold", "Fire", "Lightning"],
+    description: [
+      "Supports Chromatic Shot.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe supported skill now only selects damage types in a fixed order: Cold, Fire, and Lightning\nWhen the supported skill deals Elemental Hit Damage, inflicts the corresponding Elemental Ailment",
+      "The supported skill now only selects damage types in a fixed order: Cold, Fire, and Lightning\nWhen the supported skill deals Elemental Hit Damage, inflicts the corresponding Elemental Ailment",
+      "The supported skill deals +(28–30)% additional Hit Damage to enemies with Elemental Ailments",
+    ],
+    supportTarget: "Chromatic Shot",
     manaCostMultiplierPct: 110,
   },
   {
@@ -488,6 +500,18 @@ export const NobleSupportSkills = [
   },
   {
     type: "Support (Noble)",
+    name: "Frigid Transmission: Thin Ice (Noble)",
+    tags: ["Cold"],
+    description: [
+      "Supports Frigid Transmission.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+300% Duration for the supported skill\nReduces the supported skill's movement distance to 8 m",
+      "Reduces the supported skill's movement distance to 8 m",
+      "Refreshes the supported skill's Cooldown upon inflicting Frost-Seal in any situation. Interval: (0.7–1) s",
+    ],
+    supportTarget: "Frigid Transmission",
+    manaCostMultiplierPct: 110,
+  },
+  {
+    type: "Support (Noble)",
     name: "Frost Core: Puncture (Noble)",
     tags: ["Cold"],
     description: [
@@ -575,7 +599,7 @@ export const NobleSupportSkills = [
     description: [
       "Supports Gale Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nGains 3 Combo Point(s) after casting the Combo Starter 1 of the supported skill. Cooldown: 4 s",
       "Gains 3 Combo Point(s) after casting the Combo Starter 1 of the supported skill. Cooldown: 4 s",
-      "+(7.7–8.0)% additional Critical Strike Damage for the Combo Finisher of the supported skill for each Combo Point consumed, stacking up to 12 time(s)",
+      "+(6.2–6.6)% additional Critical Strike Damage for the Combo Finisher of the supported skill for each Combo Point consumed, stacking up to 10 time(s)",
     ],
     supportTarget: "Gale Slash",
     manaCostMultiplierPct: 110,
@@ -585,9 +609,9 @@ export const NobleSupportSkills = [
     name: "Gale Slash: Soaring (Noble)",
     tags: ["Physical"],
     description: [
-      "Supports Gale Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n-10% additional Attack Speed for the supported skill\nThe movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\nThe max jump distance of the supported skill's Combo Finisher is increased to 7 m\nThe supported skill's Combo Finisher now deals 1 instance of damage again after a brief delay",
-      "-10% additional Attack Speed for the supported skill\nThe movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\nThe max jump distance of the supported skill's Combo Finisher is increased to 7 m\nThe supported skill's Combo Finisher now deals 1 instance of damage again after a brief delay",
-      "(-15.0–-14.0)% additional damage for the supported skill",
+      "Supports Gale Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\n被辅助技能的连携终结技的最大跳跃距离提高至 7 米\n被辅助技能的连携终结技现在会在短暂延迟后再造成一次伤害\n被辅助技能对攻击速度的加成不再有衰减\n被辅助技能不再基于攻击速度加成获得额外伤害",
+      "The movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\n被辅助技能的连携终结技的最大跳跃距离提高至 7 米\n被辅助技能的连携终结技现在会在短暂延迟后再造成一次伤害\n被辅助技能对攻击速度的加成不再有衰减\n被辅助技能不再基于攻击速度加成获得额外伤害",
+      "(-39.0–-38.0)% additional damage for the supported skill",
     ],
     supportTarget: "Gale Slash",
     manaCostMultiplierPct: 110,
@@ -598,7 +622,7 @@ export const NobleSupportSkills = [
     tags: ["Erosion"],
     description: [
       "Supports Ghost Blade Einherjar.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
-      "When a Sentry deployed by the supported skill casts a skill, +(21.0–22.0)% chance for this skill's Multistrike Count to reach the max",
+      "When a Sentry deployed by the supported skill casts a skill, +(21.0–22.0)% chance for that cast's Multistrike Count to reach the max",
     ],
     supportTarget: "Ghost Blade Einherjar",
     manaCostMultiplierPct: 110,
@@ -620,7 +644,7 @@ export const NobleSupportSkills = [
     tags: ["Physical"],
     description: [
       "Supports Groundshaker.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
-      "When the supported skill consumes Demolisher Charge, extends the Duration of fissures that have spread to the max by 0.5 s and activates them once. +(40–50)% additional Hit Damage for fissures activated in this way. Interval: 1 s",
+      "When the supported skill consumes Demolisher Charge, activates fissures that have spread to the max once. +(60–70)% additional Hit Damage for fissures activated in this way",
     ],
     supportTarget: "Groundshaker",
     manaCostMultiplierPct: 110,
@@ -632,7 +656,7 @@ export const NobleSupportSkills = [
     description: [
       "Supports Groundshaker.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n+30% additional Skill Area when the supported skill consumes Demolisher Charge\n-90% additional damage while the fissure created by the supported skill spreads\nWhen the fissure created by the supported skill spreads, inflicts Paralysis on enemies on hit",
       "+30% additional Skill Area when the supported skill consumes Demolisher Charge\n-90% additional damage while the fissure created by the supported skill spreads\nWhen the fissure created by the supported skill spreads, inflicts Paralysis on enemies on hit",
-      "+(44–46)% additional damage when the Supported Skill consumes Demolisher Charge",
+      "When the cast of the Supported Skill consumes Demolisher Charge, +(44–46)% additional damage for that cast",
     ],
     supportTarget: "Groundshaker",
     manaCostMultiplierPct: 110,
@@ -770,7 +794,7 @@ export const NobleSupportSkills = [
     description: [
       "Supports Ice Shot.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe supported skill's explosions can hit enemies hit by Projectiles",
       "The supported skill's explosions can hit enemies hit by Projectiles",
-      "(-31.0–-30.0)% additional damage for the supported skill",
+      "(-3–-1)% additional damage for the supported skill",
     ],
     supportTarget: "Ice Shot",
     manaCostMultiplierPct: 110,
@@ -951,6 +975,53 @@ export const NobleSupportSkills = [
       "+(33–35)% additional damage for the supported skill",
     ],
     supportTarget: "Mind Control",
+    manaCostMultiplierPct: 110,
+  },
+  {
+    type: "Support (Noble)",
+    name: "Modularization: Calibrate (Noble)",
+    tags: [],
+    description: [
+      "Supports Modularization Minion Skills.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
+      "For each hit the summoner landed in the last 2 s, +(5.0–5.5)% damage for Minions summoned by the supported skill. Stacks up to 15 time(s)",
+    ],
+    supportTarget: "Modularization Minion Skills",
+    manaCostMultiplierPct: 110,
+  },
+  {
+    type: "Support (Noble)",
+    name: "Modularization: Compress (Noble)",
+    tags: [],
+    description: [
+      "Supports Modularization Minion Skills.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n-25% Physique for Minions summoned by the supported skill\n+50% Aggressiveness for Minions summoned by the supported skill",
+      "-25% Physique for Minions summoned by the supported skill\n+50% Aggressiveness for Minions summoned by the supported skill",
+      "+(33–35)% additional damage for Minions summoned by the supported skill",
+    ],
+    supportTarget: "Modularization Minion Skills",
+    manaCostMultiplierPct: 110,
+  },
+  {
+    type: "Support (Noble)",
+    name: "Modularization: Sever (Noble)",
+    tags: [],
+    description: [
+      "Supports Modularization Minion Skills.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nMinions summoned by the supported skill are immune to damage\n-99% additional damage for Minions summoned by the supported skill",
+      "Minions summoned by the supported skill are immune to damage\n-99% additional damage for Minions summoned by the supported skill",
+      "+(1.0–3.0)% additional damage for the summoner when there is at least 1 Minion summoned by the supported skill",
+    ],
+    supportTarget: "Modularization Minion Skills",
+    manaCostMultiplierPct: 110,
+  },
+  {
+    type: "Support (Noble)",
+    name: "Modularization: Superconductivity (Noble)",
+    tags: [],
+    description: [
+      "Supports Modularization Minion Skills.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n+100% additional Cooldown Recovery Speed for Minions summoned by the supported skill",
+      "+100% additional Cooldown Recovery Speed for Minions summoned by the supported skill",
+      "+(12–14)% additional damage for Minions summoned by the supported skill",
+    ],
+    supportTarget: "Modularization Minion Skills",
     manaCostMultiplierPct: 110,
   },
   {
@@ -1192,7 +1263,7 @@ export const NobleSupportSkills = [
     description: [
       "Supports Spectral Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe supported skill's Combo Finisher generates 1 additional Clone for each enemy within 15 m, up to 5",
       "The supported skill's Combo Finisher generates 1 additional Clone for each enemy within 15 m, up to 5",
-      "+(10–12)% additional damage for the supported skill",
+      "(-2–0)% additional damage for the supported skill",
     ],
     supportTarget: "Spectral Slash",
     manaCostMultiplierPct: 110,
@@ -1204,7 +1275,7 @@ export const NobleSupportSkills = [
     description: [
       "Supports Spectral Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe Combo Finisher of the supported skill is changed to generate 3 Clone(s) around you. These Clones slam the ground in place and create a series of 3 Explosions forward.\n+108% additional Hit Damage for the Combo Finisher of the supported skill",
       "The Combo Finisher of the supported skill is changed to generate 3 Clone(s) around you. These Clones slam the ground in place and create a series of 3 Explosions forward.\n+108% additional Hit Damage for the Combo Finisher of the supported skill",
-      "+(30–32)% additional damage for the supported skill",
+      "+(16–18)% additional damage for the supported skill",
     ],
     supportTarget: "Spectral Slash",
     manaCostMultiplierPct: 110,
@@ -1214,9 +1285,8 @@ export const NobleSupportSkills = [
     name: "Split Firebolt: Focal Point (Noble)",
     tags: ["Fire"],
     description: [
-      "Supports Split Firebolt.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe fireballs that split off from the supported skill are fired in a fan shape instead of being fired everywhere",
-      "The fireballs that split off from the supported skill are fired in a fan shape instead of being fired everywhere",
-      "(-14–-12)% additional damage for the supported skill",
+      "Supports Split Firebolt.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
+      "+(9.3–9.7)% additional damage for the large fireball for every 1 small fireball(s) that split off from the supported skill",
     ],
     supportTarget: "Split Firebolt",
     manaCostMultiplierPct: 110,

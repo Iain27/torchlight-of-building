@@ -16,11 +16,22 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Aember Rain",
+    tags: ["Spell", "Erosion", "Area"],
+    description: [
+      "Casts the skill and fires 1 Projectile forward, dealing Attack Physical Damage equal to 61% Base Damage. The Projectile Penetrates 2 times.",
+      "Aimed Shot:\nDeals Attack Physical Damage equal to 61% Base Damage\n+2 Penetration for this skill",
+    ],
+    mainStats: ["int"],
+    kinds: ["deal_damage", "hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Aim",
     tags: ["Spell", "Persistent", "Empower"],
     description: [
-      "Casts the skill and gains Euphoria: Ranged and Beam Skills 16% additional damage and Ailment Damage but additionally -20% Movement Speed for 6s.",
-      "Casts the skill and gains Euphoria:\nRanged and Beam Skills +35% additional damage\nRanged and Beam Skills +35% additional Ailment Damage\n-20% additional Movement Speed while the skill lasts. This effect is not affected by the effects of Empower Skills.\nLasts 6s.",
+      "Casts this skill and gains Euphoria: Ranged and Beam Skills 16% additional damage and Ailment Damage but -16% Attack and Cast Speed for 6s.",
+      "Casts the skill and gains Euphoria:\nRanged and Beam Skills +35% additional damage\nRanged and Beam Skills +35% additional Ailment Damage\n-16% Attack and Cast Speed while this skill lasts. This effect is not affected by the effects of Empower Skills\nLasts 6s.",
     ],
     kinds: [],
   },
@@ -31,6 +42,17 @@ export const ActiveSkills = [
     description: [
       "Casts the skill and fires 1 Projectile forward, dealing Attack Physical Damage equal to 61% Base Damage. The Projectile Penetrates 2 times.",
       "Aimed Shot:\nDeals Attack Physical Damage equal to 61% Base Damage\n+2 Penetration for this skill",
+    ],
+    mainStats: ["dex", "int"],
+    kinds: ["deal_damage", "hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "All-Out Volley",
+    tags: ["Attack", "Physical", "Fire", "Ranged", "Horizontal", "Projectile"],
+    description: [
+      "Casts this skill and fires 3 Projectiles forward, dealing Attack Physical Damage equal to 87% Base Damage on hit.",
+      "All-Out Volley:\nDeals Attack Physical Damage equal to 87% of Base Damage",
     ],
     mainStats: ["dex", "int"],
     kinds: ["deal_damage", "hit_enemies"],
@@ -85,6 +107,17 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "dot", "hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Auric Shot",
+    tags: ["Attack", "Physical", "Projectile", "Horizontal", "Ranged"],
+    description: [
+      "Casts this skill and consecutively fires 3 Projectile(s) forward, each dealing Attack Physical Damage equal to 41% of Base Damage on hit.",
+      "Auric Shot:\nDeals Attack Physical Damage equal to 41% of Base Damage",
+    ],
+    mainStats: ["dex", "int"],
+    kinds: ["hit_enemies"],
   },
   {
     type: "Active",
@@ -167,6 +200,17 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Blade of Glory",
+    tags: ["Attack", "Physical", "Area", "Melee"],
+    description: [
+      "Casts this skill to attack in a fan-shaped area in front, dealing Attack Physical Damage equal to 37% of Base Damage on hit.",
+      "Blade of Glory:\nDeals Attack Physical Damage equal to 37% of Base Damage",
+    ],
+    mainStats: ["dex", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Blazing Bullet",
     tags: ["Attack", "Fire", "Area", "Ranged", "Projectile", "Horizontal"],
     description: [
@@ -231,7 +275,6 @@ export const ActiveSkills = [
     name: "Blink",
     tags: ["Mobility", "Spell"],
     description: [
-      "Casts the skill and moves in the target direction.\nThe skill and some Mobility Skills share the same cooldown.",
       "Casts the skill and moves in the target direction.\nThe skill and some Mobility Skills share the same cooldown.\n+5% additional Cooldown Recovery Speed for this skill",
     ],
     kinds: [],
@@ -257,6 +300,17 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Blitz Strike",
+    tags: ["Attack", "Physical", "Fire", "Projectile", "Horizontal"],
+    description: [
+      "Casts this skill, teleports to the target enemy, and fires 3 Projectiles that always Penetrate, dealing Attack Fire Damage equal to 75% of Base Damage on hit and additionally increases the damage of the next Burst Hammer.",
+      "Blitz Strike:\nDeals Attack Fire Damage equal to 75% of Base Damage\n+100% additional damage for the next Burst Hammer cast after casting this skill",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Blizzard",
     tags: ["Spell", "Cold", "Area", "Barrage"],
     description: [
@@ -265,16 +319,6 @@ export const ActiveSkills = [
     ],
     mainStats: ["int"],
     kinds: ["deal_damage", "hit_enemies"],
-  },
-  {
-    type: "Active",
-    name: "Blurry Steps",
-    tags: ["Spell", "Persistent", "Empower"],
-    description: [
-      "Casts the skill and gains Euphoria: 25.5% Movement Speed. Lasts 3s.",
-      "Casts the skill and gains Euphoria:\n+35% Movement Speed while the skill lasts\nLasts 3s.",
-    ],
-    kinds: [],
   },
   {
     type: "Active",
@@ -325,12 +369,23 @@ export const ActiveSkills = [
     name: "Burning Shot",
     tags: ["Attack", "Ranged", "Area", "Projectile", "Fire", "Horizontal"],
     description: [
-      "Casts the skill and shoots 1 Blazing Arrow, dealing 256% Weapon Attack Damage, adding the Main-Hand Weapon's Physical and Fire Damage to Base Ignite Damage, and additionally increasing Ignite Damage dealt.\nThis skill causes an explosion upon hitting an Ignited enemy, dealing True Damage equal to 100% of the Ignite DPS taken by the enemy to enemies within a 3m radius and dealing 5-5 Secondary Fire Damage.\nAll Physical Damage of the skill will be converted to Fire Damage.",
+      "Casts this skill and shoots 1 Blazing Arrow, dealing 256% Weapon Attack Damage and additionally increasing Ignite Damage dealt.\nThis skill causes an explosion upon hitting an Ignited enemy, dealing True Damage equal to 100% of the Ignite DPS taken by the enemy to enemies within a 3m radius and dealing 5-5 Secondary Fire Damage.\nAll Physical Damage of this skill will be converted to Fire Damage.",
       "Burning Shot:\nDeals 256% Weapon Attack Damage.\nThe skill fires 1 Projectile in its base state.\n+30% additional Ignite Damage for this skill\nConverts 100% of the skill's Physical Damage to Fire Damage\n+25% Ignite chance",
       "This skill causes an explosion upon hitting an Ignited enemy, dealing True Damage equal to 100% of the Ignite DPS taken by the enemy to enemies within a 3m radius. This effect's Cooldown for the same enemy: 5s",
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Burst Hammer",
+    tags: ["Attack", "Physical", "Fire", "Area", "Melee"],
+    description: [
+      "Casts this skill and generates 3 consecutive waves of explosions in a circular area in front, dealing Attack Fire Damage equal to 64% of Base Damage on hit. If you have at least 1 stack of Tenacity Blessing, this skill consumes 1 stack of Tenacity Blessing to deal additional damage.",
+      "Burst Hammer:\nDeals Attack Fire Damage equal to 64% of Base Damage\nIf the summoner has Tenacity Blessing stacks when casting this skill, consumes 1 stack of Tenacity Blessing to make this skill deal +30% additional damage\nThe pummel and explosion caused by this skill can hit the same enemy.\nThis skill's Shotgun Effect falloff coefficient is 64%",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
   },
   {
     type: "Active",
@@ -348,8 +403,7 @@ export const ActiveSkills = [
     name: "Centralized Loading",
     tags: ["Attack", "Ranged", "Mobility", "Persistent"],
     description: [
-      "Casts the skill and dashes forward, gaining a buff: 16% damage for Projectile Skills, and 30% chance to 2 Projectile Quantity for the skill when casting a Projectile Skill. Lasts for 1s.",
-      "Casts the skill and dashes forward, gaining a buff",
+      "Casts the skill and dashes forward, gaining a buff: 16% damage for Projectile Skills, and when casting a Projectile Skill, there is a 30% chance to 2 Projectile Quantity for that cast. Lasts 1s.",
       "Buff:\n+35% Projectile Damage\nWhen casting a Horizontal Projectile Skill, +30% chance to +2 Projectile Quantity for the skill\nLasts 1s.",
       "75% of the bonuses for Movement Speed is also applied to the additional Attack Speed of the skill, up to +60% additional Attack Speed",
     ],
@@ -406,7 +460,7 @@ export const ActiveSkills = [
       "Persistent",
     ],
     description: [
-      "Pummels the ground at the end of the skill channeling, dealing 438% Weapon Attack Damage.\nThe skill will generate an Electric Field at the spot pummeled when consuming Demolisher Charge, continuously hitting the enemies within the field for a period of time and dealing 22% Weapon Attack Damage.\nWhen consumingDemolisher Charge, Each channeled stack additionally increases the Pummel Damage and extends the Base Duration of the Electric Field.\nAll of the skill's Physical Damage will be converted to Lightning Damage.",
+      "Pummels the ground at the end of the skill channeling, dealing 438% Weapon Attack Damage.\nThe skill will generate an Electric Field at the spot pummeled when consuming Demolisher Charge, continuously hitting the enemies within the field for a period of time and dealing 22% Weapon Attack Damage.\nWhen consumingDemolisher Charge, Each channeled stack additionally increases the Damage of the Pummel cast that time and extends the Base Duration of the Electric Field.\nAll of the skill's Physical Damage will be converted to Lightning Damage.",
       "Pummel:\nDeals 438% Weapon Attack Damage.\nWhen consuming Demolisher Charge, 70% additional Hit Damage for the Pummel per channeled stacks.",
       "Electric Field:\nDeals 22% Weapon Attack Damage.\nThe Electric Field lasts 2s.\nEach channeled stack grants +0.2s Electric Field Duration.\nThe Electric Field deals damage once every 0.3s",
       "Converts 100% of the skill's Physical Damage to Lightning Damage\n+100% additional Attack Speed for this skill\nThe skill gains Demolisher Charge once every 3s.\nMax channeled stacks: 5\nMovement is not restricted when the skill is being channeled",
@@ -436,28 +490,27 @@ export const ActiveSkills = [
     tags: [
       "Spell",
       "Projectile",
+      "Area",
       "Cold",
-      "Erosion",
       "Fire",
       "Lightning",
-      "Physical",
       "Horizontal",
     ],
     description: [
-      "Casts the skill and fires 3 auto-tracing shots, dealing 91-152 Spell Physical Damage, 102-189 Spell Fire Damage, 13-254 SpellLightning Damage. 87-131 Spell Cold Damage, and 97-97 Spell Erosion Damage.\nShots fired by the skill can hit the same enemy.",
-      "Chromatic Shot:\nDeals 91-152 Spell Physical Damage.\nDeals 102-189 Spell Fire Damage.\nDeals 13-254 Spell Lightning Damage.\nDeals 87-131 Spell Cold Damage.\nDeals 97-97 Spell Erosion Damage.\nThis skill fires 1 Projectile in its base state.\nProjectile Quantity of this skill +2.\nThe Projectiles fired by this skill can hit the same enemy.\nThis skill's Shotgun Effect falloff coefficient is 70%.",
+      "Casts this skill and fires 3 auto-tracing shots, dealing 592-1100 Spell Damage.\n10% chance for enemies to explode once when defeated by this skill, dealing True Damage equal to 25% of their Max Life.\nEach time this skill is used, forcibly converts all damage dealt by the next skill to a randomly selected type of Elemental Damage.\nShots fired by this skill can hit the same enemy.",
+      "Chromatic Shot:\nDeals 592-1100 Spell Damage\nThis skill fires 1 Projectile in its base state.\nProjectile Quantity of this skill +2\nWhen this skill is cast, selects a random Elemental type, forcibly converting the damage of the next use of this skill to that type\n10% chance for enemies to explode when defeated by this skill, dealing True Damage equal to 25% of their Max Life to enemies within a 5 m radius\nThe Projectiles shot by this skill can hit the same enemy.\nThis skill's Shotgun Effect falloff coefficient is 70%",
     ],
     mainStats: ["str", "dex", "int"],
-    kinds: ["deal_damage", "hit_enemies"],
+    kinds: ["deal_damage"],
   },
   {
     type: "Active",
-    name: "Compound Source",
-    tags: ["Restoration"],
+    name: "Compound Tonic",
+    tags: ["Restoration", "Elixir"],
     description: [
       "Casts the skill and gains restoration: Restores 39% Max Life and 47 Mana within 2s. The effect disappears when Life and Mana are both fully restored.\nDefeating enemies will grant Charge.",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
-      "Casts the skill and gains restoration:\nRestores 39% Max Life within 2s\nRestores 47 Mana in 2 s",
+      "Casts this skill and gains restoration:\nRestores 39% Max Life within 2s\nRestores 47 Mana in 2 s\nThis skill's Restoration Effect and Duration are also affected by Elixir Effect and Duration",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
     ],
     kinds: [],
@@ -563,7 +616,6 @@ export const ActiveSkills = [
     tags: ["Spell", "Persistent", "Summon", "Empower"],
     description: [
       "Casts the skill and teleports all Spirit Magi to the designated location and makes them switch targets to the enemy with the highest Rarity within 5m.\nCasts the skill and gains Euphoria: Spirit Magi deal up to 22% additional damage for 3s based on the enemy's Rarity.",
-      "Casts the skill, and teleports all Spirit Magi to the designated location.\nAfter being teleported, all Spirit Magus will switch targets to the enemies with the highest Rarity within 5m.",
       "Casts the skill and gains Euphoria:\nWhile the skill lasts, Spirit Magi deal higher damage to rarer enemies, up to 22 additional damage\nLasts for 3s",
     ],
     kinds: ["summon_spirit_magus"],
@@ -602,6 +654,17 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Divine Judgment",
+    tags: ["Spell", "Lightning", "Area"],
+    description: [
+      "Casts this skill and attacks many circular areas nearby the target after a brief delay, dealing Spell Lightning Damage equal to 104% of Base Damage on hit, gaining Lucky Damage, and additionally increasing Max Damage.",
+      "Divine Judgment:\nDeals Spell Lightning Damage equal to 104% of Base Damage\nGains a buff when casting this skill: Lucky Damage and +60% additional Max Damage for 4 s",
+    ],
+    mainStats: ["int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Double Thrusts",
     tags: ["Attack", "Melee", "Physical", "Shadow Strike", "Area"],
     description: [
@@ -613,17 +676,14 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
-    name: "Drinking Recovery",
-    tags: ["Restoration"],
+    name: "Earthshatter",
+    tags: ["Attack", "Physical", "Area", "Melee"],
     description: [
-      "Casts the skill and gains restoration: Restores 7 Life within 4s. The effect disappears when Life is fully restored.\nWhen the skill is granting Life Restoration, Life Regain will be increased to its upper limit and -10% additional Life Regain Interval.\nUsing the skill will cost 30% of current Life",
-      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
-      "Casts the skill and gains restoration:\nRestores 7 Life in 4 s",
-      "Life Regain is increased to the max during the skill's restoration effect\n-10% additional Life Regain Interval during the skill's restoration effect\nConsumes 30% of the current Life on skill use",
-      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
-      "Consumes 30% of the current Life on skill use\nRestores 7 Life in 4 s\nLife Regain is increased to the max during the skill's restoration effect\n-10% additional Life Regain Interval during the skill's restoration effect",
+      "Casts this skill to attack in a fan-shaped area in front, dealing Attack Physical Damage equal to 94% of Base Damage on hit.",
+      "Earthshatter:\nDeals Attack Physical Damage equal to 94% of Base Damage",
     ],
-    kinds: [],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
   },
   {
     type: "Active",
@@ -667,9 +727,7 @@ export const ActiveSkills = [
     type: "Active",
     name: "Endless Vendetta",
     tags: ["Attack", "Melee", "Area"],
-    description: [
-      "Repeatedly casts Vendetta, targeting a random enemy within a 12m radius each time. Starts with -30% additional Attack Speed, +5% additional Attack Speed per repeat cast. Repeat limit: 30 times.\nThis skill cannot be supported by Activation Medium Skills.\nClick it again while casting to interrupt.",
-    ],
+    description: [],
     kinds: [],
   },
   {
@@ -726,11 +784,44 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Fire Lizard Distillate",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: Converts 11.2% of Physical Damage taken to Fire Damage. Replaces inflicted Ignite with Scorch. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\nConverts 15% of Physical Damage taken to Fire Damage\nThe Ignite inflicted is replaced with Scorch\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
+    name: "Firebird",
+    tags: ["Spell", "Cold", "Fire", "Horizontal", "Projectile"],
+    description: [
+      "Casts this skill and fires 5 Projectiles forward, dealing Spell Fire Damage equal to 121% of Base Damage on hit. Grants a buff when the Projectiles fired by this skill hit an enemy: Adds a percentage of Cold Damage as Fire Damage.",
+      "Firebird:\nDeals Spell Fire Damage equal to 121% of Base Damage\nProjectiles fired by this skill will return after reaching their max range\nFor every enemy hit by the Projectiles fired by this skill, gains 1 stack of a buff: Adds 10% of Cold Damage as Fire Damage. Stacks up to 8 time(s). Lasts for 4s",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Firebomb",
+    tags: ["Spell", "Fire", "Area"],
+    description: [
+      "Casts this skill and summons a bomb-throwing Drone to attack many circular areas, dealing Spell Fire Damage equal to 73% of Base Damage on hit.",
+      "Firebomb:\nDeals Spell Fire Damage equal to 73% of Base Damage",
+    ],
+    mainStats: ["int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Fixate",
     tags: ["Spell", "Area", "Persistent", "Empower"],
     description: [
       "Casts the skill and Marks enemies within 10m.\nCasts the skill and gains Euphoria: For each Marked enemy, gain 1.1% additional damage and 6.1% Mark Effect for 6s.",
-      "Casts the skill and Marks enemies within 10m",
       "Casts the skill and gains Euphoria:\n+3% additional damage for each enemy affected. Stacks up to 10 times\n+8% Mark Effect for each enemy affected, stacking up to 10 times.\nLasts 6s.",
     ],
     kinds: [],
@@ -785,6 +876,17 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Flickering Shadow",
+    tags: ["Attack", "Physical", "Erosion", "Area", "Melee"],
+    description: [
+      "Casts this skill, teleports to the target enemy, and attacks in a circular area, dealing Attack Physical Damage equal to 68% of Base Damage on hit. Additionally increases this skill's damage dealt to Wilted enemies but consumes their Wilt stacks.",
+      "Flickering Shadow:\nDeals Attack Physical Damage equal to 68% of Base Damage\nRemoves 1 stack of Wilt and +75% additional damage for this skill when hitting a Wilted enemy\nThis skill cannot inflict Wilt",
+    ],
+    mainStats: ["dex", "int"],
+    kinds: ["hit_enemies", "inflict_ailment"],
+  },
+  {
+    type: "Active",
     name: "Focused Shot",
     tags: ["Attack", "Ranged", "Physical", "Projectile", "Horizontal"],
     description: [
@@ -813,8 +915,8 @@ export const ActiveSkills = [
     name: "Forced Start",
     tags: ["Spell", "Persistent", "Defensive"],
     description: [
-      "Casts the skill and gains defensive effect: 12.3% Energy Shield Charge Speed for 5s.\nThe Energy Shield starts to charge upon casting the skill.",
-      "Casts the skill and gains defensive effect:\n+18% Energy Shield Charge Speed while the skill lasts\nEnergy Shield starts to Charge immediately\nLasts 5s.",
+      "Casts the skill and gains defensive effect: 21% Energy Shield Charge Speed for 5s.\nThe Energy Shield starts to charge upon casting the skill.",
+      "Casts the skill and gains defensive effect:\n+40% Energy Shield Charge Speed while the skill lasts\nEnergy Shield starts to Charge immediately\nLasts 5s.",
     ],
     kinds: [],
   },
@@ -823,12 +925,11 @@ export const ActiveSkills = [
     name: "Frigid Transmission",
     tags: ["Spell", "Cold", "Area", "Mobility"],
     description: [
-      "Casts this skill to move to the target spot, leaving cold ice within a certain area at the starting point and the target location, dealing 693 - 1040 Spell Cold Damage.\nRefreshes this skill's Cooldown upon inflicting Frost-Seal in any situation.",
-      "Frigid Transmission:\nDeals 693-1040 Spell Cold Damage.\nRefreshes this skill's Cooldown upon inflicting Frost-Seal in any situation. Interval: 0.03s",
-      "Refreshes this skill's Cooldown upon inflicting Frost-Seal in any situation. Interval: 0.03 s",
+      "Casts this skill to move to the target spot, leaving cold ice within a certain area at the starting point and the target location, dealing 693-1040 Spell Cold Damage.\nAfter casting this skill, inflicts Frostbite when dealing Hit Cold Damage.\nThis skill and some Mobility Skills share the same cooldown.",
+      "Frigid Transmission:\nDeals 693-1040 Spell Cold Damage.\nGains a buff when casting this skill:\nInflicts Frostbite when dealing Hit Cold Damage. Lasts for 1s",
     ],
     mainStats: ["int"],
-    kinds: ["deal_damage", "hit_enemies"],
+    kinds: ["deal_damage", "hit_enemies", "inflict_ailment"],
   },
   {
     type: "Active",
@@ -847,7 +948,7 @@ export const ActiveSkills = [
     tags: ["Attack", "Melee", "Area", "Cold", "Demolisher"],
     description: [
       "Casts the skill, pummels the ground in front, and generates a wave of Ice Spikes within a certain area, dealing 202% Weapon Attack Damage.\nWhen the skill consumes Demolisher Charge, generates 3 additional waves of Ice Spikes, with each wave dealing additional damage and having a bigger skill area.\nAll of the skill's Physical Damage will be converted to Cold Damage.",
-      "Ice Spike:\nDeals 202% Weapon Attack Damage.\n+30% additional Hit Damage for each wave of Ice Spikes.\n+20% additional Skill Area for each wave of Ice Spikes.\nThis skill's Demolisher Charge Restoration Speed bonuses are also applied to Ice Spike generation interval.\nThis skill gains 1 Demolisher Charge\nevery 3s.Converts 100% of the skill's Physical Damage to Cold Damage\nIn any situation, when inflicting Freeze, if this skill doesn't have Demolisher Charge, it immediately gains Demolisher Charge. Interval: 3 s",
+      "Ice Spike:\nDeals 202% Weapon Attack Damage.\n+30% additional Hit Damage (multiplies) for each wave of Ice Spikes.\n+20% additional Skill Area for each wave of Ice Spikes.\nThis skill's Demolisher Charge Recovery Speed bonuses are also applied to Ice Spike generation interval.\nThis skill gains 1 Demolisher Charge\nevery 3s.Converts 100% of the skill's Physical Damage to Cold Damage\nIn any situation, when inflicting Freeze, if this skill doesn't have Demolisher Charge, it immediately gains Demolisher Charge. Interval: 3 s",
     ],
     mainStats: ["str", "int"],
     kinds: ["deal_damage", "hit_enemies"],
@@ -891,7 +992,7 @@ export const ActiveSkills = [
     description: [
       "Casts the skill and thrusts forward, dealing 201% Weapon Attack Damage.\nFires 2 Icy Blades on hit, dealing 201% Weapon Attack Damage.\nThe enemy's Frostbite Rating will increase the number of Icy Blades fired by the skill.\nAll of the skill's Physical Damage will be converted to Cold Damage.",
       "Thrust:\nDeals 201% Weapon Attack Damage.",
-      "Icy Blade:\nDeals 201% Weapon Attack Damage.\nThis skill fires 2 Projectiles in its base state.\nThis skill gains +1 Projectile Quantity for every 35 Frostbite Rating of the enemy on hit",
+      "Icy Blade:\nDeals 201% Weapon Attack Damage.\nThis skill fires 2 Projectiles in its base state.\nThis skill gains +1 Projectile Quantity for every 30 Frostbite Rating of the enemy on hit",
       "Converts 100% of the skill's Physical Damage to Cold Damage\n+8% additional Damage for every +1 Projectile Quantity of this skill\nThe max amount of Projectiles that can be fired by this skill is 5\n100% of the increase or decrease on Skill Area is also applied to the Tracking Area of this skill's Shadows, up to 100%",
     ],
     mainStats: ["dex", "int"],
@@ -936,25 +1037,35 @@ export const ActiveSkills = [
     tags: ["Spell", "Cold", "Area", "Persistent", "Terra"],
     description: [
       "Casts this skill to generate a Frost Terra at the target spot, dealing 494 Persistent Cold Damage every second.\nTerra Charge grants additional damage to this skill.",
-      "Frost Terra:\nFrost Terra lasts for 3s\nDeals 494 Persistent Cold damage every second for 2s.\nInflicts Frostbite when this skill deals damage\nFor each Terra Charge consumed, this skill deals 26% additional damage\nDamage Over Time statuses inflicted by the skill can't be spread (excludes Ailments)",
-      "The maximum stacks of Terra Charge are 1\nGain 1 stack of Terra Charge per 0.5s",
+      "Frost Terra:\nFrost Terra lasts for 3s\nDeals 494 Persistent Cold damage every second for 2s.\nInflicts Frostbite when this skill deals damage\nFor each Terra Charge consumed when this skill is cast, that cast deals 26% additional damage\nDamage Over Time statuses inflicted by the skill can't be spread (excludes Ailments)",
       "This skill's max base Terra quantity is 1.",
-      "Inflicts Frostbite when this skill deals damage\n+26% additional damage for this skill for every Terra Charge consumed\nDamage Over Time statuses inflicted by the skill can't be spread (excludes Ailments)",
+      "Inflicts Frostbite when this skill deals damage\n+26% additional damage for the skill for every Terra Charge consumed\nDamage Over Time statuses inflicted by the skill can't be spread (excludes Ailments)",
     ],
     mainStats: ["int"],
     kinds: ["deal_damage", "dot", "inflict_ailment"],
   },
   {
     type: "Active",
+    name: "Frostclaw",
+    tags: ["Spell", "Cold", "Fire", "Area"],
+    description: [
+      "Casts this skill and attacks in a circular area after a brief delay, dealing Spell Cold Damage equal to 62% of Base Damage on hit.\nConverts 99% of this skill's Cold Damage to Fire Damage.",
+      "Frostclaw:\nDeals Spell Cold Damage equal to 62% of Base Damage\nConverts 99% of the skill's Cold Damage to Fire Damage",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Gale Slash",
     tags: ["Attack", "Melee", "Area", "Physical", "Combo", "Persistent"],
     description: [
-      "Combo Starter 1: Charges forward, dealing 392% Weapon Attack Damage to enemies in the path.",
-      "Combo Starter 2: Launches a spinning attack while moving forward, dealing 392% Weapon Attack Damage.",
-      "Combo Finisher: Leaps and pummels the ground ahead, dealing 392% Weapon Attack Damage.",
-      "Combo Starter 1:\nDeals 392% Weapon Attack Damage.\nCharges forward 3.5m. If the enemy is too far away, instead charges 6m\n+20% additional Attack Speed for the Combo Starter 1 of this skill",
-      "Combo Starter 2:\nDeals 392% Weapon Attack Damage\nMove forward 2.5m\nWhen the Starter 2 hits, it knocks back enemies in the direction this skill was cast",
-      "Combo Finisher:\nDeals 392% Weapon Attack Damage\nJump forward 4m\n-50% additional Attack Speed for the Combo Finisher of this skill",
+      "Combo Starter 1: Charges forward, dealing 313% Weapon Attack Damage to enemies in the path.",
+      "Combo Starter 2: Launches a spinning attack while moving forward, dealing 313% Weapon Attack Damage.",
+      "Combo Finisher: Leaps and pummels the ground ahead, dealing 313% Weapon Attack Damage.",
+      "Combo Starter 1:\nDeals 313% Weapon Attack Damage.\nCharges forward 3.5m. If the enemy is too far away, instead charges 6m\n+20% additional Attack Speed for the Combo Starter 1 of this skill",
+      "Combo Starter 2:\nDeals 313% Weapon Attack Damage\nMove forward 2.5m\nWhen the Starter 2 hits, it knocks back enemies in the direction this skill was cast",
+      "Combo Finisher:\nDeals 313% Weapon Attack Damage\nJump forward 4m\n-50% additional Attack Speed for the Combo Finisher of this skill",
       "+30% Combo Finisher Amplification for this skill\nThis skill's Attack Speed bonus falls off at a rate equal to that of a normal Mobility Skill\n0.2% additional damage for this skill for every +1% Attack Speed",
       "After casting this skill's Starter, gains 1 stack of Wind Wake for every 1 Combo Point(s) gained from the Starter\n+5% movement distance for this skill's Starter for each current Combo Point. Stacks up to 4 time(s)\nThis skill cannot be triggered\nThis skill cannot be supported by Activation Medium Skills",
       "+20% additional Attack Speed for the Combo Starter 1 of this skill\n-50% additional Attack Speed for the Combo Finisher of this skill\nAfter casting this skill's Starter, gains 1 stack of Wind Wake for every 1 Combo Point(s) gained from the Starter\n+5% movement distance for this skill's Starter for each current Combo Point. Stacks up to 4 time(s)\n+30% Combo Finisher Amplification for this skill\n1.5% additional Critical Strike Rating for this skill for each stack of buff\nThis skill cannot be triggered\n0.2% additional damage for this skill for every +1% Attack Speed",
@@ -1010,6 +1121,17 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Gravelshot",
+    tags: ["Attack", "Physical", "Area", "Projectile", "Parabolic"],
+    description: [
+      "Casts this skill and hurls a huge rock Projectile forward that explodes upon landing, dealing Attack Physical Damage equal to 38% of Base Damage.",
+      "Gravelshot:\nDeals Attack Physical Damage equal to 38% of Base Damage\nThe skill's Projectiles' effect after splitting -50% additional damage",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Groundshaker",
     tags: ["Attack", "Melee", "Area", "Physical", "Demolisher"],
     description: [
@@ -1020,6 +1142,17 @@ export const ActiveSkills = [
     ],
     mainStats: ["str"],
     kinds: ["deal_damage", "hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Groundslam",
+    tags: ["Attack", "Physical", "Area", "Melee"],
+    description: [
+      "释放该技能时向前跃起，落地时打击圆形区域，造成90% 基础伤害的AttackPhysical伤害，并使周围一定范围内的敌人造成的伤害额外降低。",
+      "Groundslam:\nDeals Attack Physical Damage equal to 90% of Base Damage\nGains a buff when casting this skill: -25% additional damage dealt by enemies within 10m nearby. Lasts for 5 s",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
   },
   {
     type: "Active",
@@ -1063,11 +1196,22 @@ export const ActiveSkills = [
       "Casts the skill and deals 405-405 Spell Erosion Damage to the target enemy and generates a Haunting Terra to follow the enemy around.\nHaunting Terra deals 405-405 Spell Erosion Damage to the enemies within it every 0.65s.\nTerra Charge grants additional damage to the skill.",
       "Haunting Abomination:\nDeals 405-405 Spell Erosion Damage.",
       "Haunting Terra:\nHaunting Terra lasts 4s.\nDeals 405-405 Spell Erosion Damage to enemies within it every 0.65s. Bonuses and additional bonuses for Cast Speed are also applied to the Interval.\nHaunting Terra expands gradually over its duration, gaining +20% additional Skill Area per second.",
-      "The maximum stacks of Terra Charge are 1.\nGain 1 stack of Terra Charge every 0.5s.\n+26% additional damage for this skill for every Terra Charge consumed",
+      "The maximum stacks of Terra Charge are 1.\nGain 1 stack of Terra Charge every 0.5s.\n+26% additional damage for the skill for every Terra Charge consumed",
       "This skill's max base Terra quantity is 1.",
     ],
     mainStats: ["int"],
     kinds: ["deal_damage", "hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "High Court Covenant",
+    tags: ["Attack", "Physical", "Area", "Melee"],
+    description: [
+      "Casts this skill and generates many Phantoms, then charges forward after a brief delay, dealing Attack Physical Damage equal to 104% of Base Damage to enemies in the path. Also gains a Critical Strike Rating and Critical Strike Damage buff.",
+      "High Court Covenant:\nDeals Attack Physical Damage equal to 104% of Base Damage\nGains a buff when casting this skill: +300 Critical Strike Rating and +75% Critical Strike Damage for 4 s",
+    ],
+    mainStats: ["dex", "int"],
+    kinds: ["hit_enemies"],
   },
   {
     type: "Active",
@@ -1186,7 +1330,6 @@ export const ActiveSkills = [
       "Channels the skill and fires 1 Cold Beam forward, hitting the enemy at the end point and dealing 171-257 Spell Cold Damage.\nAt max channeled stacks, loses all channeled stacks and fires 2 Icy Blades to the end point of the beam, dealing 513-770 Spell Cold Damage.",
       "Cold Beam:\nDeals 171-257 Spell Cold Damage.\nNot affected by beam quantity bonuses and refraction attempt bonuses.",
       "Icy Blade:\nDeals 513-770 Spell Cold Damage.\nThe skill fires 1 Projectile in its base state.\nProjectile Quantity of this skill +1\nEvery 1 Beam reflections of this skill will be converted into 2 Projectile Jumps\nProjectile Quantity +1 for every 1 additional Beams",
-      "Channels up to 5 stacks.",
       "The Projectiles shot by the skill can hit the same enemy.\nThe skill's Shotgun Effect falloff coefficient is 65%.",
     ],
     mainStats: ["int"],
@@ -1210,6 +1353,17 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Impaling Thrust",
+    tags: ["Attack", "Physical", "Area", "Melee"],
+    description: [
+      "Casts this skill and charges forward to attack in a fan-shaped area in front, dealing Attack Physical Damage equal to 111% of Base Damage on hit. Also grants a buff that increases Skill Area and Area Damage.",
+      "Impaling Thrust:\nDeals Attack Physical Damage equal to 111% of Base Damage\nGains a buff when casting this skill: +60% Skill Area and +40% additional Area Damage for 4 s",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Inexhaustible Barrage",
     tags: [
       "Attack",
@@ -1223,12 +1377,34 @@ export const ActiveSkills = [
       "Barrage",
     ],
     description: [
-      "At the end of the channeling of the skill, drops multiple waves of barrage at enemies within a certain area, attacking random enemies within range, with each wave dealing 185% Weapon Attack Damage.\nThe channeled stacks will increase the number of barrage waves.\nProjectile Speed will additionally increase the skill's damage.",
-      "Inexhaustible Barrage:\nDeals 185% Weapon Attack Damage.\nThe skill drops 1 wave of barrage in its base state.\nEach wave of barrage fires 1 Projectile by default.\nEach channeled stack will grant a wave of barrage at the end of the channeling process.\nProjectile Quantity of this skill +5\n25% of the skill's additional Projectile Speed bonus also applies to the skill's additional damage\n+100% additional Attack Speed for this skill",
+      "At the end of the channeling of the skill, drops multiple waves of barrage at enemies within a certain area, attacking random enemies within range, with each wave dealing 124% Weapon Attack Damage.\nThe channeled stacks will increase the number of barrage waves.\nProjectile Speed will additionally increase the skill's damage.",
+      "Inexhaustible Barrage:\nDeals 124% Weapon Attack Damage.\nThe skill drops 1 wave of barrage in its base state.\nEach wave of barrage fires 1 Projectile by default.\nEach channeled stack will grant a wave of barrage at the end of the channeling process.\nProjectile Quantity of this skill +5\n25% of the skill's additional Projectile Speed bonus also applies to the skill's additional damage\n+100% additional Attack Speed for this skill",
       "Movement is not restricted when the skill is being channeled.\nChannels up to 5 stacks.",
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Javelin of Judgment",
+    tags: ["Spell", "Lightning", "Projectile", "Horizontal"],
+    description: [
+      "Casts this skill and fires 1 Javelin Projectile that always Penetrates, dealing Spell Lightning Damage equal to 62% of Base Damage. The Projectiles fired by this skill are not affected by Projectile Quantity bonuses.",
+      "Javelin of Judgment:\nDeals Spell Lightning Damage equal to 62% of Base Damage",
+    ],
+    mainStats: ["int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Kinetic Thrust",
+    tags: ["Attack", "Physical", "Area", "Melee"],
+    description: [
+      "Casts this skill to attack in a fan-shaped area in front, dealing Attack Physical Damage equal to 47% of Base Damage on hit.",
+      "Kinetic Thrust:\nDeals Attack Physical Damage equal to 47% of Base Damage",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
   },
   {
     type: "Active",
@@ -1238,19 +1414,18 @@ export const ActiveSkills = [
       "Casts the skill and leaps up to the target spot to pummel the ground, dealing 228% Weapon Attack Damage to enemies within a certain area.\nThe skill grants the following buff upon consuming Demolisher Charge: Hitting enemies will increase the skill's Damage and Area.",
       "Leap Attack:\nDeals 228% Weapon Attack Damage.",
       "This skill gains Demolisher Charge once every 4s.\nThis skill grants the following buff upon consuming Demolisher Charge: Gains a buff once for each enemy hit, up to 20 time(s).\nThe buff lasts 2s.\n+20% damage to the skill per bonus gained\n+10% Skill Area to the skill per bonus gained\n-40% additional Attack Speed for this skill\n75% of the bonuses for Movement Speed is also applied to the additional Attack Speed of the skill, up to +60% additional Attack Speed",
-      "The closer the jump distance, the faster the Base Attack Speed of this skill",
     ],
     mainStats: ["str"],
     kinds: ["deal_damage", "hit_enemies"],
   },
   {
     type: "Active",
-    name: "Life Source",
-    tags: ["Restoration"],
+    name: "Life Tonic",
+    tags: ["Restoration", "Elixir"],
     description: [
       "Casts the skill and gains restoration: Restores 41% Max Life within 2s. The effect disappears when Life is fully restored.\nDefeating enemies will grant Charge.",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
-      "Casts the skill and gains restoration:\nRestores 41% Max Life within 2s",
+      "Casts this skill and gains restoration:\nRestores 41% Max Life within 2s\nThis skill's Restoration Effect and Duration are also affected by Elixir Effect and Duration",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
     ],
     kinds: [],
@@ -1368,13 +1543,13 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
-    name: "Mana Source",
-    tags: ["Restoration"],
+    name: "Mana Tonic",
+    tags: ["Restoration", "Elixir"],
     description: [
       "Casts the skill and gains restoration: Restores 41% Max Mana within 2s. The effect disappears when Mana is fully restored.\nDefeating enemies will grant Charge.",
-      "Defeating enemies can increase the Charging Progress of this skill. At 10 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
-      "Casts the skill and gains restoration:\nRestores 41% Max Mana within 2s",
-      "Defeating enemies can increase the Charging Progress of this skill. At 10 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains restoration:\nRestores 41% Max Mana within 2s\nThis skill's Restoration Effect and Duration are also affected by Elixir Effect and Duration",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
     ],
     kinds: [],
   },
@@ -1456,6 +1631,17 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Molten Barrage",
+    tags: ["Attack", "Physical", "Fire", "Ranged", "Horizontal", "Projectile"],
+    description: [
+      "Casts this skill and fires 12 Projectiles in a spiral nearby within 1s, dealing Attack Physical Damage equal to 104% of Base Damage on hit.\nThe Projectiles fired by the skill are not affected by Projectile Quantity bonuses.",
+      "Molten Barrage:\nDeals Attack Physical Damage equal to 104% of Base Damage",
+    ],
+    mainStats: ["dex", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Molten Rising",
     tags: ["Ultimate", "Spell", "Fire", "Area"],
     description: [
@@ -1480,6 +1666,18 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Nimbleness Dew",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: 2200 Evasion. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\n+6000 Evasion\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
     name: "Nourishment of Life",
     tags: ["Spell", "Persistent", "Area", "Summon", "Empower"],
     description: [
@@ -1496,6 +1694,15 @@ export const ActiveSkills = [
       "When casting this skill, gains a defensive effect: Upon evading or avoiding damage, Blur Rating 5% of Max Blur Rating for 6s.\nWhen casting this skill, Blur Rating 10.5% of Max Blur Rating.",
       "Casts the skill and gains defensive effect:\nBlur Rating +5% of Max Blur Rating every time you evade or avoid damage while the skill lasts. Interval: 0.2s",
       "10.5% Blur Rating above its max stack when casting skills",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
+    name: "Ominous",
+    tags: ["Spell", "Area", "Persistent", "Curse"],
+    description: [
+      "Casts this skill and Curses enemies within the target area.\nCursed enemies can gain Ill Omen\n+21% Skill Area for the skill\n+21% additional duration for this skill\nLasts for 5s",
     ],
     kinds: [],
   },
@@ -1520,6 +1727,17 @@ export const ActiveSkills = [
     ],
     mainStats: ["str", "int"],
     kinds: ["deal_damage", "hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Overstrike",
+    tags: ["Attack", "Physical", "Fire", "Area", "Melee"],
+    description: [
+      "Casts this skill to attack in a square area in front, dealing Attack Fire Damage equal to 54% of Base Damage on hit.",
+      "Overstrike:\nDeals Attack Fire Damage equal to 54% of Base Damage",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
   },
   {
     type: "Active",
@@ -1556,6 +1774,29 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Putrid Toad Distillate",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: Has Blur. While Blur is active, 10.5% Defense and -21% Curse Effect Received. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\nHas Blur\nWhile Blur is active, +20% Defense\n-40% Cursed Effect while Blur is active\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
+    name: "Pyromania",
+    tags: ["Spell", "Fire", "Persistent", "Area"],
+    description: [
+      "Casts this skill to generate a Flame Terra in a square area in front, dealing Persistent Fire Damage equal to 68% of Base Damage to enemies inside it.",
+      "Pyromania:\nDeals Persistent Fire Damage equal to 68% of Base Damage",
+    ],
+    mainStats: ["int"],
+    kinds: ["deal_damage", "dot", "hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Raging Warcry",
     tags: ["Warcry", "Area", "Persistent"],
     description: [
@@ -1578,12 +1819,34 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Ravaging Slash",
+    tags: ["Attack", "Physical", "Area", "Melee"],
+    description: [
+      "Casts this skill to attack in a square area in front, dealing Attack Physical Damage equal to 74% of Base Damage on hit.",
+      "Ravaging Slash:\nDeals Attack Physical Damage equal to 74% of Base Damage",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Reform",
     tags: ["Spell", "Persistent", "Defensive"],
     description: [
       "Casts the skill and gains defensive effect: Refreshes the Barrier and gains 7.5% additional Barrier Shield for 6s.\nWhile the skill lasts, Weakens Nearby enemies upon gaining Barrier.",
       "Casts the skill and gains defensive effect:\nWeakens Nearby enemies when you gain Barrier while the skill lasts\n12.25% additional Barrier Shield while the skill lasts\nLasts 6s.",
-      "Refreshes the Barrier owned upon casting the skill",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
+    name: "Resistance Dew",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: 12.2% Elemental and Erosion Resistance. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\n+16% Elemental and Erosion Resistance\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
     ],
     kinds: [],
   },
@@ -1614,9 +1877,7 @@ export const ActiveSkills = [
     description: [
       "When channeling this skill, generates ring blades around you, dealing 379-631 Spell Physical Damage to enemies within range.\nThe ring blades will remain for 5s after the channeling is over.\nMovement is not restricted when this skill is being channeled.",
       "Ring of Blades:\nDeals 379-631 Spell Physical Damage\nFor the same enemy, Projectiles can deal damage once every 0.25s at the fastest\nMax channeled stacks: 5\nGenerates 1 Projectile for each channeling, up to 5 Projectile(s)\nAfter channeling, Projectiles will remain for 5s\nMovement is not restricted when the skill is being channeled",
-      "This skill 21.5 % additional damage for every +1 additional Max Channeled Stack(s)",
-      "The orbiting radius of Projectiles is also affected by the skill's Skill Area bonuses.",
-      "This skill is not affected by Projectile Size",
+      "This skill 21.5 % additional damage for every +1 additional Max Channeled Stack(s)\n-30% Movement Speed while channeling this skill",
     ],
     mainStats: ["int"],
     kinds: ["deal_damage", "hit_enemies"],
@@ -1666,12 +1927,53 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Rockfall",
+    tags: ["Spell", "Physical", "Area", "Barrage"],
+    description: [
+      "Casts this skill and rains down a volley of boulders at the target location to attack in a circular area in front, dealing Spell Physical Damage equal to 34% of Base Damage.",
+      "Rockfall:\nDeals Spell Physical Damage equal to 34% of Base Damage",
+    ],
+    mainStats: ["int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Rootsurge",
+    tags: [
+      "Spell",
+      "Erosion",
+      "Persistent",
+      "Area",
+      "Horizontal",
+      "Projectile",
+    ],
+    description: [
+      "Casts this skill and fires 5 Projectiles that always Penetrate forward, dealing Spell Erosion Damage equal to 87% of Base Damage on hit.",
+      "Rootsurge:\nDeals Spell Erosion Damage equal to 87% of Base Damage\n+100% chance for this skill to inflict Slow on hit\nThe Projectiles fired by the skill are not affected by Projectile Quantity bonuses.\nThe Projectiles fired by this skill cannot return.",
+    ],
+    mainStats: ["int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Safeguard Ring",
     tags: ["Spell", "Area", "Persistent", "Sentry", "Defensive"],
     description: [
       "Casts the skill and place a Safeguard Sentry at the target spot, who will generate a Safeguard Field, knock back enemies within it, and periodically knock back them during its effect.\nAllies within the Safeguard Field gains the defensive effect: -8% additional damage taken and -10.5% additional damage taken from enemies outside the Safeguard Field.",
       "Isolation Sentry:\nKnocks back the enemies within range every 2s.\nThe Sentry lasts 6.1s.\nSkill's max base Sentry quantity is 1\nThe skill can only place 1 Sentry.",
       "The Safeguard Sentry grants defensive effect to allies:\n-8% additional damage taken as the buff lasts\n-20% additional damage dealt by enemies outside the circle as the buff lasts",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
+    name: "Saltpeter Mushroom Distillate",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: 8.2% of damage taken is transferred to a random Minion, and 25% chance for enemies to explode when defeated by Minions' Attacks or Spells, dealing True Damage equal to 250% of their Max Life to enemies within a 6m radius. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\n召唤物的攻击或者法术击败敌人时 25% 几率爆炸，对半径 6 米内的敌人造成被击败的敌人最大生命 250% 的真实伤害（不受灵药技能效果影响）\n12% of damage taken is transferred to a random Minion\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
     ],
     kinds: [],
   },
@@ -1737,6 +2039,29 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Scorpion Stinger Distillate",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: 1 Projectile Quantity, 10.5% Skill Area, and 10.5% Movement Speed for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\nProjectile Quantity +1\n+20% Skill Area\n+20% Movement Speed\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
+    name: "Searing Crush",
+    tags: ["Attack", "Physical", "Fire", "Area", "Melee"],
+    description: [
+      "Casts this skill and charges forward, dealing Attack Fire Damage equal to 149% of Base Damage to enemies in the path and additionally increasing the damage taken by enemies within a certain area nearby.",
+      "Searing Crush:\nDeals Attack Fire Damage equal to 149% of Base Damage\nGains a buff when casting this skill: +50% additional damage taken by enemies within 10m nearby. Lasts for 5 s",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Secret Origin Unleash",
     tags: ["Spell", "Persistent", "Empower"],
     description: [
@@ -1764,7 +2089,6 @@ export const ActiveSkills = [
       "Combo Starter 1: Fires a Fire Beam at an enemy, dealing 403-672 Spell Physical Damage and inflicting Serpent Bind.",
       "Combo Starter 2: Fires a Fire Beam at an enemy that refracts 3 time(s), dealing 403-672 Spell Physical Damage and spreading the Serpent Bind from the enemy.",
       "Combo Finisher: Fires a Finisher Fire Beam at an enemy, dealing 403-672 Spell Physical Damage to the target and all other enemies that have Serpent Bind. Consumes all Combo Points.",
-      "Converts all Physical Damage of this skill to Fire Damage.",
       "Combo Starter 1:\nDeals 403-672 Spell Physical Damage.\nInflicts Serpent Bind on hit\nThis skill is not affected by the number of refractions",
       "When defeating an enemy, this skill spreads Serpent Bind from the enemy to other enemies within 5m",
       "Combo Starter 2:\nDeals 403-672 Spell Physical Damage\n-15% Attack Speed, Cast Speed, and Movement Speed for the enemy on hit for 2s\nOn hit, spreads the Serpent Bind from the target to other enemies within 5m\nThis skill can refract 3 time(s) in its base state\n+1 additional refraction(s) for this skill's Combo Starters per +1 Beam(s)",
@@ -1820,7 +2144,6 @@ export const ActiveSkills = [
       "Casts the skill and generates Erosion Explosion at the target spot, dealing 420-420 Spell Erosion Damage to enemies within a certain area.\nThe Erosion Explosion will leave a Swamp Terra afterwards, dealing 557 Persistent Erosion Damage to enemies in it. The Swamp Terra lasts 3s.\nThe Swamp Terra can be moved by Shadows. After that, there will be another Erosion Explosion and the duration will be refreshed.",
       "Explosion:\nDeals 420-420 Spell Erosion Damage.",
       "Swamp Terra:\nSwamp Terra lasts for 3s\nDeals 557 Persistent Erosion Damage every second for 2s\nThe skill can only generate 1 Terra\nEnemies on a Swamp Terra are Weakened\nOn hit, Shadow Shot moves the existing Swamp Terra to the location of the hit and causes another explosion\nEach movement grants +10% additional Skill Area for the Swamp Terra\nStacks up to 1 time(s)\nFor every stack of Terra Charge consumed, the Swamp Terra gains an additional effect every time it moves: +26% additional Damage Over Time (does not apply to Ailment Damage)\nDamage Over Time statuses inflicted by the skill can't be spread (excludes Ailments)\nFor every +1 Max Terra Quantity, the number of times this effect can be stacked +2",
-      "The maximum stacks of Terra Charge are 1\nGain 1 stack of Terra Charge per 0.5s",
     ],
     mainStats: ["int"],
     kinds: ["deal_damage", "dot", "hit_enemies"],
@@ -1848,6 +2171,17 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Sin of the Fallen",
+    tags: ["Attack", "Physical", "Erosion", "Area", "Melee"],
+    description: [
+      "Casts this skill and attacks many circular areas after a brief delay, dealing Attack Physical Damage equal to 72% of Base Damage and inflicting Wilt on hit.",
+      "Sin of the Fallen:\nDeals Attack Physical Damage equal to 72% of Base Damage\n+100% Wilt Chance for this skill and adds 5 - 5 Base Wilt Damage",
+    ],
+    mainStats: ["dex", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Sparkle",
     tags: ["Spell", "Projectile", "Lightning", "Area", "Horizontal"],
     description: [
@@ -1862,26 +2196,26 @@ export const ActiveSkills = [
     name: "Spectral Slash",
     tags: ["Attack", "Melee", "Area", "Physical", "Combo", "Persistent"],
     description: [
-      "Combo Starter 1: Launches a Steep Strike forward, dealing 448% Weapon Attack Damage to the first enemy hit and inflicting Mark.",
-      "Combo Starter 2: Launches a Steep Strike forward, dealing 448% Weapon Attack Damage and spreading the enemy's Mark.",
-      "Combo Finisher: Pummels the ground ahead, dealing 145% Weapon Attack Damage, and generates several clones that launch a Steep Strike to enemies with Mark, dealing 145% Weapon Attack Damage.",
-      "Combo Starter 1:\nDeals 448% Weapon Attack Damage\nThis skill can only hit 1 enemy\nOn hit, inflicts Mark to the enemy\nWhen defeating an enemy, this skill directly spreads the target's Mark to other enemies within 8m",
-      "Combo Starter 2:\nDeals 448% Weapon Attack Damage\nOn hit, spreads the target's Mark to other enemies within 8m (affected by Skill Area)",
-      "Combo Finisher:\nDeals 145% Weapon Attack Damage\nGenerates 1 additional Clone for every Combo Point consumed, up to 4 Clone(s)\nThe falloff coefficient of the Clones' Shotgun Effect is 70%\nRemoves Mark from enemies after this skill ends",
+      "Combo Starter 1: Launches a Steep Strike forward, dealing 406% Weapon Attack Damage to the first enemy hit and inflicting Mark.",
+      "Combo Starter 2: Launches a Steep Strike forward, dealing 406% Weapon Attack Damage and spreading the enemy's Mark.",
+      "Combo Finisher: Pummels the ground ahead, dealing 127% Weapon Attack Damage, and generates several clones that launch a Steep Strike to enemies with Mark, dealing 127% Weapon Attack Damage.",
+      "Combo Starter 1:\nDeals 406% Weapon Attack Damage\nThis skill can only hit 1 enemy\nOn hit, inflicts Mark to the enemy\nWhen defeating an enemy, this skill directly spreads the target's Mark to other enemies within 8m",
+      "Combo Starter 2:\nDeals 406% Weapon Attack Damage\nOn hit, spreads the target's Mark to other enemies within 8m (affected by Skill Area)",
+      "Combo Finisher:\nDeals 127% Weapon Attack Damage\nGenerates 1 additional Clone for every Combo Point consumed, up to 4 Clone(s)\nThe falloff coefficient of the Clones' Shotgun Effect is 70%\nRemoves Mark from enemies after this skill ends",
       "-40% additional Attack Speed for the Combo Finisher of this skill\n+30% Combo Finisher Amplification for this skill",
     ],
     mainStats: ["str"],
     kinds: ["deal_damage", "hit_enemies"],
     levelValues: {
       comboStarterWeaponAtkDmgPct: [
-        255, 264, 273, 282, 291, 300, 310, 320, 330, 340, 350, 360, 370, 381,
-        392, 403, 414, 425, 436, 448, 448, 448, 448, 448, 448, 448, 448, 448,
-        448, 448, 448, 448, 448, 448, 448, 448, 448, 448, 448, 448,
+        231, 239, 247, 256, 264, 272, 281, 290, 299, 308, 317, 326, 336, 345,
+        355, 365, 375, 385, 395, 406, 406, 406, 406, 406, 406, 406, 406, 406,
+        406, 406, 406, 406, 406, 406, 406, 406, 406, 406, 406, 406,
       ],
       comboFinisherWeaponAtkDmgPct: [
-        83, 86, 89, 92, 95, 98, 101, 104, 107, 110, 114, 117, 120, 124, 127,
-        131, 134, 138, 142, 145, 145, 145, 145, 145, 145, 145, 145, 145, 145,
-        145, 145, 145, 145, 145, 145, 145, 145, 145, 145, 145,
+        72, 75, 77, 80, 82, 85, 88, 91, 93, 96, 99, 102, 105, 108, 111, 114,
+        117, 120, 124, 127, 127, 127, 127, 127, 127, 127, 127, 127, 127, 127,
+        127, 127, 127, 127, 127, 127, 127, 127, 127, 127,
       ],
       comboFinisherAspdPct: [
         -40, -40, -40, -40, -40, -40, -40, -40, -40, -40, -40, -40, -40, -40,
@@ -1917,6 +2251,17 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Spikeburst",
+    tags: ["Attack", "Physical", "Cold", "Area", "Projectile", "Horizontal"],
+    description: [
+      "Casts this skill and fires 5 Projectile(s) at the target, dealing Attack Physical Damage equal to 75% of Base Damage on hit.",
+      "Spikeburst:\nDeals Attack Physical Damage equal to 75% of Base Damage\nProjectiles from this skill always Penetrate\nThe Projectiles fired by the skill are not affected by Projectile Quantity bonuses.\nThe Projectiles fired by this skill can hit the same enemy.\nThis skill's Shotgun Effect falloff coefficient is 64%",
+    ],
+    mainStats: ["dex", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Spiral Strike",
     tags: ["Attack", "Erosion", "Area", "Melee", "Mobility"],
     description: [
@@ -1931,11 +2276,11 @@ export const ActiveSkills = [
     name: "Split Firebolt",
     tags: ["Spell", "Projectile", "Fire", "Area", "Horizontal"],
     description: [
-      "Casts the skill and fires 1 fireball forward, which will explode upon reaching its destination. The fireball will deal 46-69 Spell Fire Damage on hit and upon explosion respectively.\nOn hit, the fireball will split into three small fireballs, each dealing 458-687 Spell Fire Damage on hit. These small fireballs can deal damage to the enemy hit by the large fireball and can hit the same enemy.",
-      "Fireball:\nDeals 46-69 Spell Fire Damage.\nThe skill fires 1 Projectile in its base state\nLarge fireballs can't hit the same enemy",
-      "Fireball Explosion:\nDeals 46-69 Spell Fire Damage.",
-      "Small Fireball:\nDeals 458-687 SpellFire Damage.",
-      "+1 Penetration for the small fireballs split off from this skill\nSmall fireballs can hit the enemy hit by the large fireball.\nEach enemy can be hit by multiple small fireballs.\nThe Shotgun Effect falloff coefficient of each small fireball is 75%",
+      "Casts the skill and fires 1 fireball forward, which will explode upon reaching its destination. The fireball will deal 674-1011 Spell Fire Damage on hit and upon explosion respectively.\nOn hit, the fireball will split into three small fireballs, each dealing 337-506 Spell Fire Damage on hit.",
+      "Fireball:\nDeals 674-1011 Spell Fire damage.\nThe skill fires 1 Projectile in its base state.",
+      "Fireball Explosion:\nDeals 674-1011 Spell Fire Damage.",
+      "Small Fireball:\nDeals 337-506 SpellFire Damage.",
+      "+1 Penetration for the small fireballs split off from this skill",
     ],
     mainStats: ["int"],
     kinds: ["deal_damage", "hit_enemies"],
@@ -1964,6 +2309,18 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Steadfast Dew",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: 2200 Armor. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\n+6000 Armor\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
     name: "Stoneskin",
     tags: ["Persistent", "Defensive", "Spell"],
     description: [
@@ -1989,8 +2346,6 @@ export const ActiveSkills = [
     name: "Summon Machine Guard",
     tags: ["Spell", "Summon", "Persistent", "Physical", "Synthetic Troop"],
     description: [
-      "Casts the skill and summons 1 Machine Guard to the target spot.",
-      "No more Minions will be summoned by this skill after reaching its Max Minion Quantity.",
       "Summon Machine Guard:\nSummons 1 Machine Guard\nCan only summon up to 2 Machine Guard(s)\n0.5% Skill Area for Minions summoned by this skill for every 1 Command",
     ],
     mainStats: ["str", "int"],
@@ -2001,12 +2356,21 @@ export const ActiveSkills = [
     name: "Summon Spider Tank",
     tags: ["Spell", "Summon", "Persistent", "Physical", "Synthetic Troop"],
     description: [
-      "Casts the skill and summons 1 Spider Tank to the target spot.",
-      "No more Minions will be summoned by this skill after reaching its Max Minion Quantity.",
       "Spider Tank Summoning:\nSummons 1 Spider Tank\nCan only summon up to 2 Spider Tank(s)\n+3% additional Spider Tank Damage for every Spider Tank summoned by this skill\nProjectiles fired by the Minions summoned by this skill always Penetrate enemies when having at least 30 point(s) of Command\n+2 Projectile Quantity for Minions summoned by this skill when having at least 10 Command\nThe max amount of Projectiles that can be fired by Minions summoned by this skill are 5",
     ],
     mainStats: ["dex", "int"],
     kinds: ["summon_minions", "summon_synthetic_troops"],
+  },
+  {
+    type: "Active",
+    name: "Sweep",
+    tags: ["Spell", "Erosion", "Area"],
+    description: [
+      "Casts this skill to attack in a fan-shaped area in front, dealing Spell Erosion Damage equal to 56% of Base Damage on hit.",
+      "Sweep:\nDeals Spell Erosion Damage equal to 56% of Base Damage",
+    ],
+    mainStats: ["int"],
+    kinds: ["hit_enemies"],
   },
   {
     type: "Active",
@@ -2018,6 +2382,41 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Swiftness Dew",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: 22.5% Movement Speed. Lasts 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\n+32% Movement Speed while the skill lasts\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
+    name: "Tailsweep",
+    tags: ["Attack", "Physical", "Cold", "Area", "Melee"],
+    description: [
+      "Casts this skill to attack enemies in a fan-shaped area in front, knocking them back and dealing Attack Physical Damage equal to 73% of Base Damage.",
+      "Tailsweep:\nDeals Attack Physical Damage equal to 73% of Base Damage",
+    ],
+    mainStats: ["dex", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Tenacity Dew",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: 4.1% Max Elemental Resistance. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\n+6% Max Elemental Resistance\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
   },
   {
     type: "Active",
@@ -2070,6 +2469,18 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Thunder Wood Distillate",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: Converts 11.2% of Physical Damage taken to Lightning Damage. Lucky Damage. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\nConverts 15% of Physical Damage taken to Lightning Damage\nDamage triggers Lucky\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
     name: "Thunderbolt Overload",
     tags: ["Spell", "Area", "Lightning", "Projectile", "Parabolic", "Physical"],
     description: [
@@ -2101,6 +2512,16 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex", "int"],
     kinds: [],
+  },
+  {
+    type: "Active",
+    name: "Thunderfall",
+    tags: ["Spell", "Lightning", "Persistent", "Area"],
+    description: [
+      "Casts this skill to make multiple bolts of lightning rain down in a circular area at the target location, dealing Spell Lightning Damage equal to 83% of Base Damage. The location of the lightning strikes will gradually move forward.",
+      "Thunderfall:\nDeals Spell Lightning Damage equal to 83% of Base Damage",
+    ],
+    kinds: ["hit_enemies"],
   },
   {
     type: "Active",
@@ -2150,6 +2571,18 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Tortoise Shell Distillate",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: Grants a Shield equal to 5.5% of Max Life, but half of damage taken bypasses Energy Shield. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\nAdds 15% of Max Life to Energy Shield\nHalf of the damage taken bypasses Energy Shield\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
     name: "Towering Mountains",
     tags: ["Ultimate", "Attack", "Melee", "Physical", "Area"],
     description: [
@@ -2161,11 +2594,31 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Twinstrike",
+    tags: ["Attack", "Physical", "Area", "Melee"],
+    description: [
+      "Casts this skill to attack in a fan-shaped area in front twice, dealing Attack Physical Damage equal to 23% of Base Damage each time.",
+      "Twinstrike:\nDeals Attack Physical Damage equal to 23% of Base Damage",
+    ],
+    mainStats: ["str", "int"],
+    kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "Undercurrent",
+    tags: ["Spell", "Erosion", "Area"],
+    description: [
+      "Casts the skill and fires 1 Projectile forward, dealing Attack Physical Damage equal to 61% Base Damage. The Projectile Penetrates 2 times.",
+      "Aimed Shot:\nDeals Attack Physical Damage equal to 61% Base Damage\n+2 Penetration for this skill",
+    ],
+    mainStats: ["int"],
+    kinds: ["deal_damage", "hit_enemies"],
+  },
+  {
+    type: "Active",
     name: "Vendetta",
     tags: ["Attack", "Melee", "Area"],
-    description: [
-      "Teleports to a random enemy within 9m, then triggers the Main Skill 1 time and +40% additional attack damage for the triggered skill.\nThis skill cannot be supported by Activation Medium Skills.\nCan only be used when a non-Channeled, non-Mobility, or Main Melee Attack Skill is equipped.",
-    ],
+    description: [],
     kinds: [],
   },
   {
@@ -2203,12 +2656,24 @@ export const ActiveSkills = [
       "Horizontal",
     ],
     description: [
-      "Casts the skill and fires 1 Projectile that always Penetrates in the target direction, dealing 308-513 Spell Physical Damage. The Projectile deals damage once every 0.25s and stops on the spot after traveling a fixed distance or hitting an Elite.\nAfter casting this skill, casting it again will recall the Projectile that has been fired, but this skill is not deemed to have been cast again.\nProjectiles can only be fired again after all previous Projectiles have been recalled. Projectiles will be automatically recalled after 5s. If a Projectile is more than 40m away from the character, the Projectile will be forcibly removed and won't need to be recalled.\nThe Projectiles fired by this skill can hit the same enemy.",
+      "Casts the skill and fires 1 Projectile that always Penetrates in the target direction, dealing 308-513 Spell Physical Damage. The Projectile deals damage once every 0.25s and stops on the spot after traveling a fixed distance or hitting an Elite.\nAfter casting this skill, casting it again will recall the Projectile that has been fired, but that cast is not deemed to have been cast again.\nProjectiles can only be fired again after all previous Projectiles have been recalled. Projectiles will be automatically recalled after 5s. If a Projectile is more than 40m away from the character, the Projectile will be forcibly removed and won't need to be recalled.\nThe Projectiles fired by this skill can hit the same enemy.",
       "Whirlwind Blade:\nDeals 308-513 Spell Physical Damage.\nThis skill fires 1 Projectile in its base state.\nIt deals damage once every 0.25s.\nProjectiles from this skill always Penetrate\nProjectiles will be automatically recovered after 5 s.",
       "The Projectiles shot by the skill can hit the same enemy.\nThe skill's Shotgun Effect falloff coefficient is 75%.",
     ],
     mainStats: ["int"],
     kinds: ["deal_damage", "hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "White Rhino Distillate",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: Converts 11.2% of Physical Damage taken to Cold Damage. Energy Shield Charge started recently cannot be interrupted by damage. 10% Energy Shield Charge Speed. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\nConverts 15% of Physical Damage taken to Cold Damage\nEnergy Shield Charge started recently cannot be interrupted by damage\n+10% Energy Shield Charge Speed\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
   },
   {
     type: "Active",
@@ -2257,6 +2722,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["int"],
     kinds: ["hit_enemies"],
+  },
+  {
+    type: "Active",
+    name: "渴饮滴露",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "释放该技能获得灵药效果：92% 暴击值，36% 伤害，持续 3 秒。",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\n+130% Critical Strike Rating\n+55% damage\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
   },
   {
     type: "Active",

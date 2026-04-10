@@ -202,7 +202,7 @@ export const Talents: readonly Talent[] = [
     tree: "God of Might",
     type: "Micro",
     name: "",
-    effect: "+2% Max Life\n1.5% Life Regain",
+    effect: "+2% Max Life\n1.25% Life Regain",
   },
   {
     god: "Might",
@@ -238,7 +238,7 @@ export const Talents: readonly Talent[] = [
     tree: "God of Might",
     type: "Medium",
     name: "",
-    effect: "+4% Max Life\n+3% Life Regain",
+    effect: "+4% Max Life\n2.5% Life Regain",
   },
   {
     god: "Might",
@@ -252,7 +252,7 @@ export const Talents: readonly Talent[] = [
     tree: "God of Might",
     type: "Micro",
     name: "",
-    effect: "Regenerates 0.4% Life per second",
+    effect: "Regenerates 0.75% Life per second",
   },
   {
     god: "Might",
@@ -419,7 +419,7 @@ export const Talents: readonly Talent[] = [
     tree: "The Brave",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain",
+    effect: "1.25% Life Regain",
   },
   {
     god: "Might",
@@ -455,7 +455,7 @@ export const Talents: readonly Talent[] = [
     tree: "The Brave",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain",
+    effect: "2.5% Life Regain",
   },
   {
     god: "Might",
@@ -575,7 +575,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Well Matched",
     effect:
-      "Deals up to +25% additional Attack Damage to enemies in proximity, and this damage reduces as the distance from the enemy grows\n-15% additional damage taken from enemies in proximity, and this damage reduces as the distance from the enemy grows (Max Divinity Effect: 1)",
+      "Deals up to +40% additional Attack Damage to enemies in proximity, and this damage reduces as the distance from the enemy grows\n-15% additional damage taken from enemies in proximity, and this damage reduces as the distance from the enemy grows (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -617,14 +617,14 @@ export const Talents: readonly Talent[] = [
     tree: "Onslaughter",
     type: "Medium",
     name: "",
-    effect: "+6% Max Life",
+    effect: "+5% Max Life\nRegenerates 0.5% Life per second",
   },
   {
     god: "Might",
     tree: "Onslaughter",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain",
+    effect: "1.25% Life Regain",
   },
   {
     god: "Might",
@@ -659,7 +659,7 @@ export const Talents: readonly Talent[] = [
     tree: "Onslaughter",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain",
+    effect: "2.5% Life Regain",
   },
   {
     god: "Might",
@@ -814,7 +814,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "True Flame",
     effect:
-      "When an enemy is Ignited, 60% of the additional bonus to Damage Over Time taken from Affliction is also applied to your Fire Hit Damage (Max Divinity Effect: 1)",
+      "When an enemy is Ignited, 65% of the additional bonus to Damage Over Time taken from Affliction is also applied to your Fire Hit Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -891,7 +891,7 @@ export const Talents: readonly Talent[] = [
     tree: "Warlord",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "Might",
@@ -927,7 +927,7 @@ export const Talents: readonly Talent[] = [
     tree: "Warlord",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield Regain",
+    effect: "2.5% Life Regain\n2.5% Energy Shield Regain",
   },
   {
     god: "Might",
@@ -1055,7 +1055,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "No Loose Ends",
     effect:
-      "+50% additional Attack Damage at Low Life\nYour Max Energy Shield is fixed at 0 (Max Divinity Effect: 1)",
+      "+40% additional Attack Damage at Low Life\nYour Max Energy Shield is fixed at 0 (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -1155,7 +1155,7 @@ export const Talents: readonly Talent[] = [
     tree: "Warrior",
     type: "Micro",
     name: "",
-    effect: "Regenerates 0.4% Life per second",
+    effect: "Regenerates 0.75% Life per second",
   },
   {
     god: "Might",
@@ -1177,7 +1177,7 @@ export const Talents: readonly Talent[] = [
     tree: "Warrior",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain",
+    effect: "1.25% Life Regain",
   },
   {
     god: "Might",
@@ -1191,7 +1191,7 @@ export const Talents: readonly Talent[] = [
     tree: "Warrior",
     type: "Medium",
     name: "",
-    effect: "Regenerates 0.8% Life per second",
+    effect: "Regenerates 1.5% Life per second",
   },
   {
     god: "Might",
@@ -1199,6 +1199,13 @@ export const Talents: readonly Talent[] = [
     type: "Micro",
     name: "",
     effect: "+9% damage",
+  },
+  {
+    god: "Might",
+    tree: "Warrior",
+    type: "Micro",
+    name: "",
+    effect: "+4% Life Regeneration Speed",
   },
   {
     god: "Might",
@@ -1232,6 +1239,13 @@ export const Talents: readonly Talent[] = [
   {
     god: "Might",
     tree: "Warrior",
+    type: "Medium",
+    name: "",
+    effect: "+8% Life Regeneration Speed",
+  },
+  {
+    god: "Might",
+    tree: "Warrior",
     type: "Micro",
     name: "",
     effect: "+12% damage if you have taken damage recently",
@@ -1257,6 +1271,13 @@ export const Talents: readonly Talent[] = [
     name: "",
     effect:
       "+25% additional damage against Low Life enemies (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Might",
+    tree: "Warrior",
+    type: "Legendary Medium",
+    name: "",
+    effect: "+30% Life Regeneration Speed (Max Divinity Effect: 1)",
   },
   {
     god: "Might",
@@ -1460,7 +1481,7 @@ export const Talents: readonly Talent[] = [
     tree: "Goddess of Hunting",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -1498,7 +1519,7 @@ export const Talents: readonly Talent[] = [
     tree: "Goddess of Hunting",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield Regain",
+    effect: "2.5% Life Regain\n2.5% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -1537,7 +1558,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Master Escapist",
     effect:
-      "+1 Max Deflection stacks\nGains 1 stacks of Deflection on Evasion (Max Divinity Effect: 1)",
+      "+1 Max Deflection stacks\nFor every 5 m moved, gains 1 stack(s) of Deflection (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -1867,7 +1888,7 @@ export const Talents: readonly Talent[] = [
     tree: "Bladerunner",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -1903,7 +1924,7 @@ export const Talents: readonly Talent[] = [
     tree: "Bladerunner",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield Regain",
+    effect: "2.5% Life Regain\n2.5% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -2115,7 +2136,7 @@ export const Talents: readonly Talent[] = [
     tree: "Druid",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -2136,7 +2157,7 @@ export const Talents: readonly Talent[] = [
     tree: "Druid",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield Regain",
+    effect: "2.5% Life Regain\n2.5% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -2209,7 +2230,7 @@ export const Talents: readonly Talent[] = [
     tree: "Druid",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "Hunting",
@@ -2249,7 +2270,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Transition",
     effect:
-      "50% chance for this skill to deal +16% additional damage when casting a skill\n25% chance for this skill to deal +32% additional damage when casting a skill\n10% chance for this skill to deal +80% additional damage when casting a skill (Max Divinity Effect: 1)",
+      "When casting a skill, there is a 50% chance for that cast to deal +16% additional damage\nWhen casting a skill, there is a 25% chance for that cast to deal +32% additional damage\nWhen casting a skill, there is a 10% chance for that cast to deal +80% additional damage (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2265,7 +2286,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Thunderclap",
     effect:
-      "If you have Agility Blessing stacks when casting the Main Skill, consumes 1 stack(s) of Agility Blessing to make this skill deal +35% additional Lightning Damage (Max Divinity Effect: 1)",
+      "If you have Agility Blessing stacks when casting the Main Skill, consumes 1 stack(s) of Agility Blessing to make that cast deal +35% additional Lightning Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Hunting",
@@ -2408,16 +2429,14 @@ export const Talents: readonly Talent[] = [
     tree: "Assassin",
     type: "Legendary Medium",
     name: "",
-    effect:
-      "Converts 50% of Lightning Damage to Fire Damage (Max Divinity Effect: 1)",
+    effect: "Converts 50% of Lightning Damage to Fire Damage",
   },
   {
     god: "Hunting",
     tree: "Assassin",
     type: "Legendary Medium",
     name: "",
-    effect:
-      "Converts 50% of Lightning Damage to Cold Damage (Max Divinity Effect: 1)",
+    effect: "Converts 50% of Lightning Damage to Cold Damage",
   },
   {
     god: "Hunting",
@@ -2497,9 +2516,9 @@ export const Talents: readonly Talent[] = [
     god: "Knowledge",
     tree: "Goddess of Knowledge",
     type: "Core",
-    name: "Chilly",
+    name: "Insight",
     effect:
-      "+100% chance to gain 1 stack of Focus Blessing on hit\n+1 to Max Focus Blessing Stacks (Max Divinity Effect: 1)",
+      "+30% additional Spell Damage\n+25% additional Skill Cost (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2507,15 +2526,15 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Peculiar Vibe",
     effect:
-      "You can apply 1 additional Tangle(s) to enemies\n-30% additional Tangle Skill Area (Max Divinity Effect: 1)",
+      "You can apply 1 additional Tangle(s) to enemies\n-30% additional Tangle Duration (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
     tree: "Goddess of Knowledge",
     type: "Core",
-    name: "Insight",
+    name: "Chilly",
     effect:
-      "+30% additional Spell Damage\n+25% additional Skill Cost (Max Divinity Effect: 1)",
+      "+100% chance to gain 1 stack of Focus Blessing on hit\n+1 to Max Focus Blessing Stacks (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2529,9 +2548,9 @@ export const Talents: readonly Talent[] = [
     god: "Knowledge",
     tree: "Goddess of Knowledge",
     type: "Core",
-    name: "Quick Wits",
+    name: "Acquaintance",
     effect:
-      "+25% additional Spell Damage when the Energy Shield is not low\n-20% additional damage taken at Low Energy Shield (Max Divinity Effect: 1)",
+      "Has Dormant Entanglement\n+1 Max Tangle Quantity (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2644,7 +2663,7 @@ export const Talents: readonly Talent[] = [
     tree: "Goddess of Knowledge",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -2673,7 +2692,7 @@ export const Talents: readonly Talent[] = [
     tree: "Goddess of Knowledge",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield Regain",
+    effect: "2.5% Life Regain\n2.5% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -2863,14 +2882,15 @@ export const Talents: readonly Talent[] = [
     tree: "Magister",
     type: "Legendary Medium",
     name: "",
-    effect: "Restores 3% of Energy Shield on defeat (Max Divinity Effect: 1)",
+    effect:
+      "When activating Spell Burst or generating Tangle, immediately starts Charging Energy Shield. Interval: 2 s (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
     tree: "Magister",
     type: "Micro",
     name: "",
-    effect: "1.5% Energy Shield Regain",
+    effect: "1.25% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -2892,7 +2912,7 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Gains 1 stack(s) of Focus Blessing when activating Spell Burst (Max Divinity Effect: 1)",
+      "Gains 1 stack(s) of Focus Blessing when activating Spell Burst or generating Tangle (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -2907,7 +2927,7 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "-8% additional Energy Shield Regain Interval\n+8% Energy Shield Regain",
+      "-8% additional Energy Shield Regain Interval\n+7% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -3002,9 +3022,9 @@ export const Talents: readonly Talent[] = [
     god: "Knowledge",
     tree: "Arcanist",
     type: "Core",
-    name: "Acquaintance",
+    name: "Quick Wits",
     effect:
-      "Has Dormant Entanglement\n+1 Max Tangle Quantity (Max Divinity Effect: 1)",
+      "+25% additional Spell Damage when the Energy Shield is not low\n-20% additional damage taken at Low Energy Shield (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3089,7 +3109,7 @@ export const Talents: readonly Talent[] = [
     tree: "Arcanist",
     type: "Micro",
     name: "",
-    effect: "1.5% Energy Shield Regain",
+    effect: "1.25% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -3124,7 +3144,7 @@ export const Talents: readonly Talent[] = [
     tree: "Arcanist",
     type: "Medium",
     name: "",
-    effect: "+3% Energy Shield Regain",
+    effect: "2.5% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -3181,7 +3201,7 @@ export const Talents: readonly Talent[] = [
     type: "Micro",
     name: "",
     effect:
-      "+10% Focus Blessing Duration\nRegenerates 0.4% Mana per second while Focus Blessing is active",
+      "+10% Focus Blessing Duration\n+10% damage while Focus Blessing is active",
   },
   {
     god: "Knowledge",
@@ -3232,7 +3252,7 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Consumes 4% of current Mana when casting Main Skills\n+8% additional Spell Damage (Max Divinity Effect: 1)",
+      "Consumes 4% of current Mana when casting a Main Skill. Interval: 0.03s\n+8% additional Spell Damage (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3493,7 +3513,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Frostbitten",
     effect:
-      "Inflicts Frostbite when dealing Hit Cold Damage\n+50% Frostbite Effect (Max Divinity Effect: 1)",
+      "Inflicts Frostbite when dealing Hit Cold Damage\n+40% Frostbite Effect (Max Divinity Effect: 1)",
   },
   {
     god: "Knowledge",
@@ -3632,7 +3652,7 @@ export const Talents: readonly Talent[] = [
     tree: "Prophet",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -3653,7 +3673,7 @@ export const Talents: readonly Talent[] = [
     tree: "Prophet",
     type: "Micro",
     name: "",
-    effect: "+20% Critical Strike Rating against Frostbitten enemies",
+    effect: "+4% Frostbite Effect",
   },
   {
     god: "Knowledge",
@@ -3667,7 +3687,7 @@ export const Talents: readonly Talent[] = [
     tree: "Prophet",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield Regain",
+    effect: "2.5% Life Regain\n2.5% Energy Shield Regain",
   },
   {
     god: "Knowledge",
@@ -3689,7 +3709,7 @@ export const Talents: readonly Talent[] = [
     tree: "Prophet",
     type: "Medium",
     name: "",
-    effect: "+20% Critical Strike Damage against Frostbitten enemies",
+    effect: "+8% Frostbite Effect",
   },
   {
     god: "Knowledge",
@@ -3725,8 +3745,7 @@ export const Talents: readonly Talent[] = [
     tree: "Prophet",
     type: "Legendary Medium",
     name: "",
-    effect:
-      "+100 Critical Strike Rating against Frostbitten enemies (Max Divinity Effect: 1)",
+    effect: "+20% Frostbite Effect",
   },
   {
     god: "Knowledge",
@@ -3931,7 +3950,7 @@ export const Talents: readonly Talent[] = [
     tree: "God of War",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "War",
@@ -3952,7 +3971,7 @@ export const Talents: readonly Talent[] = [
     tree: "God of War",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield Regain",
+    effect: "2.5% Life Regain\n2.5% Energy Shield Regain",
   },
   {
     god: "War",
@@ -3991,7 +4010,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Open Wounds",
     effect:
-      "Refreshes Trauma Duration on hit\nUpon inflicting damage, +8% additional Hit Physical Damage for each second of Trauma remaining on the enemy (Max Divinity Effect: 1)",
+      "+2 TraumaLimit\n-99% additional Trauma Damage\n+12% additional Hit Physical Damage taken, up to +60% , for every stack of Trauma the enemy has (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -4366,7 +4385,7 @@ export const Talents: readonly Talent[] = [
     tree: "Ronin",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "War",
@@ -4402,7 +4421,7 @@ export const Talents: readonly Talent[] = [
     tree: "Ronin",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield Regain",
+    effect: "2.5% Life Regain\n2.5% Energy Shield Regain",
   },
   {
     god: "War",
@@ -4546,7 +4565,7 @@ export const Talents: readonly Talent[] = [
     tree: "Ranger",
     type: "Micro",
     name: "",
-    effect: "+9% Area Damage",
+    effect: "+15% Critical Strike Rating",
   },
   {
     god: "War",
@@ -4580,9 +4599,10 @@ export const Talents: readonly Talent[] = [
   {
     god: "War",
     tree: "Ranger",
-    type: "Medium",
+    type: "Legendary Medium",
     name: "",
-    effect: "+18% Area Damage",
+    effect:
+      "Critical Strikes eliminate enemies under 8% Life (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -4597,6 +4617,13 @@ export const Talents: readonly Talent[] = [
     type: "Micro",
     name: "",
     effect: "+4% Fervor effect",
+  },
+  {
+    god: "War",
+    tree: "Ranger",
+    type: "Micro",
+    name: "",
+    effect: "+3% Max Life\n+3% Max Energy Shield",
   },
   {
     god: "War",
@@ -4626,7 +4653,13 @@ export const Talents: readonly Talent[] = [
     name: "",
     effect: "0.5% Critical Strike Damage per Fervor Rating",
   },
-  { god: "War", tree: "Ranger", type: "Micro", name: "", effect: "+9% damage" },
+  {
+    god: "War",
+    tree: "Ranger",
+    type: "Medium",
+    name: "",
+    effect: "+6% Max Life\n+6% Max Energy Shield",
+  },
   {
     god: "War",
     tree: "Ranger",
@@ -4655,14 +4688,23 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "Critical Strikes eliminate enemies under 8% Life (Max Divinity Effect: 1)",
+      "Restores 10 % of Missing Life on attack Critical Strike. Interval: 10 s (Max Divinity Effect: 1)",
   },
   {
     god: "War",
     tree: "Ranger",
     type: "Legendary Medium",
     name: "",
-    effect: "+10% additional damage taken by enemies in Proximity",
+    effect:
+      "Immediately starts Charging Energy Shield on attack Critical Strike. Interval: 2 s (Max Divinity Effect: 1)",
+  },
+  {
+    god: "War",
+    tree: "Ranger",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "+15% additional damage taken by enemies in Proximity (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -4778,7 +4820,7 @@ export const Talents: readonly Talent[] = [
     tree: "Sentinel",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "War",
@@ -4814,7 +4856,7 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+6% Life Regain\nRestores 15% of Missing Life when suffer a Severe Injury (Max Divinity Effect: 1)",
+      "+5% Life Regain\nRestores 15% of Missing Life when suffer a Severe Injury (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -4822,7 +4864,7 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+6% Energy Shield Regain\nRestores 15% Missing Energy Shield when suffering a Severe Injury (Max Divinity Effect: 1)",
+      "+5% Energy Shield Regain\nRestores 15% Missing Energy Shield when suffering a Severe Injury (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -4941,7 +4983,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Subtle Impact",
     effect:
-      "Blur gains an additional effect: +25% additional Damage Over Time (Max Divinity Effect: 1)",
+      "+30% additional Damage Over Time while Blur is active (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -5048,7 +5090,7 @@ export const Talents: readonly Talent[] = [
     tree: "Goddess of Deception",
     type: "Micro",
     name: "",
-    effect: "+9% Erosion Damage",
+    effect: "+3% Ill Omen Cumulative Efficiency",
   },
   {
     god: "Deception",
@@ -5081,9 +5123,9 @@ export const Talents: readonly Talent[] = [
   {
     god: "Deception",
     tree: "Goddess of Deception",
-    type: "Medium",
+    type: "Legendary Medium",
     name: "",
-    effect: "+8% Deterioration Chance",
+    effect: "+18% Ill Omen Cumulative Efficiency",
   },
   {
     god: "Deception",
@@ -5111,7 +5153,7 @@ export const Talents: readonly Talent[] = [
     tree: "Goddess of Deception",
     type: "Micro",
     name: "",
-    effect: "+4% Deterioration Damage",
+    effect: "+4% Deterioration Chance",
   },
   {
     god: "Deception",
@@ -5292,7 +5334,7 @@ export const Talents: readonly Talent[] = [
     tree: "Shadowmaster",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "Deception",
@@ -5328,7 +5370,7 @@ export const Talents: readonly Talent[] = [
     tree: "Shadowmaster",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield Regain",
+    effect: "2.5% Life Regain\n2.5% Energy Shield Regain",
   },
   {
     god: "Deception",
@@ -5416,9 +5458,9 @@ export const Talents: readonly Talent[] = [
     god: "Deception",
     tree: "Psychic",
     type: "Core",
-    name: "More With Less",
+    name: "Inexorable Doom",
     effect:
-      "+30% additional Damage Over Time\n-10% additional Damage Over Time Duration (Max Divinity Effect: 1)",
+      "Inflicts 1 additional stacks of Ill Omen when inflicting Ill Omen for the first time\nWhen triggering Ill Omen, inflicts 3 stack(s) of Ill Omen on 1 Nearby non-Elite enemy (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -5426,7 +5468,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Reap Purification",
     effect:
-      "Additionally settles 25% of the remaining total damage when Reaping, then removes all Damage Over Time acting on the target (Max Divinity Effect: 1)",
+      "Ill Omen Effect becomes: Enemies take True Damage equal to 4% of Max Life when gaining 1 stack of Ill Omen (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -5489,7 +5531,7 @@ export const Talents: readonly Talent[] = [
     tree: "Psychic",
     type: "Micro",
     name: "",
-    effect: "+9% Terra Skill Damage",
+    effect: "+9% Damage Over Time",
   },
   {
     god: "Deception",
@@ -5522,16 +5564,17 @@ export const Talents: readonly Talent[] = [
   {
     god: "Deception",
     tree: "Psychic",
-    type: "Medium",
+    type: "Legendary Medium",
     name: "",
-    effect: "+18% Terra Skill Damage",
+    effect:
+      "Gains a stack of Torment when dealing damage to enemies with max Affliction (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
     tree: "Psychic",
-    type: "Medium",
+    type: "Micro",
     name: "",
-    effect: "+12% Terra Charge Recovery Speed",
+    effect: "+6 Affliction inflicted per second\n+6% Affliction Effect",
   },
   {
     god: "Deception",
@@ -5564,6 +5607,14 @@ export const Talents: readonly Talent[] = [
   {
     god: "Deception",
     tree: "Psychic",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "+18 Affliction inflicted per second\n-8% All Resistance when the enemy has max Affliction",
+  },
+  {
+    god: "Deception",
+    tree: "Psychic",
     type: "Medium",
     name: "",
     effect: "+12% Reaping Duration",
@@ -5573,7 +5624,7 @@ export const Talents: readonly Talent[] = [
     tree: "Psychic",
     type: "Micro",
     name: "",
-    effect: "+9% Damage Over Time",
+    effect: "+3% Ill Omen Cumulative Efficiency",
   },
   {
     god: "Deception",
@@ -5585,9 +5636,9 @@ export const Talents: readonly Talent[] = [
   {
     god: "Deception",
     tree: "Psychic",
-    type: "Micro",
+    type: "Medium",
     name: "",
-    effect: "+6 Affliction inflicted per second\n+6% Affliction Effect",
+    effect: "+12% Reaping Duration",
   },
   {
     god: "Deception",
@@ -5601,15 +5652,14 @@ export const Talents: readonly Talent[] = [
     tree: "Psychic",
     type: "Legendary Medium",
     name: "",
-    effect: "+5% chance to gain Blur when Reaping (Max Divinity Effect: 1)",
+    effect: "+50% chance to gain Blur when Reaping (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
     tree: "Psychic",
-    type: "Legendary Medium",
+    type: "Medium",
     name: "",
-    effect:
-      "Gains a stack of Torment when dealing damage to enemies with max Affliction (Max Divinity Effect: 1)",
+    effect: "+7% Ill Omen Cumulative Efficiency",
   },
   {
     god: "Deception",
@@ -5625,7 +5675,14 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+18 Affliction inflicted per second\n-8% All Resistance when the enemy has max Affliction",
+      "When Reaping, immediately starts Charging Energy Shield. Interval: 2 s (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Deception",
+    tree: "Psychic",
+    type: "Legendary Medium",
+    name: "",
+    effect: "+16% Blur Effect",
   },
   {
     god: "Deception",
@@ -5633,7 +5690,7 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+10% Movement Speed while Blur is active\nMovement Speed cannot be reduced to below the base value while Blur is active",
+      "+10% Movement Speed if Ill Omen has been triggered recently (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -5665,7 +5722,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Daze",
     effect:
-      "Blur gains an additional effect: +40% crowd control effect and +25% additional Ailment Damage (Max Divinity Effect: 1)",
+      "+40% Crowd Control Effects and +25% additional Ailment Damage while Blur is active (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -5845,7 +5902,7 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+10% chance to gain Blur when inflicting crowd control effects (Max Divinity Effect: 1)",
+      "+20% chance to gain Blur when inflicting crowd control effects (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -5887,6 +5944,14 @@ export const Talents: readonly Talent[] = [
   },
   {
     god: "Deception",
+    tree: "Warlock",
+    type: "Legendary Medium",
+    name: "",
+    effect:
+      "+30% chance to inflict Damaging Ailments\nAilments inflicted are reflected back onto you (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Deception",
     tree: "Lich",
     type: "Core",
     name: "Indifference",
@@ -5915,7 +5980,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Stab In The Back",
     effect:
-      "While Blur is active, loses Blur after casting a Main Skill, and the skill deals +40% additional damage (Max Divinity Effect: 1)",
+      "While Blur is active, loses Blur after casting a Main Skill, and +40% additional damage for that cast (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -6059,7 +6124,7 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "0.2% Blur effect for every 1% of Life lost (Max Divinity Effect: 1)",
+      "+10% Movement Speed while Blur is active\nMovement Speed cannot be reduced to below the base value while Blur is active",
   },
   {
     god: "Deception",
@@ -6138,7 +6203,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Orders",
     effect:
-      "+25% additional Minion Damage\n+50% additional Summon Skill Cast Speed (Max Divinity Effect: 1)",
+      "+25% additional Minion Damage\n+50% additional Summon Skill Cast Speed\n-90% additional damage taken by Minions (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -6414,7 +6479,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "United Stand",
     effect:
-      "-5% additional damage taken for every nearby Synthetic Troop Minion within 10m\n-10% Minion aggressiveness (Max Divinity Effect: 1)",
+      "+20% Life Regain and Energy Shield Regain for Minions\n20% of the Life and Energy Shield Regain Effect of Synthetic Troop Minions is also applied to you (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -6435,7 +6500,7 @@ export const Talents: readonly Talent[] = [
     tree: "Machinist",
     type: "Micro",
     name: "",
-    effect: "+2% Max Life\nRegenerates 0.4% Life per second",
+    effect: "+2% Max Life\nRegenerates 0.75% Life per second",
   },
   {
     god: "Machines",
@@ -6463,7 +6528,8 @@ export const Talents: readonly Talent[] = [
     tree: "Machinist",
     type: "Micro",
     name: "",
-    effect: "+7% Barrier Shield",
+    effect:
+      "+8% Minion Damage\n+12% chance for Minions to inflict Damaging Ailments",
   },
   {
     god: "Machines",
@@ -6498,7 +6564,8 @@ export const Talents: readonly Talent[] = [
     tree: "Machinist",
     type: "Medium",
     name: "",
-    effect: "+14% Barrier Shield",
+    effect:
+      "+16% Minion Damage\n+24% chance for Minions to inflict Damaging Ailments",
   },
   {
     god: "Machines",
@@ -6525,10 +6592,10 @@ export const Talents: readonly Talent[] = [
   {
     god: "Machines",
     tree: "Machinist",
-    type: "Micro",
+    type: "Legendary Medium",
     name: "",
     effect:
-      "+8% Minion Damage\n+12% chance for Minions to inflict Damaging Ailments",
+      "Adds 10 - 10 Base Ailment Damage to Minions (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -6561,10 +6628,9 @@ export const Talents: readonly Talent[] = [
   {
     god: "Machines",
     tree: "Machinist",
-    type: "Medium",
+    type: "Micro",
     name: "",
-    effect:
-      "+16% Minion Damage\n+24% chance for Minions to inflict Damaging Ailments",
+    effect: "+9% Minion Damage",
   },
   {
     god: "Machines",
@@ -6600,8 +6666,7 @@ export const Talents: readonly Talent[] = [
     tree: "Machinist",
     type: "Legendary Medium",
     name: "",
-    effect:
-      "Adds 10 - 10 Base Ailment Damage to Minions (Max Divinity Effect: 1)",
+    effect: "+1 to Max Summonable Synthetic Troops (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -6616,7 +6681,8 @@ export const Talents: readonly Talent[] = [
     tree: "Machinist",
     type: "Legendary Medium",
     name: "",
-    effect: "+1 Synthetic Troop Skill Level",
+    effect:
+      "+1 Synthetic Troop Skill Level\n-40% additional damage taken by Synthetic Troop Minions",
   },
   {
     god: "Machines",
@@ -6654,9 +6720,9 @@ export const Talents: readonly Talent[] = [
     god: "Machines",
     tree: "Steel Vanguard",
     type: "Core",
-    name: "Panacea",
+    name: "Tailored Remedy",
     effect:
-      "Restoration Skills: +100% Restoration Effect\nRestoration Effect from Restoration Skills cannot be removed (Max Divinity Effect: 1)",
+      "The Restoration Effect from Elixir Skills cannot be removed\n-40% additional Elixir Skill Effect Duration when equipped with no more than 1 Elixir Skill\n+60% additional Elixir Skill Effect when equipped with no more than 2 Elixir Skills (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -6719,7 +6785,7 @@ export const Talents: readonly Talent[] = [
     tree: "Steel Vanguard",
     type: "Micro",
     name: "",
-    effect: "+4% Max Mana",
+    effect: "+15% Critical Strike Rating\n+15% Minion Critical Strike Rating",
   },
   {
     god: "Machines",
@@ -6733,7 +6799,7 @@ export const Talents: readonly Talent[] = [
     tree: "Steel Vanguard",
     type: "Micro",
     name: "",
-    effect: "1.5% Life Regain\n1.5% Energy Shield Regain",
+    effect: "1.25% Life Regain\n1.25% Energy Shield Regain",
   },
   {
     god: "Machines",
@@ -6747,14 +6813,15 @@ export const Talents: readonly Talent[] = [
     tree: "Steel Vanguard",
     type: "Micro",
     name: "",
-    effect: "Restoration Skills gain 0.5 Charging Progress every second",
+    effect: "Elixir Skills gain 0.5 Charging Progress every second",
   },
   {
     god: "Machines",
     tree: "Steel Vanguard",
     type: "Medium",
     name: "",
-    effect: "+8% Max Mana",
+    effect:
+      "+20% Critical Strike Rating\n+20% Minion Critical Strike Rating\n+5% Critical Strike Damage\n+5% Minion Critical Strike Damage",
   },
   {
     god: "Machines",
@@ -6768,7 +6835,7 @@ export const Talents: readonly Talent[] = [
     tree: "Steel Vanguard",
     type: "Medium",
     name: "",
-    effect: "+3% Life Regain\n+3% Energy Shield Regain",
+    effect: "2.5% Life Regain\n2.5% Energy Shield Regain",
   },
   {
     god: "Machines",
@@ -6776,7 +6843,7 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect:
-      "+1% Restoration Skill Effect for every 2% of Life lost (Max Divinity Effect: 1)",
+      "Elixir Skills gain 2.5 Charging Progress every second (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -6798,6 +6865,13 @@ export const Talents: readonly Talent[] = [
     type: "Micro",
     name: "",
     effect: "4.5% Focus Speed",
+  },
+  {
+    god: "Machines",
+    tree: "Steel Vanguard",
+    type: "Micro",
+    name: "",
+    effect: "+12% damage while an Elixir Skill is active",
   },
   {
     god: "Machines",
@@ -6830,16 +6904,16 @@ export const Talents: readonly Talent[] = [
   {
     god: "Machines",
     tree: "Steel Vanguard",
-    type: "Micro",
+    type: "Medium",
     name: "",
-    effect: "+7% Barrier Shield",
+    effect: "+8% Elixir Skill Effect",
   },
   {
     god: "Machines",
     tree: "Steel Vanguard",
     type: "Legendary Medium",
     name: "",
-    effect: "Converts 6% of Physical Damage taken to random Elemental Damage",
+    effect: "Converts 8% of Physical Damage taken to random Elemental Damage",
   },
   {
     god: "Machines",
@@ -6861,7 +6935,7 @@ export const Talents: readonly Talent[] = [
     tree: "Steel Vanguard",
     type: "Legendary Medium",
     name: "",
-    effect: "+40% Barrier Shield",
+    effect: "+20% Elixir Skill Effect (Max Divinity Effect: 1)",
   },
   {
     god: "Machines",
@@ -6914,7 +6988,7 @@ export const Talents: readonly Talent[] = [
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "Regenerates 0.4% Life per second",
+    effect: "Regenerates 0.75% Life per second",
   },
   {
     god: "Machines",
@@ -6950,7 +7024,7 @@ export const Talents: readonly Talent[] = [
     tree: "Alchemist",
     type: "Medium",
     name: "",
-    effect: "Regenerates 0.8% Life per second",
+    effect: "Regenerates 1.5% Life per second",
   },
   {
     god: "Machines",
@@ -6979,7 +7053,7 @@ export const Talents: readonly Talent[] = [
     tree: "Alchemist",
     type: "Micro",
     name: "",
-    effect: "+3% Energy Shield Charge Speed",
+    effect: "3.75% Energy Shield Charge Speed",
   },
   {
     god: "Machines",
@@ -7016,7 +7090,7 @@ export const Talents: readonly Talent[] = [
     tree: "Alchemist",
     type: "Medium",
     name: "",
-    effect: "+6% Energy Shield Charge Speed",
+    effect: "7.5% Energy Shield Charge Speed",
   },
   {
     god: "Machines",
@@ -7365,5 +7439,12 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect: "+8% Barrier Absorption Rate (Max Divinity Effect: 1)",
+  },
+  {
+    god: "Machines",
+    tree: "Artisan",
+    type: "Legendary Medium",
+    name: "",
+    effect: "+40% Barrier Shield",
   },
 ];

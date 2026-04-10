@@ -81,8 +81,8 @@ export const PassiveSkills = [
     name: "Deep Pain",
     tags: ["Aura", "Area"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n15% additional Damage Over Time.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+34% additional Damage Over Time",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n16% additional Damage Over Time.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+35% additional Damage Over Time",
     ],
     sealedManaPct: 50,
     levelValues: {
@@ -120,8 +120,8 @@ export const PassiveSkills = [
     name: "Electric Conversion",
     tags: ["Aura", "Area", "Lightning"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n15% additional Lightning Damage.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+34% additional Lightning Damage",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n16% additional Lightning Damage.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+35% additional Lightning Damage",
     ],
     sealedManaPct: 50,
     levelValues: {
@@ -171,8 +171,8 @@ export const PassiveSkills = [
     name: "Erosion Amplification",
     tags: ["Aura", "Area", "Erosion"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n15% additional Erosion Damage.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+34% additional Erosion Damage",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n16% additional Erosion Damage.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+35% additional Erosion Damage",
     ],
     sealedManaPct: 50,
     levelValues: {
@@ -188,8 +188,8 @@ export const PassiveSkills = [
     name: "Fearless",
     tags: ["Aura", "Area", "Melee"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\nMelee Skills 60% Critical Strike Rating, and 10% additional damage.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+79% Critical Strike Rating for Melee Skills\n+29% additional Melee Skill Damage",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\nMelee Skills 61% Critical Strike Rating, and 11% additional damage.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+80% Critical Strike Rating for Melee Skills\n+30% additional Melee Skill Damage",
     ],
     sealedManaPct: 50,
   },
@@ -210,8 +210,8 @@ export const PassiveSkills = [
     name: "Frigid Domain",
     tags: ["Aura", "Area", "Cold"],
     description: [
-      "Activates the Aura, and enemies within 12m gain the following debuff:\n18% additional Cold Damage taken.",
-      "Activates the Aura, and enemies within 12m gain the following debuff:\n+37% additional Cold Damage against enemies affected by the skill",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n16% additional Cold Damage.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+35% additional Cold Damage",
     ],
     sealedManaPct: 50,
     levelValues: {
@@ -307,8 +307,8 @@ export const PassiveSkills = [
     name: "Precise: Charged Flames",
     tags: ["Aura", "Area", "Fire"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n20% additional Fire Damage.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+39% additional Fire Damage",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n21% additional Fire Damage.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+40% additional Fire Damage",
     ],
     sealedManaPct: 50,
   },
@@ -470,8 +470,8 @@ export const PassiveSkills = [
     name: "Precise: Fearless",
     tags: ["Aura", "Area", "Melee"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\nMelee Skills 60% Critical Strike Rating, 10% additional damage, and 8% Attack Speed.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+79% Critical Strike Rating for Melee Skills\n+29% additional Melee Skill Damage\n+8% Melee Attack Speed",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\nMelee Skills 61% Critical Strike Rating, 11% additional damage, and 8% Attack Speed.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+80% Critical Strike Rating for Melee Skills\n+30% additional Melee Skill Damage\n+8% Melee Attack Speed",
     ],
     sealedManaPct: 50,
     levelValues: {
@@ -508,8 +508,8 @@ export const PassiveSkills = [
     name: "Precise: Frigid Domain",
     tags: ["Aura", "Area", "Cold"],
     description: [
-      "Activates the Aura, and enemies within 12m gain the following debuff:\n25% additional Cold Damage taken.",
-      "Activates the Aura, and enemies within 12m gain the following debuff:\n+44% additional Cold Damage against enemies affected by the skill",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n21% additional Cold Damage.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+40% additional Cold Damage",
     ],
     sealedManaPct: 50,
     levelValues: {
@@ -583,8 +583,8 @@ export const PassiveSkills = [
     name: "Precise: Precise Projectiles",
     tags: ["Aura", "Area", "Projectile"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n20% additional Projectile Damage, 20% additional Ailment Damage by Projectiles, and 10% Projectile Speed.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+39% additional Projectile Damage\n+39% additional Ailment Damage dealt by Projectiles\n+10% Projectile Speed",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n21% additional Projectile Damage, 21% additional Ailment Damage by Projectiles, and 10% Projectile Speed.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+40% additional Projectile Damage\n+40% additional Ailment Damage dealt by Projectiles\n+10% Projectile Speed",
     ],
     sealedManaPct: 50,
     levelValues: {
@@ -620,10 +620,10 @@ export const PassiveSkills = [
     name: "Precise: Rejuvenation",
     tags: ["Aura", "Area"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n2 Life Restoration per Second, and 5% Life Restoration Speed",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+95 Life Regeneration per second\n+5% life restoration speed",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\nRegenerates 2% of Life per second",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\nRegenerates 8% Life per second",
     ],
-    sealedManaPct: 10,
+    sealedManaPct: 20,
   },
   {
     type: "Passive",
@@ -700,8 +700,8 @@ export const PassiveSkills = [
     name: "Precise: Weapon Amplification",
     tags: ["Aura", "Area", "Physical"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n15% additional Physical Damage. 30% chance to inflict Paralysis on hit.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+34% additional Physical Damage\n+30% chance to inflict Paralysis on hit",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n21% additional Physical Damage.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+40% additional Physical Damage",
     ],
     sealedManaPct: 50,
   },
@@ -748,7 +748,7 @@ export const PassiveSkills = [
     tags: ["Aura", "Area"],
     description: [
       "Activates the Aura, you and allies within a certain area gain the following buff:\n2 Life Regeneration per Second.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+95 Life Regeneration per second",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+227 Life Regeneration per second",
     ],
     sealedManaPct: 10,
   },
@@ -757,8 +757,8 @@ export const PassiveSkills = [
     name: "Spell Amplification",
     tags: ["Aura", "Area", "Spell"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n15% additional damage for Spell Skills.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+34% additional Spell Damage",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n16% additional damage for Spell Skills.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+35% additional Spell Damage",
     ],
     sealedManaPct: 50,
     levelValues: {
@@ -800,7 +800,6 @@ export const PassiveSkills = [
       "Activates the skill and summons 1 Erosion Magus.\nActivating the skill grants the character Origin of Spirit Magus: -6.3% additional Damage Over Time taken (Up to additional -50%).",
       "Summon Erosion Magus:\nSummons 1 Erosion Magus\nThis skill summons up to 1 Minions\nSpirit Magi become undefeatable\nWhen Spirit Magi become undefeatable, they gain Reconjuring\nConverts 100% of Physical Damage to Erosion Damage for Spirit Magi",
       "Origin of Spirit Magus:\n-9.15% additional Damage Over Time taken, up to -50% additional damage",
-      "Erosion Magus:\nBase Skill: Scattered Mud\nEmpower Skill: Withering Payback\nEnhanced Skill: Bleak Grass\nUltimate: World of Thorns",
     ],
     sealedManaPct: 20,
     mainStats: ["int"],
@@ -813,7 +812,6 @@ export const PassiveSkills = [
       "Activates the skill and summons 1 Fire Magus.\nActivating the skill grants the character Origin of Spirit Magus: 58 Critical Strike Rating.",
       "Summon Fire Magus:\nSummons 1 Fire Magus\nThis skill summons up to 1 Minions\nSpirit Magi become undefeatable\nWhen Spirit Magi become undefeatable, they gain Reconjuring",
       "Origin of Spirit Magus:\nGains Origin of Fire, giving the summoner +115 Attack and Spell Critical Strike Rating",
-      "Fire Magus:\nBase Skill: Blazing Dance.\nEmpower Skill: Blazing Spin.\nEnhanced Skill: Blazing Incineration.\nUltimate: Rising Molten.",
     ],
     sealedManaPct: 20,
     mainStats: ["str", "int"],
@@ -833,7 +831,6 @@ export const PassiveSkills = [
       "Activates the skill and summons 1 Frost Magus.\nActivating the skill grants the character Origin of Spirit Magus: Restores 2.4% Max Life and Max Energy Shield every second.",
       "Summon Frost Magus:\nSummons 1 Frost Magus\nThis skill summons up to 1 Minions\n+1 Max Frostbite Rating for the Minions summoned by this skill for every +1 Max Frostbite Rating\nSpirit Magi become undefeatable\nWhen Spirit Magi become undefeatable, they gain Reconjuring",
       "Origin of Spirit Magus:\nGains Origin of Ice, restoring 3.825% of Max Life and Max Energy Shield per second to the summoner",
-      "Frost Magus:\nBase Skill: Glacier Ripples.\nEmpower Skill: Frost Release.\nEnhanced Skill: Permafrost Cast.\nUltimate: Ice Earthshaker.",
     ],
     sealedManaPct: 20,
     mainStats: ["int"],
@@ -846,7 +843,6 @@ export const PassiveSkills = [
       "Activates the skill and summons 1 Rock Magus.\nActivating the skill grants the character Origin of Spirit Magus: -5.2% additional Hit Damage taken (Up to additional -50%).",
       "Summon Rock Magus:\nSummons 1 Rock Magus\nThis skill summons up to 1 Minions\nSpirit Magi become undefeatable\nWhen Spirit Magi become undefeatable, they gain Reconjuring",
       "Origin of Spirit Magus:\n-8.05% additional Hit Damage taken, up to -50% additional damage",
-      "Rock Magus:\nBase Skill: Shattered Stone\nEmpower Skill: Gold Rush\nEnhanced Skill: Rock Blast\nUltimate: Towering Mountains",
     ],
     sealedManaPct: 20,
     mainStats: ["str", "int"],
@@ -859,7 +855,6 @@ export const PassiveSkills = [
       "Activates the skill and summons 1 Thunder Magus.\nActivating the skill grants the character Origin of Spirit Magus: 6% additional Attack and Cast Speed and 2.5% additional damage.",
       "Summon Thunder Magus:\nSummons 1 Thunder Magus.\nThis skill summons up to 1 Minions\nSpirit Magi become undefeatable\nWhen Spirit Magi become undefeatable, they gain Reconjuring\nConverts 100% of Spirit Magi's Physical Damage to Lightning Damage.",
       "Origin of Spirit Magus:\nGains Origin of Thunder: +6% additional Attack and Cast Speed and 7.25% additional damage to the summoner",
-      "Thunder Magus:\nBase Skill: Lightning Star.\nEmpower Skill: Thundercloud Surge.\nEnhanced Skill: Thunderlight Arrow.\nUltimate: Lightning Surge.",
     ],
     sealedManaPct: 20,
     mainStats: ["dex", "int"],
@@ -903,8 +898,8 @@ export const PassiveSkills = [
     name: "Weapon Amplification",
     tags: ["Aura", "Area", "Physical"],
     description: [
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n15% additional Physical Damage.",
-      "Activates the Aura, you and allies within a certain area gain the following buff:\n+34% additional Physical Damage",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n16% additional Physical Damage.",
+      "Activates the Aura, you and allies within a certain area gain the following buff:\n+35% additional Physical Damage",
     ],
     sealedManaPct: 50,
   },

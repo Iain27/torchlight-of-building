@@ -8,7 +8,7 @@ export const HeroTraits = [
     name: "Anger",
     level: 1,
     affix:
-      "When not in the Berserk state, each Melee Attack Skill generates 10 Rage\nWhen not in the Berserk state, each stack of Melee Attack Skill channeled generates 5 Rage\n0.22% additional damage and 0.1% Movement Speed for every 1 Rage you have\nEnter Berserk automatically at Max Rage\nWhile Berserk is active, 15 Rage is consumed per second\nAttacks trigger Burst once on hit while Berserk is active. Cooldown: 0.3 s\n2.9% additional Burst Damage per 1 levels",
+      "Level 1When not in the Berserk state, each Melee Attack Skill generates 10 Rage\nWhen not in the Berserk state, each stack of Melee Attack Skill channeled generates 5 Rage\n0.22% additional damage and 0.1% Movement Speed for every 1 Rage you have\nEnter Berserk automatically at Max Rage\nWhile Berserk is active, 15 Rage is consumed per second\nAttacks trigger Burst once on hit while Berserk is active. Cooldown: 0.3 s\n2.9% additional Burst Damage per 1 levelsLevel 2When not in the Berserk state, each Melee Attack Skill generates 10 Rage\nWhen not in the Berserk state, each stack of Melee Attack Skill channeled generates 5 Rage\n0.22% additional damage and 0.1% Movement Speed for every 1 Rage you have\nEnter Berserk automatically at Max Rage\nWhile Berserk is active, 15 Rage is consumed per second\nAttacks trigger Burst once on hit while Berserk is active. Cooldown: 0.3 s\n3.1% additional Burst Damage per 1 levelsLevel 3When not in the Berserk state, each Melee Attack Skill generates 10 Rage\nWhen not in the Berserk state, each stack of Melee Attack Skill channeled generates 5 Rage\n0.22% additional damage and 0.1% Movement Speed for every 1 Rage you have\nEnter Berserk automatically at Max Rage\nWhile Berserk is active, 15 Rage is consumed per second\nAttacks trigger Burst once on hit while Berserk is active. Cooldown: 0.3 s\n3.3% additional Burst Damage per 1 levelsLevel 4When not in the Berserk state, each Melee Attack Skill generates 10 Rage\nWhen not in the Berserk state, each stack of Melee Attack Skill channeled generates 5 Rage\n0.22% additional damage and 0.1% Movement Speed for every 1 Rage you have\nEnter Berserk automatically at Max Rage\nWhile Berserk is active, 15 Rage is consumed per second\nAttacks trigger Burst once on hit while Berserk is active. Cooldown: 0.3 s\n3.5% additional Burst Damage per 1 levelsLevel 5When not in the Berserk state, each Melee Attack Skill generates 10 Rage\nWhen not in the Berserk state, each stack of Melee Attack Skill channeled generates 5 Rage\n0.22% additional damage and 0.1% Movement Speed for every 1 Rage you have\nEnter Berserk automatically at Max Rage\nWhile Berserk is active, 15 Rage is consumed per second\nAttacks trigger Burst once on hit while Berserk is active. Cooldown: 0.3 s\n3.7% additional Burst Damage per 1 levels\nArtificial Moon:\n1.5% Burst Cooldown Recovery Speed for every 10 Rage",
   },
   {
     hero: "Berserker Rehan: Anger (#1)",
@@ -50,7 +50,7 @@ export const HeroTraits = [
     name: "Seething Silhouette",
     level: 1,
     affix:
-      "When not in the Berserk state, each Melee Attack Skill generates 10 Rage\n+1% Attack Speed for every 5 Rage\nEnter Berserk automatically at Max Rage\n+20% Movement Speed while Berserk is active\nGains bonuses twice the Max Rage while Berserk is active\nWhile Berserk is active, 10 Rage is consumed per second\nCasting Melee Attack Skills no longer generates Rage and consumes 10 points of Rage instead while Berserk is active. The mode ends when Rage runs out\n+45% Skill Area while Berserk is active\n+20% additional damage while Berserk is active",
+      "Level 1When not in the Berserk state, each Melee Attack Skill generates 10 Rage\n+1% Attack Speed for every 5 Rage\nEnter Berserk automatically at Max Rage\n+20% Movement Speed while Berserk is active\nGains bonuses twice the Max Rage while Berserk is active\nWhile Berserk is active, 10 Rage is consumed per second\nCasting Melee Attack Skills no longer generates Rage and consumes 10 points of Rage instead while Berserk is active. The mode ends when Rage runs out\n+45% Skill Area while Berserk is active\n+20% additional damage while Berserk is activeLevel 2When not in the Berserk state, each Melee Attack Skill generates 10 Rage\n+1% Attack Speed for every 5 Rage\nEnter Berserk automatically at Max Rage\n+20% Movement Speed while Berserk is active\nGains bonuses twice the Max Rage while Berserk is active\nWhile Berserk is active, 10 Rage is consumed per second\nCasting Melee Attack Skills no longer generates Rage and consumes 10 points of Rage instead while Berserk is active. The mode ends when Rage runs out\n+45% Skill Area while Berserk is active\n+26% additional damage while Berserk is activeLevel 3When not in the Berserk state, each Melee Attack Skill generates 10 Rage\n+1% Attack Speed for every 5 Rage\nEnter Berserk automatically at Max Rage\n+20% Movement Speed while Berserk is active\nGains bonuses twice the Max Rage while Berserk is active\nWhile Berserk is active, 10 Rage is consumed per second\nCasting Melee Attack Skills no longer generates Rage and consumes 10 points of Rage instead while Berserk is active. The mode ends when Rage runs out\n+45% Skill Area while Berserk is active\n+32% additional damage while Berserk is activeLevel 4When not in the Berserk state, each Melee Attack Skill generates 10 Rage\n+1% Attack Speed for every 5 Rage\nEnter Berserk automatically at Max Rage\n+20% Movement Speed while Berserk is active\nGains bonuses twice the Max Rage while Berserk is active\nWhile Berserk is active, 10 Rage is consumed per second\nCasting Melee Attack Skills no longer generates Rage and consumes 10 points of Rage instead while Berserk is active. The mode ends when Rage runs out\n+45% Skill Area while Berserk is active\n+38% additional damage while Berserk is activeLevel 5When not in the Berserk state, each Melee Attack Skill generates 10 Rage\n+1% Attack Speed for every 5 Rage\nEnter Berserk automatically at Max Rage\n+20% Movement Speed while Berserk is active\nGains bonuses twice the Max Rage while Berserk is active\nWhile Berserk is active, 10 Rage is consumed per second\nCasting Melee Attack Skills no longer generates Rage and consumes 10 points of Rage instead while Berserk is active. The mode ends when Rage runs out\n+45% Skill Area while Berserk is active\n+44% additional damage while Berserk is active\nArtificial Moon:\n+1% chance to deal Double Damage every 5 points of Rage you have",
   },
   {
     hero: "Berserker Rehan: Seething Silhouette (#2)",
@@ -85,21 +85,21 @@ export const HeroTraits = [
     name: "Split Form",
     level: 75,
     affix:
-      "Life Regain no longer requires a hit to activate\n(+5/+10/+15/+20/+25)% additional Max Life\n(+1/+1/+2/+2/+2)% Rage gained for every 40 Max Life",
+      "Life Regain no longer requires a hit to activate\n(-15/-10/-5/0/+5)% additional Max Life\n(+1/+1/+2/+2/+2)% Rage gained for every 40 Max Life",
   },
   {
     hero: "Berserker Rehan: Seething Silhouette (#2)",
     name: "Rage Infusion",
     level: 75,
     affix:
-      "+5% additional damage per 25 points of Rage gained recently. Stacks up to (6/7/8/9/10) times\nYou will no longer be Disarmed after Berserk has been active for 5s. +40% Rage gained",
+      "+5% additional damage per 25 points of Rage gained recently. Stacks up to (4/5/6/7/8) times\nYou will no longer be Disarmed after Berserk has been active for 5s. +40% Rage gained",
   },
   {
     hero: "Divineshot Carino: Ranger of Glory (#1)",
     name: "Ranger of Glory",
     level: 1,
     affix:
-      "Projectile Skills consume ammo\n+35% additional Projectile Damage when consuming ammo\n+6 initial magazine capacity\nClick the Trait Skill to reload the magazine. Base reloading time is 0.6 s\nProjectile Skills are unavailable while reloading\n150% of the max bonus to Attack Speed or Cast Speed is also applied to Reload Speed\nWhile reloading, +45% Movement Speed\nAlways auto-reloading ammo; Reloading can be interrupted.",
+      "Level 1Projectile Skills consume ammo\n+35% additional Projectile Damage when consuming ammo\n+6 initial magazine capacity\nClick the Trait Skill to reload the magazine. Base reloading time is 0.6 s\nProjectile Skills are unavailable while reloading\n150% of the max bonus to Attack Speed or Cast Speed is also applied to Reload Speed\nWhile reloading, +45% Movement Speed\nAlways auto-reloading ammo; Reloading can be interrupted.Level 2Projectile Skills consume ammo\n+42% additional Projectile Damage when consuming ammo\n+6 initial magazine capacity\nClick the Trait Skill to reload the magazine. Base reloading time is 0.6 s\nProjectile Skills are unavailable while reloading\n150% of the max bonus to Attack Speed or Cast Speed is also applied to Reload Speed\nWhile reloading, +45% Movement Speed\nAlways auto-reloading ammo; Reloading can be interrupted.Level 3Projectile Skills consume ammo\n+49% additional Projectile Damage when consuming ammo\n+6 initial magazine capacity\nClick the Trait Skill to reload the magazine. Base reloading time is 0.6 s\nProjectile Skills are unavailable while reloading\n150% of the max bonus to Attack Speed or Cast Speed is also applied to Reload Speed\nWhile reloading, +45% Movement Speed\nAlways auto-reloading ammo; Reloading can be interrupted.Level 4Projectile Skills consume ammo\n+56% additional Projectile Damage when consuming ammo\n+6 initial magazine capacity\nClick the Trait Skill to reload the magazine. Base reloading time is 0.6 s\nProjectile Skills are unavailable while reloading\n150% of the max bonus to Attack Speed or Cast Speed is also applied to Reload Speed\nWhile reloading, +45% Movement Speed\nAlways auto-reloading ammo; Reloading can be interrupted.Level 5Projectile Skills consume ammo\n+63% additional Projectile Damage when consuming ammo\n+6 initial magazine capacity\nClick the Trait Skill to reload the magazine. Base reloading time is 0.6 s\nProjectile Skills are unavailable while reloading\n150% of the max bonus to Attack Speed or Cast Speed is also applied to Reload Speed\nWhile reloading, +45% Movement Speed\nAlways auto-reloading ammo; Reloading can be interrupted.\nArtificial Moon:\n+20% chance to Reload Special Ammo and +20% Magic Shot Duration",
   },
   {
     hero: "Divineshot Carino: Ranger of Glory (#1)",
@@ -134,63 +134,56 @@ export const HeroTraits = [
     name: "Well Prepared",
     level: 75,
     affix:
-      "+1 Special Ammo slot(s). These slots can be installed with Projectile exclusive Noble Support Skills\n(+15/+20/+25/+30/+35)% additional damage dealt by this Projectile Skill if a Special Ammo is consumed",
+      "+1 Special Ammo slot(s). These slots can be installed with Projectile-exclusive Magnificent and Noble Support Skills\n(+15/+20/+25/+30/+35)% additional damage dealt by this Projectile Skill if a Special Ammo is consumed",
   },
   {
     hero: "Divineshot Carino: Lethal Flash (#2)",
     name: "Lethal Flash",
     level: 1,
     affix:
-      "Projectile Skills consume ammo\n+6 initial magazine capacity\nAlways auto-reload ammo, reloading 2 ammo each time. Reload Time: 0.6 s\nProjectile Skills can be cast while reloading, but will interrupt the reloading process\nProjectile Quantity +2\nProjectile Skills have the Shotgun Effect",
-  },
-  {
-    hero: "Divineshot Carino: Lethal Flash (#2)",
-    name: "Shadow Magazine",
-    level: 45,
-    affix:
-      "(-0.2/-0.25/-0.3/-0.35/-0.4) s reloading time\n25% chance for Projectile Skills to not consume ammo",
-  },
-  {
-    hero: "Divineshot Carino: Lethal Flash (#2)",
-    name: "Dart Shot",
-    level: 45,
-    affix:
-      "When casting a Projectile Skill, for every ammo consumed, - (20/20/25/25/30)% current cooldown for Mobility Skills\n(+15/+20/+25/+30/+35)% additional damage for 4 s after using Mobility Skills",
+      "Level 1Projectile Skills consume ammo\n+12 initial magazine capacity\nAlways auto-reload ammo, reloading 2 ammo each time. Reload Time: 0.6 s\nProjectile Skills can be cast while reloading, but will interrupt the reloading process\n+50% additional damage when consuming ammo\nProjectile Quantity +2Level 2Projectile Skills consume ammo\n+12 initial magazine capacity\nAlways auto-reload ammo, reloading 2 ammo each time. Reload Time: 0.6 s\nProjectile Skills can be cast while reloading, but will interrupt the reloading process\n+50% additional damage when consuming ammo\nProjectile Quantity +2Level 3Projectile Skills consume ammo\n+12 initial magazine capacity\nAlways auto-reload ammo, reloading 2 ammo each time. Reload Time: 0.6 s\nProjectile Skills can be cast while reloading, but will interrupt the reloading process\n+50% additional damage when consuming ammo\nProjectile Quantity +2Level 4Projectile Skills consume ammo\n+12 initial magazine capacity\nAlways auto-reload ammo, reloading 2 ammo each time. Reload Time: 0.6 s\nProjectile Skills can be cast while reloading, but will interrupt the reloading process\n+50% additional damage when consuming ammo\nProjectile Quantity +2Level 5Projectile Skills consume ammo\n+12 initial magazine capacity\nAlways auto-reload ammo, reloading 2 ammo each time. Reload Time: 0.6 s\nProjectile Skills can be cast while reloading, but will interrupt the reloading process\n+50% additional damage when consuming ammo\nProjectile Quantity +2\nArtificial Moon:\nMain Skill is supported by Lv. 1 Multiple Projectiles",
   },
   {
     hero: "Divineshot Carino: Lethal Flash (#2)",
     name: "Evil Ouroboros",
+    level: 45,
+    affix:
+      "After reaching their max range, Projectiles will return and travel an additional 75% of that distance, hitting the enemies on their path again\n(-40/-37.5/-35/-32.5/-30)% additional damage dealt by Projectile Skills",
+  },
+  {
+    hero: "Divineshot Carino: Lethal Flash (#2)",
+    name: "Impending Doom",
+    level: 45,
+    affix:
+      "-80% Projectile Range\n(+46/+53/+60/+69/+77)% additional Ranged Attack Horizontal Projectile Damage\nGains a stack of Fortitude when casting a Projectile Skill",
+  },
+  {
+    hero: "Divineshot Carino: Lethal Flash (#2)",
+    name: "Shadow Magazine",
     level: 60,
     affix:
-      "Normal Projectiles will return after reaching their max range and will hit enemies on their path again\n-50% Projectile Range\n(-70/-64/-58/-52/-46)% additional Returning Projectile Damage",
+      "+2% Reload Speed for every 1% Projectile Speed\n+1 to Reload Quantity for every 70% Projectile Speed\n(+30/+36/+42/+49/+56)% additional damage when consuming ammo",
   },
   {
     hero: "Divineshot Carino: Lethal Flash (#2)",
-    name: "Lethal Interval",
-    level: 60,
-    affix:
-      "For every ammo consumed recently, -3 ° Projectile Spreading Angle\nHorizontal Projectiles cannot Penetrate but have (+1/+1/+2/+2/+3) Jump(s)\n(+10/+16/+22/+28/+34)% additional damage dealt by Projectile Skills",
-  },
-  {
-    hero: "Divineshot Carino: Lethal Flash (#2)",
-    name: "Malice Charge",
+    name: "Weightless Step",
     level: 75,
     affix:
-      "Reloads all ammo when using Mobility Skills\nFor every ammo consumed recently, (0.6/+1/1.4/1.8/2.2)% base damage coefficient for subsequent Projectiles of Shotgun Effect. Stacks up to 10 time(s)",
+      "Projectiles can Jump off the ground\n(+20/+25/+31/+36/+41)% additional damage dealt by Projectile Skills\nThe max range of Projectiles after Jumping is fixed at 9 m",
   },
   {
     hero: "Divineshot Carino: Lethal Flash (#2)",
-    name: "Desperate Measure",
+    name: "Born in the Breeze",
     level: 75,
     affix:
-      "Your Projectile Skills will consume all ammo\nWhen casting a Projectile Skill, the skill (+9/+10/+11/+12/+13)% additional damage for every 1 ammo it consumes. Stacks up to 8 times",
+      "(+32/+38/+44/+50/+56)% additional Projectile Damage while having Deflection\n(-24/-28/-31/-34/-37)% additional damage taken when without Deflection",
   },
   {
     hero: "Divineshot Carino: Zealot of War (#3)",
     name: "Zealot of War",
     level: 1,
     affix:
-      "Projectile Skills consume ammo\n+6 initial Magazine Capacity\nBase reloading time is 0.8 s\nProjectile Quantity +2\nFor every +1 Projectile Quantity or +1 Split Quantity, +3 Magazine Capacity (excludes the Projectile Quantity and Split Quantity provided by the skill itself and linked Support Skills)\n+20% additional damage",
+      "Level 1Projectile Skills consume ammo\n+6 initial Magazine Capacity\nBase reloading time is 0.8 s\nProjectile Quantity +2\nFor every +1 Projectile Quantity or +1 Split Quantity, +3 Magazine Capacity (excludes the Projectile Quantity and Split Quantity provided by the skill itself and linked Support Skills)\n+20% additional damageLevel 2Projectile Skills consume ammo\n+6 initial Magazine Capacity\nBase reloading time is 0.8 s\nProjectile Quantity +2\nFor every +1 Projectile Quantity or +1 Split Quantity, +3 Magazine Capacity (excludes the Projectile Quantity and Split Quantity provided by the skill itself and linked Support Skills)\n+26% additional damageLevel 3Projectile Skills consume ammo\n+6 initial Magazine Capacity\nBase reloading time is 0.8 s\nProjectile Quantity +2\nFor every +1 Projectile Quantity or +1 Split Quantity, +3 Magazine Capacity (excludes the Projectile Quantity and Split Quantity provided by the skill itself and linked Support Skills)\n+32% additional damageLevel 4Projectile Skills consume ammo\n+6 initial Magazine Capacity\nBase reloading time is 0.8 s\nProjectile Quantity +2\nFor every +1 Projectile Quantity or +1 Split Quantity, +3 Magazine Capacity (excludes the Projectile Quantity and Split Quantity provided by the skill itself and linked Support Skills)\n+38% additional damageLevel 5Projectile Skills consume ammo\n+6 initial Magazine Capacity\nBase reloading time is 0.8 s\nProjectile Quantity +2\nFor every +1 Projectile Quantity or +1 Split Quantity, +3 Magazine Capacity (excludes the Projectile Quantity and Split Quantity provided by the skill itself and linked Support Skills)\n+38% additional damage\nArtificial Moon:\n+50% Heat Up Effect",
   },
   {
     hero: "Divineshot Carino: Zealot of War (#3)",
@@ -204,14 +197,14 @@ export const HeroTraits = [
     name: "Ceasefire",
     level: 60,
     affix:
-      "Starts with max stacks of Heat Up but does not reload ammo at the beginning\nWhile active, Overheated can last without forcing reloadStarts with max stacks of Heat Up but does not reload ammo at the beginning\nWhile active, Overheated can last without forcing reload\n+5% additional damageStarts with max stacks of Heat Up but does not reload ammo at the beginning\nWhile active, Overheated can last without forcing reload\n+10% additional damageStarts with max stacks of Heat Up but does not reload ammo at the beginning\nWhile active, Overheated can last without forcing reload\n+16% additional damageStarts with max stacks of Heat Up but does not reload ammo at the beginning\nWhile active, Overheated can last without forcing reload\n+21% additional damage",
+      "Level 1Starts with max stacks of Heat Up but does not reload ammo at the beginning\nWhile active, Overheated can last without forcing reloadLevel 2Starts with max stacks of Heat Up but does not reload ammo at the beginning\nWhile active, Overheated can last without forcing reload\n+5% additional damageLevel 3Starts with max stacks of Heat Up but does not reload ammo at the beginning\nWhile active, Overheated can last without forcing reload\n+10% additional damageLevel 4Starts with max stacks of Heat Up but does not reload ammo at the beginning\nWhile active, Overheated can last without forcing reload\n+16% additional damageLevel 5Starts with max stacks of Heat Up but does not reload ammo at the beginning\nWhile active, Overheated can last without forcing reload\n+21% additional damage",
   },
   {
     hero: "Divineshot Carino: Zealot of War (#3)",
     name: "Extreme Heat",
     level: 60,
     affix:
-      "At Max Heat Up Stacks, enter Burning Red instead of Overheated\nReload immediately when Burning Red ends\nExtends the duration of Burning Red by 3 s and restores 3% Max Life and Energy Shield when defeating an EliteAt Max Heat Up Stacks, enter Burning Red instead of Overheated\nReload immediately when Burning Red ends\nExtends the duration of Burning Red by 4 s and restores 3% Max Life and Energy Shield when defeating an Elite\n+5% additional damageAt Max Heat Up Stacks, enter Burning Red instead of Overheated\nReload immediately when Burning Red ends\nExtends the duration of Burning Red by 5 s and restores 3% Max Life and Energy Shield when defeating an Elite\n+5% additional damageAt Max Heat Up Stacks, enter Burning Red instead of Overheated\nReload immediately when Burning Red ends\nExtends the duration of Burning Red by 5 s and restores 3% Max Life and Energy Shield when defeating an Elite\n+10% additional damageAt Max Heat Up Stacks, enter Burning Red instead of Overheated\nReload immediately when Burning Red ends\nExtends the duration of Burning Red by 5 s and restores 3% Max Life and Energy Shield when defeating an Elite\n+16% additional damage",
+      "Level 1At Max Heat Up Stacks, enter Burning Red instead of Overheated\nReload immediately when Burning Red ends\nExtends the duration of Burning Red by 3 s and restores 3% Max Life and Energy Shield when defeating an EliteLevel 2At Max Heat Up Stacks, enter Burning Red instead of Overheated\nReload immediately when Burning Red ends\nExtends the duration of Burning Red by 4 s and restores 3% Max Life and Energy Shield when defeating an Elite\n+5% additional damageLevel 3At Max Heat Up Stacks, enter Burning Red instead of Overheated\nReload immediately when Burning Red ends\nExtends the duration of Burning Red by 5 s and restores 3% Max Life and Energy Shield when defeating an Elite\n+5% additional damageLevel 4At Max Heat Up Stacks, enter Burning Red instead of Overheated\nReload immediately when Burning Red ends\nExtends the duration of Burning Red by 5 s and restores 3% Max Life and Energy Shield when defeating an Elite\n+10% additional damageLevel 5At Max Heat Up Stacks, enter Burning Red instead of Overheated\nReload immediately when Burning Red ends\nExtends the duration of Burning Red by 5 s and restores 3% Max Life and Energy Shield when defeating an Elite\n+16% additional damage",
   },
   {
     hero: "Divineshot Carino: Zealot of War (#3)",
@@ -225,14 +218,14 @@ export const HeroTraits = [
     name: "Eternal Flames",
     level: 75,
     affix:
-      "Heat Up gains an additional effect: For every stack of Heat Up, 0.6% additional Attack and Cast SpeedHeat Up gains an additional effect: For every stack of Heat Up, 0.6% additional Attack and Cast Speed\n+5% additional damageHeat Up gains an additional effect: For every stack of Heat Up, 0.6% additional Attack and Cast Speed\n+10% additional damageHeat Up gains an additional effect: For every stack of Heat Up, 0.6% additional Attack and Cast Speed\n+16% additional damageHeat Up gains an additional effect: For every stack of Heat Up, 0.6% additional Attack and Cast Speed\n+21% additional damage",
+      "Level 1Heat Up gains an additional effect: For every stack of Heat Up, 0.6% additional Attack and Cast SpeedLevel 2Heat Up gains an additional effect: For every stack of Heat Up, 0.6% additional Attack and Cast Speed\n+5% additional damageLevel 3Heat Up gains an additional effect: For every stack of Heat Up, 0.6% additional Attack and Cast Speed\n+10% additional damageLevel 4Heat Up gains an additional effect: For every stack of Heat Up, 0.6% additional Attack and Cast Speed\n+16% additional damageLevel 5Heat Up gains an additional effect: For every stack of Heat Up, 0.6% additional Attack and Cast Speed\n+21% additional damage",
   },
   {
     hero: "Cateye Erika: Wind Stalker (#1)",
     name: "Wind Stalker",
     level: 1,
     affix:
-      "+20% Movement Speed\nGains 1 stack of Stalker for every 1 m of movement\nYour Multistrike Count will not be interrupted during Stalker",
+      "Level 1+26% Movement Speed\nGains 1 stack of Stalker for every 1 m of movement\nYour Multistrike Count will not be interrupted during StalkerLevel 2+26% Movement Speed\nGains 1 stack of Stalker for every 1 m of movement\nYour Multistrike Count will not be interrupted during Stalker\n+5% additional Attack DamageLevel 3+26% Movement Speed\nGains 1 stack of Stalker for every 1 m of movement\nYour Multistrike Count will not be interrupted during Stalker\n+10% additional Attack DamageLevel 4+26% Movement Speed\nGains 1 stack of Stalker for every 1 m of movement\nYour Multistrike Count will not be interrupted during Stalker\n+15% additional Attack DamageLevel 5+26% Movement Speed\nGains 1 stack of Stalker for every 1 m of movement\nYour Multistrike Count will not be interrupted during Stalker\n+20% additional Attack Damage\nArtificial Moon:\nWhile Stalker is active, marks all enemies within +8 m and +30% Mark Effect",
   },
   {
     hero: "Cateye Erika: Wind Stalker (#1)",
@@ -267,7 +260,7 @@ export const HeroTraits = [
     name: "Cat's Punches",
     level: 75,
     affix:
-      "At Max Multistrike Count, gains 1 stack of Stalker\n+1 to the initial Multistrike Count for every 3 stack(s) of Stalker\n-18% additional damageAt Max Multistrike Count, gains 1 stack of Stalker\n+1 to the initial Multistrike Count for every 3 stack(s) of Stalker\n-12% additional damageAt Max Multistrike Count, gains 1 stack of Stalker\n+1 to the initial Multistrike Count for every 3 stack(s) of Stalker\n-6% additional damageAt Max Multistrike Count, gains 1 stack of Stalker\n+1 to the initial Multistrike Count for every 3 stack(s) of StalkerAt Max Multistrike Count, gains 1 stack of Stalker\n+1 to the initial Multistrike Count for every 3 stack(s) of Stalker\n+6% additional damage",
+      "Level 1At Max Multistrike Count, gains 1 stack of Stalker\n+1 to the initial Multistrike Count for every 3 stack(s) of Stalker\n-18% additional damageLevel 2At Max Multistrike Count, gains 1 stack of Stalker\n+1 to the initial Multistrike Count for every 3 stack(s) of Stalker\n-12% additional damageLevel 3At Max Multistrike Count, gains 1 stack of Stalker\n+1 to the initial Multistrike Count for every 3 stack(s) of Stalker\n-6% additional damageLevel 4At Max Multistrike Count, gains 1 stack of Stalker\n+1 to the initial Multistrike Count for every 3 stack(s) of StalkerLevel 5At Max Multistrike Count, gains 1 stack of Stalker\n+1 to the initial Multistrike Count for every 3 stack(s) of Stalker\n+6% additional damage",
   },
   {
     hero: "Cateye Erika: Wind Stalker (#1)",
@@ -281,7 +274,7 @@ export const HeroTraits = [
     name: "Lightning Shadow",
     level: 1,
     affix:
-      "Start moving or click a Trait Skill to gain 1 Electrify stack for every 3 m of movement made within the next 1 s, up to 3 stack(s). Lasts for 10 s. Electrify is affected by Skill Effect Duration\nClick the Trait Skill again to reset the effect\nWhen Electrify is owned, triggers Feline Figure on up to 3 enemy(ies) within 10 m. Cooldown: 0.4 s. Can only be triggered once on each enemy\nFor every 1 stack(s) of Electrify, Feline Figure inflicts 1 stack(s) of Numbed on enemies within the area\n+18% additional Numbed Effect",
+      "Level 1Start moving or click a Trait Skill to gain 1 Electrify stack for every 3 m of movement made within the next 1 s, up to 3 stack(s). Lasts for 10 s. Electrify is affected by Skill Effect Duration\nClick the Trait Skill again to reset the effect\nWhen Electrify is owned, triggers Feline Figure on up to 3 enemy(ies) within 10 m. Cooldown: 0.4 s. Can only be triggered once on each enemy\nFor every 1 stack(s) of Electrify, Feline Figure inflicts 1 stack(s) of Numbed on enemies within the area\n+18% additional Numbed EffectLevel 2Start moving or click a Trait Skill to gain 1 Electrify stack for every 3 m of movement made within the next 1 s, up to 3 stack(s). Lasts for 10 s. Electrify is affected by Skill Effect Duration\nClick the Trait Skill again to reset the effect\nWhen Electrify is owned, triggers Feline Figure on up to 3 enemy(ies) within 10 m. Cooldown: 0.4 s. Can only be triggered once on each enemy\nFor every 1 stack(s) of Electrify, Feline Figure inflicts 1 stack(s) of Numbed on enemies within the area\n+30% additional Numbed EffectLevel 3Start moving or click a Trait Skill to gain 1 Electrify stack for every 3 m of movement made within the next 1 s, up to 3 stack(s). Lasts for 10 s. Electrify is affected by Skill Effect Duration\nClick the Trait Skill again to reset the effect\nWhen Electrify is owned, triggers Feline Figure on up to 3 enemy(ies) within 10 m. Cooldown: 0.4 s. Can only be triggered once on each enemy\nFor every 1 stack(s) of Electrify, Feline Figure inflicts 1 stack(s) of Numbed on enemies within the area\n+43% additional Numbed EffectLevel 4Start moving or click a Trait Skill to gain 1 Electrify stack for every 3 m of movement made within the next 1 s, up to 3 stack(s). Lasts for 10 s. Electrify is affected by Skill Effect Duration\nClick the Trait Skill again to reset the effect\nWhen Electrify is owned, triggers Feline Figure on up to 3 enemy(ies) within 10 m. Cooldown: 0.4 s. Can only be triggered once on each enemy\nFor every 1 stack(s) of Electrify, Feline Figure inflicts 1 stack(s) of Numbed on enemies within the area\n+55% additional Numbed EffectLevel 5Start moving or click a Trait Skill to gain 1 Electrify stack for every 3 m of movement made within the next 1 s, up to 3 stack(s). Lasts for 10 s. Electrify is affected by Skill Effect Duration\nClick the Trait Skill again to reset the effect\nWhen Electrify is owned, triggers Feline Figure on up to 3 enemy(ies) within 10 m. Cooldown: 0.4 s. Can only be triggered once on each enemy\nFor every 1 stack(s) of Electrify, Feline Figure inflicts 1 stack(s) of Numbed on enemies within the area\n+68% additional Numbed Effect\nArtificial Moon:\n+15% Movement Speed if you have inflicted Numbed recently",
   },
   {
     hero: "Cateye Erika: Lightning Shadow (#2)",
@@ -323,35 +316,35 @@ export const HeroTraits = [
     name: "Vendetta's Sting",
     level: 1,
     affix:
-      "Replace the skill in the third slot with VendettaGains Incisive after casting Vendetta\n100% of the bonuses to Skill Area is also applied to Vendetta, up to 200%",
+      "Level 1Gains Incisive after casting Vendetta\n100% of the bonuses to Skill Area is also applied to Vendetta, up to 200%\n+5% additional Attack Damage for skills triggered by VendettaReplace the skill in the third slot with VendettaLevel 2Gains Incisive after casting Vendetta\n100% of the bonuses to Skill Area is also applied to Vendetta, up to 200%\n+10% additional Attack Damage for skills triggered by VendettaReplace the skill in the third slot with VendettaLevel 3Gains Incisive after casting Vendetta\n100% of the bonuses to Skill Area is also applied to Vendetta, up to 200%\n+15% additional Attack Damage for skills triggered by VendettaReplace the skill in the third slot with VendettaLevel 4Gains Incisive after casting Vendetta\n100% of the bonuses to Skill Area is also applied to Vendetta, up to 200%\n+20% additional Attack Damage for skills triggered by VendettaReplace the skill in the third slot with VendettaLevel 5Gains Incisive after casting Vendetta\n100% of the bonuses to Skill Area is also applied to Vendetta, up to 200%\n+25% additional Attack Damage for skills triggered by Vendetta\nArtificial Moon:\n+20% Vendetta Skill Area. +10% additional Attack Damage for skills triggered by VendettaReplace the skill in the third slot with Vendetta",
   },
   {
     hero: "Cateye Erika: Vendetta's Sting (#3)",
     name: "Twinblade Onslaught",
     level: 45,
     affix:
-      "No additional Attack Speed bonus is granted while Dual Wielding. Instead, (+25/+30/+35/+40/+45)% additional Attack Damage\nNo Attack Block Chance bonus is granted while Dual Wielding. Instead, converts 50% of Life Regain and Shield Regain to Restoration Over Time",
+      "No additional Attack Speed bonus is granted while Dual Wielding. Instead, (+15/+20/+25/+30/+35)% additional Attack Damage\nNo Attack Block Chance bonus is granted while Dual Wielding. Instead, converts 50% of Life Regain and Shield Regain to Restoration Over Time",
   },
   {
     hero: "Cateye Erika: Vendetta's Sting (#3)",
     name: "Leisurely Stroll",
     level: 60,
     affix:
-      "Main Skills cannot be supported by Activation MediumVendetta has no Cooldown when you have Hasten\n-80% additional damage for manually used Main Skills while Incisive is activeMain Skills cannot be supported by Activation MediumWhen having Hasten, Vendetta has no Cooldown and Vendetta gains +5% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is activeMain Skills cannot be supported by Activation MediumWhen having Hasten, Vendetta has no Cooldown and Vendetta gains +10% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is activeMain Skills cannot be supported by Activation MediumWhen having Hasten, Vendetta has no Cooldown and Vendetta gains +15% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is activeMain Skills cannot be supported by Activation MediumWhen having Hasten, Vendetta has no Cooldown and Vendetta gains +20% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is active",
+      "Level 1Vendetta has no Cooldown when you have Hasten\n-80% additional damage for manually used Main Skills while Incisive is activeMain Skills cannot be supported by Activation MediumLevel 2When having Hasten, Vendetta has no Cooldown and Vendetta gains +5% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is activeMain Skills cannot be supported by Activation MediumLevel 3When having Hasten, Vendetta has no Cooldown and Vendetta gains +10% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is activeMain Skills cannot be supported by Activation MediumLevel 4When having Hasten, Vendetta has no Cooldown and Vendetta gains +15% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is activeMain Skills cannot be supported by Activation MediumLevel 5When having Hasten, Vendetta has no Cooldown and Vendetta gains +20% additional Attack Speed\n-80% additional damage for manually used Main Skills while Incisive is activeMain Skills cannot be supported by Activation Medium",
   },
   {
     hero: "Cateye Erika: Vendetta's Sting (#3)",
     name: "Swift Stalk",
     level: 60,
     affix:
-      "Replace Vendetta with Endless VendettaSkills triggered by Vendetta deal (+30/+45/+60/+75/+90)% additional damage to Elites while Endless Vendetta is active\n+333% additional Incisive Duration. +99% Incisive Effect",
+      "Skills triggered by Vendetta deal (+30/+45/+60/+75/+90)% additional damage to Elites while Endless Vendetta is active\n+333% additional Incisive Duration. +99% Incisive EffectReplace Vendetta with Endless Vendetta",
   },
   {
     hero: "Cateye Erika: Vendetta's Sting (#3)",
     name: "Feline Fury",
     level: 75,
     affix:
-      "+200 Attack Critical Strike Rating when Dual Wielding the same type of weapons\n+20% additional attack damage for Critical Strikes when Dual Wielding different types of weapons\nVendetta has a 1% chance to trigger Main Melee Attack Skill 1 additional time for every (5/4/3/2.5/2)% Effective Critical Strike Chance\nVendetta has a 1% chance to trigger Main Melee Attack Skill 1 additional time for every 0.5% Excess Critical Strike Chance, up to 100%",
+      "+150 Attack Critical Strike Rating when Dual Wielding the same type of weapons\n+20% additional attack damage for Critical Strikes when Dual Wielding different types of weapons\nVendetta has a 1% chance to trigger Main Melee Attack Skill 1 additional time for every (5/4/3/2.5/2)% Effective Critical Strike Chance\nFor every 0.5% Excess Critical Strike Chance, 1% chance to +100% additional Attack Damage for skills triggered by Vendetta",
   },
   {
     hero: "Cateye Erika: Vendetta's Sting (#3)",
@@ -365,7 +358,7 @@ export const HeroTraits = [
     name: "Blast Nova",
     level: 1,
     affix:
-      "When using a Non-channeling Projectile Skill, throw 1 bomb instead\nThe bomb automatically detonates 1 s after landing, firing Projectiles in all directions\nThere can be up to 10 undetonated bombs at the same time. Exceeding the limit will detonate the bomb that landed first\nBomb throwing speed is 1.5 time(s) per second\nFor every +100% Attack Speed, +1 bombs thrown upon using an Attack Projectile Skill.\nFor every +100% Cast Speed, +1 bombs thrown upon using a Spell Projectile Skill.\nThe amount less than +100% has a chance to grant +1 bombs thrown upon using an Attack or Spell Projectile Skill.\n+1% additional Attack Bomb Damage for every +1% additional Attack Speed\n+1% additional Spell Bomb Damage for every +1% additional Cast Speed\n+30% additional Bomb Damage\nProjectile Quantity +2\nReduces Max Spell Burst Stacks to 1/2\n-40% additional Sentry Damage",
+      "Level 1When using a Non-channeling Projectile Skill, throw 1 bomb instead\nThe bomb automatically detonates 1 s after landing, firing Projectiles in all directions\nThere can be up to 10 undetonated bombs at the same time. Exceeding the limit will detonate the bomb that landed first\nBomb throwing speed is 1.5 time(s) per second\nFor every +100% Attack Speed, +1 bombs thrown upon using an Attack Projectile Skill.\nFor every +100% Cast Speed, +1 bombs thrown upon using a Spell Projectile Skill.\nThe amount less than +100% has a chance to grant +1 bombs thrown upon using an Attack or Spell Projectile Skill.\n+1% additional Attack Bomb Damage for every +1% additional Attack Speed\n+1% additional Spell Bomb Damage for every +1% additional Cast Speed\n+30% additional Bomb Damage\nProjectile Quantity +2\nReduces Max Spell Burst Stacks to 1/2\n-40% additional Sentry DamageLevel 2When using a Non-channeling Projectile Skill, throw 1 bomb instead\nThe bomb automatically detonates 1 s after landing, firing Projectiles in all directions\nThere can be up to 10 undetonated bombs at the same time. Exceeding the limit will detonate the bomb that landed first\nBomb throwing speed is 1.5 time(s) per second\nFor every +100% Attack Speed, +1 bombs thrown upon using an Attack Projectile Skill.\nFor every +100% Cast Speed, +1 bombs thrown upon using a Spell Projectile Skill.\nThe amount less than +100% has a chance to grant +1 bombs thrown upon using an Attack or Spell Projectile Skill.\n+1% additional Attack Bomb Damage for every +1% additional Attack Speed\n+1% additional Spell Bomb Damage for every +1% additional Cast Speed\n+37% additional Bomb Damage\nProjectile Quantity +2\nReduces Max Spell Burst Stacks to 1/2\n-40% additional Sentry DamageLevel 3When using a Non-channeling Projectile Skill, throw 1 bomb instead\nThe bomb automatically detonates 1 s after landing, firing Projectiles in all directions\nThere can be up to 10 undetonated bombs at the same time. Exceeding the limit will detonate the bomb that landed first\nBomb throwing speed is 1.5 time(s) per second\nFor every +100% Attack Speed, +1 bombs thrown upon using an Attack Projectile Skill.\nFor every +100% Cast Speed, +1 bombs thrown upon using a Spell Projectile Skill.\nThe amount less than +100% has a chance to grant +1 bombs thrown upon using an Attack or Spell Projectile Skill.\n+1% additional Attack Bomb Damage for every +1% additional Attack Speed\n+1% additional Spell Bomb Damage for every +1% additional Cast Speed\n+44% additional Bomb Damage\nProjectile Quantity +2\nReduces Max Spell Burst Stacks to 1/2\n-40% additional Sentry DamageLevel 4When using a Non-channeling Projectile Skill, throw 1 bomb instead\nThe bomb automatically detonates 1 s after landing, firing Projectiles in all directions\nThere can be up to 10 undetonated bombs at the same time. Exceeding the limit will detonate the bomb that landed first\nBomb throwing speed is 1.5 time(s) per second\nFor every +100% Attack Speed, +1 bombs thrown upon using an Attack Projectile Skill.\nFor every +100% Cast Speed, +1 bombs thrown upon using a Spell Projectile Skill.\nThe amount less than +100% has a chance to grant +1 bombs thrown upon using an Attack or Spell Projectile Skill.\n+1% additional Attack Bomb Damage for every +1% additional Attack Speed\n+1% additional Spell Bomb Damage for every +1% additional Cast Speed\n+51% additional Bomb Damage\nProjectile Quantity +2\nReduces Max Spell Burst Stacks to 1/2\n-40% additional Sentry DamageLevel 5When using a Non-channeling Projectile Skill, throw 1 bomb instead\nThe bomb automatically detonates 1 s after landing, firing Projectiles in all directions\nThere can be up to 10 undetonated bombs at the same time. Exceeding the limit will detonate the bomb that landed first\nBomb throwing speed is 1.5 time(s) per second\nFor every +100% Attack Speed, +1 bombs thrown upon using an Attack Projectile Skill.\nFor every +100% Cast Speed, +1 bombs thrown upon using a Spell Projectile Skill.\nThe amount less than +100% has a chance to grant +1 bombs thrown upon using an Attack or Spell Projectile Skill.\n+1% additional Attack Bomb Damage for every +1% additional Attack Speed\n+1% additional Spell Bomb Damage for every +1% additional Cast Speed\n+58% additional Bomb Damage\nProjectile Quantity +2\nReduces Max Spell Burst Stacks to 1/2\n-40% additional Sentry Damage\nArtificial Moon:\nInflicts enemies within 6 m of the bomb with Paralysis and Slow",
   },
   {
     hero: "Escapist Bing: Blast Nova (#1)",
@@ -414,105 +407,105 @@ export const HeroTraits = [
     name: "Creative Genius",
     level: 1,
     affix:
-      "+1 Max Spell Burst\nGains 2 Inspiration Machines that can be powered by Whimsy Essence and Ingenuity Essence respectively. Starts with 0 Whimsy Essence and Ingenuity Essence with an upper limit of 100. Restores 20 Whimsy Essence per second\nWhen Whimsy Essence reaches 100, dealing Spell Damage to an enemy causes Inspiration Machines to use a Whimsy Explosion, inflicting Whimsy Signal on affected enemies\nWhen Ingenuity Essence reaches 100, clicking the Trait Skill causes Inspiration Machines to use Ingenuity Overload\nBing's ingenious ideas allow him to possess more Traits. In addition to Base Traits, an additional Trait can be selected at each level threshold.",
+      "Level 1+1 Max Spell Burst\nGains 2 Inspiration Machines that can be powered by Whimsy Essence and Ingenuity Essence respectively. Starts with 0 Whimsy Essence and Ingenuity Essence with an upper limit of 100. Restores 20 Whimsy Essence per second\nWhen Whimsy Essence reaches 100, dealing Spell Damage to an enemy causes Inspiration Machines to use a Whimsy Explosion, inflicting Whimsy Signal on affected enemies\nWhen Ingenuity Essence reaches 100, clicking the Trait Skill causes Inspiration Machines to use Ingenuity Overload\nBing's ingenious ideas allow him to possess more Traits. In addition to Base Traits, an additional Trait can be selected at each level threshold.Level 2+1 Max Spell Burst\nGains 2 Inspiration Machines that can be powered by Whimsy Essence and Ingenuity Essence respectively. Starts with 0 Whimsy Essence and Ingenuity Essence with an upper limit of 100. Restores 20 Whimsy Essence per second\nWhen Whimsy Essence reaches 100, dealing Spell Damage to an enemy causes Inspiration Machines to use a Whimsy Explosion, inflicting Whimsy Signal on affected enemies\nWhen Ingenuity Essence reaches 100, clicking the Trait Skill causes Inspiration Machines to use Ingenuity Overload\nBing's ingenious ideas allow him to possess more Traits. In addition to Base Traits, an additional Trait can be selected at each level threshold.\n+5% additional Spell DamageLevel 3+1 Max Spell Burst\nGains 2 Inspiration Machines that can be powered by Whimsy Essence and Ingenuity Essence respectively. Starts with 0 Whimsy Essence and Ingenuity Essence with an upper limit of 100. Restores 20 Whimsy Essence per second\nWhen Whimsy Essence reaches 100, dealing Spell Damage to an enemy causes Inspiration Machines to use a Whimsy Explosion, inflicting Whimsy Signal on affected enemies\nWhen Ingenuity Essence reaches 100, clicking the Trait Skill causes Inspiration Machines to use Ingenuity Overload\nBing's ingenious ideas allow him to possess more Traits. In addition to Base Traits, an additional Trait can be selected at each level threshold.\n+10% additional Spell DamageLevel 4+1 Max Spell Burst\nGains 2 Inspiration Machines that can be powered by Whimsy Essence and Ingenuity Essence respectively. Starts with 0 Whimsy Essence and Ingenuity Essence with an upper limit of 100. Restores 20 Whimsy Essence per second\nWhen Whimsy Essence reaches 100, dealing Spell Damage to an enemy causes Inspiration Machines to use a Whimsy Explosion, inflicting Whimsy Signal on affected enemies\nWhen Ingenuity Essence reaches 100, clicking the Trait Skill causes Inspiration Machines to use Ingenuity Overload\nBing's ingenious ideas allow him to possess more Traits. In addition to Base Traits, an additional Trait can be selected at each level threshold.\n+15% additional Spell DamageLevel 5+1 Max Spell Burst\nGains 2 Inspiration Machines that can be powered by Whimsy Essence and Ingenuity Essence respectively. Starts with 0 Whimsy Essence and Ingenuity Essence with an upper limit of 100. Restores 20 Whimsy Essence per second\nWhen Whimsy Essence reaches 100, dealing Spell Damage to an enemy causes Inspiration Machines to use a Whimsy Explosion, inflicting Whimsy Signal on affected enemies\nWhen Ingenuity Essence reaches 100, clicking the Trait Skill causes Inspiration Machines to use Ingenuity Overload\nBing's ingenious ideas allow him to possess more Traits. In addition to Base Traits, an additional Trait can be selected at each level threshold.\n+20% additional Spell Damage\nArtificial Moon:+1 to Non-Base Hero Trait Level",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Inspiration Overflow",
     level: 45,
     affix:
-      "Instantly restores 5 Whimsy Essence when consuming Spell Burst Charge, and restores 6 additional Whimsy Essence for every 3 stacks of Spell Burst Charge consumed. Interval: 1s\n(+10/+15/+20/+25/+30)% additional Hit Damage for skills cast by Spell Burst\nInstantly restores 80 Ingenuity Essence after entering a stage or reviving",
+      "Instantly restores 5 Whimsy Essence when consuming Spell Burst Charge, and restores 6 additional Whimsy Essence for every 3 stacks of Spell Burst Charge consumed. Interval: 1s\n(+10/+15/+20/+25/+30/+35)% additional Hit Damage for skills cast by Spell Burst\nInstantly restores 80 Ingenuity Essence after entering a stage or reviving",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Mind Domain",
     level: 60,
     affix:
-      "Whimsy Explosion spawns an energy field. Gains 1 stack of Whimsy for every 0.5s staying in the energy field. Stacks up to (4/5/6/7/8) time(s)",
+      "Whimsy Explosion spawns an energy field. Gains 1 stack of Whimsy for every 0.5s staying in the energy field. Stacks up to (3/4/5/6/7/8) time(s)",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Trouble Maker",
     level: 60,
     affix:
-      "Loses (20/15/15/10/10)% Max Life and Energy Shield when Whimsy Explosion hits yourself\nEffect of Whimsy Signal enhanced to: (+60/+60/+75/+75/+90)% additional Spell Damage taken",
+      "Loses (20/15/15/10/10/10)% Max Life and Energy Shield when Whimsy Explosion hits yourself\nEffect of Whimsy Signal enhanced to: (+50/+50/+65/+65/+80/+85)% additional Spell Damage taken",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Brainstorm",
     level: 75,
     affix:
-      "After a 1s delay, Whimsy Explosion creates an additional Energy Explosion that eliminates enemies with less than (15/15/18/18/21)% Life within 12m\nRestores (5/6/6/7/7) additional Whimsy Essence for each enemy affected by Whimsy Signal defeated",
+      "After a 1s delay, Whimsy Explosion creates an additional Energy Explosion that eliminates enemies with less than (15/15/18/18/21/23)% Life within 12m\nRestores (5/6/6/7/7/8) additional Whimsy Essence for each enemy affected by Whimsy Signal defeated",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Flash of Brilliance",
     level: 75,
     affix:
-      "Casting a Main Skill has a (20/25/25/30/30)% chance to trigger Whimsy Explosion without consuming Whimsy Essence. Interval: (3.5/3.5/3/3/2.5) s",
+      "Casting a Main Skill has a (20/25/25/30/30/40)% chance to trigger Whimsy Explosion without consuming Whimsy Essence. Interval: (3.5/3.5/3/3/2.5/2.5) s",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Super Sonic Protocol",
     level: 45,
     affix:
-      "(+80/+85/+90/+95/+100)% Movement Speed when casting Ingenuity Overload. The bonus falls off to 0 within 4s",
+      "(+60/+65/+70/+75/+80/+85)% Movement Speed when casting Ingenuity Overload. The bonus falls off to 0 within 4s",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Over-Shield Module",
     level: 45,
     affix:
-      "- (60/62.5/65/67.5/70)% additional damage taken when casting Ingenuity Overload for 1s",
+      "- (50/52.5/55/57.5/60/62.5)% additional damage taken when casting Ingenuity Overload for 1s",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Law of Ingenuity",
     level: 60,
     affix:
-      "Ingenuity Overload has a (20/25/30/35/40)% chance to not consume Ingenuity Essence",
+      "Ingenuity Overload has a (20/25/30/35/40/45)% chance to not consume Ingenuity Essence",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Ingenious Chaos Principle",
     level: 60,
     affix:
-      "(+4/+6/+8/+10/+12)% Ingenuity Essence restoration per Max Spell Burst",
+      "(+4/+6/+8/+10/+12/+14)% Ingenuity Essence restoration per Max Spell Burst",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Auto-Ingenuity Program",
     level: 60,
     affix:
-      "When Ingenuity Essence reaches 100, triggers Ingenuity Overload\n-10% Whimsy Essence Recovery SpeedWhen Ingenuity Essence reaches 100, triggers Ingenuity Overload\n-5% Whimsy Essence Recovery SpeedWhen Ingenuity Essence reaches 100, triggers Ingenuity OverloadWhen Ingenuity Essence reaches 100, triggers Ingenuity Overload\n+5% Whimsy Essence Recovery SpeedWhen Ingenuity Essence reaches 100, triggers Ingenuity Overload\n+10% Whimsy Essence Recovery Speed",
+      "Level 1When Ingenuity Essence reaches 100, triggers Ingenuity Overload\n-10% Whimsy Essence Recovery SpeedLevel 2When Ingenuity Essence reaches 100, triggers Ingenuity Overload\n-5% Whimsy Essence Recovery SpeedLevel 3When Ingenuity Essence reaches 100, triggers Ingenuity OverloadLevel 4When Ingenuity Essence reaches 100, triggers Ingenuity Overload\n+5% Whimsy Essence Recovery SpeedLevel 5When Ingenuity Essence reaches 100, triggers Ingenuity Overload\n+10% Whimsy Essence Recovery SpeedLevel 6When Ingenuity Essence reaches 100, triggers Ingenuity Overload\n+15% Whimsy Essence Recovery Speed",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Multi-Coupling Equation",
     level: 75,
     affix:
-      "For every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 1 time(s)For every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 1 time(s)\n+15% Empower and Defensive Skill Effect DurationFor every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 2 time(s)\n+15% Empower and Defensive Skill Effect DurationFor every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 2 time(s)\n+30% Empower and Defensive Skill Effect DurationFor every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 3 time(s)\n+30% Empower and Defensive Skill Effect Duration",
+      "Level 1For every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 1 time(s)Level 2For every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 1 time(s)\n+15% Empower and Defensive Skill Effect DurationLevel 3For every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 2 time(s)\n+15% Empower and Defensive Skill Effect DurationLevel 4For every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 2 time(s)\n+30% Empower and Defensive Skill Effect DurationLevel 5For every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 3 time(s)\n+30% Empower and Defensive Skill Effect DurationLevel 6For every 2 Empower or Defensive Skill(s) affecting you, +1 Max Spell Burst. Stacks up to 3 time(s)\n+40% Empower and Defensive Skill Effect Duration",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Hyper-Resonance Hypothesis",
     level: 75,
     affix:
-      "When casting Ingenuity Overload, gains Buff Effect: (+15/+19/+23/+27/+31)% additional Spell Burst Charge Speed for 10s",
+      "When casting Ingenuity Overload, gains Buff Effect: (+15/+19/+23/+27/+31/+35)% additional Spell Burst Charge Speed for 10s",
   },
   {
     hero: "Escapist Bing: Creative Genius (#2)",
     name: "Contingency Inspiration Delivery",
     level: 75,
     affix:
-      "Summons 3 Contingency Inspiration Machines when casting Ingenuity Overload. Their Skill Interval: (0.9/0.8/0.7/0.6/0.5) s",
+      "Summons 3 Contingency Inspiration Machines when casting Ingenuity Overload. Their Skill Interval: (0.9/0.8/0.7/0.6/0.5/0.4) s",
   },
   {
     hero: "Frostfire Gemma: Flame of Pleasure (#1)",
     name: "Flame of Pleasure",
     level: 1,
     affix:
-      "Click the Trait Skill to unleash Purgatory.\nPurgatory has an initial radius of 8 m, lasts for 5 s, and has a cooldown of 8 s\nPurgatory's upper limit becomes 1 . Purgatory follows the player while it is active\nAttempts to auto-cast Purgatory when you are not in Purgatory and enemies are present within 15m. Interval: 1s\n+45% additional damage taken by enemies within the range of Purgatory",
+      "Level 1Click the Trait Skill to unleash Purgatory.\nPurgatory has an initial radius of 8 m, lasts for 5 s, and has a cooldown of 8 s\nPurgatory's upper limit becomes 1 . Purgatory follows the player while it is active\nAttempts to auto-cast Purgatory when you are not in Purgatory and enemies are present within 15m. Interval: 1s\n+45% additional damage taken by enemies within the range of PurgatoryLevel 2Click the Trait Skill to unleash Purgatory.\nPurgatory has an initial radius of 8 m, lasts for 5 s, and has a cooldown of 8 s\nPurgatory's upper limit becomes 1 . Purgatory follows the player while it is active\nAttempts to auto-cast Purgatory when you are not in Purgatory and enemies are present within 15m. Interval: 1s\n+52% additional damage taken by enemies within the range of PurgatoryLevel 3Click the Trait Skill to unleash Purgatory.\nPurgatory has an initial radius of 8 m, lasts for 5 s, and has a cooldown of 8 s\nPurgatory's upper limit becomes 1 . Purgatory follows the player while it is active\nAttempts to auto-cast Purgatory when you are not in Purgatory and enemies are present within 15m. Interval: 1s\n+60% additional damage taken by enemies within the range of PurgatoryLevel 4Click the Trait Skill to unleash Purgatory.\nPurgatory has an initial radius of 8 m, lasts for 5 s, and has a cooldown of 8 s\nPurgatory's upper limit becomes 1 . Purgatory follows the player while it is active\nAttempts to auto-cast Purgatory when you are not in Purgatory and enemies are present within 15m. Interval: 1s\n+68% additional damage taken by enemies within the range of PurgatoryLevel 5Click the Trait Skill to unleash Purgatory.\nPurgatory has an initial radius of 8 m, lasts for 5 s, and has a cooldown of 8 s\nPurgatory's upper limit becomes 1 . Purgatory follows the player while it is active\nAttempts to auto-cast Purgatory when you are not in Purgatory and enemies are present within 15m. Interval: 1s\n+76% additional damage taken by enemies within the range of Purgatory\nArtificial Moon:\nConverts 30% of Cold and Lightning Damage to Fire Damage",
   },
   {
     hero: "Frostfire Gemma: Flame of Pleasure (#1)",
@@ -533,7 +526,7 @@ export const HeroTraits = [
     name: "Infernal Damnation",
     level: 60,
     affix:
-      "For every second Purgatory is active, (+6/+7/+8/+9/+10)% additional damage until Purgatory is lost or a new Purgatory is cast",
+      "For every second Purgatory is active, (+6/+7/+8/+9/+10)% additional damage and Minion Damage until Purgatory is lost or a new Purgatory is cast",
   },
   {
     hero: "Frostfire Gemma: Flame of Pleasure (#1)",
@@ -554,21 +547,21 @@ export const HeroTraits = [
     name: "Frostbitten Heart",
     level: 1,
     affix:
-      "When dealing Cold Damage, casts Cold Pulse. Interval: 4 s\nInflicts Frostbite when Cold Pulse hits an enemy\n+20% additional Cold Damage for 6 s when Cold Pulse hits an enemy",
+      "Level 1When dealing Cold Damage, triggers Cold Pulse at the enemy's location. Interval: 4 s\nInflicts Frostbite when Cold Pulse hits an enemy\n+20% additional Cold Damage for you and your Minions for 6 s when Cold Pulse hits an enemyLevel 2When dealing Cold Damage, triggers Cold Pulse at the enemy's location. Interval: 4 s\nInflicts Frostbite when Cold Pulse hits an enemy\n+26% additional Cold Damage for you and your Minions for 6 s when Cold Pulse hits an enemyLevel 3When dealing Cold Damage, triggers Cold Pulse at the enemy's location. Interval: 4 s\nInflicts Frostbite when Cold Pulse hits an enemy\n+32% additional Cold Damage for you and your Minions for 6 s when Cold Pulse hits an enemyLevel 4When dealing Cold Damage, triggers Cold Pulse at the enemy's location. Interval: 4 s\nInflicts Frostbite when Cold Pulse hits an enemy\n+38% additional Cold Damage for you and your Minions for 6 s when Cold Pulse hits an enemyLevel 5When dealing Cold Damage, triggers Cold Pulse at the enemy's location. Interval: 4 s\nInflicts Frostbite when Cold Pulse hits an enemy\n+44% additional Cold Damage for you and your Minions for 6 s when Cold Pulse hits an enemy\nArtificial Moon:\n+10 Max Frostbite Rating and +50% additional Cold Pulse Skill Area",
   },
   {
     hero: "Frostfire Gemma: Frostbitten Heart (#2)",
     name: "Deepfreeze",
     level: 45,
     affix:
-      "Frostbite Rating can exceed its upper limit, up to (150/150/200/200/200)\n(+65/+90/+110/+130/+150)% Frostbite Effect",
+      "Frostbite Rating can exceed its upper limit, up to (150/150/200/200/200)\n(+25/+40/+55/+65/+80)% Frostbite Effect\n+10% additional Cold Damage for you and your Minions",
   },
   {
     hero: "Frostfire Gemma: Frostbitten Heart (#2)",
     name: "Glacial Night",
     level: 60,
     affix:
-      "Enemies are inflicted with Condensed FrostEnemies are inflicted with Condensed Frost\n+25% Condensed Frost EffectEnemies are inflicted with Condensed Frost\n+50% Condensed Frost EffectEnemies are inflicted with Condensed Frost\n+75% Condensed Frost EffectEnemies are inflicted with Condensed Frost\n+100% Condensed Frost Effect",
+      "Level 1Enemies are inflicted with Condensed FrostLevel 2Enemies are inflicted with Condensed Frost\n+25% Condensed Frost EffectLevel 3Enemies are inflicted with Condensed Frost\n+50% Condensed Frost EffectLevel 4Enemies are inflicted with Condensed Frost\n+75% Condensed Frost EffectLevel 5Enemies are inflicted with Condensed Frost\n+100% Condensed Frost Effect",
   },
   {
     hero: "Frostfire Gemma: Frostbitten Heart (#2)",
@@ -596,7 +589,7 @@ export const HeroTraits = [
     name: "Ice-Fire Fusion",
     level: 1,
     affix:
-      "Enters Frostfire Rampage after casting Fire or Cold Skills 5 time(s)\n+20% additional Fire Damage and Cold Damage during Frostfire Rampage\nFrostfire Rampage lasts for 5 s and has a cooldown of 10 s",
+      "Level 1Enters Frostfire Rampage after casting Fire or Cold Skills 5 time(s)\n+20% additional Fire Damage and Cold Damage during Frostfire Rampage\nFrostfire Rampage lasts for 5 s and has a cooldown of 10 sLevel 2Enters Frostfire Rampage after casting Fire or Cold Skills 5 time(s)\n+23% additional Fire Damage and Cold Damage during Frostfire Rampage\nFrostfire Rampage lasts for 5 s and has a cooldown of 10 sLevel 3Enters Frostfire Rampage after casting Fire or Cold Skills 5 time(s)\n+26% additional Fire Damage and Cold Damage during Frostfire Rampage\nFrostfire Rampage lasts for 5 s and has a cooldown of 10 sLevel 4Enters Frostfire Rampage after casting Fire or Cold Skills 5 time(s)\n+30% additional Fire Damage and Cold Damage during Frostfire Rampage\nFrostfire Rampage lasts for 5 s and has a cooldown of 10 sLevel 5Enters Frostfire Rampage after casting Fire or Cold Skills 5 time(s)\n+33% additional Fire Damage and Cold Damage during Frostfire Rampage\nFrostfire Rampage lasts for 5 s and has a cooldown of 10 s\nArtificial Moon:\n+100% additional Cooldown Recovery Speed for Frostfire Rampage",
   },
   {
     hero: "Frostfire Gemma: Ice-Fire Fusion (#3)",
@@ -637,35 +630,28 @@ export const HeroTraits = [
     name: "Wisdom of The Gods",
     level: 1,
     affix:
-      "Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to cast God's Boon\nGod's Boon: Consumes all Focus Blessings to grant self God's Boon. Cooldown: 15 s\n+6% additional damage for each stack of Focus Blessing that God's Boon consumes. Lasts for 10 s. Stacks up to 8 time(s)",
+      "Level 1Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to cast God's Boon\nGod's Boon: Consumes all Focus Blessings to grant self God's Boon. Cooldown: 15 s\n+6% additional damage for each stack of Focus Blessing that God's Boon consumes. Lasts for 10 s. Stacks up to 8 time(s)Level 2Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to cast God's Boon\nGod's Boon: Consumes all Focus Blessings to grant self God's Boon. Cooldown: 15 s\n+7% additional damage for each stack of Focus Blessing that God's Boon consumes. Lasts for 10 s. Stacks up to 8 time(s)Level 3Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to cast God's Boon\nGod's Boon: Consumes all Focus Blessings to grant self God's Boon. Cooldown: 15 s\n+8% additional damage for each stack of Focus Blessing that God's Boon consumes. Lasts for 10 s. Stacks up to 8 time(s)Level 4Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to cast God's Boon\nGod's Boon: Consumes all Focus Blessings to grant self God's Boon. Cooldown: 15 s\n+9% additional damage for each stack of Focus Blessing that God's Boon consumes. Lasts for 10 s. Stacks up to 8 time(s)Level 5Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to cast God's Boon\nGod's Boon: Consumes all Focus Blessings to grant self God's Boon. Cooldown: 15 s\n+10% additional damage for each stack of Focus Blessing that God's Boon consumes. Lasts for 10 s. Stacks up to 8 time(s)\nArtificial Moon:\n+6% Skill Area for each stack of Focus Blessing consumed by God's Boon. Lasts for +10 s. Stacks up to 8 time(s)",
   },
   {
     hero: "Oracle Thea: Wisdom of The Gods (#1)",
-    name: "Predicted Harvest",
+    name: "Divine Prophecy",
     level: 45,
     affix:
-      "Automatically try to use God's Boon when Focus Blessing is at max stacks\n(30/35/40/45/50)% chance to gain an additional stack of Focus Blessing when Tenacity Blessing, Agility Blessing or Focus Blessing is gained",
-  },
-  {
-    hero: "Oracle Thea: Wisdom of The Gods (#1)",
-    name: "Finale Prophecy",
-    level: 450,
-    affix:
-      "0.8 to the radius of God's Boon for each stack of blessing consumed by God's Boon\nFor each enemy within range of God's Boon, (+3/3.7/4.4/5.1/+6)% additional damage after granting God's Boon. Lasts for 10 s. Stacks up to 10 time(s)",
+      "When at max stacks of all Blessings and God's Boon is not active, automatically uses God's Boon when dealing damage\nWhen gaining a type of Blessing, (+50/+50/+100/+100/+100)% chance to gain (1/2/2/3/4) additional stack(s) of the corresponding Blessing\n(+6/+8/+10/+12/+14)% additional damage for every Blessing at max stacks (multiplies)",
   },
   {
     hero: "Oracle Thea: Wisdom of The Gods (#1)",
     name: "Predicted Reincarnation",
     level: 60,
     affix:
-      "(+3/+4/+5/+6/+7)% additional God's Boon Cooldown Recovery Speed for every stack of Focus Blessing consumed by God's Boon\n(+20/+24/+28/+32/+36)% additional damage if God's Boon consumes max stacks of Focus Blessing. Lasts for 10 s",
+      "+7% additional God's Boon Cooldown Recovery Speed for every stack of Focus Blessing consumed by God's Boon. Stacks up to 8 time(s)\n(+20/+26/+32/+38/+45)% additional damage if God's Boon consumes max stacks of Focus Blessing. Lasts for 10 s",
   },
   {
     hero: "Oracle Thea: Wisdom of The Gods (#1)",
     name: "Predicted Hope",
     level: 60,
     affix:
-      "God's Boon will now consume all Tenacity Blessing and Agility Blessing stacks\n(+2/2.3/2.6/2.9/3.2)% additional All Damage for each stack of Blessing that God's Boon consumes. Lasts for 10 s. Stacks up to 20 time(s)",
+      "+1 to Max Tenacity Blessing Stacks\n+1 to Max Agility Blessing Stacks\n(-3/+2/+7/+12/+17)% additional damage",
   },
   {
     hero: "Oracle Thea: Wisdom of The Gods (#1)",
@@ -679,21 +665,28 @@ export const HeroTraits = [
     name: "Predicted Justice",
     level: 75,
     affix:
-      "The biggest max stack bonus of Agility Blessing or Tenacity Blessing is also applied to the max stack bonus of Focus Blessing\n(-25/-22.5/-20/-17.5/-15)% additional Cooldown Recovery Speed",
+      "The biggest max stack bonus of Agility Blessing or Tenacity Blessing is also applied to the max stack bonus of Focus Blessing\n(-25/-22.5/-20/-17.5/-15)% additional Cooldown Recovery Speed for God's Boon",
   },
   {
     hero: "Oracle Thea: Incarnation of The Gods (#2)",
     name: "Incarnation of the Gods",
     level: 1,
     affix:
-      "Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to use Divine Realm on the closest enemy for 8 s. Cooldown: 8 s\nDeals +7% additional damage to Full-Life enemies for every stack of Agility Blessing. Stacks up to 20 times.\n+7% additional damage against enemies at Low-Life for every stack of Tenacity Blessing. Stacks up to 20 times.\nConverts all Tenacity Blessing to Agility Blessing when outside the Divine Realm\nConverts all Agility Blessing to Tenacity Blessing when within the Divine Realm",
+      "Level 1Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to use Divine Realm on the closest enemy for 8 s. Cooldown: 8 s\n+3% additional damage for every stack of Blessing when the Divine Realm is active. Stacks up to 8 time(s)\nConverts all Tenacity Blessing to Agility Blessing when outside the Divine Realm\nConverts all Agility Blessing to Tenacity Blessing when within the Divine Realm\nThe increase/decrease of max Tenacity Blessing stacks is also applied to Agility Blessing when you're outside of the Divine Realm.\nThe increase/decrease of max Agility Blessing stacks is also applied to Tenacity Blessing when you're within the Divine Realm.Level 2Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to use Divine Realm on the closest enemy for 8 s. Cooldown: 8 s\n3.8% additional damage for every stack of Blessing when the Divine Realm is active. Stacks up to 8 time(s)\nConverts all Tenacity Blessing to Agility Blessing when outside the Divine Realm\nConverts all Agility Blessing to Tenacity Blessing when within the Divine Realm\nThe increase/decrease of max Tenacity Blessing stacks is also applied to Agility Blessing when you're outside of the Divine Realm.\nThe increase/decrease of max Agility Blessing stacks is also applied to Tenacity Blessing when you're within the Divine Realm.Level 3Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to use Divine Realm on the closest enemy for 8 s. Cooldown: 8 s\n4.5% additional damage for every stack of Blessing when the Divine Realm is active. Stacks up to 8 time(s)\nConverts all Tenacity Blessing to Agility Blessing when outside the Divine Realm\nConverts all Agility Blessing to Tenacity Blessing when within the Divine Realm\nThe increase/decrease of max Tenacity Blessing stacks is also applied to Agility Blessing when you're outside of the Divine Realm.\nThe increase/decrease of max Agility Blessing stacks is also applied to Tenacity Blessing when you're within the Divine Realm.Level 4Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to use Divine Realm on the closest enemy for 8 s. Cooldown: 8 s\n5.3% additional damage for every stack of Blessing when the Divine Realm is active. Stacks up to 8 time(s)\nConverts all Tenacity Blessing to Agility Blessing when outside the Divine Realm\nConverts all Agility Blessing to Tenacity Blessing when within the Divine Realm\nThe increase/decrease of max Tenacity Blessing stacks is also applied to Agility Blessing when you're outside of the Divine Realm.\nThe increase/decrease of max Agility Blessing stacks is also applied to Tenacity Blessing when you're within the Divine Realm.Level 5Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to use Divine Realm on the closest enemy for 8 s. Cooldown: 8 s\n+6% additional damage for every stack of Blessing when the Divine Realm is active. Stacks up to 8 time(s)\nConverts all Tenacity Blessing to Agility Blessing when outside the Divine Realm\nConverts all Agility Blessing to Tenacity Blessing when within the Divine Realm\nThe increase/decrease of max Tenacity Blessing stacks is also applied to Agility Blessing when you're outside of the Divine Realm.\nThe increase/decrease of max Agility Blessing stacks is also applied to Tenacity Blessing when you're within the Divine Realm.\nArtificial Moon:\n+1% additional damage for every stack of Tenacity Blessing or Agility Blessing. Stacks up to 15% time(s)",
   },
   {
     hero: "Oracle Thea: Incarnation of The Gods (#2)",
-    name: "Divinity",
+    name: "Tenacious Divinity",
     level: 45,
     affix:
-      "(+10/+12/+14/+16/+19)% additional damage (multiplies) each time a Blessing reaches its max stacks\nThe increase/decrease of max Tenacity Blessing stacks is also applied to Agility Blessing when you're outside of the Divine Realm.\nThe increase/decrease of max Agility Blessing stacks is also applied to Tenacity Blessing when you're within the Divine Realm.\nGains a Skill Slot, in which a Support Skill or Activation Medium Support Skill can be installed to support Trait Skill Divine Realm",
+      "+12% additional Divine Realm Skill Area for every stack of Tenacity Blessing. Stacks up to 8 time(s)\nGains a Skill Slot, in which a Support Skill or Activation Medium Support Skill can be installed to support Trait Skill Divine Realm\nWhen Tenacity Blessing is at least at 6 stack(s), (+20/+26/+32/+35/+38)% additional damage. When Tenacity Blessing is at least at 10 stack(s), this effect becomes: Deals (+7/7.5/+8/8.5/+9)% additional damage to enemies at Low Life for every stack of Tenacity Blessing. Stacks up to 17 time(s)",
+  },
+  {
+    hero: "Oracle Thea: Incarnation of The Gods (#2)",
+    name: "Agile Godhood",
+    level: 45,
+    affix:
+      "-12% additional Divine Realm Skill Area for every stack of Agility Blessing. Stacks up to 8 time(s)\nGains a Skill Slot, in which a Support Skill or Activation Medium Support Skill can be installed to support Trait Skill Divine Realm\nWhen Agility Blessing is at least at 6 stack(s), (+18/+24/+28/+31/+34)% additional Attack and Cast Speed. When Agility Blessing is at least at 10 stack(s), this effect becomes: When at Low Life, (1.8/2.3/2.8/3.4/+4)% additional damage for every stack of Agility Blessing. Stacks up to 17 time(s)",
   },
   {
     hero: "Oracle Thea: Incarnation of The Gods (#2)",
@@ -707,28 +700,28 @@ export const HeroTraits = [
     name: "Divine Realm Power",
     level: 60,
     affix:
-      "(+20/+26/+32/+38/+45)% additional damage to enemies in the Divine Realm\n+1% Movement Speed for 30 s upon defeating an enemy in the Divine Realm. Stacks up to 20 time(s)\nWhen there are no enemies in the Divine Realm, refreshes the cooldown of Divine Realm",
+      "When in the Divine Realm, (+20/+26/+32/+38/+45)% additional damage to enemies in the Divine Realm\n(+29/+40/+52/+58/+65)% Attack and Cast Speed for every stack of any blessing when outside the Divine Realm while the Divine Realm is active\nWhen defeating an enemy outside the Divine Realm while the Divine Realm is active, +1% Movement Speed for 30 s. Stacks up to 20 time(s)\nWhen there are no enemies in the Divine Realm, refreshes the cooldown of Divine Realm",
   },
   {
     hero: "Oracle Thea: Incarnation of The Gods (#2)",
     name: "Incarnation",
     level: 75,
     affix:
-      "The Divine Realm will follow you\nFor (1/1/2/2/2) s after inflicting damage to an enemy for the first time, this enemy is deemed to be at Low Life\nWhen casting a Divine Realm, for every 1 stack(s) of Blessings, (+1/1.25/1.5/1.75/+2)% additional damage dealt inside the Divine Realm until the Divine Realm ends",
+      "Level 1Upon inflicting damage, deem this enemy to be at Low Life for 4.5 s. This effect's Interval for the same enemy: 10 sLevel 2Upon inflicting damage, deem this enemy to be at Low Life for 5 s. This effect's Interval for the same enemy: 10 s\n+5% additional damage to enemies in the Divine RealmLevel 3Upon inflicting damage, deem this enemy to be at Low Life for 5.5 s. This effect's Interval for the same enemy: 10 s\n+10% additional damage to enemies in the Divine RealmLevel 4Upon inflicting damage, deem this enemy to be at Low Life for 6 s. This effect's Interval for the same enemy: 10 s\n+15% additional damage to enemies in the Divine RealmLevel 5Upon inflicting damage, deem this enemy to be at Low Life for 6.5 s. This effect's Interval for the same enemy: 10 s\n+20% additional damage to enemies in the Divine Realm",
   },
   {
     hero: "Oracle Thea: Incarnation of The Gods (#2)",
     name: "Divine Spirit",
     level: 75,
     affix:
-      "-70% Divine Realm skill radius\n(1.7/1.5/1.3/1.1/0.8)% additional damage taken for every 4% of Missing Life when outside the Divine Realm\nWhen dealing damage outside the Divine Realm, enemies with a higher percentage of Life than you will be considered Full-Life enemies",
+      "(1.8/1.9/+2/2.15/2.3)% damage for every 3% Missing Life when outside the Divine Realm\n(+1/0.9/0.8/0.7/0.6)% additional damage taken for every 3% of Missing Life when outside the Divine Realm",
   },
   {
     hero: "Oracle Thea: Blasphemer (#3)",
     name: "Blasphemer",
     level: 1,
     affix:
-      "Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to inflict Desecration on the enemy with the highest rarity within 15m. Cooldown: 5s. Inflicts one-third of the max stacks each time (rounded up)\nConverts the effects of affixes that increase Max Blessings Stacks into effects that reduce Max Blessings Stacks and increase Max Desecration Stacks. Increases Max Desecration Stacks by up to 4 for each type of Blessings\nTriggers the Trait Skill and ignores its cooldown when gaining any Blessing. Interval: 0.3s",
+      "Level 1Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to inflict Desecration on the enemy with the highest rarity within 15m. Cooldown: 5s. Inflicts one-third of the max stacks each time (rounded up)\nConverts the effects of affixes that increase Max Blessings Stacks into effects that reduce Max Blessings Stacks and increase Max Desecration Stacks. Increases Max Desecration Stacks by up to 4 for each type of Blessings\nTriggers the Trait Skill and ignores its cooldown when gaining any Blessing. Interval: 0.3sLevel 2Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to inflict Desecration on the enemy with the highest rarity within 15m. Cooldown: 5s. Inflicts one-third of the max stacks each time (rounded up)\nConverts the effects of affixes that increase Max Blessings Stacks into effects that reduce Max Blessings Stacks and increase Max Desecration Stacks. Increases Max Desecration Stacks by up to 4 for each type of Blessings\nTriggers the Trait Skill and ignores its cooldown when gaining any Blessing. Interval: 0.3s\n+5% additional Erosion DamageLevel 3Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to inflict Desecration on the enemy with the highest rarity within 15m. Cooldown: 5s. Inflicts one-third of the max stacks each time (rounded up)\nConverts the effects of affixes that increase Max Blessings Stacks into effects that reduce Max Blessings Stacks and increase Max Desecration Stacks. Increases Max Desecration Stacks by up to 4 for each type of Blessings\nTriggers the Trait Skill and ignores its cooldown when gaining any Blessing. Interval: 0.3s\n+10% additional Erosion DamageLevel 4Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to inflict Desecration on the enemy with the highest rarity within 15m. Cooldown: 5s. Inflicts one-third of the max stacks each time (rounded up)\nConverts the effects of affixes that increase Max Blessings Stacks into effects that reduce Max Blessings Stacks and increase Max Desecration Stacks. Increases Max Desecration Stacks by up to 4 for each type of Blessings\nTriggers the Trait Skill and ignores its cooldown when gaining any Blessing. Interval: 0.3s\n+15% additional Erosion DamageLevel 5Gain a Divine Blessing every 2s in the following order: Focus Blessing - Agility Blessing - Tenacity Blessing\nClick the Trait Skill to inflict Desecration on the enemy with the highest rarity within 15m. Cooldown: 5s. Inflicts one-third of the max stacks each time (rounded up)\nConverts the effects of affixes that increase Max Blessings Stacks into effects that reduce Max Blessings Stacks and increase Max Desecration Stacks. Increases Max Desecration Stacks by up to 4 for each type of Blessings\nTriggers the Trait Skill and ignores its cooldown when gaining any Blessing. Interval: 0.3s\n+20% additional Erosion Damage\nArtificial Moon:\nConverts 30% of Physical Damage taken to Erosion Damage",
   },
   {
     hero: "Oracle Thea: Blasphemer (#3)",
@@ -756,7 +749,7 @@ export const HeroTraits = [
     name: "Onset of Depravity",
     level: 75,
     affix:
-      "When inflicting Desecration on an Elite for the first time, deals True Damage equal to (3/6/9/12/15)% of their Max Life. (30/40/50/60/70)% of the max Desecration stacks is also applied to this value to deal True Damage equal to up to 25% of their Max Life\nWhen a Desecrated target is under a crowd control effect, the target gains Mountain of Sins",
+      "When inflicting Desecration on an Elite for the first time, deals True Damage equal to (6/8/10/12/15)% of their Max Life. $P2$% of the max Desecration stacks is also applied to this value to deal True Damage equal to up to 25% of their Max Life\nWhen a Desecrated target is under a crowd control effect, the target gains Mountain of Sins",
   },
   {
     hero: "Oracle Thea: Blasphemer (#3)",
@@ -770,7 +763,7 @@ export const HeroTraits = [
     name: "Spacetime Illusion",
     level: 1,
     affix:
-      "Own Spacetime Illusion\nThe Spacetime Illusion uses your Main Skill once every 1.5 s. The Spacetime Illusion's castings are considered your castings\nWhile having Spacetime Illusion, click the Trait Skill to recall Spacetime Illusion",
+      "Level 1Own Spacetime Illusion\nThe Spacetime Illusion uses your Main Skill once every 1.5 s. The Spacetime Illusion's castings are considered your castings\nWhile having Spacetime Illusion, click the Trait Skill to recall Spacetime IllusionLevel 2Own Spacetime Illusion\nThe Spacetime Illusion uses your Main Skill once every 1.5 s. The Spacetime Illusion's castings are considered your castings\nWhile having Spacetime Illusion, click the Trait Skill to recall Spacetime Illusion\n+5% additional Spell DamageLevel 3Own Spacetime Illusion\nThe Spacetime Illusion uses your Main Skill once every 1.5 s. The Spacetime Illusion's castings are considered your castings\nWhile having Spacetime Illusion, click the Trait Skill to recall Spacetime Illusion\n+10% additional Spell DamageLevel 4Own Spacetime Illusion\nThe Spacetime Illusion uses your Main Skill once every 1.5 s. The Spacetime Illusion's castings are considered your castings\nWhile having Spacetime Illusion, click the Trait Skill to recall Spacetime Illusion\n+15% additional Spell DamageLevel 5Own Spacetime Illusion\nThe Spacetime Illusion uses your Main Skill once every 1.5 s. The Spacetime Illusion's castings are considered your castings\nWhile having Spacetime Illusion, click the Trait Skill to recall Spacetime Illusion\n+20% additional Spell Damage\nArtificial Moon:\n1.5% Cooldown Recovery Speed every time you or the Spacetime Illusion casts a skill. Lasts for 8 s. Stacks up to 10 time(s)",
   },
   {
     hero: "Spacetime Witness Youga: Spacetime Illusion (#1)",
@@ -812,7 +805,7 @@ export const HeroTraits = [
     name: "Spacetime Elapse",
     level: 1,
     affix:
-      "Clicking the Trait Skill or dealing Damage Over Time to an enemy casts Twisted Spacetime. Interval: 2 s. Lasts for 6 s\nWhile Twisted Spacetime is active, cast Twisted Spacetime again to move it and extend its Duration by 2\nRecords 30% of Damage Over Time, Reaping Damage, and Reap Purification Damage dealt to enemies while Twisted Spacetime is active\nAfter moving, Twisted Spacetime inflicts Turbulence on enemies within, having them share the damage it records equally and clearing the records",
+      "Level 1Clicking the Trait Skill or dealing Damage Over Time to an enemy casts Twisted Spacetime. Interval: 2 s. Lasts for 6 s\nWhile Twisted Spacetime is active, cast Twisted Spacetime again to move it and extend its Duration by 2\n扭曲时空持续期间，记录 30% 对敌人造成的持续和收割伤害\nAfter moving, Twisted Spacetime inflicts Turbulence on enemies within, having them share the damage it records equally and clearing the recordsLevel 2Clicking the Trait Skill or dealing Damage Over Time to an enemy casts Twisted Spacetime. Interval: 2 s. Lasts for 6 s\nWhile Twisted Spacetime is active, cast Twisted Spacetime again to move it and extend its Duration by 2\n扭曲时空持续期间，记录 35% 对敌人造成的持续和收割伤害\nAfter moving, Twisted Spacetime inflicts Turbulence on enemies within, having them share the damage it records equally and clearing the recordsLevel 3Clicking the Trait Skill or dealing Damage Over Time to an enemy casts Twisted Spacetime. Interval: 2 s. Lasts for 6 s\nWhile Twisted Spacetime is active, cast Twisted Spacetime again to move it and extend its Duration by 2\n扭曲时空持续期间，记录 40% 对敌人造成的持续和收割伤害\nAfter moving, Twisted Spacetime inflicts Turbulence on enemies within, having them share the damage it records equally and clearing the recordsLevel 4Clicking the Trait Skill or dealing Damage Over Time to an enemy casts Twisted Spacetime. Interval: 2 s. Lasts for 6 s\nWhile Twisted Spacetime is active, cast Twisted Spacetime again to move it and extend its Duration by 2\n扭曲时空持续期间，记录 45% 对敌人造成的持续和收割伤害\nAfter moving, Twisted Spacetime inflicts Turbulence on enemies within, having them share the damage it records equally and clearing the recordsLevel 5Clicking the Trait Skill or dealing Damage Over Time to an enemy casts Twisted Spacetime. Interval: 2 s. Lasts for 6 s\nWhile Twisted Spacetime is active, cast Twisted Spacetime again to move it and extend its Duration by 2\n扭曲时空持续期间，记录 50% 对敌人造成的持续和收割伤害\nAfter moving, Twisted Spacetime inflicts Turbulence on enemies within, having them share the damage it records equally and clearing the records\nArtificial Moon:\n+25% additional Spacetime Turbulence Duration",
   },
   {
     hero: "Spacetime Witness Youga: Spacetime Elapse (#2)",
@@ -854,7 +847,7 @@ export const HeroTraits = [
     name: "Order Calling",
     level: 1,
     affix:
-      "Within 4 s after a Summon Skill is cast, all your Minions will gain Overload. Cooldown: 12 s\nOverload grants +60% additional damage\nThe Effect and Duration of Overload are refreshed when a Minion that already has Overload gains Overload again",
+      "Level 1Within 4 s after a Summon Skill is cast, all your Minions will gain Overload. Cooldown: 12 s\nOverload grants +60% additional damage\nThe Effect and Duration of Overload are refreshed when a Minion that already has Overload gains Overload againLevel 2Within 4 s after a Summon Skill is cast, all your Minions will gain Overload. Cooldown: 12 s\nOverload grants +60% additional damage\nThe Effect and Duration of Overload are refreshed when a Minion that already has Overload gains Overload again\n+5% additional damage when Minions have OverloadLevel 3Within 4 s after a Summon Skill is cast, all your Minions will gain Overload. Cooldown: 12 s\nOverload grants +60% additional damage\nThe Effect and Duration of Overload are refreshed when a Minion that already has Overload gains Overload again\n+10% additional damage when Minions have OverloadLevel 4Within 4 s after a Summon Skill is cast, all your Minions will gain Overload. Cooldown: 12 s\nOverload grants +60% additional damage\nThe Effect and Duration of Overload are refreshed when a Minion that already has Overload gains Overload again\n+16% additional damage when Minions have OverloadLevel 5Within 4 s after a Summon Skill is cast, all your Minions will gain Overload. Cooldown: 12 s\nOverload grants +60% additional damage\nThe Effect and Duration of Overload are refreshed when a Minion that already has Overload gains Overload again\n+22% additional damage when Minions have Overload\nArtificial Moon:\n+30% Overload Duration",
   },
   {
     hero: "Commander Moto: Order Calling (#1)",
@@ -868,42 +861,42 @@ export const HeroTraits = [
     name: "All In",
     level: 45,
     affix:
-      "(+120/+155/+190/+225/+270)% additional Overload Effect when a Minion gains Overload for the first time",
+      "(+80/+90/+100/+120/+140)% additional Overload Effect when a Minion gains Overload for the first time",
   },
   {
     hero: "Commander Moto: Order Calling (#1)",
-    name: "Tough as Nails",
+    name: "自主重构",
     level: 60,
     affix:
-      "(+9/+11/+13/+15/+18)% Overload Effect for every 5 Command owned\nMinions with Overload regenerate 1% Max Life per second for every 5 Command owned",
+      "Minions with Overload regenerate 1% Max Life per second for every 5 Command owned\n(+25/+32/+40/+50/+60)% additional damage when Minions have Overload and are not at Low Life",
   },
   {
     hero: "Commander Moto: Order Calling (#1)",
-    name: "Last Stand",
+    name: "过载程式",
     level: 60,
     affix:
-      "Minions won't be defeated when they have Overload\n-100% Life Restoration Speed for Minions when they have Overload\nMinions deal additional damage based on their Missing Life when they have Overload, up to (+25/+32/+40/+50/+60)% additional damage",
+      "Gains Overload for 6 s after a Synthetic Troop Minion is spawned\nSynthetic Troop Minions will be defeated 6 s after spawning\n(+10/+15/+20/+25/+30)% additional Overload Effect",
   },
   {
     hero: "Commander Moto: Order Calling (#1)",
     name: "Charge Forward",
     level: 75,
     affix:
-      "For every +5% Max Life a Minion has, +1% Physique and (+2/+3/+4/+5/+6)% Overload Effect received",
+      "(+9/+11/+13/+15/+18)% Overload Effect for every 5 Command owned, up to (+90/+110/+130/+150/+180)%",
   },
   {
     hero: "Commander Moto: Order Calling (#1)",
-    name: "Go for Broke",
+    name: "广域辐射",
     level: 75,
     affix:
-      "For every 5% Life lost by a Synthetic Troop Minion in the last second, (+10/+11/+12/+14/+15)% Overload Effect received. Stacks up to 20 time(s)",
+      "+100% Aura Area\n+10% additional Attack and Cast Speed when you or your Minions are affected by an Aura\n(+3/+4/+6/+7/+8)% additional damage for every Aura affecting you and your Minions",
   },
   {
     hero: "Commander Moto: Charge Calling (#2)",
     name: "Charge Calling",
     level: 1,
     affix:
-      "Allows you to click the Trait Skill to gain Charge Calling for 6 s. Cooldown: 6 s\nDuring Charge Calling, Synthetic Troop Minions summoned at a time +1 . All Synthetic Troop Minions will activate Self-Destruct Protocol and Charge at the enemy in the next 1 s, self-destructing upon colliding with an enemy or being defeated to deal Physical Attack Damage to enemies within the area\n+20% additional Self-Destruct Damage triggered by Self-Destruct Protocol",
+      "Level 1Allows you to click the Trait Skill to gain Charge Calling for 6 s. Cooldown: 6 s\nDuring Charge Calling, Synthetic Troop Minions summoned at a time +1 . All Synthetic Troop Minions will activate Self-Destruct Protocol and Charge at the enemy in the next 1 s, self-destructing upon colliding with an enemy or being defeated to deal Physical Attack Damage to enemies within the area\n+20% additional Self-Destruct Damage triggered by Self-Destruct ProtocolLevel 2Allows you to click the Trait Skill to gain Charge Calling for 6 s. Cooldown: 6 s\nDuring Charge Calling, Synthetic Troop Minions summoned at a time +1 . All Synthetic Troop Minions will activate Self-Destruct Protocol and Charge at the enemy in the next 1 s, self-destructing upon colliding with an enemy or being defeated to deal Physical Attack Damage to enemies within the area\n+26% additional Self-Destruct Damage triggered by Self-Destruct ProtocolLevel 3Allows you to click the Trait Skill to gain Charge Calling for 6 s. Cooldown: 6 s\nDuring Charge Calling, Synthetic Troop Minions summoned at a time +1 . All Synthetic Troop Minions will activate Self-Destruct Protocol and Charge at the enemy in the next 1 s, self-destructing upon colliding with an enemy or being defeated to deal Physical Attack Damage to enemies within the area\n+32% additional Self-Destruct Damage triggered by Self-Destruct ProtocolLevel 4Allows you to click the Trait Skill to gain Charge Calling for 6 s. Cooldown: 6 s\nDuring Charge Calling, Synthetic Troop Minions summoned at a time +1 . All Synthetic Troop Minions will activate Self-Destruct Protocol and Charge at the enemy in the next 1 s, self-destructing upon colliding with an enemy or being defeated to deal Physical Attack Damage to enemies within the area\n+38% additional Self-Destruct Damage triggered by Self-Destruct ProtocolLevel 5Allows you to click the Trait Skill to gain Charge Calling for 6 s. Cooldown: 6 s\nDuring Charge Calling, Synthetic Troop Minions summoned at a time +1 . All Synthetic Troop Minions will activate Self-Destruct Protocol and Charge at the enemy in the next 1 s, self-destructing upon colliding with an enemy or being defeated to deal Physical Attack Damage to enemies within the area\n+44% additional Self-Destruct Damage triggered by Self-Destruct Protocol\nArtificial Moon:\n如果最近拾取过机械零件，额外 +12% 召唤物伤害；自毁程序 +40% 技能范围",
   },
   {
     hero: "Commander Moto: Charge Calling (#2)",
@@ -917,7 +910,7 @@ export const HeroTraits = [
     name: "Heroic Sacrifice",
     level: 60,
     affix:
-      "For every (+70/+60/+50/+45/+40) Max Life or Energy Shield a Synthetic Troop Minion has, Self-Destruct triggered by Self-Destruct Protocol deals +1% additional damage",
+      "For every (70/60/50/45/40) Max Life or Energy Shield a Synthetic Troop Minion has, Self-Destruct triggered by Self-Destruct Protocol deals +1% additional damage",
   },
   {
     hero: "Commander Moto: Charge Calling (#2)",
@@ -945,7 +938,7 @@ export const HeroTraits = [
     name: "High Court Chariot",
     level: 1,
     affix:
-      "+30% Attack and Spell Block Chance\nRestores 4 Murderous Intent per second\nRestores 10 Murderous Intent when Blocking\nWhen having at least 15 Murderous Intent, you can cast the Trait Skill and consume 15 Murderous Intent to create a Holy Domain centered around you and pull enemies within 8 m inside\nWhile inside the Holy Domain, +20% additional damage",
+      "Level 1+30% Attack and Spell Block Chance\nRestores 4 Murderous Intent per second\nRestores 10 Murderous Intent when Blocking\nWhen having at least 15 Murderous Intent, you can cast the Trait Skill and consume 15 Murderous Intent to create a Holy Domain centered around you and pull enemies within 8 m inside\nWhile inside the Holy Domain, +20% additional damageLevel 2+30% Attack and Spell Block Chance\nRestores 4 Murderous Intent per second\nRestores 10 Murderous Intent when Blocking\nWhen having at least 15 Murderous Intent, you can cast the Trait Skill and consume 15 Murderous Intent to create a Holy Domain centered around you and pull enemies within 8 m inside\nWhile inside the Holy Domain, +26% additional damageLevel 3+30% Attack and Spell Block Chance\nRestores 4 Murderous Intent per second\nRestores 10 Murderous Intent when Blocking\nWhen having at least 15 Murderous Intent, you can cast the Trait Skill and consume 15 Murderous Intent to create a Holy Domain centered around you and pull enemies within 8 m inside\nWhile inside the Holy Domain, +32% additional damageLevel 4+30% Attack and Spell Block Chance\nRestores 4 Murderous Intent per second\nRestores 10 Murderous Intent when Blocking\nWhen having at least 15 Murderous Intent, you can cast the Trait Skill and consume 15 Murderous Intent to create a Holy Domain centered around you and pull enemies within 8 m inside\nWhile inside the Holy Domain, +38% additional damageLevel 5+30% Attack and Spell Block Chance\nRestores 4 Murderous Intent per second\nRestores 10 Murderous Intent when Blocking\nWhen having at least 15 Murderous Intent, you can cast the Trait Skill and consume 15 Murderous Intent to create a Holy Domain centered around you and pull enemies within 8 m inside\nWhile inside the Holy Domain, +44% additional damage\nArtificial Moon:\nFor every 10 Murderous Intent you currently have, +2% Holy Domain radius and +1% Attack and Spell Block Chance",
   },
   {
     hero: "Lightbringer Rosa: High Court Chariot (#1)",
@@ -980,7 +973,7 @@ export const HeroTraits = [
     name: "Desperation",
     level: 75,
     affix:
-      "Trait Skills can be continuously channeled. During this time, the Holy Domain moves with the player, and no Murderous Intent is consumed while channeling. Max channeled stacks: 2\nAt max channeled stacks, loses all channeled stacks and casts Holy Domain again. Inflicts a number of stacks of No Guard on all units in the Holy Domain. No Guard lasts for 8s\nFor every 1% Block Ratio, (2.4/2.5/2.6/2.8/2.8)% additional No Guard Effect for enemies and (-0.67/-0.8/-1/-1/-1.2)% additional No Guard Effect on you\n-30% Holy Domain radius",
+      "Trait Skills can be continuously channeled. During this time, the Holy Domain moves with the player, and no Murderous Intent is consumed while channeling. Max channeled stacks: 2\nAt max channeled stacks, loses all channeled stacks and casts Holy Domain again. Inflicts No Guard on all units in the Holy Domain. No Guard lasts for 8s\nFor every 1% Block Ratio, (2.4/2.5/2.6/2.8/2.8)% additional No Guard Effect for enemies and (-0.67/-0.8/-1/-1/-1.2)% additional No Guard Effect on you\n-30% Holy Domain radius",
   },
   {
     hero: "Lightbringer Rosa: High Court Chariot (#1)",
@@ -994,7 +987,7 @@ export const HeroTraits = [
     name: "Unsullied Blade",
     level: 1,
     affix:
-      "Gains Mystic Mercury\nWhile Mystic Mercury is active, using non-Channeled Attack Skills grants Mercury Pts\nUpon reaching max Mercury Pts, Mystic Mercury becomes Realm of Mercury. Realm of Mercury consumes 30 Mercury Pts every second. When Mercury Pt is 0, Realm of Mercury becomes Mystic Mercury again\nMana can only be consumed by Mystic Mercury. At the same time, Mana can only be restored by Realm of Mercury\nBonus and additional bonus to Spell Damage and also apply to Attack Damage",
+      "Level 1Gains Mystic Mercury\nWhile Mystic Mercury is active, using non-Channeled Attack Skills grants Mercury Pts\nUpon reaching max Mercury Pts, Mystic Mercury becomes Realm of Mercury. Realm of Mercury consumes 30 Mercury Pts every second. When Mercury Pt is 0, Realm of Mercury becomes Mystic Mercury again\nMana can only be consumed by Mystic Mercury. At the same time, Mana can only be restored by Realm of Mercury\nBonus and additional bonus to Spell Damage and also apply to Attack DamageLevel 2Gains Mystic Mercury\nWhile Mystic Mercury is active, using non-Channeled Attack Skills grants Mercury Pts\nUpon reaching max Mercury Pts, Mystic Mercury becomes Realm of Mercury. Realm of Mercury consumes 30 Mercury Pts every second. When Mercury Pt is 0, Realm of Mercury becomes Mystic Mercury again\nMana can only be consumed by Mystic Mercury. At the same time, Mana can only be restored by Realm of Mercury\nBonus and additional bonus to Spell Damage and also apply to Attack Damage\n+5% additional Spell DamageLevel 3Gains Mystic Mercury\nWhile Mystic Mercury is active, using non-Channeled Attack Skills grants Mercury Pts\nUpon reaching max Mercury Pts, Mystic Mercury becomes Realm of Mercury. Realm of Mercury consumes 30 Mercury Pts every second. When Mercury Pt is 0, Realm of Mercury becomes Mystic Mercury again\nMana can only be consumed by Mystic Mercury. At the same time, Mana can only be restored by Realm of Mercury\nBonus and additional bonus to Spell Damage and also apply to Attack Damage\n+10% additional Spell DamageLevel 4Gains Mystic Mercury\nWhile Mystic Mercury is active, using non-Channeled Attack Skills grants Mercury Pts\nUpon reaching max Mercury Pts, Mystic Mercury becomes Realm of Mercury. Realm of Mercury consumes 30 Mercury Pts every second. When Mercury Pt is 0, Realm of Mercury becomes Mystic Mercury again\nMana can only be consumed by Mystic Mercury. At the same time, Mana can only be restored by Realm of Mercury\nBonus and additional bonus to Spell Damage and also apply to Attack Damage\n+15% additional Spell DamageLevel 5Gains Mystic Mercury\nWhile Mystic Mercury is active, using non-Channeled Attack Skills grants Mercury Pts\nUpon reaching max Mercury Pts, Mystic Mercury becomes Realm of Mercury. Realm of Mercury consumes 30 Mercury Pts every second. When Mercury Pt is 0, Realm of Mercury becomes Mystic Mercury again\nMana can only be consumed by Mystic Mercury. At the same time, Mana can only be restored by Realm of Mercury\nBonus and additional bonus to Spell Damage and also apply to Attack Damage\n+20% additional Spell Damage\nArtificial Moon:\nWhile Realm of Mercury is in effect, +2% additional Attack Speed every time Mercury Baptism is cast. Lasts for 8 s. Stacks up to 4 time(s)",
   },
   {
     hero: "Lightbringer Rosa: Unsullied Blade (#2)",
@@ -1029,42 +1022,35 @@ export const HeroTraits = [
     name: "Born to Cleanse",
     level: 75,
     affix:
-      "- 30% additional Mana restoration for Realm of Mercury\nMystic Mercury gains an additional effect: +25% additional Elemental Damage\nMystic Mercury still exists when it becomes Realm of Mercury and retains 40% effect\nWhile Mystic Mercury is active, (+20/+27/+34/+41/+48)% additional damage for Weapons",
+      "- 30% additional Mana restoration for Realm of Mercury\nMystic Mercury gains an additional effect: +25% additional Elemental Damage\nMystic Mercury still exists when it becomes Realm of Mercury and retains 40% effect\nWhile Mystic Mercury is active, (+20/+27/+34/+41/+48)% additional damage for Main-Hand Weapon",
   },
   {
     hero: "The Forsaken Iris: Growing Breeze (#1)",
     name: "Growing Breeze",
     level: 1,
     affix:
-      "Spirit Magus Skills can be equipped to Active Skill slotsWhen a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nGrants 4 stack(s) of Nourishment to all Spirit Magi when using Trait Skills. Cooldown: 5 s\nWithin 1 s of Spirit Magi gaining Nourishment, if there are no enemies within 5 m, +70% Movement Speed\nWhen a Spirit Magus casts a skill, +30% chance for it to lose 1 stack of Nourishment\nFor every stack of Nourishment a Spirit Magus has, when it uses a skill, +8% chance for it to lose a stack of Nourishment\nNourishment: When using a skill, +30% additional damage dealt by this skill. Lasts 15 s and stacks up to 10 time(s).\n100% of your Empower Skill Effect bonus is also applied to Spirit Magi's Nourishment",
-  },
-  {
-    hero: "The Forsaken Iris: Growing Breeze (#1)",
-    name: "Embrace the World",
-    level: 45,
-    affix:
-      "For every 1% Fire, Cold, or Lightning Resistance, +1% chance for the corresponding Spirit Magi to use an Enhanced Skill, up to (+28/+36/+44/+52/+60)%",
-  },
-  {
-    hero: "The Forsaken Iris: Growing Breeze (#1)",
-    name: "Struggle Free",
-    level: 45,
-    affix:
-      "+100% Sealed Mana Compensation for Spirit Magus Skills\nSpirit Magi's Skill Cooldown Recovery Speed (+50/+65/+80/+95/+110)%",
+      "Level 1When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nGrants 4 stack(s) of Nourishment to all Spirit Magi when using Trait Skills. Cooldown: 5 s\nWithin 1 s of Spirit Magi gaining Nourishment, if there are no enemies within 5 m, +70% Movement Speed\nWhen a Spirit Magus casts a skill, +30% chance for it to lose 1 stack of Nourishment\nFor every stack of Nourishment a Spirit Magus has, when it uses a skill, +8% chance for it to lose a stack of Nourishment\nNourishment: When using a skill, +30% additional damage dealt by this skill. Lasts 15 s and stacks up to 10 time(s).\n100% of your Empower Skill Effect bonus is also applied to Spirit Magi's NourishmentSpirit Magus Skills can be equipped to Active Skill slotsLevel 2When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nGrants 4 stack(s) of Nourishment to all Spirit Magi when using Trait Skills. Cooldown: 5 s\nWithin 1 s of Spirit Magi gaining Nourishment, if there are no enemies within 5 m, +70% Movement Speed\nWhen a Spirit Magus casts a skill, +30% chance for it to lose 1 stack of Nourishment\nFor every stack of Nourishment a Spirit Magus has, when it uses a skill, +8% chance for it to lose a stack of Nourishment\nNourishment: When using a skill, +30% additional damage dealt by this skill. Lasts 15 s and stacks up to 10 time(s).\n100% of your Empower Skill Effect bonus is also applied to Spirit Magi's Nourishment\n+5% additional Minion DamageSpirit Magus Skills can be equipped to Active Skill slotsLevel 3When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nGrants 4 stack(s) of Nourishment to all Spirit Magi when using Trait Skills. Cooldown: 5 s\nWithin 1 s of Spirit Magi gaining Nourishment, if there are no enemies within 5 m, +70% Movement Speed\nWhen a Spirit Magus casts a skill, +30% chance for it to lose 1 stack of Nourishment\nFor every stack of Nourishment a Spirit Magus has, when it uses a skill, +8% chance for it to lose a stack of Nourishment\nNourishment: When using a skill, +30% additional damage dealt by this skill. Lasts 15 s and stacks up to 10 time(s).\n100% of your Empower Skill Effect bonus is also applied to Spirit Magi's Nourishment\n+10% additional Minion DamageSpirit Magus Skills can be equipped to Active Skill slotsLevel 4When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nGrants 4 stack(s) of Nourishment to all Spirit Magi when using Trait Skills. Cooldown: 5 s\nWithin 1 s of Spirit Magi gaining Nourishment, if there are no enemies within 5 m, +70% Movement Speed\nWhen a Spirit Magus casts a skill, +30% chance for it to lose 1 stack of Nourishment\nFor every stack of Nourishment a Spirit Magus has, when it uses a skill, +8% chance for it to lose a stack of Nourishment\nNourishment: When using a skill, +30% additional damage dealt by this skill. Lasts 15 s and stacks up to 10 time(s).\n100% of your Empower Skill Effect bonus is also applied to Spirit Magi's Nourishment\n+15% additional Minion DamageSpirit Magus Skills can be equipped to Active Skill slotsLevel 5When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nGrants 4 stack(s) of Nourishment to all Spirit Magi when using Trait Skills. Cooldown: 5 s\nWithin 1 s of Spirit Magi gaining Nourishment, if there are no enemies within 5 m, +70% Movement Speed\nWhen a Spirit Magus casts a skill, +30% chance for it to lose 1 stack of Nourishment\nFor every stack of Nourishment a Spirit Magus has, when it uses a skill, +8% chance for it to lose a stack of Nourishment\nNourishment: When using a skill, +30% additional damage dealt by this skill. Lasts 15 s and stacks up to 10 time(s).\n100% of your Empower Skill Effect bonus is also applied to Spirit Magi's Nourishment\n+20% additional Minion Damage\nArtificial Moon:\nGrant 1 additional stack of Nourishment to all Spirit Magi when casting a Trait SkillSpirit Magus Skills can be equipped to Active Skill slots",
   },
   {
     hero: "The Forsaken Iris: Growing Breeze (#1)",
     name: "Socialite",
-    level: 60,
+    level: 45,
     affix:
       "+1 to Max Spirit Magi In Map\nMax Summonable Spirit Magi of Spirit Magus Skills +1\nWhen a Spirit Magus casts a skill, (+15/+12/+8/+4/+2)% chance for it to lose 1 stack of Nourishment",
   },
   {
     hero: "The Forsaken Iris: Growing Breeze (#1)",
-    name: "Amazing Friends",
+    name: "怀中世界",
     level: 60,
     affix:
-      "-20% chance for Spirit Magi to use an Enhanced Skill\nAfter gaining a total of (40/35/30/24/18) stacks of Nourishment, Spirit Magi enter Full Bloom for 12 s\nWhen a Spirit Magus casts the Ultimate while having Full Bloom, (+10/+11/+12/+13/+14)% additional Ultimate Cooldown Recovery Speed for every stack of Nourishment",
+      "For every 1% Fire, Cold, Lightning Resistance, or Erosion Resistance, or every 500 Armor, +1% chance for the corresponding Spirit Magi to use an Enhanced Skill, up to (+28/+36/+44/+52/+60)%",
+  },
+  {
+    hero: "The Forsaken Iris: Growing Breeze (#1)",
+    name: "化雨微风",
+    level: 60,
+    affix:
+      "The chance for Spirit Magi to use an Enhanced Skill is fixed at 0%\nSpirit Magi do not lose Nourishment when casting non-Ultimates but do not gain Nourishment bonuses\nAfter gaining a total of 10 stacks of Nourishment, Spirit Magi enter Full Bloom for 12 s\nWhen a Spirit Magus casts the Ultimate while having Full Bloom, (+10/+11/+12/+13/+14)% additional Ultimate Cooldown Recovery Speed for every stack of Nourishment",
   },
   {
     hero: "The Forsaken Iris: Growing Breeze (#1)",
@@ -1075,17 +1061,17 @@ export const HeroTraits = [
   },
   {
     hero: "The Forsaken Iris: Growing Breeze (#1)",
-    name: "Grow With It",
+    name: "它们一起长大",
     level: 75,
     affix:
-      "Always attempts to auto-trigger the Trait Skill, Growing Breeze\nWhen a Spirit Magus casts a skill, for every +1 skill level of the corresponding skil, the Spirit Magus gains -4% chance to lose 1 stack of Nourishment, up to (-20/-24/-28/-36/-40)%",
+      "Always attempts to auto-trigger the Trait Skill, Growing Breeze\n(20/30/40/50/60)% of the bonus applied to Origin of Spirit Magus is also applied to Spirit Magi's Nourishment",
   },
   {
     hero: "The Forsaken Iris: Vigilant Breeze (#2)",
     name: "Vigilant Breeze",
     level: 1,
     affix:
-      "Spirit Magus Skills can be equipped to Active Skill slotsWhen a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nMerges with Spirit Magi after casting the Trait Skill, entering the Vigilant state. Merged Spirit Magi gain 5 stack(s) of Breeze. Casting the Trait Skill again will remove the Vigilant state\nDuring Vigilant, Merged Spirit Magi consume 20% of Max Life per second when not Reconjuring\nWhile in the Vigilant state, Merged Spirit Magi gain 1 stack of Breeze every 1 s when not Reconjuring, up to 10 stack(s)\nWhen Reconjuring or not Merged, Spirit Magi lose 2 stack(s) of Breeze every 1 s",
+      "Level 1When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nMerges with Spirit Magi after casting the Trait Skill, entering the Vigilant state. Merged Spirit Magi gain 5 stack(s) of Breeze. Casting the Trait Skill again will remove the Vigilant state\nDuring Vigilant, Merged Spirit Magi consume 20% of Max Life per second when not Reconjuring\nWhile in the Vigilant state, Merged Spirit Magi gain 1 stack of Breeze every 1 s when not Reconjuring, up to 10 stack(s)\nWhen Reconjuring or not Merged, Spirit Magi lose 2 stack(s) of Breeze every 1 sSpirit Magus Skills can be equipped to Active Skill slotsLevel 2When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nMerges with Spirit Magi after casting the Trait Skill, entering the Vigilant state. Merged Spirit Magi gain 5 stack(s) of Breeze. Casting the Trait Skill again will remove the Vigilant state\nDuring Vigilant, Merged Spirit Magi consume 20% of Max Life per second when not Reconjuring\nWhile in the Vigilant state, Merged Spirit Magi gain 1 stack of Breeze every 1 s when not Reconjuring, up to 10 stack(s)\nWhen Reconjuring or not Merged, Spirit Magi lose 2 stack(s) of Breeze every 1 s\n+5% additional Minion DamageSpirit Magus Skills can be equipped to Active Skill slotsLevel 3When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nMerges with Spirit Magi after casting the Trait Skill, entering the Vigilant state. Merged Spirit Magi gain 5 stack(s) of Breeze. Casting the Trait Skill again will remove the Vigilant state\nDuring Vigilant, Merged Spirit Magi consume 20% of Max Life per second when not Reconjuring\nWhile in the Vigilant state, Merged Spirit Magi gain 1 stack of Breeze every 1 s when not Reconjuring, up to 10 stack(s)\nWhen Reconjuring or not Merged, Spirit Magi lose 2 stack(s) of Breeze every 1 s\n+10% additional Minion DamageSpirit Magus Skills can be equipped to Active Skill slotsLevel 4When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nMerges with Spirit Magi after casting the Trait Skill, entering the Vigilant state. Merged Spirit Magi gain 5 stack(s) of Breeze. Casting the Trait Skill again will remove the Vigilant state\nDuring Vigilant, Merged Spirit Magi consume 20% of Max Life per second when not Reconjuring\nWhile in the Vigilant state, Merged Spirit Magi gain 1 stack of Breeze every 1 s when not Reconjuring, up to 10 stack(s)\nWhen Reconjuring or not Merged, Spirit Magi lose 2 stack(s) of Breeze every 1 s\n+15% additional Minion DamageSpirit Magus Skills can be equipped to Active Skill slotsLevel 5When a Spirit Magus Skill is set as an Active Skill, casting the Active Skill is considered as casting the Trait Skill as well\nMerges with Spirit Magi after casting the Trait Skill, entering the Vigilant state. Merged Spirit Magi gain 5 stack(s) of Breeze. Casting the Trait Skill again will remove the Vigilant state\nDuring Vigilant, Merged Spirit Magi consume 20% of Max Life per second when not Reconjuring\nWhile in the Vigilant state, Merged Spirit Magi gain 1 stack of Breeze every 1 s when not Reconjuring, up to 10 stack(s)\nWhen Reconjuring or not Merged, Spirit Magi lose 2 stack(s) of Breeze every 1 s\n+20% additional Minion Damage\nArtificial Moon:\n+6 Growth for every stack of BreezeSpirit Magus Skills can be equipped to Active Skill slots",
   },
   {
     hero: "The Forsaken Iris: Vigilant Breeze (#2)",
@@ -1134,7 +1120,7 @@ export const HeroTraits = [
     name: "Sing with the Tide",
     level: 1,
     affix:
-      "Click the Trait Slot to switch between Bard and Loud Song\nIn the Bard state, Attack Channeled Skills and Attack Mobility Skills cannot be used\nIn the Bard state, it is possible to move while casting Spell Channeled Skills, and -20% additional Channeled Skill Damage\nIn the Bard state, the Main Skill is auto channeled while moving\nIn the Bard state, all non-instant and non-Mobility Skills will channel Bard Song instead. Bard Song loses all channeled stacks after reaching max stacks and casts a bubble. This bubble bursts upon making contact with an enemy or reaching the maximum distance, using the corresponding skill once at the location.\nThe bubble leaves a Tide where it bursts and at the feet of enemies it collides with, lasting for 6 s\nIn the Loud Song state, -20% additional Attack and Cast Speed, -20% additional Movement Speed, and +50% additional Tide Effect\nWhen contacting a Tide, gains the following Tide Effect: Ignore physical collisions with enemies and +15% additional damage for 4 s",
+      "Level 1Click the Trait Slot to switch between Bard and Loud Song\nIn the Bard state, Attack Channeled Skills and Attack Mobility Skills cannot be used\nIn the Bard state, it is possible to move while casting Spell Channeled Skills, and -20% additional Channeled Skill Damage\nIn the Bard state, the Main Skill is auto channeled while moving\nIn the Bard state, all non-instant and non-Mobility Skills will channel Bard Song instead. Bard Song loses all channeled stacks after reaching max stacks and casts a bubble. This bubble bursts upon making contact with an enemy or reaching the maximum distance, using the corresponding skill once at the location.\nThe bubble leaves a Tide where it bursts and at the feet of enemies it collides with, lasting for 6 s\nIn the Loud Song state, -20% additional Attack and Cast Speed, -20% additional Movement Speed, and +80% additional Tide Effect\nWhen contacting a Tide, gains the following Tide Effect: Ignore physical collisions with enemies and +15% additional damage for 4 sLevel 2Click the Trait Slot to switch between Bard and Loud Song\nIn the Bard state, Attack Channeled Skills and Attack Mobility Skills cannot be used\nIn the Bard state, it is possible to move while casting Spell Channeled Skills, and -20% additional Channeled Skill Damage\nIn the Bard state, the Main Skill is auto channeled while moving\nIn the Bard state, all non-instant and non-Mobility Skills will channel Bard Song instead. Bard Song loses all channeled stacks after reaching max stacks and casts a bubble. This bubble bursts upon making contact with an enemy or reaching the maximum distance, using the corresponding skill once at the location.\nThe bubble leaves a Tide where it bursts and at the feet of enemies it collides with, lasting for 6 s\nIn the Loud Song state, -20% additional Attack and Cast Speed, -20% additional Movement Speed, and +80% additional Tide Effect\nWhen contacting a Tide, gains the following Tide Effect: Ignore physical collisions with enemies and +15% additional damage for 4 s\n+5% additional damage taken by enemies on the TideLevel 3Click the Trait Slot to switch between Bard and Loud Song\nIn the Bard state, Attack Channeled Skills and Attack Mobility Skills cannot be used\nIn the Bard state, it is possible to move while casting Spell Channeled Skills, and -20% additional Channeled Skill Damage\nIn the Bard state, the Main Skill is auto channeled while moving\nIn the Bard state, all non-instant and non-Mobility Skills will channel Bard Song instead. Bard Song loses all channeled stacks after reaching max stacks and casts a bubble. This bubble bursts upon making contact with an enemy or reaching the maximum distance, using the corresponding skill once at the location.\nThe bubble leaves a Tide where it bursts and at the feet of enemies it collides with, lasting for 6 s\nIn the Loud Song state, -20% additional Attack and Cast Speed, -20% additional Movement Speed, and +80% additional Tide Effect\nWhen contacting a Tide, gains the following Tide Effect: Ignore physical collisions with enemies and +15% additional damage for 4 s\n+10% additional damage taken by enemies on the TideLevel 4Click the Trait Slot to switch between Bard and Loud Song\nIn the Bard state, Attack Channeled Skills and Attack Mobility Skills cannot be used\nIn the Bard state, it is possible to move while casting Spell Channeled Skills, and -20% additional Channeled Skill Damage\nIn the Bard state, the Main Skill is auto channeled while moving\nIn the Bard state, all non-instant and non-Mobility Skills will channel Bard Song instead. Bard Song loses all channeled stacks after reaching max stacks and casts a bubble. This bubble bursts upon making contact with an enemy or reaching the maximum distance, using the corresponding skill once at the location.\nThe bubble leaves a Tide where it bursts and at the feet of enemies it collides with, lasting for 6 s\nIn the Loud Song state, -20% additional Attack and Cast Speed, -20% additional Movement Speed, and +80% additional Tide Effect\nWhen contacting a Tide, gains the following Tide Effect: Ignore physical collisions with enemies and +15% additional damage for 4 s\n+15% additional damage taken by enemies on the TideLevel 5Click the Trait Slot to switch between Bard and Loud Song\nIn the Bard state, Attack Channeled Skills and Attack Mobility Skills cannot be used\nIn the Bard state, it is possible to move while casting Spell Channeled Skills, and -20% additional Channeled Skill Damage\nIn the Bard state, the Main Skill is auto channeled while moving\nIn the Bard state, all non-instant and non-Mobility Skills will channel Bard Song instead. Bard Song loses all channeled stacks after reaching max stacks and casts a bubble. This bubble bursts upon making contact with an enemy or reaching the maximum distance, using the corresponding skill once at the location.\nThe bubble leaves a Tide where it bursts and at the feet of enemies it collides with, lasting for 6 s\nIn the Loud Song state, -20% additional Attack and Cast Speed, -20% additional Movement Speed, and +80% additional Tide Effect\nWhen contacting a Tide, gains the following Tide Effect: Ignore physical collisions with enemies and +15% additional damage for 4 s\n+20% additional damage taken by enemies on the Tide\nArtificial Moon:\n+10% Skill Area and +15% Skill Effect Duration when on the Tide",
   },
   {
     hero: "Tide Whisper Selena: Sing with the Tide (#1)",
@@ -1169,7 +1155,7 @@ export const HeroTraits = [
     name: "Chantey of Sinking",
     level: 75,
     affix:
-      "For every 1 s in the Loud Song state, (+25/+35/+45/+55/+65)% Tide Area and (+25/+35/+45/+55/+65)% Tide Effect. Stacks up to 2 time(s) and lasts until all Tides are lost or you exit the Loud Song state",
+      "For every 1 s in the Loud Song state, (+35/+45/+55/+65/+75)% Tide Area and (+35/+45/+55/+65/+75)% Tide Effect. Stacks up to 2 time(s) and lasts until you exit the Loud Song state",
   },
   {
     hero: "Tide Whisper Selena: Sing with the Tide (#1)",
@@ -1177,5 +1163,47 @@ export const HeroTraits = [
     level: 75,
     affix:
       "In the Bard state, (-50/-50/-50/-50/-40)% Tide Duration and (+60/+70/+80/+90/+100)% additional Tide Effect",
+  },
+  {
+    hero: "Scent Weaver Sage: Licorice Note (#1)",
+    name: "Licorice Note",
+    level: 1,
+    affix:
+      "Level 1The Restoration Effect from Elixir Skills cannot be removed\nObtain a Basic Scent Bottle, which can be used to concoct Elixir Skills. The second Active Skill slot is treated as the Basic Scent Bottle\nElixir Skills from Basic Scent Bottles can be equipped with 2 Ingredients to gain their corresponding additional Base EffectsLevel 2The Restoration Effect from Elixir Skills cannot be removed\nObtain a Basic Scent Bottle, which can be used to concoct Elixir Skills. The second Active Skill slot is treated as the Basic Scent Bottle\nElixir Skills from Basic Scent Bottles can be equipped with 2 Ingredients to gain their corresponding additional Base EffectsLevel 3The Restoration Effect from Elixir Skills cannot be removed\nObtain a Basic Scent Bottle, which can be used to concoct Elixir Skills. The second Active Skill slot is treated as the Basic Scent Bottle\nElixir Skills from Basic Scent Bottles can be equipped with 2 Ingredients to gain their corresponding additional Base EffectsLevel 4The Restoration Effect from Elixir Skills cannot be removed\nObtain a Basic Scent Bottle, which can be used to concoct Elixir Skills. The second Active Skill slot is treated as the Basic Scent Bottle\nElixir Skills from Basic Scent Bottles can be equipped with 2 Ingredients to gain their corresponding additional Base EffectsLevel 5The Restoration Effect from Elixir Skills cannot be removed\nObtain a Basic Scent Bottle, which can be used to concoct Elixir Skills. The second Active Skill slot is treated as the Basic Scent Bottle\nElixir Skills from Basic Scent Bottles can be equipped with 2 Ingredients to gain their corresponding additional Base Effects\nArtificial Moon:\n+12% additional Elixir Skill Effect for the Elixir Skills from any Scent Bottle",
+  },
+  {
+    hero: "Scent Weaver Sage: Licorice Note (#1)",
+    name: "Pungent Stimulant Salt",
+    level: 45,
+    affix:
+      "Elixir Skills from any Scent Bottle can be equipped with 1 additional Ingredient to gain the corresponding Charge restoration\n基础药香瓶中的灵药技能持续期间，每隔 (8/7/6/5/4) 秒随机预备一个已安装的激发或者诅咒技能\n(200/230/260/290/320)% of the Skill Effect Bonus applied to Elixir Skills of the Basic Scent Bottle is also applied to its prepared Empower Skills, up to (+70/+100/+130/+160/+190)%\n基础药香瓶中的灵药技能，对其技能效果加成的 (200/230/260/290/320)% 同样作用于被其预备的诅咒技能，上限 (+50/+70/+90/+110/+130)%",
+  },
+  {
+    hero: "Scent Weaver Sage: Licorice Note (#1)",
+    name: "Elixir of Immortality",
+    level: 60,
+    affix:
+      "Every 3 recent excess Life Restoration is converted to 2 Temporary Life, up to (20/25/30/40/50)% of Base Max Life\nEvery 3 recent excess Mana restoration is converted to 2 Temporary Mana, up to (20/25/30/40/50)% of Base Max Mana\nFor every Temporary Life equal to 5% of Base Max Life or Temporary Mana equal to Base Max Mana, (+1/1.5/+2/2.5/+3)% additional damage, up to (+10/+15/+20/+25/+30)%",
+  },
+  {
+    hero: "Scent Weaver Sage: Licorice Note (#1)",
+    name: "Scent of Ambition",
+    level: 60,
+    affix:
+      "释放 (6/6/5/4/3) 次灵药技能后，额外 (+24/+27/+30/+33/+36)% 灵药技能效果，持续 4 秒\n-30% additional Elixir Skill Effect Duration",
+  },
+  {
+    hero: "Scent Weaver Sage: Licorice Note (#1)",
+    name: "Everlasting Nectar",
+    level: 75,
+    affix:
+      "(100/120/140/160/180)% of the bonus applied to Max Life or Max Mana is also applied to Elixir Skill Effect, up to (+60/+70/+80/+90/+100)%",
+  },
+  {
+    hero: "Scent Weaver Sage: Licorice Note (#1)",
+    name: "Licorice Tincture Blend",
+    level: 75,
+    affix:
+      "Level 1Obtain a Special Scent Bottle, which can be used to concoct Elixir Skills. The third Active Skill slot is treated as the Special Scent Bottle\nElixir Skills from Special Scent Bottles can be equipped with 1 Ingredient to gain its corresponding additional Base EffectsLevel 2Obtain a Special Scent Bottle, which can be used to concoct Elixir Skills. The third Active Skill slot is treated as the Special Scent Bottle\nElixir Skills from Special Scent Bottles can be equipped with 1 Ingredient to gain its corresponding additional Base EffectsLevel 3Obtain a Special Scent Bottle, which can be used to concoct Elixir Skills. The third Active Skill slot is treated as the Special Scent Bottle\nElixir Skills from Special Scent Bottles can be equipped with 1 Ingredient to gain its corresponding additional Base EffectsLevel 4Obtain a Special Scent Bottle, which can be used to concoct Elixir Skills. The third Active Skill slot is treated as the Special Scent Bottle\nElixir Skills from Special Scent Bottles can be equipped with 1 Ingredient to gain its corresponding additional Base EffectsLevel 5Obtain a Special Scent Bottle, which can be used to concoct Elixir Skills. The third Active Skill slot is treated as the Special Scent Bottle\nElixir Skills from Special Scent Bottles can be equipped with 1 Ingredient to gain its corresponding additional Base Effects",
   },
 ] as const satisfies readonly BaseHeroTrait[];
