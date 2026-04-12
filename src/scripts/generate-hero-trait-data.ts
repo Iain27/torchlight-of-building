@@ -4,6 +4,7 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { basename, join } from "node:path";
 import * as cheerio from "cheerio";
 import type { BaseHeroTrait } from "../data/hero-trait/types";
+import { assertCount } from "./lib/assertions";
 
 const BASE_URL = "https://tlidb.com/en";
 const HERO_LIST_URL = `${BASE_URL}/Hero`;
@@ -100,11 +101,7 @@ const fetchHeroTraitPages = async (): Promise<void> => {
     `Found ${links.length} hero trait pages (expected: ${EXPECTED_TRAIT_COUNT})`,
   );
 
-  if (links.length !== EXPECTED_TRAIT_COUNT) {
-    console.warn(
-      `Warning: Count mismatch: found ${links.length}, expected ${EXPECTED_TRAIT_COUNT}`,
-    );
-  }
+  assertCount("hero trait pages", links.length, EXPECTED_TRAIT_COUNT);
 
   let completed = 0;
   const fetchTasks = links.map((link) => async (): Promise<void> => {
@@ -280,6 +277,7 @@ const main = async (): Promise<void> => {
   console.log("Fetching hero list page for labels...");
   const listHtml = await fetchPage(HERO_LIST_URL);
   const links = extractHeroTraitLinks(listHtml);
+  assertCount("hero trait list links", links.length, EXPECTED_TRAIT_COUNT);
   const heroLabels = buildHeroLabels(links);
 
   console.log("Reading cached hero trait HTML files...");
@@ -294,19 +292,21 @@ const main = async (): Promise<void> => {
     const decodedHref = decodeURIComponent(link.href);
     const file = files.find((f) => f.fileName === decodedHref);
     if (file === undefined) {
-      console.warn(`Missing cached file for ${decodedHref}`);
-      continue;
+      throw new Error(
+        `Missing cached file for ${decodedHref} — run with --refetch.`,
+      );
     }
 
     const heroLabel = heroLabels.get(decodedHref);
     if (heroLabel === undefined) {
-      console.warn(`Missing hero label for ${decodedHref}`);
-      continue;
+      throw new Error(`Missing hero label for ${decodedHref}`);
     }
 
     const traits = extractTraitsFromPage(file.html, heroLabel);
     if (traits.length === 0) {
-      console.warn(`No traits extracted from ${decodedHref}`);
+      throw new Error(
+        `No traits extracted from ${decodedHref} — upstream HTML structure likely changed.`,
+      );
     }
     allTraits.push(...traits);
   }

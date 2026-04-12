@@ -6,8 +6,11 @@ import type {
   Pactspirit,
   PactspiritRingDetails,
 } from "../data/pactspirit/types";
+import { assertCount } from "./lib/assertions";
 
 const RARITIES = ["Magic", "Rare", "Legendary"] as const;
+
+const EXPECTED_PACTSPIRIT_COUNT = 108;
 
 const cleanEffectText = (html: string): string => {
   // Use cheerio to properly extract text content from HTML
@@ -171,6 +174,8 @@ const main = async (): Promise<void> => {
   const files = await readdir(inputDir);
   const htmlFiles = files.filter((f) => f.endsWith(".html"));
   console.log(`Found ${htmlFiles.length} HTML files`);
+
+  assertCount("pactspirit pages", htmlFiles.length, EXPECTED_PACTSPIRIT_COUNT);
 
   const pactspirits: Pactspirit[] = [];
 

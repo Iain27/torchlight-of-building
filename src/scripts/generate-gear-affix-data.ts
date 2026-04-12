@@ -432,8 +432,9 @@ const main = async (options: Options): Promise<void> => {
   for (const file of htmlFiles) {
     const equipmentInfo = EQUIPMENT_MAP[file];
     if (!equipmentInfo) {
-      console.warn(`Unknown equipment file: ${file}, skipping`);
-      continue;
+      throw new Error(
+        `Unknown equipment file: "${file}" — no entry in EQUIPMENT_TYPE_PAGES.`,
+      );
     }
 
     const { type, slot } = equipmentInfo;

@@ -5,6 +5,11 @@ import * as cheerio from "cheerio";
 import { program } from "commander";
 import type { BaseCoreTalent } from "../data/core-talent/types";
 import { isTree } from "../data/talent";
+import { assertCount } from "./lib/assertions";
+
+// From the generated core-talents.ts ground truth.
+// 138 total Core talents from tlidb, minus 6 "New God" talents excluded below = 132.
+const EXPECTED_CORE_TALENT_COUNT = 132;
 
 // ============================================================================
 // Fetching
@@ -91,7 +96,11 @@ const extractCoreTalents = ($: cheerio.CheerioAPI): BaseCoreTalent[] => {
     // Extract tree from the anchor tag
     const tree = contentDiv.find("a").first().text().trim();
     if (!tree) return;
-    if (!isTree(tree)) return;
+    if (!isTree(tree)) {
+      throw new Error(
+        `Unknown tree "${tree}" on core talent "${name}" — upstream drift.`,
+      );
+    }
 
     // Skip "New God" talents
     if (tree === "New God") return;
@@ -139,6 +148,8 @@ const main = async (options: Options): Promise<void> => {
   const talents = extractCoreTalents($);
 
   console.log(`Extracted ${talents.length} core talents`);
+
+  assertCount("core talents", talents.length, EXPECTED_CORE_TALENT_COUNT);
 
   await mkdir(outDir, { recursive: true });
 
