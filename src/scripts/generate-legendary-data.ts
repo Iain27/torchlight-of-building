@@ -287,13 +287,15 @@ const extractLegendary = (
     }
   });
 
-  if (s12Card === undefined) {
-    console.log(`  Skipping ${filename}: No SS12Season card found`);
+  if (s12Card === undefined && s11Card === undefined) {
+    console.log(
+      `  Skipping ${filename}: No SS12Season or SS11Season card found`,
+    );
     return undefined;
   }
 
-  // Try SS12 card first, fall back to SS11 if no affixes
-  let mainCard = s12Card;
+  // Try SS12 card first, fall back to SS11 if missing or no affixes
+  let mainCard = s12Card ?? s11Card!;
   let normalAffixes = extractNormalAffixes(mainCard, $, choiceCards);
 
   if (normalAffixes.length === 0 && s11Card !== undefined) {
