@@ -8,7 +8,7 @@ import type { BaseHeroTrait } from "../data/hero-trait/types";
 const BASE_URL = "https://tlidb.com/en";
 const HERO_LIST_URL = `${BASE_URL}/Hero`;
 const CACHE_DIR = join(process.cwd(), ".garbage", "tlidb", "hero-trait");
-const EXPECTED_TRAIT_COUNT = 25;
+const EXPECTED_TRAIT_COUNT = 26;
 
 // ============================================================================
 // Fetching

@@ -189,13 +189,13 @@ const allSupportParsers = [
     value: c.value,
     per: { stackable: "skill_use", limit: c.limit },
   })),
-  t(
-    "{value:dec%} effect for the status provided by the skill per charge when you use the supported skill",
-  ).output((c) => ({
-    type: "SkillEffPct",
-    value: c.value,
-    per: { stackable: "skill_charges_on_use" },
-  })),
+  t("{value:dec%} effect for the supported skill for every +1 charge").output(
+    (c) => ({
+      type: "SkillEffPct",
+      value: c.value,
+      per: { stackable: "skill_charges_on_use" },
+    }),
+  ),
   t("{value:+int} shadow quantity for the supported skill").output((c) => ({
     type: "ShadowQuant",
     value: c.value,

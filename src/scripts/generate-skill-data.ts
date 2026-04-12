@@ -27,12 +27,32 @@ import {
   parseNumericValue,
 } from "./skills/progression-table";
 import type {
+  ParsedLevelValues,
   ProgressionColumn,
   SkillCategory,
   SupportParserInput,
 } from "./skills/types";
 
-const CURRENT_SEASON = "SS11Season";
+// Populated by loadFallbackLevelValues() at the start of main(). Acts as a
+// cache of the last successful run's parser output so we can survive tlidb
+// temporarily dropping a skill's progression table. Kept mutable so the
+// generator can bootstrap from an empty map if the file is missing.
+let FALLBACK_LEVEL_VALUES: Record<string, ParsedLevelValues> = {};
+
+const loadFallbackLevelValues = async (): Promise<void> => {
+  try {
+    const mod = await import("./skills/fallback-level-values");
+    FALLBACK_LEVEL_VALUES = mod.FALLBACK_LEVEL_VALUES;
+  } catch (err) {
+    console.warn(
+      "fallback-level-values.ts missing or failed to load; starting from empty. Error:",
+      err,
+    );
+    FALLBACK_LEVEL_VALUES = {};
+  }
+};
+
+const CURRENT_SEASON = "SS12Season";
 
 // ============================================================================
 // Fetching
@@ -814,25 +834,42 @@ const extractSkillFromTlidbHtml = (
   let parsedLevelModValues: Record<string, Record<number, number>> | undefined;
 
   // Skills that extract values from description only (no progression table in HTML)
-  const SKILLS_WITHOUT_PROGRESSION_TABLE = new Set(["Charging Warcry"]);
+  const SKILLS_WITHOUT_PROGRESSION_TABLE = new Set([
+    "Charging Warcry",
+    "Biting Cold",
+    "Corruption",
+    "Electrocute",
+    "Entangled Pain",
+    "Fearless Warcry",
+    "Mana Boil",
+    "Secret Origin Unleash",
+    "Timid",
+  ]);
 
   // Only run parser for non-support skills (support skills use the new approach)
   if (parser !== undefined && skillType !== "Support") {
     const parserProgressionTable = extractProgressionTable($);
+    const fallback = FALLBACK_LEVEL_VALUES[name];
 
-    if (
-      parserProgressionTable === undefined &&
-      !SKILLS_WITHOUT_PROGRESSION_TABLE.has(name)
-    ) {
-      throw new Error(`No progression table found for "${name}"`);
+    if (parserProgressionTable === undefined && fallback !== undefined) {
+      // tlidb removed this skill's progression table; use the cached values
+      // from the last successful scrape instead of running the parser.
+      parsedLevelModValues = fallback;
+    } else {
+      if (
+        parserProgressionTable === undefined &&
+        !SKILLS_WITHOUT_PROGRESSION_TABLE.has(name)
+      ) {
+        throw new Error(`No progression table found for "${name}"`);
+      }
+
+      const parserInput: SupportParserInput = {
+        skillName: name,
+        description,
+        progressionTable: parserProgressionTable ?? [],
+      };
+      parsedLevelModValues = parser.parser(parserInput);
     }
-
-    const parserInput: SupportParserInput = {
-      skillName: name,
-      description,
-      progressionTable: parserProgressionTable ?? [],
-    };
-    parsedLevelModValues = parser.parser(parserInput);
   }
 
   // Extract affixDefs for activation medium skills
@@ -879,6 +916,53 @@ const toTypeScript = (obj: unknown): string => {
     return `{ ${entries.join(", ")} }`;
   }
   return String(obj);
+};
+
+/**
+ * Emit a snapshot of every parser-produced levelValues into
+ * `fallback-level-values.ts`. This file acts as the last-known-good source
+ * for skills whose progression tables get temporarily removed from tlidb.
+ *
+ * Only skills whose values came from the parser (i.e. `parsedLevelModValues`
+ * is defined and non-empty) are included. Test skills and support skills are
+ * excluded because they don't flow through this path.
+ */
+const emitFallbackLevelValues = async (
+  rawSkills: RawSkill[],
+): Promise<void> => {
+  const snapshot: Record<string, Record<string, Record<number, number>>> = {};
+
+  const sorted = [...rawSkills].sort((a, b) => a.name.localeCompare(b.name));
+
+  for (const raw of sorted) {
+    if (raw.parsedLevelModValues === undefined) continue;
+    if (Object.keys(raw.parsedLevelModValues).length === 0) continue;
+    snapshot[raw.name] = raw.parsedLevelModValues;
+  }
+
+  const fileContent = `// This file is machine-generated. Do not modify manually.
+// To regenerate, run: pnpm exec tsx src/scripts/generate-skill-data.ts
+//
+// Snapshot of every parser-produced levelValues from the last successful
+// generator run. The generator reads this file when a skill's progression
+// table is missing from tlidb (which happens periodically at season
+// rollover) and uses the cached values instead of crashing.
+import type { ParsedLevelValues } from "./types";
+
+export const FALLBACK_LEVEL_VALUES: Record<string, ParsedLevelValues> = ${toTypeScript(snapshot)};
+`;
+
+  const fallbackPath = join(
+    process.cwd(),
+    "src",
+    "scripts",
+    "skills",
+    "fallback-level-values.ts",
+  );
+  await writeFile(fallbackPath, fileContent, "utf-8");
+  console.log(
+    `Emitted fallback-level-values.ts (${Object.keys(snapshot).length} skills)`,
+  );
 };
 
 // Convert Record<number, number> (level → value) to number[] (index = level - 1)
@@ -1213,6 +1297,12 @@ const main = async (options: Options): Promise<void> => {
     await fetchSkillPages();
     console.log("");
   }
+
+  // Snapshot-on-startup: load the previous run's fallback values into memory
+  // BEFORE any parsing. This avoids a partial-run rewrite from clobbering
+  // good cached values on disk. emitFallbackLevelValues() only writes AFTER
+  // every skill has parsed successfully.
+  await loadFallbackLevelValues();
 
   console.log("Reading tlidb skill HTML files...");
   const allFiles = await readAllTlidbSkills();
@@ -1566,6 +1656,15 @@ const main = async (options: Options): Promise<void> => {
     `Generated ${totalGroups} skill type files with ${rawData.length} total skills`,
   );
 
+  // Snapshot parser-produced level values so the next run can fall back to
+  // them if tlidb drops a progression table. Done AFTER all generated data
+  // files have been written, so we only ever emit from a fully-valid state.
+  await emitFallbackLevelValues(rawData);
+
+  runFormat();
+};
+
+const runFormat = (): void => {
   execSync("pnpm format", { stdio: "inherit" });
 };
 
