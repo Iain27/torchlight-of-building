@@ -138,8 +138,7 @@ export const RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix:
-      "Triggers Lv. 20 Dazzled Curse upon inflicting damage. Cooldown: 0.2 s",
+    craftableAffix: "周围 15 米内敌人受到 20 级不祥诅咒",
   },
   {
     equipmentSlot: "Trinket",
@@ -226,5 +225,13 @@ export const RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "1",
     craftableAffix:
       "When dealing damage, inflicts Lightning Infiltration. Interval for each enemy: 2 s",
+  },
+  {
+    equipmentSlot: "Trinket",
+    equipmentType: "Ring",
+    affixType: "Sweet Dream Affix",
+    craftingPool: "",
+    tier: "1",
+    craftableAffix: "+(12-16)% Blur Effect",
   },
 ];

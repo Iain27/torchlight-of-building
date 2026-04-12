@@ -109,22 +109,40 @@ export const assertModInvariants = (mod: Mod): boolean => {
   return false;
 };
 
+const perModMatchesStackable = (
+  mod: Mod,
+  stackable: Stackable,
+  stacks: number,
+): boolean => {
+  if (
+    !("per" in mod) ||
+    mod.per === undefined ||
+    mod.per.stackable !== stackable
+  ) {
+    return false;
+  }
+  if (mod.condThreshold === undefined) {
+    return true;
+  }
+  if (mod.condThreshold.target === stackable) {
+    return condThresholdSatisfied(stacks, mod.condThreshold);
+  }
+  // condThreshold targets a different stackable than per.stackable.
+  // We don't have that stackable's value here, so the threshold
+  // cannot be checked. Drop the mod to avoid silently ignoring the threshold.
+  console.error(
+    `normalizeStackables: mod has per.stackable="${stackable}" but condThreshold.target="${mod.condThreshold.target}"; cannot evaluate threshold, dropping mod (type=${mod.type}, src=${mod.src ?? "?"})`,
+  );
+  return false;
+};
+
 export const normalizeStackables = (
   prenormalizedMods: Mod[],
   stackable: Stackable,
   stacks: number,
 ): Mod[] => {
   return prenormalizedMods
-    .filter(
-      (mod) =>
-        "per" in mod &&
-        mod.per !== undefined &&
-        mod.per.stackable === stackable &&
-        // Also filter by condThreshold if the mod has one for this stackable
-        (mod.condThreshold === undefined ||
-          mod.condThreshold.target !== stackable ||
-          condThresholdSatisfied(stacks, mod.condThreshold)),
-    )
+    .filter((mod) => perModMatchesStackable(mod, stackable, stacks))
     .map((mod) => normalizeStackable(mod, stackable, stacks))
     .filter((mod) => mod !== undefined);
 };

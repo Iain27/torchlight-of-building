@@ -1057,6 +1057,12 @@ export const Prisms: readonly Prism[] = [
   {
     type: "Prism Gauge",
     rarity: "Rare",
+    affix:
+      "All Medium Talent within the area also gain: +6% Sealed Mana Compensation",
+  },
+  {
+    type: "Prism Gauge",
+    rarity: "Rare",
     affix: "All Micro Talent within the area also gain: 10.5% Attack Damage",
   },
   {
@@ -1413,6 +1419,12 @@ export const Prisms: readonly Prism[] = [
   {
     type: "Prism Gauge",
     rarity: "Rare",
+    affix:
+      "All Medium Talent within the area also gain: 10.5% Sealed Mana Compensation",
+  },
+  {
+    type: "Prism Gauge",
+    rarity: "Rare",
     affix: "All Micro Talent within the area also gain: +6% Attack Damage",
   },
   {
@@ -1765,6 +1777,12 @@ export const Prisms: readonly Prism[] = [
   },
   {
     type: "Prism Gauge",
+    rarity: "Rare",
+    affix:
+      "All Medium Talent within the area also gain: +6% Sealed Mana Compensation",
+  },
+  {
+    type: "Prism Gauge",
     rarity: "Legendary",
     affix:
       "Points can be allocated to all Micro Talent within the area 1 additional time(s)",
@@ -1893,13 +1911,19 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      "When activating 2 Legendary Medium Talent within the area, Immune to Paralysis and Slow",
+      "When activating 2 Legendary Medium Talent within the area, Immune to crowd control effects\n-25% Defense",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
       "When activating 2 Legendary Medium Talent within the area, -100% Curse effect against you",
+  },
+  {
+    type: "Prism Gauge",
+    rarity: "Legendary",
+    affix:
+      "When activating 2 Legendary Medium Talent within the area, Immune to Elemental Ailments\n-8% Elemental Resistance",
   },
   {
     type: "Prism Gauge",
@@ -2031,13 +2055,19 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      "When activating 2 Legendary Medium Talent within the area, Immune to Paralysis and Slow",
+      "When activating 2 Legendary Medium Talent within the area, Immune to crowd control effects",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
       "When activating 2 Legendary Medium Talent within the area, -100% Curse effect against you",
+  },
+  {
+    type: "Prism Gauge",
+    rarity: "Legendary",
+    affix:
+      "When activating 2 Legendary Medium Talent within the area, Immune to Elemental Ailments",
   },
   {
     type: "Prism Gauge",
@@ -2169,12 +2199,18 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
-      "When activating 2 Legendary Medium Talent within the area, Immune to Paralysis and Slow",
+      "When activating 2 Legendary Medium Talent within the area, Immune to crowd control effects\n-25% Defense",
   },
   {
     type: "Prism Gauge",
     rarity: "Legendary",
     affix:
       "When activating 2 Legendary Medium Talent within the area, -100% Curse effect against you",
+  },
+  {
+    type: "Prism Gauge",
+    rarity: "Legendary",
+    affix:
+      "When activating 2 Legendary Medium Talent within the area, Immune to Elemental Ailments\n-8% Elemental Resistance",
   },
 ];

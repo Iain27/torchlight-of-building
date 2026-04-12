@@ -163,9 +163,8 @@ const main = async (): Promise<void> => {
   const items = extractBlendData(html);
   console.log(`Extracted ${items.length} blends`);
 
-  if (items.length === 0) {
-    throw new Error("No blends extracted — check HTML structure");
-  }
+  const { assertCount } = await import("./lib/assertions");
+  assertCount("blends", items.length, 97);
 
   const outDir = join(process.cwd(), "src", "data", "blend");
   await mkdir(outDir, { recursive: true });

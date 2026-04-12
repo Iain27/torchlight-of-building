@@ -90,7 +90,7 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(28-32)% additional damage when a Skill consumes Demolisher Charge",
+      "+(28-32)% additional skill damage when Demolisher Charge is consumed",
   },
   {
     equipmentSlot: "Two-Handed",
@@ -173,5 +173,13 @@ export const TWO_HANDED_HAMMER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "0",
     craftableAffix:
       "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (250-300)% of their Max Life to enemies within a 6 m radius",
+  },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Two-Handed Hammer",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "2",
+    craftableAffix: "+16% Life Regain and Energy Shield Regain",
   },
 ];

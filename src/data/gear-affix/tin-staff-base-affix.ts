@@ -156,4 +156,12 @@ export const TIN_STAFF_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "1",
     craftableAffix: "Projectile Quantity +2",
   },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Tin Staff",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "2",
+    craftableAffix: "+16% Life Regain and Energy Shield Regain",
+  },
 ];

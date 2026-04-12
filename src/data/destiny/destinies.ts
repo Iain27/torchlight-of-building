@@ -67,7 +67,7 @@ export const Destinies: readonly Destiny[] = [
   {
     type: "Micro Fate",
     name: "Life Regeneration",
-    affix: "+(3-5)% Life Regeneration Speed",
+    affix: "+(5-7.5)% Life Regeneration Speed",
   },
   {
     type: "Micro Fate",
@@ -274,7 +274,7 @@ export const Destinies: readonly Destiny[] = [
   {
     type: "Medium Fate",
     name: "Life Regeneration",
-    affix: "+(6-10)% Life Regeneration Speed",
+    affix: "+(10-15)% Life Regeneration Speed",
   },
   {
     type: "Medium Fate",
@@ -395,12 +395,6 @@ export const Destinies: readonly Destiny[] = [
   },
   {
     type: "Kismet",
-    name: "Shackles",
-    affix:
-      "Gains (30-35)% Movement Speed when consuming Demolisher Charge. The effect gradually falls off to 0 within 1 s.",
-  },
-  {
-    type: "Kismet",
     name: "War Hammer",
     affix:
       "+(50-60)% Demolisher Charge Restoration Speed when wielding a hammer",
@@ -489,7 +483,7 @@ export const Destinies: readonly Destiny[] = [
     type: "Kismet",
     name: "Spades",
     affix:
-      "+(8-10)% Max Life\n+5% additional Damage Over Time\nRegenerates 1% Life per second",
+      "+(8-10)% Max Life\n+5% additional Damage Over Time\nRegenerates 2% Life per second",
   },
   {
     type: "Kismet",
@@ -607,7 +601,7 @@ export const Destinies: readonly Destiny[] = [
     type: "Kismet",
     name: "Creek",
     affix:
-      "Restoration Skills gain 1 Charging Progress every second\n+(6-9)% Movement Speed while the Restoration Skill lasts",
+      "Elixir Skills gain 1 Charging Progress every second\n+(6-9)% Movement Speed while an Elixir Skill is active",
   },
   {
     type: "Kismet",
@@ -636,6 +630,11 @@ export const Destinies: readonly Destiny[] = [
     name: "Tiger's Chain",
     affix:
       "When casting Combo Starters, Reverse Knocks Back enemies within 8 m by (1.5-2) m\nThe effective radius is affected by Skill Area bonuses\n+8% Knockback Distance for each Combo Finisher cast recently. Stacks up to 5 time(s)\n+(4-6)% additional Combo Skill Damage",
+  },
+  {
+    type: "Kismet",
+    name: "Deeproot",
+    affix: "Obtain a Lv. 20 Precise: Rejuvenation buff",
   },
   {
     type: "Dual Kismet",
@@ -815,7 +814,7 @@ export const Destinies: readonly Destiny[] = [
     type: "Dual Kismet",
     name: "Two-Headed Crow",
     affix:
-      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nYou can inflict 1 additional Curse\nEnemies are immune to Curse until they have max Affliction",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nYou can inflict 1 additional Curse\n-5% Curse Effect",
   },
   {
     type: "Dual Kismet",
@@ -887,7 +886,7 @@ export const Destinies: readonly Destiny[] = [
     type: "Dual Kismet",
     name: "Unholy Grail",
     affix:
-      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n-40% Restoration Duration for Restoration Skills\nWhen casting a Restoration Skill, gains 4 stacks of a random Blessing",
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\n-40% Restoration Duration for Restoration Skills\nWhen casting an Elixir Skill, gains 4 stacks of a random Blessing",
   },
   {
     type: "Dual Kismet",
@@ -948,6 +947,18 @@ export const Destinies: readonly Destiny[] = [
     name: "Resentful Maiden",
     affix:
       "Activates the following effects when there are 2 of this Kismet on the same pact page:\n+1 to Max Tangle Quantity\n+10% Tangle Duration",
+  },
+  {
+    type: "Dual Kismet",
+    name: "Banshee",
+    affix:
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nInflicts 2 additional stacks of Ill Omen when inflicting Ill Omen for the first time\nInflicts Weaken on enemies who have Ill Omen",
+  },
+  {
+    type: "Dual Kismet",
+    name: "Shackles",
+    affix:
+      "Activates the following effects when there are 2 of this Kismet on the same pact page:\nGains 45% Movement Speed when consuming Demolisher Charge. The effect gradually falls off to 0 within 2s\n+10% additional Demolisher Skill Area",
   },
   { type: "Undetermined Fate", name: "Undetermined Fate", affix: "" },
 ];

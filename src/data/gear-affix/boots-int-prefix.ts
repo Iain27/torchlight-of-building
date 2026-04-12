@@ -497,7 +497,8 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "70% chance to gain Blur per (5-10) m you move",
+    craftableAffix:
+      "+(26-32)% Blur Effect\n70% chance to gain Blur per (5-10) m you move",
   },
   {
     equipmentSlot: "Boots",
@@ -505,7 +506,8 @@ export const BOOTS_INT_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "50% chance to gain Blur per (5-10) m you move",
+    craftableAffix:
+      "+(19-24)% Blur Effect\n50% chance to gain Blur per (5-10) m you move",
   },
   {
     equipmentSlot: "Boots",

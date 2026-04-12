@@ -9,7 +9,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Regenerates (177-234) Life per second",
+    craftableAffix: "Regenerates (511-663) Life per second",
   },
   {
     equipmentSlot: "Shield",
@@ -17,7 +17,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Regenerates (136-180) Life per second",
+    craftableAffix: "Regenerates (358-510) Life per second",
   },
   {
     equipmentSlot: "Shield",
@@ -25,7 +25,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "2",
-    craftableAffix: "Regenerates (114-126) Life per second",
+    craftableAffix: "Regenerates (256-357) Life per second",
   },
   {
     equipmentSlot: "Shield",
@@ -33,7 +33,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "3",
-    craftableAffix: "Regenerates (82-90) Life per second",
+    craftableAffix: "Regenerates (73-90) Life per second",
   },
   {
     equipmentSlot: "Shield",
@@ -41,7 +41,7 @@ export const SHIELD_DEX_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "4",
-    craftableAffix: "Regenerates (65-72) Life per second",
+    craftableAffix: "Regenerates (58-72) Life per second",
   },
   {
     equipmentSlot: "Shield",

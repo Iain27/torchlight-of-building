@@ -18,7 +18,7 @@ export const CHEST_ARMOR_INT_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "+(4-6)% Energy Shield Charge Speed",
+      craftableAffix: "+(15-20)% Energy Shield Charge Speed",
     },
     {
       equipmentSlot: "Chest Armor",

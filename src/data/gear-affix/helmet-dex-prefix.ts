@@ -572,7 +572,7 @@ export const HELMET_DEX_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "(-20--16)% additional Damage dealt by Nearby enemies",
+    craftableAffix: "(-20--16)% additional damage dealt by Nearby enemies",
   },
   {
     equipmentSlot: "Helmet",
@@ -580,7 +580,7 @@ export const HELMET_DEX_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "(-15--12)% additional Damage dealt by Nearby enemies",
+    craftableAffix: "(-15--12)% additional damage dealt by Nearby enemies",
   },
   {
     equipmentSlot: "Helmet",
@@ -588,7 +588,7 @@ export const HELMET_DEX_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Ultimate",
     tier: "2",
-    craftableAffix: "(-11--9)% additional Damage dealt by Nearby enemies",
+    craftableAffix: "(-11--9)% additional damage dealt by Nearby enemies",
   },
   {
     equipmentSlot: "Helmet",

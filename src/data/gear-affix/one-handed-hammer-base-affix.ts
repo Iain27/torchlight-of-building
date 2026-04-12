@@ -90,7 +90,7 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "1",
     craftableAffix:
-      "+(12-16)% additional damage when a Skill consumes Demolisher Charge",
+      "+(12-16)% additional skill damage when Demolisher Charge is consumed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -140,5 +140,13 @@ export const ONE_HANDED_HAMMER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix: "+1 to Max Focus Blessing Stacks",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Hammer",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "2",
+    craftableAffix: "+8% Life Regain and Energy Shield Regain",
   },
 ];

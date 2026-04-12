@@ -4086,7 +4086,6 @@ export const ALL_BASE_GEAR: readonly BaseGear[] = [
     name: "Headless Cleric Wand",
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
-    stats:
-      "500 Critical Strike Rating\n1.2 Attack Speed\nAdds 32 - 32 Cold Damage to Spells",
+    stats: "500 Critical Strike Rating\n1.2 Attack Speed\n+40% Spell Damage",
   },
 ];

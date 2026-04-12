@@ -172,4 +172,12 @@ export const BOW_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftableAffix:
       "Enemies have a (20-25)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (250-300)% of their Max Life to enemies within a 6 m radius",
   },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Bow",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "2",
+    craftableAffix: "+16% Life Regain and Energy Shield Regain",
+  },
 ];

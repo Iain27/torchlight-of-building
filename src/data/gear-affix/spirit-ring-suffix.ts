@@ -420,7 +420,7 @@ export const SPIRIT_RING_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "4",
-    craftableAffix: "+(6-7) to Max Frostbite Rating",
+    craftableAffix: "+(5-7) to Max Frostbite Rating",
   },
   {
     equipmentSlot: "Trinket",

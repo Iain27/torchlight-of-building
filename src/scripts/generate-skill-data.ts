@@ -837,18 +837,11 @@ const extractSkillFromTlidbHtml = (file: TlidbSkillFile): RawSkill => {
   const parser = getParserForSkill(name, file.category as SkillCategory);
   let parsedLevelModValues: Record<string, Record<number, number>> | undefined;
 
-  // Skills that extract values from description only (no progression table in HTML)
-  const SKILLS_WITHOUT_PROGRESSION_TABLE = new Set([
-    "Charging Warcry",
-    "Biting Cold",
-    "Corruption",
-    "Electrocute",
-    "Entangled Pain",
-    "Fearless Warcry",
-    "Mana Boil",
-    "Secret Origin Unleash",
-    "Timid",
-  ]);
+  // Skills that extract values from description only (no progression table in HTML).
+  // Most skills with missing progression tables are covered by
+  // FALLBACK_LEVEL_VALUES instead of this set. This set is for skills whose
+  // parsers intentionally read from description text rather than progression.
+  const SKILLS_WITHOUT_PROGRESSION_TABLE = new Set(["Charging Warcry"]);
 
   // Only run parser for non-support skills (support skills use the new approach)
   if (parser !== undefined && skillType !== "Support") {

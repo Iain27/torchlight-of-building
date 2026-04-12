@@ -130,8 +130,7 @@ export const SPIRIT_RING_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Sweet Dream Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix:
-      "Triggers Lv. 20 Dazzled Curse when Minions deal damage. Cooldown: 0.2 s",
+    craftableAffix: "周围 15 米内敌人受到 20 级不祥诅咒",
   },
   {
     equipmentSlot: "Trinket",

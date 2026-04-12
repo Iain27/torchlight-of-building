@@ -9,7 +9,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(25-31)% Energy Shield Charge Speed",
+    craftableAffix: "+(46-59)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -17,7 +17,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(18-24)% Energy Shield Charge Speed",
+    craftableAffix: "+(33-45)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -25,7 +25,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "2",
-    craftableAffix: "+(13-17)% Energy Shield Charge Speed",
+    craftableAffix: "+(24-32)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -33,7 +33,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "3",
-    craftableAffix: "+(10-12)% Energy Shield Charge Speed",
+    craftableAffix: "+(19-23)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "One-Handed",
@@ -41,7 +41,7 @@ export const SCEPTER_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "4",
-    craftableAffix: "+(7-9)% Energy Shield Charge Speed",
+    craftableAffix: "+(15-18)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "One-Handed",

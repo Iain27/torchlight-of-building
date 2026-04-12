@@ -18,14 +18,6 @@ export const CHEST_ARMOR_STR_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix[]
       affixType: "Sweet Dream Affix",
       craftingPool: "",
       tier: "2",
-      craftableAffix: "Regenerates (0.5-1.0)% Life per second",
-    },
-    {
-      equipmentSlot: "Chest Armor",
-      equipmentType: "Chest Armor (STR)",
-      affixType: "Sweet Dream Affix",
-      craftingPool: "",
-      tier: "2",
       craftableAffix: "+(5-10)% Fire Resistance",
     },
     {

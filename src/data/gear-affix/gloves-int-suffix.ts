@@ -247,6 +247,38 @@ export const GLOVES_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     equipmentSlot: "Gloves",
     equipmentType: "Gloves (INT)",
     affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "0",
+    craftableAffix: "+(11-13)% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "1",
+    craftableAffix: "+(8-10)% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "2",
+    craftableAffix: "+(6-7)% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "3",
+    craftableAffix: "+5% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Gloves",
+    equipmentType: "Gloves (INT)",
+    affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix: "+(61-78)% Critical Strike Damage",
@@ -481,7 +513,7 @@ export const GLOVES_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "+(16-20)% Blur Effect\nGains Blur for 1 s after losing Blur",
+      "+(32-40)% Blur Effect\nGains Blur for 1 s after losing Blur",
   },
   {
     equipmentSlot: "Gloves",
@@ -490,7 +522,7 @@ export const GLOVES_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "+(12-15)% Blur Effect\nGains Blur for 1 s after losing Blur",
+      "+(24-30)% Blur Effect\nGains Blur for 1 s after losing Blur",
   },
   {
     equipmentSlot: "Gloves",
@@ -499,6 +531,6 @@ export const GLOVES_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "+(8-10)% Blur Effect\nGains Blur for 1 s after losing Blur",
+      "+(16-20)% Blur Effect\nGains Blur for 1 s after losing Blur",
   },
 ];

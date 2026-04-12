@@ -533,6 +533,24 @@ export const HeroMemories: readonly HeroMemory[] = [
   },
   {
     type: "Fixed Affix",
+    item: "Memory of Origin",
+    affix: "Immune to Ignite Damage\n-100% Ignite Effect received",
+    tier: 1,
+  },
+  {
+    type: "Fixed Affix",
+    item: "Memory of Origin",
+    affix: "Immune to Wilt Damage",
+    tier: 1,
+  },
+  {
+    type: "Fixed Affix",
+    item: "Memory of Origin",
+    affix: "Immune to Trauma Damage",
+    tier: 1,
+  },
+  {
+    type: "Fixed Affix",
     item: "Memory of Discipline",
     affix: "+2 to Hero Trait Level",
     tier: 1,
@@ -930,7 +948,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+(34–38)% Armor",
+    affix: "+(30–42)% Armor",
     tier: 1,
   },
   {
@@ -948,7 +966,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+(34–38)% Evasion",
+    affix: "+(30–42)% Evasion",
     tier: 1,
   },
   {
@@ -967,6 +985,24 @@ export const HeroMemories: readonly HeroMemory[] = [
     type: "Fixed Affix",
     item: "Memory of Discipline",
     affix: "+10% Cooldown Recovery Speed",
+    tier: 1,
+  },
+  {
+    type: "Fixed Affix",
+    item: "Memory of Discipline",
+    affix: "Immune to Ignite Damage\n-100% Ignite Effect received",
+    tier: 1,
+  },
+  {
+    type: "Fixed Affix",
+    item: "Memory of Discipline",
+    affix: "Immune to Wilt Damage",
+    tier: 1,
+  },
+  {
+    type: "Fixed Affix",
+    item: "Memory of Discipline",
+    affix: "Immune to Trauma Damage",
     tier: 1,
   },
   {
@@ -1368,7 +1404,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+(34–38)% Armor",
+    affix: "+(30–42)% Armor",
     tier: 1,
   },
   {
@@ -1386,7 +1422,7 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+(34–38)% Evasion",
+    affix: "+(30–42)% Evasion",
     tier: 1,
   },
   {
@@ -1405,6 +1441,24 @@ export const HeroMemories: readonly HeroMemory[] = [
     type: "Fixed Affix",
     item: "Memory of Progress",
     affix: "+10% Cooldown Recovery Speed",
+    tier: 1,
+  },
+  {
+    type: "Fixed Affix",
+    item: "Memory of Progress",
+    affix: "Immune to Ignite Damage\n-100% Ignite Effect received",
+    tier: 1,
+  },
+  {
+    type: "Fixed Affix",
+    item: "Memory of Progress",
+    affix: "Immune to Wilt Damage",
+    tier: 1,
+  },
+  {
+    type: "Fixed Affix",
+    item: "Memory of Progress",
+    affix: "Immune to Trauma Damage",
     tier: 1,
   },
   {

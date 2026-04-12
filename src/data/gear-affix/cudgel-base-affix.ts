@@ -163,4 +163,12 @@ export const CUDGEL_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "0",
     craftableAffix: "Lucky Critical Strike\n(-50--40)% Critical Strike Rating",
   },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "Cudgel",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "2",
+    craftableAffix: "+16% Life Regain and Energy Shield Regain",
+  },
 ];

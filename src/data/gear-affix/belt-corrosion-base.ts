@@ -146,7 +146,7 @@ export const BELT_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "(-50--40)% additional Damage Over Time taken when a Restoration Skill is active",
+      "(-50--40)% additional Damage Over Time taken when an Elixir Skill is active",
   },
   {
     equipmentSlot: "Trinket",

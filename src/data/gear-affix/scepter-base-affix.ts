@@ -113,7 +113,7 @@ export const SCEPTER_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "+(6-8)% Blur Effect",
+    craftableAffix: "+(36-40)% Blur Effect",
   },
   {
     equipmentSlot: "One-Handed",

@@ -273,34 +273,34 @@ const extractLegendary = (
   filename: string,
   choiceCards: Map<string, AffixChoiceCard>,
 ): TlidbLegendary | undefined => {
-  // Find both SS11Season and SS10Season cards
+  // Find both SS12Season and SS11Season cards
+  let s12Card: CheerioCard | undefined;
   let s11Card: CheerioCard | undefined;
-  let s10Card: CheerioCard | undefined;
 
   $(".card.ui_item").each((_, card) => {
     const $card = $(card);
     const itemVer = $card.find(".item_ver").text().trim();
-    if (itemVer === "SS11Season" && !$card.hasClass("previousItem")) {
+    if (itemVer === "SS12Season" && !$card.hasClass("previousItem")) {
+      s12Card = $card;
+    } else if (itemVer === "SS11Season") {
       s11Card = $card;
-    } else if (itemVer === "SS10Season") {
-      s10Card = $card;
     }
   });
 
-  if (s11Card === undefined) {
-    console.log(`  Skipping ${filename}: No SS11Season card found`);
+  if (s12Card === undefined) {
+    console.log(`  Skipping ${filename}: No SS12Season card found`);
     return undefined;
   }
 
-  // Try SS11 card first, fall back to SS10 if no affixes
-  let mainCard = s11Card;
+  // Try SS12 card first, fall back to SS11 if no affixes
+  let mainCard = s12Card;
   let normalAffixes = extractNormalAffixes(mainCard, $, choiceCards);
 
-  if (normalAffixes.length === 0 && s10Card !== undefined) {
+  if (normalAffixes.length === 0 && s11Card !== undefined) {
     console.log(
-      `  ${filename}: SS11 card has no affixes, falling back to SS10`,
+      `  ${filename}: SS12 card has no affixes, falling back to SS11`,
     );
-    mainCard = s10Card;
+    mainCard = s11Card;
     normalAffixes = extractNormalAffixes(mainCard, $, choiceCards);
   }
 

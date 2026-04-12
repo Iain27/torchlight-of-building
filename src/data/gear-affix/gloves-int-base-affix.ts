@@ -17,7 +17,7 @@ export const GLOVES_INT_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "+(4-6)% Energy Shield Charge Speed",
+    craftableAffix: "+(15-20)% Energy Shield Charge Speed",
   },
   {
     equipmentSlot: "Gloves",

@@ -4,7 +4,7 @@ import { join } from "node:path";
 import * as cheerio from "cheerio";
 import { program } from "commander";
 import type { Prism } from "../data/prism/types";
-import { assertNonEmpty } from "./lib/assertions";
+import { assertCount } from "./lib/assertions";
 
 const BASE_URL = "https://tlidb.com/en";
 const PRISM_PAGE_PATH = "Ethereal_Prism";
@@ -165,7 +165,7 @@ const main = async (options: Options): Promise<void> => {
   console.log("Extracting prism data...");
   const items = extractPrismData(html);
   console.log(`Extracted ${items.length} prisms`);
-  assertNonEmpty("prisms", items);
+  assertCount("prisms", items.length, 387);
 
   const outDir = join(process.cwd(), "src", "data", "prism");
   await mkdir(outDir, { recursive: true });

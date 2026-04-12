@@ -91,7 +91,7 @@ export const TWO_HANDED_HAMMER_SWEET_DREAM_AFFIX_AFFIXES: readonly BaseGearAffix
       craftingPool: "",
       tier: "1",
       craftableAffix:
-        "+(14-16)% additional damage when a Skill consumes Demolisher Charge",
+        "+(14-16)% additional skill damage when Demolisher Charge is consumed",
     },
     {
       equipmentSlot: "Two-Handed",

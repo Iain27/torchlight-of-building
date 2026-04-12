@@ -61,7 +61,7 @@ export const Blends: readonly Blend[] = [
     affix:
       "+20% chance to Blind the target on hit\n+25% Critical Strike Damage Mitigation against Blinded enemies",
   },
-  { type: "Medium", affix: "+100% chance to gain Blur on defeat" },
+  { type: "Medium", affix: "+18% Ill Omen Cumulative Efficiency" },
   { type: "Medium", affix: "Gains 1 stack(s) of Focus Blessing when Reaping" },
   {
     type: "Medium",
@@ -71,7 +71,7 @@ export const Blends: readonly Blend[] = [
   {
     type: "Medium",
     affix:
-      "Upon inflicting damage, +15% damage for every type of Ailment the enemy has\nWhen Minions deal damage, +15% damage for every type of Ailment the enemy has",
+      "+18 Affliction inflicted per second\n-8% All Resistance when the enemy has max Affliction",
   },
   { type: "Medium", affix: "+1 to All Skills' Levels" },
   {
@@ -86,7 +86,7 @@ export const Blends: readonly Blend[] = [
   {
     type: "Medium",
     affix:
-      "+12% additional Sentry Damage if Sentry Skill is not used in the last 1 s",
+      "+10% additional Sentry Damage if Sentry Skill is not used in the last 1 s",
   },
   {
     type: "Medium",
@@ -112,7 +112,7 @@ export const Blends: readonly Blend[] = [
   {
     type: "Core",
     affix:
-      "[Perception] +100% chance to gain 1 stacks of Agility Blessing on hit\n+1 to Max Agility Blessing Stacks",
+      "[Conductive] Changes the base effect of Numbed to: +11% additional Lightning Damage taken",
   },
   {
     type: "Core",
@@ -122,17 +122,16 @@ export const Blends: readonly Blend[] = [
   {
     type: "Core",
     affix:
-      "[Transition] 50% chance for this skill to deal +16% additional damage when casting a skill\n25% chance for this skill to deal +32% additional damage when casting a skill\n10% chance for this skill to deal +80% additional damage when casting a skill",
+      "[Transition] When casting a skill, there is a 50% chance for that cast to deal +16% additional damage\nWhen casting a skill, there is a 25% chance for that cast to deal +32% additional damage\nWhen casting a skill, there is a 10% chance for that cast to deal +80% additional damage",
+  },
+  {
+    type: "Core",
+    affix: "[Acquaintance] Has Dormant Entanglement\n+1 Max Tangle Quantity",
   },
   {
     type: "Core",
     affix:
-      "[Quick Wits] +25% additional Spell Damage when the Energy Shield is not low\n-20% additional damage taken at Low Energy Shield",
-  },
-  {
-    type: "Core",
-    affix:
-      "[Frostbitten] Inflicts Frostbite when dealing Hit Cold Damage\n+50% Frostbite Effect",
+      "[Frostbitten] Inflicts Frostbite when dealing Hit Cold Damage\n+40% Frostbite Effect",
   },
   {
     type: "Core",
@@ -187,17 +186,17 @@ export const Blends: readonly Blend[] = [
   {
     type: "Core",
     affix:
-      "[Well Matched] Deals up to +25% additional Attack Damage to enemies in proximity, and this damage reduces as the distance from the enemy grows\n-15% additional damage taken from enemies in proximity, and this damage reduces as the distance from the enemy grows",
+      "[Formless] Doubles Max Warcry Skill Effects\n+66% Warcry Skill Area",
   },
   {
     type: "Core",
     affix:
-      "[Starfire] +1 Ignite limit\nWhen Ignite is inflicted, it spreads to enemies within 10m. Interval: 0.3s",
+      "[True Flame] When an enemy is Ignited, 65% of the additional bonus to Damage Over Time taken from Affliction is also applied to your Fire Hit Damage",
   },
   {
     type: "Core",
     affix:
-      "[No Loose Ends] +50% additional Attack Damage at Low Life\nYour Max Energy Shield is fixed at 0",
+      "[No Loose Ends] +40% additional Attack Damage at Low Life\nYour Max Energy Shield is fixed at 0",
   },
   {
     type: "Core",
@@ -217,17 +216,17 @@ export const Blends: readonly Blend[] = [
   {
     type: "Core",
     affix:
-      "[Peculiar Vibe] You can apply 1 additional Tangle(s) to enemies\n-30% additional Tangle Skill Area",
+      "[Extreme Coldness] +50 to Max Frostbite Rating\nYou can only deal Cold Damage",
   },
   {
     type: "Core",
     affix:
-      "[Frozen Lotus] +25% additional Cold Damage\n+25% additional Minion Cold Damage\nSkills no longer cost Mana",
+      "[Quick Wits] +25% additional Spell Damage when the Energy Shield is not low\n-20% additional damage taken at Low Energy Shield",
   },
   {
     type: "Core",
     affix:
-      "[Quick Ritual] Min Channeled Stacks +1\n+20% additional Channeled Skill damage",
+      "[Play Safe] 100% of the bonuses and additional bonuses to Cast Speed is also applied to Spell Burst Charge Speed\n-33% additional Spell Burst Charge Speed\n+40% additional Hit Damage for skills cast by Spell Burst",
   },
   {
     type: "Core",
@@ -237,7 +236,7 @@ export const Blends: readonly Blend[] = [
   {
     type: "Core",
     affix:
-      "[Hair-trigger] +2% additional damage of a skill for every 7 points of Fervor Rating when the skill is triggered",
+      "[Open Wounds] +2 TraumaLimit\n-99% additional Trauma Damage\n+12% additional Hit Physical Damage taken, up to +60% , for every stack of Trauma the enemy has",
   },
   {
     type: "Core",
@@ -257,7 +256,7 @@ export const Blends: readonly Blend[] = [
   {
     type: "Core",
     affix:
-      "[Subtle Impact] Blur gains an additional effect: +25% additional Damage Over Time",
+      "[Subtle Impact] +30% additional Damage Over Time while Blur is active",
   },
   {
     type: "Core",
@@ -292,7 +291,7 @@ export const Blends: readonly Blend[] = [
   {
     type: "Core",
     affix:
-      "[Master Escapist] +1 Max Deflection stacks\nGains 1 stacks of Deflection on Evasion",
+      "[Master Escapist] +1 Max Deflection stacks\nFor every 5 m moved, gains 1 stack(s) of Deflection",
   },
   {
     type: "Core",
@@ -346,36 +345,44 @@ export const Blends: readonly Blend[] = [
   {
     type: "Core",
     affix:
-      "[Panacea] Restoration Skills: +100% Restoration Effect\nRestoration Effect from Restoration Skills cannot be removed",
+      "[Tailored Remedy] The Restoration Effect from Elixir Skills cannot be removed\n-40% additional Elixir Skill Effect Duration when equipped with no more than 1 Elixir Skill\n+60% additional Elixir Skill Effect when equipped with no more than 2 Elixir Skills",
   },
   {
     type: "Core",
     affix:
       "[Kinetic Conversion] 100% chance to gain a Barrier for every 5 m you move\nRefreshes Barrier when gaining Barrier\n-40% additional Barrier Shield",
   },
+  { type: "Core", affix: "Ember Armor" },
+  { type: "Core", affix: "[Defensiveness] +25% Block Ratio" },
   {
-    type: "Aromatic",
+    type: "Core",
     affix:
-      "[Divine Grace] Gains 1 stack(s) of a random Blessing every second. Interval: 1s\n+1% additional damage per stack of Blessing, up to 10%\n-1% additional damage taken per stack of Blessing, up to 10%",
+      "[Resistance] +1% chance to avoidElemental Ailments for every 1% effective Erosion Resistance",
   },
   {
     type: "Aromatic",
     affix:
-      "[Caged Fury] -6% additional Attack Speed (multiplies) for every 1 time(s) you cast an Attack Mobility Skill in the last 2s\n+15% additional Attack Speed and +35% additional Attack Damage after using a Mobility Skill. The effect falls off to 0 within 2s",
+      "[Divine Grace] Changes the base effect of all Blessings to: +4% additional damage and -4% additional damage taken\nMax stacks of each Blessing: 4",
   },
   {
     type: "Aromatic",
     affix:
-      "[Rotted Taboo] Takes 100 Secondary Erosion Damage when casting an Erosion Skill. Interval: 0.1s\n+6 to Erosion Skill Level\nErosion Skills are guaranteed to inflict all types of Ailment on hit",
+      "[Caged Fury] If you have moved 12m or more in the last 1s, +15% additional Attack Speed and +15% Movement Speed\nIf you have moved less than 12m in the last 1s, +35% additional damage and +35% Physique",
   },
   {
     type: "Aromatic",
     affix:
-      "[Comradeship] Minions gain the Belt's bonuses\n-10% additional Minion Damage",
+      "[Rotted Taboo] Takes 100 Secondary Erosion Damage when casting a skill. Interval: 0.1s\n+3 to All Skills' Levels",
+  },
+  { type: "Aromatic", affix: "[Comradeship] Minions gain the Belt's bonuses." },
+  {
+    type: "Aromatic",
+    affix:
+      "[Hallowed Journey] You have a Lv. 1 Precise: Magical Source\nPrecise: Magical Source gains an additional base effect: 20% of damage is taken from Mana before life",
   },
   {
     type: "Aromatic",
     affix:
-      "[Hallowed Journey] Triggers Lv. 40 Blurry Steps, Secret Origin Unleash, and Arcane Circle after consuming a total of 5000 Mana. Interval: 2s",
+      "[Thrice Lucky] Changes Lucky Damage's effect to: Determines 3 random damage values and selects the optimal value\nLucky Damage",
   },
 ];

@@ -139,4 +139,12 @@ export const ONE_HANDED_SWORD_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "0",
     craftableAffix: "+1 to Max Focus Blessing Stacks",
   },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "One-Handed Sword",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "2",
+    craftableAffix: "+8% Life Regain and Energy Shield Regain",
+  },
 ];

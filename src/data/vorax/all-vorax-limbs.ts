@@ -9,8 +9,6 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Glorious Journey",
       "Phantasm",
       "Ice Pulse",
-      "Sarituya",
-      "Aslan",
       "Berserker Bracer",
       "Feline Gloves",
       "Furious Man's Body",
@@ -30,6 +28,7 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Alloy Covenant",
       "Providential Grace",
       "Hand of Malice",
+      "Golden Touch",
       "Imperious Verdict",
       "Agony of Lost Self",
       "Ice and Fire",
@@ -74,7 +73,6 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Ardor",
       "Varagon Shroud",
       "Ghost Slaughter",
-      "Torturer's Touch",
       "Miniature Void Sea",
       "Wings of Light",
       "Clenched Spring",
@@ -82,13 +80,11 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Aeterna Martyr",
       "Archmage's Hands",
       "Stray Bird's Return",
-      "Death's Touch",
       "Blade-Dancer's Edges",
       "Quantum Convergence",
       "Grandmaster's Hands",
       "Vajra Handguards",
       "Grasp of Truth",
-      "Demons' Touch",
     ],
     craftableAffixes: [
       {
@@ -1019,6 +1015,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+1 Active Skill Level",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix:
           "+(11-12)% additional Fire Damage and +(19-20)% Fire Penetration when you have at least 8 stack(s) of Tenacity Blessing",
         tier: "0+",
@@ -1203,6 +1205,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "You can cast 1 additional Curses\n-5% Curse Effect",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix:
           "Enemies have a (35-40)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (200-250)% of their Max Life to enemies within a 6 m radius",
         tier: "0+",
@@ -1220,6 +1228,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         craftableAffix:
           "Enemies have a (10-15)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (200-250)% of their Max Life to enemies within a 4 m radius",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "Enemies have a (10-15)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (100-150)% of their Max Life to enemies within a 4 m radius",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -1544,25 +1559,25 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
-        craftableAffix: "Regenerates (157-203) Life per second",
+        craftableAffix: "Regenerates (509-575) Life per second",
         tier: "0+",
         affixType: "Basic",
         section: "suffix",
       },
       {
-        craftableAffix: "Regenerates (121-156) Life per second",
+        craftableAffix: "Regenerates (341-442) Life per second",
         tier: "0",
         affixType: "Basic",
         section: "suffix",
       },
       {
-        craftableAffix: "Regenerates (85-120) Life per second",
+        craftableAffix: "Regenerates (239-340) Life per second",
         tier: "1",
         affixType: "Basic",
         section: "suffix",
       },
       {
-        craftableAffix: "Regenerates (61-84) Life per second",
+        craftableAffix: "Regenerates (171-238) Life per second",
         tier: "2",
         affixType: "Basic",
         section: "suffix",
@@ -2078,28 +2093,28 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
-          "+(21-25)% Blur Effect\nGains Blur for 1 s after losing Blur",
+          "+(42-50)% Blur Effect\nGains Blur for 1 s after losing Blur",
         tier: "0+",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "+(16-20)% Blur Effect\nGains Blur for 1 s after losing Blur",
+          "+(32-40)% Blur Effect\nGains Blur for 1 s after losing Blur",
         tier: "0",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "+(12-15)% Blur Effect\nGains Blur for 1 s after losing Blur",
+          "+(24-30)% Blur Effect\nGains Blur for 1 s after losing Blur",
         tier: "1",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "+(8-10)% Blur Effect\nGains Blur for 1 s after losing Blur",
+          "+(16-20)% Blur Effect\nGains Blur for 1 s after losing Blur",
         tier: "2",
         affixType: "Ultimate",
         section: "suffix",
@@ -2369,6 +2384,7 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Bodhi Girdle",
       "Silent Observer",
       "Tranquil Stir",
+      "Omni-Elixir Notes",
       "Eternity",
     ],
     craftableAffixes: [
@@ -2937,6 +2953,42 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+(35-40)% Ill Omen Cumulative Efficiency",
+        tier: "0+",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(26-30)% Ill Omen Cumulative Efficiency",
+        tier: "0",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(21-25)% Ill Omen Cumulative Efficiency",
+        tier: "1",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(16-20)% Ill Omen Cumulative Efficiency",
+        tier: "2",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(11-15)% Ill Omen Cumulative Efficiency",
+        tier: "3",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(5-10)% Ill Omen Cumulative Efficiency",
+        tier: "4",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
         craftableAffix: "+(21-25)% additional Max Life",
         tier: "0+",
         affixType: "Ultimate",
@@ -2961,20 +3013,30 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
-        craftableAffix: "100% chance to gain Blur per (5-10) m you move",
+        craftableAffix:
+          "+(38-42)% Blur Effect\n100% chance to gain Blur per (5-10) m you move",
         tier: "0+",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "70% chance to gain Blur per (5-10) m you move",
+        craftableAffix:
+          "+(26-32)% Blur Effect\n70% chance to gain Blur per (5-10) m you move",
         tier: "0",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "50% chance to gain Blur per (5-10) m you move",
+        craftableAffix:
+          "+(19-24)% Blur Effect\n50% chance to gain Blur per (5-10) m you move",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "+(12-16)% Blur Effect\n30% chance to gain Blur per (5-10) m you move",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -3401,6 +3463,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+1 to Max Channeled Stacks\n-5% additional damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix: "Min Channeled Stacks +(2-3)",
         tier: "0+",
         affixType: "Ultimate",
@@ -3415,6 +3483,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "Min Channeled Stacks +1",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "Min Channeled Stacks +1\n-5% additional damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -3465,6 +3539,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+1 Ignite limit\n-5% additional Ignite Damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix: "+(66-85)% Deterioration Damage",
         tier: "0+",
         affixType: "Ultimate",
@@ -3510,6 +3590,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
+          "+1 to Max Tenacity Blessing Stacks\n-5% additional damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
           "+1 to Max Agility Blessing Stacks\n+13% additional damage",
         tier: "0+",
         affixType: "Ultimate",
@@ -3530,6 +3617,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
+          "+1 to Max Agility Blessing Stacks\n-5% additional damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
           "+1 to Max Focus Blessing Stacks\n+13% additional damage",
         tier: "0+",
         affixType: "Ultimate",
@@ -3545,6 +3639,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "+1 to Max Focus Blessing Stacks",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "+1 to Max Focus Blessing Stacks\n-5% additional damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -4187,6 +4288,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "suffix",
       },
       {
+        craftableAffix: "For every 8 m moved, gains 1 stack(s) of Deflection",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
         craftableAffix: "+(30-37)% additional Armor while moving",
         tier: "0+",
         affixType: "Ultimate",
@@ -4212,28 +4319,28 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
-          "Triggers Lv. (21-30) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (21-30) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "0+",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "Triggers Lv. (11-20) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (11-20) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "0",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "Triggers Lv. (6-10) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (6-10) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "1",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "Triggers Lv. (1-5) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (1-5) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "2",
         affixType: "Ultimate",
         section: "suffix",
@@ -4306,6 +4413,30 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix: "+(10-12)% additional Max Energy Shield while moving",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(61-68)% Blur Effect",
+        tier: "0+",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(42-52)% Blur Effect",
+        tier: "0",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(29-40)% Blur Effect",
+        tier: "1",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(21-28)% Blur Effect",
         tier: "2",
         affixType: "Ultimate",
         section: "suffix",
@@ -4605,8 +4736,6 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Glorious Journey",
       "Phantasm",
       "Ice Pulse",
-      "Sarituya",
-      "Aslan",
       "Berserker Bracer",
       "Feline Gloves",
       "Furious Man's Body",
@@ -4626,6 +4755,7 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Alloy Covenant",
       "Providential Grace",
       "Hand of Malice",
+      "Golden Touch",
       "Imperious Verdict",
       "Agony of Lost Self",
       "Ice and Fire",
@@ -4670,7 +4800,6 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Ardor",
       "Varagon Shroud",
       "Ghost Slaughter",
-      "Torturer's Touch",
       "Miniature Void Sea",
       "Wings of Light",
       "Clenched Spring",
@@ -4678,13 +4807,11 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Aeterna Martyr",
       "Archmage's Hands",
       "Stray Bird's Return",
-      "Death's Touch",
       "Blade-Dancer's Edges",
       "Quantum Convergence",
       "Grandmaster's Hands",
       "Vajra Handguards",
       "Grasp of Truth",
-      "Demons' Touch",
     ],
     craftableAffixes: [
       {
@@ -5391,6 +5518,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "You can cast 1 additional Curses\n-5% Curse Effect",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix:
           "Enemies have a (35-40)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (200-250)% of their Max Life to enemies within a 6 m radius",
         tier: "0+",
@@ -5408,6 +5541,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         craftableAffix:
           "Enemies have a (10-15)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (200-250)% of their Max Life to enemies within a 4 m radius",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "Enemies have a (10-15)% chance to explode when defeated by an Attack or Spell, dealing True Damage equal to (100-150)% of their Max Life to enemies within a 4 m radius",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -5750,6 +5890,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+1 Active Skill Level",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix:
           "+(11-12)% additional Fire Damage and +(19-20)% Fire Penetration when you have at least 8 stack(s) of Tenacity Blessing",
         tier: "0+",
@@ -5862,25 +6008,25 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
-        craftableAffix: "Regenerates 5% Life per second",
+        craftableAffix: "Regenerates 10% Life per second",
         tier: "0+",
         affixType: "Basic",
         section: "suffix",
       },
       {
-        craftableAffix: "Regenerates 4% Life per second",
+        craftableAffix: "Regenerates (7-8)% Life per second",
         tier: "0",
         affixType: "Basic",
         section: "suffix",
       },
       {
-        craftableAffix: "Regenerates (2-3)% Life per second",
+        craftableAffix: "Regenerates (5-6)% Life per second",
         tier: "1",
         affixType: "Basic",
         section: "suffix",
       },
       {
-        craftableAffix: "Regenerates 1% Life per second",
+        craftableAffix: "Regenerates 4% Life per second",
         tier: "2",
         affixType: "Basic",
         section: "suffix",
@@ -6709,28 +6855,28 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
-          "+(21-25)% Blur Effect\nGains Blur for 1 s after losing Blur",
+          "+(42-50)% Blur Effect\nGains Blur for 1 s after losing Blur",
         tier: "0+",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "+(16-20)% Blur Effect\nGains Blur for 1 s after losing Blur",
+          "+(32-40)% Blur Effect\nGains Blur for 1 s after losing Blur",
         tier: "0",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "+(12-15)% Blur Effect\nGains Blur for 1 s after losing Blur",
+          "+(24-30)% Blur Effect\nGains Blur for 1 s after losing Blur",
         tier: "1",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "+(8-10)% Blur Effect\nGains Blur for 1 s after losing Blur",
+          "+(16-20)% Blur Effect\nGains Blur for 1 s after losing Blur",
         tier: "2",
         affixType: "Ultimate",
         section: "suffix",
@@ -6840,7 +6986,6 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Hunting the Eye of the Kraken",
       "Flying Light at Daybreak",
       "Troublemaker",
-      "Legless Bird's Lament",
       "Hanging Two-Tone Mask",
       "Headless Crown",
       "Solid River",
@@ -6848,11 +6993,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Kragol's Roar",
       "Iron and Bloom",
       "Malign Embrace",
+      "Ralph's Dreadcrest",
+      "Magmaskull",
       "Forlorn Crystal",
       "Vortex Heart",
       "Master Defender Pendant",
       "Magnus' Mindflame",
-      "Truth",
       "Warden's Breastpin",
       "Ocean of Rock",
       "Phantom",
@@ -6867,6 +7013,7 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Strange Snow",
       "False God's Skin",
       "Rat King's Megagon Dice",
+      "Iron Nest",
       "Elegy of Immortality",
       "Howling Wind",
       "Decaying Blessing",
@@ -7601,6 +7748,42 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+(35-40)% Ill Omen Cumulative Efficiency",
+        tier: "0+",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(26-30)% Ill Omen Cumulative Efficiency",
+        tier: "0",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(21-25)% Ill Omen Cumulative Efficiency",
+        tier: "1",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(16-20)% Ill Omen Cumulative Efficiency",
+        tier: "2",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(11-15)% Ill Omen Cumulative Efficiency",
+        tier: "3",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(5-10)% Ill Omen Cumulative Efficiency",
+        tier: "4",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
         craftableAffix:
           "Converts (27-35)% of Physical Damage taken to Fire Damage",
         tier: "0+",
@@ -7630,7 +7813,7 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
-          "+1 Max Spell Burst\n+13% additional Hit Damage for skills cast by Spell Burst",
+          "+1 Max Spell Burst\n+20% additional Hit Damage for skills cast by Spell Burst",
         tier: "0+",
         affixType: "Ultimate",
         section: "prefix",
@@ -7645,6 +7828,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "+1 Max Spell Burst",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "+1 Max Spell Burst\n-10% additional Hit Damage for skills cast by Spell Burst",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -7665,6 +7855,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "Max Terra Charge Stacks +1",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "Max Terra Charge Stacks +1\n-20% Terra Charge Recovery Speed",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -7693,25 +7890,25 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
-        craftableAffix: "(-25--21)% additional Damage dealt by Nearby enemies",
+        craftableAffix: "(-25--21)% additional damage dealt by Nearby enemies",
         tier: "0+",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "(-20--16)% additional Damage dealt by Nearby enemies",
+        craftableAffix: "(-20--16)% additional damage dealt by Nearby enemies",
         tier: "0",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "(-15--12)% additional Damage dealt by Nearby enemies",
+        craftableAffix: "(-15--12)% additional damage dealt by Nearby enemies",
         tier: "1",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "(-11--9)% additional Damage dealt by Nearby enemies",
+        craftableAffix: "(-11--9)% additional damage dealt by Nearby enemies",
         tier: "2",
         affixType: "Ultimate",
         section: "prefix",
@@ -7965,6 +8162,34 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix:
+          "You can apply 1 additional Tangle(s) to enemies\n+(20-25)% Tangle Damage Enhancement",
+        tier: "0+",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "You can apply 1 additional Tangle(s) to enemies\n+(12-15)% Tangle Damage Enhancement",
+        tier: "0",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "You can apply 1 additional Tangle(s) to enemies\n+(5-8)% Tangle Damage Enhancement",
+        tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "You can apply 1 additional Tangle(s) to enemies\n+(1-3)% Tangle Damage Enhancement",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix: "+(3-4) Minion Skill Level",
         tier: "0+",
         affixType: "Ultimate",
@@ -7979,6 +8204,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "+2 Minion Skill Level",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+1 Minion Skill Level",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -8001,6 +8232,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+1 Max Spell Burst\n-5% additional damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix: "+4 Active Skill Level",
         tier: "0+",
         affixType: "Ultimate",
@@ -8013,8 +8250,14 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
-        craftableAffix: "+(1-2) Active Skill Level",
+        craftableAffix: "+2 Active Skill Level",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+1 Active Skill Level",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -8033,6 +8276,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "Have Fervor",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "Have Fervor\n-5% additional damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -8085,25 +8334,25 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
-        craftableAffix: "Regenerates (157-203) Life per second",
+        craftableAffix: "Regenerates (509-575) Life per second",
         tier: "0+",
         affixType: "Basic",
         section: "suffix",
       },
       {
-        craftableAffix: "Regenerates (121-156) Life per second",
+        craftableAffix: "Regenerates (341-442) Life per second",
         tier: "0",
         affixType: "Basic",
         section: "suffix",
       },
       {
-        craftableAffix: "Regenerates (85-120) Life per second",
+        craftableAffix: "Regenerates (239-340) Life per second",
         tier: "1",
         affixType: "Basic",
         section: "suffix",
       },
       {
-        craftableAffix: "Regenerates (61-84) Life per second",
+        craftableAffix: "Regenerates (171-238) Life per second",
         tier: "2",
         affixType: "Basic",
         section: "suffix",
@@ -8920,6 +9169,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "suffix",
       },
       {
+        craftableAffix: "+(3-4)% damage per stack of any Blessing",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
         craftableAffix: "+(27-34)% Sealed Mana Compensation",
         tier: "0+",
         affixType: "Ultimate",
@@ -9116,7 +9371,6 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Hunting the Eye of the Kraken",
       "Flying Light at Daybreak",
       "Troublemaker",
-      "Legless Bird's Lament",
       "Hanging Two-Tone Mask",
       "Headless Crown",
       "Solid River",
@@ -9124,11 +9378,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Kragol's Roar",
       "Iron and Bloom",
       "Malign Embrace",
+      "Ralph's Dreadcrest",
+      "Magmaskull",
       "Forlorn Crystal",
       "Vortex Heart",
       "Master Defender Pendant",
       "Magnus' Mindflame",
-      "Truth",
       "Warden's Breastpin",
       "Ocean of Rock",
       "Phantom",
@@ -9143,6 +9398,7 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Strange Snow",
       "False God's Skin",
       "Rat King's Megagon Dice",
+      "Iron Nest",
       "Elegy of Immortality",
       "Howling Wind",
       "Decaying Blessing",
@@ -9862,6 +10118,42 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+(35-40)% Ill Omen Cumulative Efficiency",
+        tier: "0+",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(26-30)% Ill Omen Cumulative Efficiency",
+        tier: "0",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(21-25)% Ill Omen Cumulative Efficiency",
+        tier: "1",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(16-20)% Ill Omen Cumulative Efficiency",
+        tier: "2",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(11-15)% Ill Omen Cumulative Efficiency",
+        tier: "3",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(5-10)% Ill Omen Cumulative Efficiency",
+        tier: "4",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
         craftableAffix: "+(3-4) Minion Skill Level",
         tier: "0+",
         affixType: "Ultimate",
@@ -9876,6 +10168,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "+2 Minion Skill Level",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+1 Minion Skill Level",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -9898,6 +10196,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+1 Max Spell Burst\n-5% additional damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix: "+4 Active Skill Level",
         tier: "0+",
         affixType: "Ultimate",
@@ -9910,8 +10214,14 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
-        craftableAffix: "+(1-2) Active Skill Level",
+        craftableAffix: "+2 Active Skill Level",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+1 Active Skill Level",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -9930,6 +10240,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "Have Fervor",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "Have Fervor\n-5% additional damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -10011,7 +10327,7 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
-          "+1 Max Spell Burst\n+13% additional Hit Damage for skills cast by Spell Burst",
+          "+1 Max Spell Burst\n+20% additional Hit Damage for skills cast by Spell Burst",
         tier: "0+",
         affixType: "Ultimate",
         section: "prefix",
@@ -10026,6 +10342,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "+1 Max Spell Burst",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "+1 Max Spell Burst\n-10% additional Hit Damage for skills cast by Spell Burst",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -10046,6 +10369,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "Max Terra Charge Stacks +1",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "Max Terra Charge Stacks +1\n-20% Terra Charge Recovery Speed",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -10074,25 +10404,25 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
-        craftableAffix: "(-25--21)% additional Damage dealt by Nearby enemies",
+        craftableAffix: "(-25--21)% additional damage dealt by Nearby enemies",
         tier: "0+",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "(-20--16)% additional Damage dealt by Nearby enemies",
+        craftableAffix: "(-20--16)% additional damage dealt by Nearby enemies",
         tier: "0",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "(-15--12)% additional Damage dealt by Nearby enemies",
+        craftableAffix: "(-15--12)% additional damage dealt by Nearby enemies",
         tier: "1",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "(-11--9)% additional Damage dealt by Nearby enemies",
+        craftableAffix: "(-11--9)% additional damage dealt by Nearby enemies",
         tier: "2",
         affixType: "Ultimate",
         section: "prefix",
@@ -10341,6 +10671,34 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix:
           "-35% additional Damage Over Time taken when you have at least 8000 Max Energy Shield",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "You can apply 1 additional Tangle(s) to enemies\n+(20-25)% Tangle Damage Enhancement",
+        tier: "0+",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "You can apply 1 additional Tangle(s) to enemies\n+(12-15)% Tangle Damage Enhancement",
+        tier: "0",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "You can apply 1 additional Tangle(s) to enemies\n+(5-8)% Tangle Damage Enhancement",
+        tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "You can apply 1 additional Tangle(s) to enemies\n+(1-3)% Tangle Damage Enhancement",
         tier: "2",
         affixType: "Ultimate",
         section: "prefix",
@@ -10822,6 +11180,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "suffix",
       },
       {
+        craftableAffix: "+(3-4)% damage per stack of any Blessing",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
         craftableAffix: "+(27-34)% Sealed Mana Compensation",
         tier: "0+",
         affixType: "Ultimate",
@@ -11104,7 +11468,7 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         affix: "+8% damage and Minion Damage per stack of any Blessing",
         tier: "0",
       },
-      { affix: "Gains 5 stack(s) of God of War's Blessing", tier: "0" },
+      { affix: "Gains 3 stack(s) of God of War's Blessing", tier: "0" },
       { affix: "+2 to Attack Skill Level", tier: "0" },
       { affix: "+2 Spell Skill Level", tier: "0" },
     ],
@@ -11198,6 +11562,7 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Bodhi Girdle",
       "Silent Observer",
       "Tranquil Stir",
+      "Omni-Elixir Notes",
       "Eternity",
     ],
     craftableAffixes: [
@@ -11753,6 +12118,42 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+(35-40)% Ill Omen Cumulative Efficiency",
+        tier: "0+",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(26-30)% Ill Omen Cumulative Efficiency",
+        tier: "0",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(21-25)% Ill Omen Cumulative Efficiency",
+        tier: "1",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(16-20)% Ill Omen Cumulative Efficiency",
+        tier: "2",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(11-15)% Ill Omen Cumulative Efficiency",
+        tier: "3",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(5-10)% Ill Omen Cumulative Efficiency",
+        tier: "4",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
         craftableAffix: "(-21--20)% additional damage taken at Low Mana",
         tier: "0+",
         affixType: "Ultimate",
@@ -11795,6 +12196,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+1 to Max Channeled Stacks\n-5% additional damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix: "Min Channeled Stacks +(2-3)",
         tier: "0+",
         affixType: "Ultimate",
@@ -11809,6 +12216,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "Min Channeled Stacks +1",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "Min Channeled Stacks +1\n-5% additional damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -11855,6 +12268,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "+1 Ignite limit",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+1 Ignite limit\n-5% additional Ignite Damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -11907,20 +12326,30 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
-        craftableAffix: "100% chance to gain Blur per (5-10) m you move",
+        craftableAffix:
+          "+(38-42)% Blur Effect\n100% chance to gain Blur per (5-10) m you move",
         tier: "0+",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "70% chance to gain Blur per (5-10) m you move",
+        craftableAffix:
+          "+(26-32)% Blur Effect\n70% chance to gain Blur per (5-10) m you move",
         tier: "0",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "50% chance to gain Blur per (5-10) m you move",
+        craftableAffix:
+          "+(19-24)% Blur Effect\n50% chance to gain Blur per (5-10) m you move",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "+(12-16)% Blur Effect\n30% chance to gain Blur per (5-10) m you move",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -12326,6 +12755,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
+          "+1 to Max Tenacity Blessing Stacks\n-5% additional damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
           "+1 to Max Agility Blessing Stacks\n+13% additional damage",
         tier: "0+",
         affixType: "Ultimate",
@@ -12346,6 +12782,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
+          "+1 to Max Agility Blessing Stacks\n-5% additional damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
           "+1 to Max Focus Blessing Stacks\n+13% additional damage",
         tier: "0+",
         affixType: "Ultimate",
@@ -12361,6 +12804,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "+1 to Max Focus Blessing Stacks",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "+1 to Max Focus Blessing Stacks\n-5% additional damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -13194,6 +13644,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "suffix",
       },
       {
+        craftableAffix: "For every 8 m moved, gains 1 stack(s) of Deflection",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
         craftableAffix: "+(30-37)% additional Armor while moving",
         tier: "0+",
         affixType: "Ultimate",
@@ -13219,28 +13675,28 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
-          "Triggers Lv. (21-30) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (21-30) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "0+",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "Triggers Lv. (11-20) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (11-20) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "0",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "Triggers Lv. (6-10) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (6-10) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "1",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "Triggers Lv. (1-5) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (1-5) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "2",
         affixType: "Ultimate",
         section: "suffix",
@@ -13313,6 +13769,30 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix: "+(10-12)% additional Max Energy Shield while moving",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(61-68)% Blur Effect",
+        tier: "0+",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(42-52)% Blur Effect",
+        tier: "0",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(29-40)% Blur Effect",
+        tier: "1",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(21-28)% Blur Effect",
         tier: "2",
         affixType: "Ultimate",
         section: "suffix",
@@ -13453,12 +13933,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         affix:
-          "-50% additional Damage Over Time taken when a Restoration Skill is active",
+          "-50% additional Damage Over Time taken when an Elixir Skill is active",
         tier: "0",
       },
       {
         affix:
-          "+10% additional Max Life, Max Mana, and Max Energy Shield when a Restoration Skill is active",
+          "+10% additional Max Life, Max Mana, and Max Energy Shield when an Elixir Skill is active",
         tier: "0",
       },
       { affix: "+30% Warcry Effect", tier: "0" },
@@ -13555,6 +14035,7 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       "Bodhi Girdle",
       "Silent Observer",
       "Tranquil Stir",
+      "Omni-Elixir Notes",
       "Eternity",
     ],
     craftableAffixes: [
@@ -14252,6 +14733,42 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+(35-40)% Ill Omen Cumulative Efficiency",
+        tier: "0+",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(26-30)% Ill Omen Cumulative Efficiency",
+        tier: "0",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(21-25)% Ill Omen Cumulative Efficiency",
+        tier: "1",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(16-20)% Ill Omen Cumulative Efficiency",
+        tier: "2",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(11-15)% Ill Omen Cumulative Efficiency",
+        tier: "3",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+(5-10)% Ill Omen Cumulative Efficiency",
+        tier: "4",
+        affixType: "Advanced",
+        section: "prefix",
+      },
+      {
         craftableAffix:
           "+1 to Max Tenacity Blessing Stacks\n+13% additional damage",
         tier: "0+",
@@ -14268,6 +14785,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "+1 to Max Tenacity Blessing Stacks",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "+1 to Max Tenacity Blessing Stacks\n-5% additional damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -14293,6 +14817,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
+          "+1 to Max Agility Blessing Stacks\n-5% additional damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
           "+1 to Max Focus Blessing Stacks\n+13% additional damage",
         tier: "0+",
         affixType: "Ultimate",
@@ -14308,6 +14839,13 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "+1 to Max Focus Blessing Stacks",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "+1 to Max Focus Blessing Stacks\n-5% additional damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -14436,20 +14974,30 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
-        craftableAffix: "100% chance to gain Blur per (5-10) m you move",
+        craftableAffix:
+          "+(38-42)% Blur Effect\n100% chance to gain Blur per (5-10) m you move",
         tier: "0+",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "70% chance to gain Blur per (5-10) m you move",
+        craftableAffix:
+          "+(26-32)% Blur Effect\n70% chance to gain Blur per (5-10) m you move",
         tier: "0",
         affixType: "Ultimate",
         section: "prefix",
       },
       {
-        craftableAffix: "50% chance to gain Blur per (5-10) m you move",
+        craftableAffix:
+          "+(19-24)% Blur Effect\n50% chance to gain Blur per (5-10) m you move",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix:
+          "+(12-16)% Blur Effect\n30% chance to gain Blur per (5-10) m you move",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -14876,6 +15424,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "prefix",
       },
       {
+        craftableAffix: "+1 to Max Channeled Stacks\n-5% additional damage",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
         craftableAffix: "Min Channeled Stacks +(2-3)",
         tier: "0+",
         affixType: "Ultimate",
@@ -14890,6 +15444,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "Min Channeled Stacks +1",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "Min Channeled Stacks +1\n-5% additional damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -14936,6 +15496,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       {
         craftableAffix: "+1 Ignite limit",
         tier: "1",
+        affixType: "Ultimate",
+        section: "prefix",
+      },
+      {
+        craftableAffix: "+1 Ignite limit\n-5% additional Ignite Damage",
+        tier: "2",
         affixType: "Ultimate",
         section: "prefix",
       },
@@ -15664,6 +16230,12 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
         section: "suffix",
       },
       {
+        craftableAffix: "For every 8 m moved, gains 1 stack(s) of Deflection",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
         craftableAffix: "+(30-37)% additional Armor while moving",
         tier: "0+",
         affixType: "Ultimate",
@@ -15689,28 +16261,28 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix:
-          "Triggers Lv. (21-30) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (21-30) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "0+",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "Triggers Lv. (11-20) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (11-20) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "0",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "Triggers Lv. (6-10) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (6-10) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "1",
         affixType: "Ultimate",
         section: "suffix",
       },
       {
         craftableAffix:
-          "Triggers Lv. (1-5) Blurry Steps upon starting to move. Interval: 1 s",
+          "Triggers Lv. (1-5) Brisk Wind upon starting to move. Interval: 1 s",
         tier: "2",
         affixType: "Ultimate",
         section: "suffix",
@@ -15783,6 +16355,30 @@ export const ALL_VORAX_LIMBS: readonly VoraxLimbData[] = [
       },
       {
         craftableAffix: "+(10-12)% additional Max Energy Shield while moving",
+        tier: "2",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(61-68)% Blur Effect",
+        tier: "0+",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(42-52)% Blur Effect",
+        tier: "0",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(29-40)% Blur Effect",
+        tier: "1",
+        affixType: "Ultimate",
+        section: "suffix",
+      },
+      {
+        craftableAffix: "+(21-28)% Blur Effect",
         tier: "2",
         affixType: "Ultimate",
         section: "suffix",

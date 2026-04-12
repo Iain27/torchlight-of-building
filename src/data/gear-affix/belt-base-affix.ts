@@ -121,8 +121,7 @@ export const BELT_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "1",
-    craftableAffix:
-      "Restoration Skills gain 1.5 Charging Progress every second",
+    craftableAffix: "Elixir Skills gain 1.5 Charging Progress every second",
   },
   {
     equipmentSlot: "Trinket",
@@ -131,7 +130,7 @@ export const BELT_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Gains 1 stack(s) of all Blessings when casting a Restoration Skill",
+      "Gains 1 stack(s) of all Blessings when casting an Elixir Skill",
   },
   {
     equipmentSlot: "Trinket",

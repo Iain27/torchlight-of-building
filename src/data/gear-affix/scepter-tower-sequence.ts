@@ -66,7 +66,7 @@ export const SCEPTER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Tower Sequence",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+8% Blur Effect",
+    craftableAffix: "+16% Blur Effect",
   },
   {
     equipmentSlot: "One-Handed",

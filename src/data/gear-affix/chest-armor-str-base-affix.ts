@@ -17,14 +17,6 @@ export const CHEST_ARMOR_STR_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "2",
-    craftableAffix: "Regenerates (0.5-1.0)% Life per second",
-  },
-  {
-    equipmentSlot: "Chest Armor",
-    equipmentType: "Chest Armor (STR)",
-    affixType: "Base Affix",
-    craftingPool: "",
-    tier: "2",
     craftableAffix: "+(5-10)% Fire Resistance",
   },
   {

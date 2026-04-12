@@ -34,8 +34,7 @@ export const HELMET_DEX_CORROSION_BASE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Corrosion Base",
     craftingPool: "",
     tier: "0",
-    craftableAffix:
-      "Triggers Lv. (15-20) Entangled Pain Curse upon inflicting damage. Cooldown: 0.3 s",
+    craftableAffix: "周围 15 米内敌人受到 20 级不祥诅咒",
   },
   {
     equipmentSlot: "Helmet",

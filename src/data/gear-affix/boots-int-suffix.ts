@@ -271,6 +271,38 @@ export const BOOTS_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     equipmentSlot: "Boots",
     equipmentType: "Boots (INT)",
     affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "0",
+    craftableAffix: "+(11-13)% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "1",
+    craftableAffix: "+(8-10)% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "2",
+    craftableAffix: "+(6-7)% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "3",
+    craftableAffix: "+5% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (INT)",
+    affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
     craftableAffix: "+(41-52)% Movement Speed",
@@ -586,7 +618,7 @@ export const BOOTS_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. (11-20) Blurry Steps upon starting to move. Interval: 1 s",
+      "Triggers Lv. (11-20) Brisk Wind upon starting to move. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",
@@ -595,7 +627,7 @@ export const BOOTS_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Triggers Lv. (6-10) Blurry Steps upon starting to move. Interval: 1 s",
+      "Triggers Lv. (6-10) Brisk Wind upon starting to move. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",
@@ -604,7 +636,7 @@ export const BOOTS_INT_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "Triggers Lv. (1-5) Blurry Steps upon starting to move. Interval: 1 s",
+      "Triggers Lv. (1-5) Brisk Wind upon starting to move. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",

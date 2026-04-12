@@ -4,7 +4,7 @@ import { join } from "node:path";
 import * as cheerio from "cheerio";
 import { program } from "commander";
 import type { HeroMemory } from "../data/hero-memory/types";
-import { assertNonEmpty } from "./lib/assertions";
+import { assertCount } from "./lib/assertions";
 
 // ============================================================================
 // Fetching
@@ -190,7 +190,7 @@ const main = async (options: Options): Promise<void> => {
   console.log("Extracting hero memory data...");
   const items = extractHeroMemoryData(html);
   console.log(`Extracted ${items.length} hero memories`);
-  assertNonEmpty("hero memories", items);
+  assertCount("hero memories", items.length, 663);
 
   // Log breakdown by type
   const byType = items.reduce(

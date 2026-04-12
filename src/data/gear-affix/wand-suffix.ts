@@ -161,7 +161,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(19-23)% Life Regain",
+    craftableAffix: "+(16-20)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -169,7 +169,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(14-18)% Life Regain",
+    craftableAffix: "+(12-15)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -177,7 +177,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "2",
-    craftableAffix: "+(10-13)% Life Regain",
+    craftableAffix: "+(9-11)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -185,7 +185,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "3",
-    craftableAffix: "+(8-9)% Life Regain",
+    craftableAffix: "+(7-8)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -193,7 +193,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "4",
-    craftableAffix: "+7% Life Regain",
+    craftableAffix: "+6% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -201,7 +201,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(19-23)% Energy Shield Regain",
+    craftableAffix: "+(16-20)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -209,7 +209,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(14-18)% Energy Shield Regain",
+    craftableAffix: "+(12-15)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -217,7 +217,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "2",
-    craftableAffix: "+(10-13)% Energy Shield Regain",
+    craftableAffix: "+(9-11)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -225,7 +225,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "3",
-    craftableAffix: "+(8-9)% Energy Shield Regain",
+    craftableAffix: "+(7-8)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -233,7 +233,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "4",
-    craftableAffix: "+7% Energy Shield Regain",
+    craftableAffix: "+6% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -503,6 +503,46 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     equipmentSlot: "One-Handed",
     equipmentType: "Wand",
     affixType: "Suffix",
+    craftingPool: "Advanced",
+    tier: "0",
+    craftableAffix: "+(76-98)% Affliction Effect",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "Wand",
+    affixType: "Suffix",
+    craftingPool: "Advanced",
+    tier: "1",
+    craftableAffix: "+(54-75)% Affliction Effect",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "Wand",
+    affixType: "Suffix",
+    craftingPool: "Advanced",
+    tier: "2",
+    craftableAffix: "+(39-53)% Affliction Effect",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "Wand",
+    affixType: "Suffix",
+    craftingPool: "Advanced",
+    tier: "3",
+    craftableAffix: "+(31-38)% Affliction Effect",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "Wand",
+    affixType: "Suffix",
+    craftingPool: "Advanced",
+    tier: "4",
+    craftableAffix: "+(25-30)% Affliction Effect",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "Wand",
+    affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
@@ -711,7 +751,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "0",
-    craftableAffix: "+(75-85)% Tangle Damage Enhancement",
+    craftableAffix: "+(55-65)% Tangle Damage Enhancement",
   },
   {
     equipmentSlot: "One-Handed",
@@ -719,7 +759,7 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "1",
-    craftableAffix: "+(60-70)% Tangle Damage Enhancement",
+    craftableAffix: "+(40-50)% Tangle Damage Enhancement",
   },
   {
     equipmentSlot: "One-Handed",
@@ -727,6 +767,22 @@ export const WAND_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Ultimate",
     tier: "2",
-    craftableAffix: "+(40-55)% Tangle Damage Enhancement",
+    craftableAffix: "+(25-35)% Tangle Damage Enhancement",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "Wand",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "0",
+    craftableAffix: "Max Sentry Quantity +1\n+5% additional damage",
+  },
+  {
+    equipmentSlot: "One-Handed",
+    equipmentType: "Wand",
+    affixType: "Suffix",
+    craftingPool: "Ultimate",
+    tier: "1",
+    craftableAffix: "Max Sentry Quantity +1",
   },
 ];

@@ -163,4 +163,12 @@ export const MUSKET_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     tier: "0",
     craftableAffix: "Lucky Critical Strike\n(-50--40)% Critical Strike Rating",
   },
+  {
+    equipmentSlot: "Two-Handed",
+    equipmentType: "Musket",
+    affixType: "Base Affix",
+    craftingPool: "",
+    tier: "2",
+    craftableAffix: "+16% Life Regain and Energy Shield Regain",
+  },
 ];

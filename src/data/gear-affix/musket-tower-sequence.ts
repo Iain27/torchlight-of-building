@@ -124,7 +124,7 @@ export const MUSKET_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "",
     tier: "0",
     craftableAffix:
-      "Attack Horizontal Projectiles will return after reaching their max range and will hit enemies on their path again\n-30% additional Projectile Damage",
+      "After reaching their max range, Projectiles will return and travel an additional 0% of that distance, hitting the enemies on their path again\n-30% additional Projectile Damage",
   },
   {
     equipmentSlot: "Two-Handed",

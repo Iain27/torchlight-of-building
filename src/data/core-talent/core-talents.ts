@@ -81,7 +81,7 @@ export const CoreTalents = [
     name: "Well Matched",
     tree: "Onslaughter",
     affix:
-      "Deals up to +25% additional Attack Damage to enemies in proximity, and this damage reduces as the distance from the enemy grows\n-15% additional damage taken from enemies in proximity, and this damage reduces as the distance from the enemy grows",
+      "Deals up to +40% additional Attack Damage to enemies in proximity, and this damage reduces as the distance from the enemy grows\n-15% additional damage taken from enemies in proximity, and this damage reduces as the distance from the enemy grows",
   },
   {
     name: "Starfire",
@@ -104,7 +104,7 @@ export const CoreTalents = [
     name: "True Flame",
     tree: "Warlord",
     affix:
-      "When an enemy is Ignited, 60% of the additional bonus to Damage Over Time taken from Affliction is also applied to your Fire Hit Damage",
+      "When an enemy is Ignited, 65% of the additional bonus to Damage Over Time taken from Affliction is also applied to your Fire Hit Damage",
   },
   {
     name: "Arcane",
@@ -115,7 +115,7 @@ export const CoreTalents = [
     name: "No Loose Ends",
     tree: "Warrior",
     affix:
-      "+50% additional Attack Damage at Low Life\nYour Max Energy Shield is fixed at 0",
+      "+40% additional Attack Damage at Low Life\nYour Max Energy Shield is fixed at 0",
   },
   {
     name: "Life Path",
@@ -183,7 +183,8 @@ export const CoreTalents = [
   {
     name: "Master Escapist",
     tree: "Marksman",
-    affix: "+1 Max Deflection stacks\nGains 1 stacks of Deflection on Evasion",
+    affix:
+      "+1 Max Deflection stacks\nFor every 5 m moved, gains 1 stack(s) of Deflection",
   },
   {
     name: "Waiting Attack",
@@ -242,7 +243,7 @@ export const CoreTalents = [
     name: "Transition",
     tree: "Assassin",
     affix:
-      "50% chance for this skill to deal +16% additional damage when casting a skill\n25% chance for this skill to deal +32% additional damage when casting a skill\n10% chance for this skill to deal +80% additional damage when casting a skill",
+      "When casting a skill, there is a 50% chance for that cast to deal +16% additional damage\nWhen casting a skill, there is a 25% chance for that cast to deal +32% additional damage\nWhen casting a skill, there is a 10% chance for that cast to deal +80% additional damage",
   },
   {
     name: "Queer Angle",
@@ -253,25 +254,25 @@ export const CoreTalents = [
     name: "Thunderclap",
     tree: "Assassin",
     affix:
-      "If you have Agility Blessing stacks when casting the Main Skill, consumes 1 stack(s) of Agility Blessing to make this skill deal +35% additional Lightning Damage",
+      "If you have Agility Blessing stacks when casting the Main Skill, consumes 1 stack(s) of Agility Blessing to make that cast deal +35% additional Lightning Damage",
   },
   { name: "Beacon", tree: "Goddess of Knowledge", affix: "+2 Max Spell Burst" },
   {
-    name: "Chilly",
+    name: "Insight",
     tree: "Goddess of Knowledge",
-    affix:
-      "+100% chance to gain 1 stack of Focus Blessing on hit\n+1 to Max Focus Blessing Stacks",
+    affix: "+30% additional Spell Damage\n+25% additional Skill Cost",
   },
   {
     name: "Peculiar Vibe",
     tree: "Goddess of Knowledge",
     affix:
-      "You can apply 1 additional Tangle(s) to enemies\n-30% additional Tangle Skill Area",
+      "You can apply 1 additional Tangle(s) to enemies\n-30% additional Tangle Duration",
   },
   {
-    name: "Insight",
+    name: "Chilly",
     tree: "Goddess of Knowledge",
-    affix: "+30% additional Spell Damage\n+25% additional Skill Cost",
+    affix:
+      "+100% chance to gain 1 stack of Focus Blessing on hit\n+1 to Max Focus Blessing Stacks",
   },
   {
     name: "Burning Touch",
@@ -280,10 +281,9 @@ export const CoreTalents = [
       "Has Spell Aggression\n+10% Spell Aggression Effect for every Main Spell Skill cast recently. Stacks up to 10 times",
   },
   {
-    name: "Quick Wits",
+    name: "Acquaintance",
     tree: "Goddess of Knowledge",
-    affix:
-      "+25% additional Spell Damage when the Energy Shield is not low\n-20% additional damage taken at Low Energy Shield",
+    affix: "Has Dormant Entanglement\n+1 Max Tangle Quantity",
   },
   {
     name: "Bunch",
@@ -321,9 +321,10 @@ export const CoreTalents = [
       "Changes the base effect of Focus Blessing to: Adds Physical Damage equal to 1% of Max Mana to Attacks and Spells",
   },
   {
-    name: "Acquaintance",
+    name: "Quick Wits",
     tree: "Arcanist",
-    affix: "Has Dormant Entanglement\n+1 Max Tangle Quantity",
+    affix:
+      "+25% additional Spell Damage when the Energy Shield is not low\n-20% additional damage taken at Low Energy Shield",
   },
   {
     name: "Preparation",
@@ -357,7 +358,7 @@ export const CoreTalents = [
     name: "Frostbitten",
     tree: "Prophet",
     affix:
-      "Inflicts Frostbite when dealing Hit Cold Damage\n+50% Frostbite Effect",
+      "Inflicts Frostbite when dealing Hit Cold Damage\n+40% Frostbite Effect",
   },
   {
     name: "Extreme Coldness",
@@ -431,7 +432,7 @@ export const CoreTalents = [
     name: "Open Wounds",
     tree: "Shadowdancer",
     affix:
-      "Refreshes Trauma Duration on hit\nUpon inflicting damage, +8% additional Hit Physical Damage for each second of Trauma remaining on the enemy",
+      "+2 TraumaLimit\n-99% additional Trauma Damage\n+12% additional Hit Physical Damage taken, up to +60% , for every stack of Trauma the enemy has",
   },
   {
     name: "Falling Leaves",
@@ -513,7 +514,7 @@ export const CoreTalents = [
   {
     name: "Subtle Impact",
     tree: "Goddess of Deception",
-    affix: "Blur gains an additional effect: +25% additional Damage Over Time",
+    affix: "+30% additional Damage Over Time while Blur is active",
   },
   {
     name: "Forbidden Power",
@@ -562,16 +563,16 @@ export const CoreTalents = [
       "-95% Curse effect against you\n-15% additional damage taken from Cursed enemies",
   },
   {
-    name: "More With Less",
+    name: "Inexorable Doom",
     tree: "Psychic",
     affix:
-      "+30% additional Damage Over Time\n-10% additional Damage Over Time Duration",
+      "Inflicts 1 additional stacks of Ill Omen when inflicting Ill Omen for the first time\nWhen triggering Ill Omen, inflicts 3 stack(s) of Ill Omen on 1 Nearby non-Elite enemy",
   },
   {
     name: "Reap Purification",
     tree: "Psychic",
     affix:
-      "Additionally settles 25% of the remaining total damage when Reaping, then removes all Damage Over Time acting on the target",
+      "Ill Omen Effect becomes: Enemies take True Damage equal to 4% of Max Life when gaining 1 stack of Ill Omen",
   },
   {
     name: "Verbal Abuse",
@@ -594,7 +595,7 @@ export const CoreTalents = [
     name: "Daze",
     tree: "Warlock",
     affix:
-      "Blur gains an additional effect: +40% crowd control effect and +25% additional Ailment Damage",
+      "+40% Crowd Control Effects and +25% additional Ailment Damage while Blur is active",
   },
   {
     name: "Indifference",
@@ -618,13 +619,13 @@ export const CoreTalents = [
     name: "Stab In The Back",
     tree: "Lich",
     affix:
-      "While Blur is active, loses Blur after casting a Main Skill, and the skill deals +40% additional damage",
+      "While Blur is active, loses Blur after casting a Main Skill, and +40% additional damage for that cast",
   },
   {
     name: "Orders",
     tree: "God of Machines",
     affix:
-      "+25% additional Minion Damage\n+50% additional Summon Skill Cast Speed",
+      "+25% additional Minion Damage\n+50% additional Summon Skill Cast Speed\n-90% additional damage taken by Minions",
   },
   {
     name: "Sentry",
@@ -676,7 +677,7 @@ export const CoreTalents = [
     name: "United Stand",
     tree: "Machinist",
     affix:
-      "-5% additional damage taken for every nearby Synthetic Troop Minion within 10m\n-10% Minion aggressiveness",
+      "+20% Life Regain and Energy Shield Regain for Minions\n20% of the Life and Energy Shield Regain Effect of Synthetic Troop Minions is also applied to you",
   },
   {
     name: "Reflection",
@@ -697,10 +698,10 @@ export const CoreTalents = [
       "+100% additional Focus Skill Damage\n+50% Sealed Mana Compensation for Focus Skills\nFocus Skills can be equipped to Active Skill slots",
   },
   {
-    name: "Panacea",
+    name: "Tailored Remedy",
     tree: "Steel Vanguard",
     affix:
-      "Restoration Skills: +100% Restoration Effect\nRestoration Effect from Restoration Skills cannot be removed",
+      "The Restoration Effect from Elixir Skills cannot be removed\n-40% additional Elixir Skill Effect Duration when equipped with no more than 1 Elixir Skill\n+60% additional Elixir Skill Effect when equipped with no more than 2 Elixir Skills",
   },
   {
     name: "Source",

@@ -114,6 +114,10 @@ export const Hyperlinks: Record<string, string> = {
     "Excludes base affixes obtained from Dream Interpretation or Corrosion",
   Effective: "The portion that doesn't exceed the fixed upper limit",
   Excess: "The portion that exceeds the fixed upper limit",
+  "Compulsory Damage Type Conversion":
+    "Converts all damage to a corresponding damage type and ignores conventional damage conversion effects.\nAdditional damage is applied before damage conversion and does not conflict with this effect.",
+  "Ill Omen":
+    "Inflicts enemies affected by Ominous Curse with 1 stack of Ill Omen whenever the damage they take from Damage Over Time or Reaping Damage reaches a certain percentage of their Max Life (7% for non-Elite enemies and 5% for Elite enemies)\nMaximum stacks of Ill Omen: 10\nUpon reaching max stacks, eliminates non-Elite enemies and deals True Damage equal to 20% of Max Life to Elite enemies",
   Fearless:
     "Increases additional Critical Strike Chance, Critical Strike Damage, and additional Melee Skill Area",
   "Weapon Amplification": "Additionally increases Physical Damage",
@@ -215,11 +219,11 @@ export const Hyperlinks: Record<string, string> = {
   "Bull's Rage":
     "Additionally increases Melee Skill Damage while the skill lasts.",
   "Frigid Transmission":
-    "Blinks a distance to the target location, dealing damage to and inflicting 1 stack of Slow on enemy units within a certain area at the starting point and target location. Refreshes Cooldown upon inflicting Freeze in any situation.",
+    'Blinks a distance to the target location, dealing damage to and inflicting 1 stack of SlowEach stack reduces Attack Speed, Cast Speed, and Movement Speed by 6%. Stacks up to 5 times">Slow on enemy units within a certain area at the starting point and target location. Refreshes Cooldown upon inflicting FreezeWhen a unit\'s Frostbite Rating exceeds 100, it becomes Frozen\nFrozen non-Legendary bosses will be Frost-Sealed periodically and cannot act. The Frost-Seal duration is 2s, and the Frost-Seal Interval is 3 for the same unit\nFrost-Seal ends when Frostbite ends">Freeze in any situation.',
   "Ice Focus":
-    "Your Attacks gain additional Cold Damage with a chance to Frostbite enemies. Defeating a Frozen target deals damage to enemies within a certain area.",
+    'Your Attacks gain additional Cold Damage with a chance to FrostbiteFrostbite is an Ailment that may be triggered on Cold Damage hits. Frostbitten enemies -10% Attack, Cast, and Movement Speed. Base Frostbite Rating: 10. For every 1 Frostbite Rating, +1% additional Cold Damage taken. The enemy will be Frozen once they have more than 100 Frostbite Rating.">Frostbite enemies. Defeating a FreezeWhen a unit\'s Frostbite Rating exceeds 100, it becomes Frozen\nFrozen non-Legendary bosses will be Frost-Sealed periodically and cannot act. The Frost-Seal duration is 2s, and the Frost-Seal Interval is 3 for the same unit\nFrost-Seal ends when Frostbite ends">Frozen target deals damage to enemies within a certain area.',
   "Thunder Focus":
-    "Your Attacks gain additional Lightning Damage with a chance to Numb enemies. Upon reaching 100 Focus Pts, using a non-Mobility Attack Skill will trigger a Thunderstrike to attack the enemy.",
+    'Your Attacks gain additional Lightning Damage with a chance to NumbedAn Elemental Ailment that has a chance to be inflicted when Lightning Damage hits its target.\nWhen hitting a Numbed enemy, Lightning Damage inflicts 1 stack of Numbed for every 10% of the sum of Max Energy Shield and Life dealt by Lightning Damage. This threshold can be lowered or raised, but the minimum is 1%.\nThe default duration of Numbed is 2s, and the duration of each stack is calculated independently.\nMax Numbed stacks: 10. Each stack of Numbed increases the Lightning Damage taken by an additional +5%.">Numb enemies. Upon reaching 100 Focus Pts, using a non-Mobility Attack Skill will trigger a Thunderstrike to attack the enemy.',
   "High Energy Beam":
     "Fires a beam forward, dealing Spell Physical Damage to enemies within a rectangular area. When Command is above 50, the skill's range increases and its damage increases additionally every after the skill is cast 5 times. This skill is not affected by the beam length.",
   "Destructive Light Cannon":
@@ -260,6 +264,8 @@ export const Hyperlinks: Record<string, string> = {
   "Wind Wake":
     "Each stack of Wind Wake grants this skill +1.5% additional Critical Strike Rating. Stacks up to 20 time(s). Lasts 3s",
   Mark: "+30% additional damage taken from this skill for 5s",
+  Ominous:
+    '诅咒技能，被诅咒时可以获得Ill OmenInflicts enemies affected by Ominous Curse with 1 stack of Ill Omen whenever the damage they take from Damage Over Time or Reaping Damage reaches a certain percentage of their Max Life (7% for non-Elite enemies and 5% for Elite enemies)\nMaximum stacks of Ill Omen: 10\nUpon reaching max stacks, eliminates non-Elite enemies and deals True Damage equal to 20% of Max Life to Elite enemies">恶兆',
   Bombard:
     "8 cannon shells land within a 4m radius, each dealing 160% Physical Damage to enemies within 1.6m.",
   Explosion:
@@ -347,8 +353,8 @@ export const Hyperlinks: Record<string, string> = {
     "Deals True Damage equal to the shared damage every second for 2s",
   "Twisted Spacetime":
     "Gives buffs to allies within range\nGains great buffs while inside Twisted Spacetime",
-  "Divine Punishment":
-    "Consumes Tenacity Blessing, Agility Blessing, and Focus Blessing to send down Divine Punishment and gain Explosion for a short time.\nSkill Tags: Spell, Physical, Area",
+  "God's Boon":
+    "Consumes Tenacity Blessing, Agility Blessing, and Focus Blessing to send bestow God's Boon and gain Explosion for a short time.\nSkill Tags: Spell, Physical, Area",
   "Cat's Agility":
     "+40% Movement Speed and +40% additional Attack Damage.\n240% of the increase/decrease on Movement Speed is also applied to Attack Damage.",
   "Feline Figure":
@@ -404,20 +410,20 @@ export const Hyperlinks: Record<string, string> = {
   "Run Away": "+2% additional Projectile Damage\n+1% Movement Speed",
   Fission: "Doubles the bombs thrown.\n-10% additional Projectile Damage.",
   "Uncontrolled Anger":
-    "All Damage additionally +80% while Berserk is active\nBerserk consumes 10% of Max Life per second\n+60% Rage Cost while Berserk is active",
+    'All Damage additionally +80% while Berserk is active\nBerserkGains bonuses twice the Max Rage while Berserk is active\nBerserk expires when you run out of Rage">Berserk consumes 10% of Max Life per second\n+60% Rage Cost while Berserk is active',
   "Split Form":
     "No longer gain Rage when taking damage\nTaking damage reduces Rage instead\nEach point of Rage can only compensate for damage equal to 0.5% of the sum of Max Life and Max Energy Shield\nAll Max Resistances are fixed at 60%\n+2% additional Max Life for every 15% Resistance exceeding the Max Resistance",
   "Frost Embrace":
-    "+5 Max Frostbite Rating for enemies for each time they have been hit by Cold Pulse recently. Cooldown: 0.1s\nWhen Cold Pulse hits an enemy recently, +1% Cold Pulse Cooldown Recovery Speed for every 6 points of Frostbite Rating the enemy has. Interval: 0.2s.",
+    '+5 Max FrostbiteEnemies are inflicted with a fixed amount of Frostbite Rating when they are Frostbitten. This can be increased by raising Max Frostbite Rating. The Max Frostbite Rating is 120.">Frostbite Rating for enemies for each time they have been hit by Cold Pulse recently. Cooldown: 0.1s\nWhen Cold Pulse hits an enemy recently, +1% Cold Pulse Cooldown Recovery Speed for every 6 points of Frostbite Rating the enemy has. Interval: 0.2s.',
   "Death by Fire":
     "Deals True Damage equal to the damage recorded by Brand to all enemies in an area.\nThe initial radius of Death by Fire is 5m. After Death by Fire is triggered, all damage recorded by Brand is removed",
   "Full Bloom":
     "Spirit Magi grow into their ultimate form, which unlocks their Ultimate that has an initial cooldown of 8s.\n50% of the Attack Speed bonus and additional bonus to Spirit Magi is also applied to additional Spirit Magi Attack Damage.\n50% of the Cast Speed bonus and additional bonus to Spirit Magi is also applied to additional Spirit Magi Spell Damage.",
   Windrider:
-    "A Spell Channeled Skill with a base channel interval of 0.2s and can be channeled up to 5 stack(s).\nAt max channeled stacks, loses all channeled stacks and grants 2 stack(s) of Nourishment to Spirit Magi within 12m",
+    "A Spell Channeled Skill with a base channel interval of 0.33s and can be channeled up to 5 stack(s).\nAt max channeled stacks, loses all channeled stacks and grants 3 stack(s) of Nourishment to Spirit Magi within 12m",
   "Darkness Interval": "Shotgun Effect's subsequent Projectiles +2%",
   Nourishment:
-    "When using a skill, +30% additional damage dealt by this skill. Lasts 15s and stacks up to 10 time(s). Effect of Nourishment enjoys Empower Skill Effect bonuses.",
+    "When using a skill, +30% additional damage for that use. Lasts 15s and stacks up to 10 time(s). Effect of Nourishment enjoys Empower Skill Effect bonuses.",
   Purgatory:
     "Additionally increases the damage taken by enemies within the area of Purgatory",
   Brand:
@@ -434,7 +440,7 @@ export const Hyperlinks: Record<string, string> = {
   "Brave Advance":
     "+1% Physique, +1% Movement Speed, +1% additional damage taken and +3% damage to enemies in the Holy Domain. Lasts 8s, affected by Skill Effect Duration bonuses.",
   "Burning Red":
-    "Burning Red lasts for 10s. No longer gains Overheated or reloads while this is active\nGains 200% Heat Up effect bonuses but cannot trigger Empower, Curse, or Warcry skills.\nForced to reload after this effect ends",
+    "Burning Red lasts for 10s. No longer gains Overheated or reloads while this is active\nGains 160% Heat Up effect bonuses but cannot trigger Empower, Curse, or Warcry skills.\nForced to reload after this effect ends",
   "Projectile Size":
     "Changes Projectile Size\nIn general, 100% of Projectile Size is applied to the size of Projectiles\nFor Projectiles affected by Skill Area Bonuses, 25% of the increase or decrease in Projectile Size is applied to the additional Skill Area of Projectiles\nFor Projectiles that have subsequent Area Effects, 25% of the increase or decrease in Projectile Size is also applied to the additional Skill Area of the subsequent effects\nSubsequent effects: Effects caused by Projectile after they are fired, such as explosions",
   "Block Ratio Upper Limit":
@@ -446,7 +452,7 @@ export const Hyperlinks: Record<string, string> = {
   Arctic:
     "Deals 12% additional damage to an enemy for every 1 stack(s) of Arctic the enemy has",
   "Blooming Frost Flower":
-    "Upon inflicting Freeze, casts Cold Pulse at the Frozen target once without consuming any Cold Energy\nEnemies +12% additional Cold Damage taken for every Cold Pulse hit they took recently. Lasts for 4s. Stacks up to 5 time(s)",
+    'Upon inflicting Freeze, casts Cold PulseA Cold Energy Pulse spreads from the target, dealing Cold Spell Damage. Base Interval: 4s.\nSkill Tags: Spell, Cold, Elemental, Area">Cold Pulse at the Frozen target once without consuming any Cold EnergyGains 1 Cold Energy upon casting a Cold Skill. When Cold Pulse consumes Cold Energy, various buffs are provided according to the amount of Cold Energy consumed.">Cold Energy\nEnemies +12% additional Cold Damage taken for every Cold PulseA Cold Energy Pulse spreads from the target, dealing Cold Spell Damage. Base Interval: 4s.\nSkill Tags: Spell, Cold, Elemental, Area">Cold Pulse hit they took recently. Lasts for 4s. Stacks up to 5 time(s)',
   Electrify:
     "For every stack of Electrify, Feline Figure inflicts 1 stack of Numbed on enemies within the area",
   "Lightning Fast":
@@ -465,6 +471,8 @@ export const Hyperlinks: Record<string, string> = {
     "For every +2% Knockback Distance, +1% additional damage, up to +200%\nDuring Mobile Mode, you are guaranteed to Knock Back Yourself when casting a non-Channeled or non-Mobility Projectile Skill\nDuring Annihilator Mode, Heat Up gains an additional effect: +2% Knockback Distance",
   "No Guard":
     "+10% additional damage taken\nChanneled stacks lost increase the effect of No Guard, with the first 2 stacks lost increasing its effect by 100%, and each additional stack lost further increasing its effect by 100%",
+  "Hunting Instinct":
+    "+2 to Initial Multistrike Count and Max Multistrike Count. Lasts for 30s. Unable to gain Interest during Hunting Instinct",
   Stun: "Cannot act",
   Weaken: "Reduces damage dealt by 10%",
   Blind: "Target's damage has a 20% chance to miss before addressed",
@@ -483,7 +491,8 @@ export const Hyperlinks: Record<string, string> = {
     "The Shock status is an Ailment that could be triggered when Lightning Damage hits its target. It's affected by Shock Chance.\nShock Damage is settled one additional time every time enemies in the Shock status are hit.\nShock Damage is Secondary Lightning Damage. It is not affected by bonuses and ignores Resistance.\nEach Shock status can be settled up to 12 time(s).\nShock cannot be inflicted when Base Shock Damage is 0.",
   Taunt: "Forced to attack the taunting unit",
   Silence: "Cannot cast Spells and warcries",
-  Disarm: "Cannot perform Attack Skills",
+  Disarm:
+    "Deemed to be unarmed and unable to use Attack Skills when disarmed. You are not deemed to be Dual Wielding or holding a Shield when disarmed.",
   "Agility Blessing":
     "Every stack of Agility Blessing grants +4% Attack and Cast Speed and +2% additional damage. Initial max stacks: 4",
   Surge:
@@ -492,7 +501,7 @@ export const Hyperlinks: Record<string, string> = {
     "Every stack of Tenacity Blessing grants an additional 4% damage reduction (multiplies). Initial max stacks: 4.",
   Barrier:
     "Gains a Shield equal to 20% of the sum of Max Life and Max Energy Shield, absorbing 50% of the Hit Damage taken. Cannot gain another Barrier when a Barrier is present.",
-  Blur: "Gains 100 points of Blur Rating.\nOnce 100 points of Blur Rating is gained, 10 Blur Rating is lost per second. Blur is lost once Blur Rating drops to 0.\n+0.3% Evasion and +0.2% chance to avoid damage for every point of Blur Rating you have.\nMax Blur Rating is 100",
+  Blur: "Gains 100 points of Blur Rating\nOnce 100 points of Blur Rating is gained, 10 Blur Rating is lost per second. Blur is lost once Blur Rating drops to 0\n+0.2% Chance to Avoid Damage for every point of Blur Rating you have\nMax Blur Rating is 100",
   Root: "Cannot move (including walking, sprinting, blinking, and knockback)",
   "Frost-Seal":
     "Frozen units non-Legendary bosses will be Frost-Sealed periodically and cannot act. The Frost-Sealed duration is 2s, and the Frost-Sealed Interval is 3 for the same unit",
@@ -520,7 +529,7 @@ export const Hyperlinks: Record<string, string> = {
   "Wind Blade":
     "Wind Blade counts as a Steep Strike. It passes through all enemies and deals damage to them.",
   Command:
-    "Equipping a skill that can summon Synthetic Troops will grant Command. Every point of Command will grant Synthetic Troop Minions +3% additional damage (+0% when Command is lower than 0) and a bigger Tracking Area. The lowest Command is -100 while the highest is 100. When Command is not 0, 13 points will be returned (reduced/granted) per second. For every 10 Command increased, +7 additional points returned until the total Command becomes 0.",
+    "装备能够召唤智械的技能时，拥有统御。每 1 点统御值会使智械召唤物额外 +3% 伤害（统御值低于 0 时恒定 +0%），额外 -2% 受到的伤害，+2% 移动速度且索敌范围增加。统御值下限为 -100，上限为 100。统御值不为 0 时，每秒回归（损失或获得） 13 点，每多10点统御值，回归值 +7 点，直至当前统御值为 0。",
   "Six Gods' Blessings":
     "Tenacity Blessing, Agility Blessing, Focus Blessing, Fervor, Blur, Barrier.",
   "The new god is balancing Order and Chaos":
@@ -537,7 +546,7 @@ export const Hyperlinks: Record<string, string> = {
   Replicate:
     "Additionally gains a copied Talent. When copying a devoured Talent, the duplicate Talent will become take effect normally. You can only copy the original Talents on the Divinity Slate and cannot copy Talents obtained via other replication effects.",
   Growth:
-    "Spirit Magi grow into the next Stage for every 100 Growth. They start at Stage 1 and can grow until they reach Stage 5. For every 8 Growth they have, Spirit Magi gain +1% Physique, +5% additional Skill Area, and a bonus every stage:\nAt Stage 2, +30% chance for them to use Enhanced Skill chance.\nAt Stage 3, their Enhanced Skills become stronger.\nAt Stage 4, their Empower Skills become stronger.\nAt Stage 5, they +25% additional damage, +10% additional Skill Area, and gain increased Movement Speed and Tracking Area.\nThe max Growth is 1000.",
+    "Spirit Magi grow into the next Stage for every 100 Growth. They start at Stage 1 and can grow until they reach Stage 5. For every 8 Growth they have, Spirit Magi gain +1% Physique, +10% additional Skill Area, and a bonus every stage:\nAt Stage 2, +30% chance for them to use Enhanced Skill chance.\nAt Stage 3, their Enhanced Skills become stronger.\nAt Stage 4, their Empower Skills become stronger.\nAt Stage 5, they +50% additional damage, +10% additional Skill Area, and gain increased Movement Speed and Tracking Area.\nThe max Growth is 1000.",
   Notoriety:
     "+2000 Critical Strike Rating, +100% Critical Strike Damage, and 20% Attack and Cast Speed for each stack of Notoriety. The Critical Strike Rating and Critical Strike Damage bonus granted by the skill is doubled against Low-Life enemies. This status is an Aura Status and is affected by Aura Effects",
   Renown:
@@ -551,6 +560,10 @@ export const Hyperlinks: Record<string, string> = {
     "When having Dormant Entanglement, +40% additional Tangle Damage for each inactivated Tangle",
   Tangle:
     "Generated by the player, it can attach to an enemy and periodically trigger a specified Spell Skill",
+  "True Flame Immolation":
+    "Consumes all Blessings and deals Spell Cold Damage\nDeals 233 damage and +3% Base Skill Area for each stack of Blessing consumed\nFor every 1% Cooldown Recovery Speed, grants a Blessing with 2.5% Max Stacks after this skill is cast\nConverts 100% of this skill's Cold Damage to Fire Damage",
+  "Burst Blast":
+    "When triggered, deals 1458-2430 Spell Physical Damage to enemies within 3m. The damage effect of this skill is 360%.\nFor every +1 to Skill Level, Burst +10% additional damage (multiplies)\nSkill Tags: Spell, Physical, Triggered, Area, Strength, Dexterity",
   Icebound:
     "Immunity to Frostbite. 20% of Physical Damage taken will be converted to Cold Damage; 20% of Lightning Damage taken will be converted to Cold Damage.",
   "Icebound 2":
@@ -572,7 +585,7 @@ export const Hyperlinks: Record<string, string> = {
   "Thawing strike":
     "When Frostbite is caused by monsters, inflicts 1 stack of [Slow]. Each stack of [Slow] caused by monsters reduces your Cold Resistance by 6%.",
   "Miraculous Gain":
-    "Randomly triggers one of the following effects for 6s. This effect can be triggered up to 4 times within 1s:\nTriggers a Lv. 40 Empower Skill or Defensive Skill that might be useful\nGains 10 stacks of God of War's Blessing\nTriggers the Main Active Skill 10 times. Interval: 0.2s\nGains max stacks of Tenacity Blessing, Agility Blessing, and Focus Blessing. The max stacks of all Blessings +1\nTriggers Frigid Transmission and inflicts Freeze on nearby enemies",
+    "Randomly triggers one of the following effects for 6s. This effect can be triggered up to 4 times within 1s:\nTriggers a Lv. 20 Empower Skill or Defensive Skill that might be useful\nGains 5 stacks of God of War's Blessing\nTriggers the Main Active Skill 10 times. Interval: 0.2s\nGains max stacks of Tenacity Blessing, Agility Blessing, and Focus Blessing.\nTriggers Frigid Transmission and -20% additional damage taken",
   "Aember Blast":
     "Aember energy gathered on the ground. Causes damage when it takes shape.",
   "Devouring Black Hole":
@@ -719,10 +732,10 @@ export const Hyperlinks: Record<string, string> = {
   "Hatred of the Last Dragon":
     "Ordrak's hatred for the God of Might is imbued in this Shield. When dealing damage to an enemy target that has Tenacity Blessing, there is a 20% chance to trigger Ordrak's attack. Interval: 0.2s. Enemies hit are dyed gold.",
   "Mini Tough Guy":
-    "All Spirit Magi +100 initial Growth, -50% Physique, and gain immunity to damage while Reconjuring. Lasts 5s.",
+    "All Spirit Magi +60 initial Growth, -50% Physique, and gain immunity to damage while Reconjuring",
   Banquet:
     "-30% additional Regain Interval, +30% Armor Penetration, but your Armor is fixed at 0. Lasts 2s.",
-  Cage: "+16% additional Cold Damage and -7% additional Damage Over Time taken. Stacks up to 4 stack(s) and lasts 5s (multiplies)",
+  Cage: "+14% additional Cold Damage and -7% additional Damage Over Time taken. Stacks up to 4 stack(s) and lasts 5s (multiplies)",
   "Illusory Light":
     "+10% chance for Shadow Strike Skills to deal triple damage. Upper limit: 10 stack(s)",
   "Enduring Advance":
@@ -735,17 +748,17 @@ export const Hyperlinks: Record<string, string> = {
   Mottled:
     "+40% additional Elemental Damage and Erosion Damage for Minions if you have dealt Physical Damage recently. +40% additional Erosion Damage and Physical Damage for Minions if you have dealt Elemental Damage recently. +40% additional Minion Elemental Damage and Physical Damage if you have dealt Erosion Damage recently.",
   "Barrier Burst":
-    "对周围敌人造成屏障值一定比例的法术火焰伤害。\n技能标签：力量、智慧、法术、火焰、范围",
-  Ash: "Cannot inflict Critical Strike. +30% additional Spell Fire Damage and +30% Movement Speed. Unable to refresh",
+    "Deals Spell Fire Damage equal to a certain ratio of Barrier to nearby enemies.\nSkill Tags: Strength, Intelligence, Spell, Fire, Area",
+  Ash: "Cannot inflict Critical Strike. +30% additional Fire Damage and +30% Movement Speed. Unable to refresh",
   "Divine Grace":
-    "Gains 1 stack(s) of a random Blessing every second. Interval: 1s\n+1% additional damage per stack of Blessing, up to 10%\n-1% additional damage taken per stack of Blessing, up to 10%",
+    "Changes the base effect of all Blessings to: +4% additional damage and -4% additional damage taken\nMax stacks of each Blessing: 4",
   "Caged Fury":
-    "-6% additional Attack Speed (multiplies) for every 1 time(s) you cast an Attack Mobility Skill in the last 2s\n+15% additional Attack Speed and +35% additional Attack Damage after using a Mobility Skill. The effect falls off to 0 within 2s",
+    "If you have moved 12m or more in the last 1s, +15% additional Attack Speed and +15% Movement Speed\nIf you have moved less than 12m in the last 1s, +35% additional damage and +35% Physique",
   "Rotted Taboo":
-    "Takes 100 Secondary Erosion Damage when casting an Erosion Skill. Interval: 0.1s\n+6 to Erosion Skill Level\nErosion Skills are guaranteed to inflict all types of Ailment on hit",
-  Comradeship: "Minions gain the Belt's bonuses\n-10% additional Minion Damage",
+    "Takes 100 Secondary Erosion Damage when casting a skill. Interval: 0.1s\n+3 to All Skills' Levels",
+  Comradeship: "Minions gain the Belt's bonuses.",
   "Hallowed Journey":
-    "Triggers Lv. 40 Blurry Steps, Secret Origin Unleash, and Arcane Circle after consuming a total of 5000 Mana. Interval: 2s",
+    "You have a Lv. 1 Precise: Magical Source\nPrecise: Magical Source gains an additional base effect: 20% of damage is taken from Mana before life",
   "Stray Bird":
     "Attack Horizontal Projectiles gain:\nAlways Penetrates\n-15% additional Projectile Speed\n+35% additional Returning Projectile Speed\n+30% additional Returning Projectile Damage",
   Storm:
@@ -759,9 +772,9 @@ export const Hyperlinks: Record<string, string> = {
   "Low-Tier Eternal Shadow":
     "+5% Skill Area and +1% Movement Speed for every stack of Low-Tier Eternal Shadow. Upper limit: 50 stack(s). Lasts for 15s",
   "Law of Trinity":
-    "Any hit dealing Elemental Damage is guaranteed to deal 5x Elemental Damage\nRandomly selects a type of Elemental Damage on hit, and only Elemental Damage of this type can be dealt. Other elements cannot deal damage. The lower the Flat Damage percentage of an Elemental Damage, the higher the chance of it being chosen\nDamage types cannot be converted",
+    "攻击击中造成元素伤害时，必定造成五倍元素伤害\n攻击击中时，随机选择一种元素，并会造成该元素的伤害，未被选择的元素无法造成伤害。对应元素类型的点伤占比越低，被选择的概率越高\n只能造成元素伤害\n伤害类型无法转化",
   "Edict of Trinity":
-    "Any hit dealing Elemental Damage is guaranteed to deal 6x Elemental Damage\nRandomly selects a type of Elemental Damage on hit, and only Elemental Damage of this type can be dealt. Other elements cannot deal damage. The lower the Flat Damage percentage of an Elemental Damage, the higher the chance of it being chosen\nDamage types cannot be converted",
+    "攻击击中造成元素伤害时，必定造成六倍元素伤害\n攻击击中时，随机选择一种元素，并会造成该元素的伤害，未被选择的元素无法造成伤害。对应元素类型的点伤占比越低，被选择的概率越高\n只能造成元素伤害\n伤害类型无法转化",
   "Advanced Barrier Burst":
     "Deals Spell Fire Damage equal to 400% of the remaining Barrier to nearby enemies then removes the Barrier. This damage is affected by Skill Level\n-60% additional Ailment Damage for this skill\nSkill Tags: Strength, Intelligence, Spell, Fire, Area",
   Obliterate:
@@ -773,17 +786,23 @@ export const Hyperlinks: Record<string, string> = {
   "Insatiable Greed":
     "150% of the bonuses to Attack Speed is also applied to Spell Burst Charge Speed",
   "Solar Ring":
-    "+48% Skill Area\nEnemies within the Solar Ring take +30% additional damage\nEnemies within the Solar Ring are considered to be within 6m of you",
+    "+48% Skill Area\nEnemies within the Solar Ring take +40% additional damage\nEnemies within the Solar Ring are considered to be within 6m of you",
   Corona:
-    "+48% Skill Area\nEnemies within the Corona take +50% additional damage\nEnemies within the Corona are considered to be within 3m of you",
+    "+48% Skill Area\nEnemies within the Corona take +60% additional damage\nEnemies within the Corona are considered to be within 3m of you",
   Castling:
     "Block Chance equals Block Ratio. The Block Ratio for a corresponding damage type equals its Block Chance\nBlocking is not guaranteed",
   "Cause Without Effect":
     "+30% Block Ratio when Attack Block Chance equals Spell Block Chance\nWhen they differ, the higher one gains Lucky Block",
   "Wield My Sword":
-    "+10% Block Ratio and Block Ratio Upper Limit\n+1% additional damage for you and your Minions for every +4% Attack or Spell Block Chance",
+    '+10% Block RatioBy default, Blocking absorbs 30% damage. Increase Block Ratio to increase the damage absorption ratio.">Block Ratio and Block Ratio Upper LimitThe Block Ratio\'s upper limit is 60% by default and can be increased to a maximum of 80%">Block Ratio Upper Limit\n+1% additional damage for you and your Minions for every +4% Attack or Spell Block Chance',
   "Absolve My Sin":
-    "+10% Block Ratio and Block Ratio Upper Limit\n-1% additional Damage Over Time taken for every +2% Block Ratio owned",
+    '+10% Block RatioBy default, Blocking absorbs 30% damage. Increase Block Ratio to increase the damage absorption ratio.">Block Ratio and Block Ratio Upper LimitThe Block Ratio\'s upper limit is 60% by default and can be increased to a maximum of 80%">Block Ratio Upper Limit\n-1% additional Damage Over Time taken for every +2% Block Ratio owned',
+  "Thrice Lucky":
+    "Changes Lucky Damage's effect to: Determines 3 random damage values and selects the optimal value\nLucky Damage",
+  "Advanced Elemental Impact":
+    "Supports skills that deal damage\n+16% additional damage for 2 other types of Elemental Damage if the supported skill recently dealt 1 type of Elemental Damage",
+  "Big Tough Guy":
+    "All Spirit Magi +80 initial Growth, +10% Physique, and gain immunity to damage while Reconjuring",
   Rampaging:
     "100% of the bonus and additional bonus to Attack Speed is also applied to Burst's Cooldown Recovery Speed",
   Hysteria:
@@ -799,7 +818,7 @@ export const Hyperlinks: Record<string, string> = {
   "Extreme Heat":
     "When having more Overheated stacks than Heat Up stacks for more than 10s, gains Burning Red instead for 10s\nImmediately reloads when Burning Red ends. For every 10 stacks of Overheated, +0.1s reloading time, up to +2s\nClick the Trait Skill twice within 0.3s to immediately activate Burning Red",
   "Eternal Flames":
-    "When having max stacks of Heat Up, Heat Up will not be lost and ammo will not be reloaded after reloading\nDuring Blank Firing, each time a Projectile Skill is cast, +40% chance to gain 1 additional stack of Overheated and +25% additional Skill Damage for the Projectile Skill",
+    "When having max stacks of Heat Up, Heat Up will not be lost and ammo will not be reloaded after reloading\nDuring Blank Firing, each time a Projectile Skill is cast, +40% chance to gain 1 additional stack of Overheated and +25% additional Skill Damage for that cast",
   "Have Fun":
     "+6% additional Attack Speed for every 2m of movement made recently. Stacks up to 4 times",
   "Wild Lightning":
@@ -866,6 +885,107 @@ export const Hyperlinks: Record<string, string> = {
     "Tide's area is no longer affected by Skill Area\n100% of the increase/decrease on Skill Area is also applied to Tide Effect, up to +90%",
   "Sea Foam Nocturne":
     "For every +1 to Max or Min Channeled Stacks, +12% bubble flying speed and +16% additional Tide Effect. Stacks up to 5 times\nMin Channeled Stacks takes effect twice on Bard Song",
+  "Artificial Moon: Origin":
+    'Base Traits now have Base Trait SlotMemory slots that affect a Hero\'s Base Traits, provided by the Revived Affixes of Hero Memories.">Special Memory slots that can be installed with an ULTRed">Ultimate or lower OriginMemory of Origin: Installable in Slot 1">Origin Memory. Reduces the Base Stats and Random Affixes of Memories installed in this slot by 20%\nBase Traits gain additional affixes upon reaching max level',
+  "Radical Evolution Theory: Cruelty":
+    "100% of the final bonus applied to Origin of Spirit MagusBuff effect gained after Activating a Spirit Magus summoning skill.\">Origin of Spirit Magus Effect is also applied to Cruelty's Aura Effect bonus",
+  "Reactive Rainbow":
+    '每拥有 1% ExcessThe portion that exceeds the fixed upper limit">溢出的避免元素异常几率，+0.5% 几率受到元素伤害时，将元素抗性上限视为EffectiveThe portion that doesn\'t exceed the fixed upper limit">有效元素抗性\n每拥有 1% ExcessThe portion that exceeds the fixed upper limit">溢出的避免元素异常几率，+0.5% 几率造成元素伤害时，使敌人元素抗性反转Changes the enemy\'s original Elemental Resistance to a corresponding negative value">元素抗性反转',
+  "Discord of the Second Will":
+    'When dealing damage, inflicts a random Crowd Control EffectsFrostbite, Freeze, Paralysis, Knockback, Weaken, Slow, Taunt, and Blinding">crowd control effect (except Freeze and Knockback), prioritizing effects that have not yet been inflicted. Interval: 1s\n+200% inflicted ParalysisIncreases damage taken by 15%">Paralysis and WeakenReduces damage dealt by 10%">Weaken Effect',
+  "Omni-Elixir Side Effect":
+    "Scent Bottles add unselected Potion Ingredient effects, and the selected ingredients and their base effects will no longer take effect",
+  "Basic Pharmacology Manuscript":
+    "+150% additional Ingredient Effect applied to Basic Scent Bottles",
+  "Hero's Resourcefulness":
+    'BurstWhen triggered, deals powerful area explosion damage equal to 340% of Weapon Damage to enemies within 3 m. While Dual Wielding, the Base Damage is the average damage of both weapons.\nFor every +1 to Skill Level, Burst +10% additional damage (multiplies)\nSkill Tags: Attack, Melee, Physical, Triggered, Area, Strength, Dexterity">Burst becomes Burst BlastWhen triggered, deals 1458-2430 Spell Physical Damage to enemies within 3m. The damage effect of this skill is 360%.\nFor every +1 to Skill Level, Burst +10% additional damage (multiplies)\nSkill Tags: Spell, Physical, Triggered, Area, Strength, Dexterity">Burst Blast and can activate Spell BurstAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst\nAll conditions of this trait that trigger on attack are changed to trigger on hit\nThe Base Trait effect that generates Rage from using Melee Skills is changed to generating Rage upon skill use. The effect that triggers Burst on attack hit is changed to triggering Burst BlastWhen triggered, deals 1458-2430 Spell Physical Damage to enemies within 3m. The damage effect of this skill is 360%.\nFor every +1 to Skill Level, Burst +10% additional damage (multiplies)\nSkill Tags: Spell, Physical, Triggered, Area, Strength, Dexterity">Burst Blast on hit',
+  "Furious Roar":
+    'Attacks trigger BurstWhen triggered, deals powerful area explosion damage equal to 340% of Weapon Damage to enemies within 3 m. While Dual Wielding, the Base Damage is the average damage of both weapons.\nFor every +1 to Skill Level, Burst +10% additional damage (multiplies)\nSkill Tags: Attack, Melee, Physical, Triggered, Area, Strength, Dexterity">Burst once on Attack Critical Strike while BerserkGains bonuses twice the Max Rage while Berserk is active\nBerserk expires when you run out of Rage">Berserk is active. Cooldown: 0.3s',
+  "Ancestral Hate":
+    "对护盾返还间隔的额外加成也会作用于生命返还间隔\n愠怒之灵 2 秒内每使用一次攻击技能，额外 +2% 玩家自身受到的击中伤害，最多 40%",
+  "Starfall Wasteland":
+    'Seething SpiritAn ancestor spirit that casts your Non-Mobility and Non-Channeled Main Melee Attack Skills when it appears">Seething Spirit now only uses Ranged Projectile Skills (except Channeled and Parabolic Skills)\nGenerates 15 Rage when using a Ranged Skill\n+2 to Projectile Quantity, +2 Horizontal Projectile JumpUpon hitting a target, a horizontal Projectile or Chain Skill jumps to another target nearby">Jump(s), +2 Horizontal Projectile PenetrateHorizontal Projectiles pass through the targets they hit, continuing along their original trajectory until reaching the Penetration limit.">Penetration(s), +22% Projectile SizeChanges Projectile Size\nIn general, 100% of Projectile Size is applied to the size of Projectiles\nFor Projectiles affected by Skill Area Bonuses, 25% of the increase or decrease in Projectile Size is applied to the additional Skill Area of Projectiles\nFor Projectiles that have subsequent Area Effects, 25% of the increase or decrease in Projectile Size is also applied to the additional Skill Area of the subsequent effects\nSubsequent effects: Effects caused by Projectile after they are fired, such as explosions">Projectile Size for Ranged Skills cast by Seething Spirit\n66% chance for Ranged Projectiles launched by Seething Spirit to return after reaching their max range',
+  "Between the Holy Land and Hell":
+    'Gains Repent to the LightWhen in the Holy Domain, attacks yourself once after every 2 cast(s) of skills, dealing 10 Physical Damage\nFor every 1 attack(s) blocked when in the Holy Domain, +1% Block Ratio and Block Ratio Upper Limit and +2% additional damage. Stacks up to 15 time(s)">Repent to the Light for 8s after casting the Trait Skill',
+  "Apathy Blade":
+    "Intelligence no longer grants a damage bonus\nIntelligence is the sum of Strength and Dexterity\n+120% Strength and Dexterity",
+  "Mercury Purged":
+    'Realm of MercuryFor every 10% Unsealed Max Mana you have, +2% additional Attack Speed and +2% additional Elemental Damage\nRestores 15% of Unsealed Max Mana when using a non-Channeled Attack Skill. This effect does not apply to Burst.">Realm of Mercury keeps removing Elemental AilmentIgnite, Frostbite, Freeze, and Numbed">Elemental Ailments\nWhen inflicting or removing FrostbiteFrostbite is an Ailment that may be triggered on Cold Damage hits. Frostbitten enemies -10% Attack, Cast, and Movement Speed. Base Frostbite Rating: 10. For every 1 Frostbite Rating, +1% additional Cold Damage taken. The enemy will be Frozen once they have more than 100 Frostbite Rating.">Frostbite, grants Baptism: Impassive-30% additional Cold Damage taken and +60% Skill Area">Baptism: Impassive for 8s\nWhen inflicting or removing IgniteAn Ailment that may be triggered on hit, dealing Fire Damage per second for 4s based on Base Ignite Damage. Unable to stack\nIgnite cannot be inflicted when Base Ignite Damage is 0">Ignite, grants Baptism: Rage-30% additional Fire Damage taken and +30% additional damage on Critical Strike">Baptism: Rage for 8s\nWhen inflicting or removing NumbedAn Elemental Ailment that has a chance to be inflicted when Lightning Damage hits its target.\nWhen hitting a Numbed enemy, Lightning Damage inflicts 1 stack of Numbed for every 10% of the sum of Max Energy Shield and Life dealt by Lightning Damage. This threshold can be lowered or raised, but the minimum is 1%.\nThe default duration of Numbed is 2s, and the duration of each stack is calculated independently.\nMax Numbed stacks: 10. Each stack of Numbed increases the Lightning Damage taken by an additional +5%.">Numbed, grants Baptism: Indolent-30% additional Lightning Damage taken and +30% additional Max Damage">Baptism: Indolent for 8s',
+  "Telepathy Expert":
+    'When Spacetime IllusionSpacetime Illusion can only use Spell Skills and cannot use any Channeled and Summon Skills.\nOnly 1 Spacetime Illusion may exist at a time. After reaching the summoning limit, click on the Trait Slot to call back the Spacetime Illusion">Spacetime Illusion consumes Spell BurstAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst, it also attempts to consume Spell BurstAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst for Youga',
+  "Fifth Cosmic Velocity":
+    '-99% additional Spell BurstAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst Charge Speed\n100% chance to immediately gain 2 stack(s) of Spell BurstAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst Charge. Interval: 0.03s',
+  "To Myself in Another Spacetime":
+    '+1 to Max Twisted SpacetimeRecords the Damage Over Time you deal to enemies while Twisted Spacetime is active\nAfter moving the Twisted Spacetime, enemies within its area will be inflicted with Spacetime Turbulence that deals True Damage">Twisted Spacetime Quantity\nTwisted SpacetimeRecords the Damage Over Time you deal to enemies while Twisted Spacetime is active\nAfter moving the Twisted Spacetime, enemies within its area will be inflicted with Spacetime Turbulence that deals True Damage">Twisted Spacetime\'s Cast Interval is reduced to 1s\n+20% for all damage recorded by Twisted SpacetimeRecords the Damage Over Time you deal to enemies while Twisted Spacetime is active\nAfter moving the Twisted Spacetime, enemies within its area will be inflicted with Spacetime Turbulence that deals True Damage">Twisted Spacetime',
+  "Private Universe":
+    '+200% additional Twisted SpacetimeRecords the Damage Over Time you deal to enemies while Twisted Spacetime is active\nAfter moving the Twisted Spacetime, enemies within its area will be inflicted with Spacetime Turbulence that deals True Damage">Twisted Spacetime Skill Area\n+80% Spacetime TurbulenceDeals True Damage equal to the shared damage every second for 2s">Spacetime Turbulence Duration\nTwisted SpacetimeRecords the Damage Over Time you deal to enemies while Twisted Spacetime is active\nAfter moving the Twisted Spacetime, enemies within its area will be inflicted with Spacetime Turbulence that deals True Damage">Twisted Spacetime only follows you',
+  "Nourishing Spring Rain":
+    'NourishmentWhen using a skill, +30% additional damage for that use. Lasts 15s and stacks up to 10 time(s). Effect of Nourishment enjoys Empower Skill Effect bonuses.">Nourishment can be granted to Synthetic Troop Minions\nWhen there is a Spirit Magus, for every 1 Growth, +5% additional damage for Synthetic Troop Minions\nWhen there is a Spirit Magus, for every 1% chance to use an Enhanced Skill, -1% chance for Synthetic Troop Minions to lose Nourishment',
+  "Nature's Party":
+    'NourishmentWhen using a skill, +30% additional damage for that use. Lasts 15s and stacks up to 10 time(s). Effect of Nourishment enjoys Empower Skill Effect bonuses.">Nourishment applies additional base effects:\nFrost Magus: Restores 5% of Missing Life and Energy Shield to you on hit. Interval: 0.2s. +5 Max Frostbite Rating per Nourishment stack\nThunder Magus: Inflicts Numbed on hit. Interval: 0.2s. +5% additional Lightning Damage dealt to Numbed enemies per Nourishment stack\nFire Magus: +20% additional Critical Strike Damage and -20% Critical Strike Rating per Nourishment stack\nRock Magus: Transfers 20% of damage taken to this Minion, and adds Physical Damage equal to 0.1% of Armor per Nourishment stack\nErosion Magus: Inflicts Deterioration on hit and +5% Deterioration Damage per Nourishment stack',
+  "Soft Storm":
+    'While in VigilantAllows you to control Spirit Magi and attack enemies with Spirit Magus Skills.\nYou take all damage from enemies in place of the Spirit Magi under your control.\nAll skills except for the second skill are switched with Spirit Magus Skills, and the Ultimate of Merged Spirit Magi is unlocked.\nOnly skills that don\'t have an attacking or casting action can be installed as the second skill.\nWhen controlling a Spirit Magus, Iris\' Movement Speed is applied instead.">Vigilant, for every 2 use(s) of Enhanced SkillChance to change the skill into a stronger Enhanced Skill when Spirit Magus uses a Base Skill. The chance can be increased, and at 100%, Spirit Magi will no longer use Base Skills and always use Enhanced Skills">Enhanced Skills by Spirit Magi, triggers the UltimateWhen in a certain state, Spirit Magi use their Ultimate with extremely high strength">Ultimate\nSpirit Magi cannot use the UltimateWhen in a certain state, Spirit Magi use their Ultimate with extremely high strength">Ultimate. -30% additional UltimateWhen in a certain state, Spirit Magi use their Ultimate with extremely high strength">Ultimate Damage',
+  "Blowing Breeze":
+    'While in VigilantAllows you to control Spirit Magi and attack enemies with Spirit Magus Skills.\nYou take all damage from enemies in place of the Spirit Magi under your control.\nAll skills except for the second skill are switched with Spirit Magus Skills, and the Ultimate of Merged Spirit Magi is unlocked.\nOnly skills that don\'t have an attacking or casting action can be installed as the second skill.\nWhen controlling a Spirit Magus, Iris\' Movement Speed is applied instead.">Vigilant, for every 1 use(s) of the UltimateWhen in a certain state, Spirit Magi use their Ultimate with extremely high strength">Ultimate by Spirit Magi, +1 to Max Breeze+16% additional damage dealt by Merged Spirit Magi">Breeze Stacks, up to 15 to Max Breeze Stacks, lasting until ReconjuringGains additional Life Restoration but cannot use skills or be targeted. Loses this status once fully healed">Reconjuring',
+  "Neural Synchronization Training":
+    'After a Summon Skill is cast, you gain OverloadProvides buffs for your Minions\nBonuses that apply to Empower Skill Effects are also applied to Overload Effect\nBonuses that apply to Skill Effect Duration are also applied to Overload Duration">Overload for 4s\nWhile a Synthetic Troop Minion exists, +125% additional OverloadProvides buffs for your Minions\nBonuses that apply to Empower Skill Effects are also applied to Overload Effect\nBonuses that apply to Skill Effect Duration are also applied to Overload Duration">Overload effect granted on yourself\nFor every 1 Command每 1 点统御值会使智械召唤物额外 +3% 伤害，额外 -2% 受到的伤害，+2% 移动速度且索敌范围增加。\n统御值下限为 -100，上限为 100。统御值不为 0 时，每秒回归（损失或获得）13 点统御值，直至归0，每多 10 点统御值，回归值 +7 点。\n统御值不为负时，智械召唤物的持续时间不会计时。">Command, +3% additional damage for you',
+  "Machine's Joy":
+    '+4% additional OverloadProvides buffs for your Minions\nBonuses that apply to Empower Skill Effects are also applied to Overload Effect\nBonuses that apply to Skill Effect Duration are also applied to Overload Duration">Overload Effect on hit. Stacks up to 30 time(s) (multiplies). Removes all stacks when casting a Trait Skill',
+  "Peril of Synthetic Troops":
+    "Adds 18% of the player's Max Life to the Base Life of Synthetic Troop Minions\nAdds 12% of the player's Max Energy Shield to the Base Energy Shield of Synthetic Troop Minions",
+  "Three-Chambered Heart":
+    'The Main Skill is supported by a Lv. 40 Advanced Elemental ImpactSupports skills that deal damage\n+16% additional damage for 2 other types of Elemental Damage if the supported skill recently dealt 1 type of Elemental Damage">Advanced Elemental Impact',
+  "First Flake of Strange Snow":
+    '-50% additional FrostbiteFrostbite is an Ailment that may be triggered on Cold Damage hits. Frostbitten enemies -10% Attack, Cast, and Movement Speed. Base Frostbite Rating: 10. For every 1 Frostbite Rating, +1% additional Cold Damage taken. The enemy will be Frozen once they have more than 100 Frostbite Rating.">Frostbite Effect\nEach type of Crowd Control EffectsFrostbite, Freeze, Paralysis, Knockback, Weaken, Slow, Taunt, and Blinding">Crowd Control Effect, Ailment, and Curse afflicting an enemy is deemed to have 50 additional Frostbite Rating, up to 500',
+  "Sweet Pain":
+    "Converts 99% Fire Damage to Erosion Damage\nYou have a Lv. 20 Precise: Erosion Amplification\nYou have a Lv. 20 Precise: Corrosion Focus\nYou have a Lv. 20 Erosion Magus Origin of Spirit Magus Effect",
+  "Royal Arsenal":
+    "For every activated Magnificent Support Skill, +100% Projectile Speed, up to 300%\nFor every activated Noble Support Skill, +20% additional Projectile Damage, up to 60%",
+  "Into the Night":
+    '+2 to Max DeflectionReduces additional damage taken by 8% for every stack of Deflection, up to 3 stack(s). When hit, consumes all stacks of Deflection">Deflection\nDeflectionReduces additional damage taken by 8% for every stack of Deflection, up to 3 stack(s). When hit, consumes all stacks of Deflection">Deflection is no longer consumed when hit, but DeflectionReduces additional damage taken by 8% for every stack of Deflection, up to 3 stack(s). When hit, consumes all stacks of Deflection">Deflection now only lasts for 3s\n+50% additional Projectile Damage when DeflectionReduces additional damage taken by 8% for every stack of Deflection, up to 3 stack(s). When hit, consumes all stacks of Deflection">Deflection is active',
+  "Self-Imposed Shackles":
+    '静止时，每 0.5 秒额外 +20% 升温效果，上限 60%\n静止时，Heat UpAdditionally increases Projectiles Damage based on Heat Up stacks and increases the Projectile Max Deviation Angle">升温获得额外效果：每有一层升温，+1% 技能范围\n停止移动后， +20% 攻击和法术格挡率，+20% Block Ratio Upper LimitThe Block Ratio\'s upper limit is 60% by default and can be increased to a maximum of 80%">格挡比例上限，持续 8 秒\n移动时，-60% ElementalFire, Cold, and Lightning">元素抗性和腐蚀抗性上限',
+  "Cat's Night Safari":
+    'Gains 1 stack of Interest upon dealing damage to an Elite enemy. Interval: 1s\nGains Hunting Instinct+2 to Initial Multistrike Count and Max Multistrike Count. Lasts for 30s. Unable to gain Interest during Hunting Instinct">Hunting Instinct when having 5 stack(s) of Interest',
+  "Charging Tail":
+    'Feline FigureInflicts Numbed stacks equal to the number of Electrify stacks on enemies within the area\nSkill Tags: Spell, Lightning">Feline Figure can now land Critical Strikes\nOn Critical Strike, the effect of Numbed inflicted within 4s by Feline FigureInflicts Numbed stacks equal to the number of Electrify stacks on enemies within the area\nSkill Tags: Spell, Lightning">Feline Figure is doubled',
+  "Vengeful Wraith":
+    'For every 3 casts of VendettaTeleports to a random enemy within 9m, then triggers the Main Skill 1 time and +30% additional attack damage for the triggered skill. Cooldown: 3s">Vendetta, generates 1 Phantom that casts VendettaTeleports to a random enemy within 9m, then triggers the Main Skill 1 time and +30% additional attack damage for the triggered skill. Cooldown: 3s">Vendetta 1 additional time on a random target within 9m. The Phantom deals triple damage',
+  "Immolating World":
+    "Replaces the Main Skill with True Flame ImmolationConsumes all Blessings and deals Spell Cold Damage\nDeals 233 damage and +3% Base Skill Area for each stack of Blessing consumed\nFor every 1% Cooldown Recovery Speed, grants a Blessing with 2.5% Max Stacks after this skill is cast\nConverts 100% of this skill's Cold Damage to Fire Damage\">True Flame Immolation\nDuring God's BoonConsumes Tenacity Blessing, Agility Blessing, and Focus Blessing to send bestow God's Boon and gain Explosion for a short time.\nSkill Tags: Spell, Physical, Area\">God's Boon, triggers True Flame ImmolationConsumes all Blessings and deals Spell Cold Damage\nDeals 233 damage and +3% Base Skill Area for each stack of Blessing consumed\nFor every 1% Cooldown Recovery Speed, grants a Blessing with 2.5% Max Stacks after this skill is cast\nConverts 100% of this skill's Cold Damage to Fire Damage\">True Flame Immolation once every 0.5s. The Interval is affected by Cast Speed\nDuring God's Boon, each True Flame ImmolationConsumes all Blessings and deals Spell Cold Damage\nDeals 233 damage and +3% Base Skill Area for each stack of Blessing consumed\nFor every 1% Cooldown Recovery Speed, grants a Blessing with 2.5% Max Stacks after this skill is cast\nConverts 100% of this skill's Cold Damage to Fire Damage\">True Flame Immolation cast extends the duration of God's BoonConsumes Tenacity Blessing, Agility Blessing, and Focus Blessing to send bestow God's Boon and gain Explosion for a short time.\nSkill Tags: Spell, Physical, Area\">God's Boon by 0.2s",
+  "The Place of Oracle":
+    'During God\'s Boon, Tenacity BlessingEvery stack of Tenacity Blessing grants an additional 4% damage reduction (multiplies). Initial max stacks: 4.">Tenacity Blessing and Agility BlessingEvery stack of Agility Blessing grants +4% Attack and Cast Speed and +2% additional damage. Initial max stacks: 4">Agility Blessing gain an additional effect: +5% additional damage',
+  "Crossing the Divine Threshold":
+    'Immune to Ailments, Crowd Control EffectsFrostbite, Freeze, Paralysis, Knockback, Weaken, Slow, Taunt, and Blinding">Crowd Control Effects, and Curses while inside the Divine Realm\n+2 to max stacks of all Blessings when outside the Divine Realm',
+  "Inverted Shrine":
+    'Inflicts Desecration+15% additional Erosion Damage taken (multiplies) for each stack of Desecration. Initial max stacks: 3. Lasts for 5s. Can only affect 1 target">Desecration on yourself when inflicting Desecration+15% additional Erosion Damage taken (multiplies) for each stack of Desecration. Initial max stacks: 3. Lasts for 5s. Can only affect 1 target">Desecration on enemies\n+99% additional Erosion Damage when inflicted with Desecration+15% additional Erosion Damage taken (multiplies) for each stack of Desecration. Initial max stacks: 3. Lasts for 5s. Can only affect 1 target">Desecration',
+  "Bing's Big Bang Pack":
+    "33% chance to generate 3 additional reserve bomb(s) when bombs land a Critical Strike. -20% additional Reserve Bomb Damage",
+  "Genius Idea Generator":
+    "+2 to Whimsy Explosion Projectile Quantity, +100% Whimsy Effect, +50% Whimsy Signal Effect\n+2 to Max Spell Burst and +100% additional Spell Damage for Spells triggered by Ingenuity Overload",
+  "Ceaseless Tide":
+    'Deemed to be in the Loud SongIn the Loud Song state, -20% additional Attack and Cast Speed, -20% additional Movement Speed, and +80% additional Tide Effect">Loud Song state while in the BardIn the Bard state, Attack Channeled Skills and Attack Mobility Skills cannot be used\nIn the Bard state, it is possible to move while casting Spell Channeled Skills\nIn the Bard state, the Main Skill is auto channeled while moving\nIn the Bard state, all non-instant and non-Mobility Skills will channel Bard Song instead">Bard state\nAttack, Cast, and Movement Speed are no longer additionally reduced while in the Loud SongIn the Loud Song state, -20% additional Attack and Cast Speed, -20% additional Movement Speed, and +80% additional Tide Effect">Loud Song state',
+  "Artificial Moon: Discipline":
+    'Base Traits now have Base Trait SlotMemory slots that affect a Hero\'s Base Traits, provided by the Revived Affixes of Hero Memories.">Special Memory slots that can be installed with an ULTRed">Ultimate or lower DisciplineMemory of Discipline: Installable in Slot 2">Discipline Memory. Reduces the Base Stats and Random Affixes of Memories installed in this slot by 20%\nBase Traits gain additional affixes upon reaching max level',
+  "Artificial Moon: Progress":
+    'Base Traits now have Base Trait SlotMemory slots that affect a Hero\'s Base Traits, provided by the Revived Affixes of Hero Memories.">Special Memory slots that can be installed with an ULTRed">Ultimate or lower ProgressMemory of Progress: Installable in Slot 3">Progress Memory. Reduces the Base Stats and Random Affixes of Memories installed in this slot by 20%\nBase Traits gain additional affixes upon reaching max level',
+  "Radical Evolution Theory: Spell Amplification":
+    "100% of the final bonus applied to Origin of Spirit MagusBuff effect gained after Activating a Spirit Magus summoning skill.\">Origin of Spirit Magus Effect is also applied to Spell Amplification's Aura Effect bonus",
+  "Radical Evolution Theory: Radical Order":
+    "100% of the final bonus applied to Origin of Spirit MagusBuff effect gained after Activating a Spirit Magus summoning skill.\">Origin of Spirit Magus Effect is also applied to Radical Order's Aura Effect bonus",
+  "Radical Evolution Theory: Deep Pain":
+    "100% of the final bonus applied to Origin of Spirit MagusBuff effect gained after Activating a Spirit Magus summoning skill.\">Origin of Spirit Magus Effect is also applied to Deep Pain's Aura Effect bonus",
+  "Repent to the Light":
+    'When in the Holy DomainThe Holy Domain automatically closes 1s after you leave the Holy Domain\nThe Holy Domain has a radius of 5m. Not affected by Skill Area bonuses">Holy Domain, attacks yourself once after every 2 cast(s) of skills, dealing 10 Physical Damage\nFor every 1 attack(s) blocked when in the Holy DomainThe Holy Domain automatically closes 1s after you leave the Holy Domain\nThe Holy Domain has a radius of 5m. Not affected by Skill Area bonuses">Holy Domain, +1% Block RatioBy default, Blocking absorbs 30% damage. Increase Block Ratio to increase the damage absorption ratio.">Block Ratio and Block Ratio Upper LimitThe Block Ratio\'s upper limit is 60% by default and can be increased to a maximum of 80%">Block Ratio Upper Limit and +2% additional damage. Stacks up to 15 time(s)',
+  "Baptism: Impassive": "-30% additional Cold Damage taken and +60% Skill Area",
+  "Baptism: Rage":
+    "-30% additional Fire Damage taken and +30% additional damage on Critical Strike",
+  "Baptism: Indolent":
+    "-30% additional Lightning Damage taken and +30% additional Max Damage",
+  "Artificial Moon":
+    "Additional affixes granted upon reaching the max Base Trait level",
+  元素抗性反转:
+    "Changes the enemy's original Elemental Resistance to a corresponding negative value",
   "By My Side - Anger":
     "(The following effects only apply to Berserker Rehan - Anger)\nWhen the character has at least 2 of this affix:\nGains 3 Rage on hit. Cooldown: 0.3s.\nWhen the character has at least 4 of this affix:\n+15% to all Resistances and +12% Cooldown Recovery Speed.\nWhen the character has at least 6 of this affix:\n+60% additional Burst Area while Berserk is active.",
   "By My Side - Seething Silhouette":
@@ -1065,7 +1185,7 @@ export const Hyperlinks: Record<string, string> = {
   "Irritable - Might":
     "Embers dropped during Trial: God of Might have a chance to be replicated once",
   "Willful - Might":
-    "Embers dropped during Trial: God of Might have a chance to become Ultimate Embers. Additionally increases Drop Quantity during Trial: God of Might.",
+    "Additionally increases Drop Quantity during Trial: God of Might",
   "Indignant - Might":
     "Increases the Drop Rarity of Dwarven Automatons during Trial: God of Might",
   "Enraged - Might":
@@ -1109,7 +1229,7 @@ export const Hyperlinks: Record<string, string> = {
   "Desire Incarnation - Cube":
     "Malice Incarnations have a chance to drop additional Desire Crystals",
   "Spiteful - Cube":
-    "When Malice is accumulating in a stage, there is a chance for additional Malice Judges to appear",
+    'When Malice is accumulating in a stage, there is a chance for additional Malice JudgeThe Malice Judge is a special Elite in the Cube Season. Defeat the Malice Judge to obtain precious rewards.">Malice Judges to appear',
   "Foolish - Cube":
     "There is a chance that A Corner of Divinity will drop with Desire Crystals",
   "Fallacious - Cube":
@@ -1129,7 +1249,7 @@ export const Hyperlinks: Record<string, string> = {
   "Disappointed - Nightmare":
     "In stages, increases the chance for additional Sweet Dream Mist to appear in a Sweet Dream",
   "Hopeless - Nightmare":
-    "Reduces the chance to enter a Nightmare when the number of Dream stacks hasn't reached the upper limit",
+    "Reduces the chance to enter a Nightmare when you are not at the max Dream level",
   "Disillusioned - Nightmare":
     "When selecting a Dream Omen, there is a chance that all Nightmare Omens will become: Additionally increases Drop Quantity",
   "Sorrowful - Whispering Mist":
@@ -1190,6 +1310,34 @@ export const Hyperlinks: Record<string, string> = {
     "Within the Overrealm, the quality of the first Bottled Shadow obtained is guaranteed to be Rainbow",
   "Unhinged - Overrealm":
     "Within the Overrealm, the chance for Floating Skull, Antimemetic Cage, and Doorhunter to appear increases",
+  "Mad - Might":
+    "Embers dropped during Trial: God of Might have a chance to become Ultimate Embers",
+  "Appalling - Vorax":
+    "Clearing Vorax monsters in Netherrealm stages additionally increases the Drop Quantity of Antidote Vials in Shelley's Operating Theater",
+  "Insane - Vorax":
+    "Additional Scavengers appear in Netherrealm stages. Clearing Scavengers in Netherrealm stages additionally increases the Drop Quantity of Antidote Vials in Shelley's Operating Theater",
+  "Simple - Creation":
+    "Additionally increases the Drop Quantity of Creation Engines",
+  "Ignorant - Creation":
+    "Each time a Creation Engine activates a Creation Crystal, there is a chance to activate additional Creation Crystals",
+  "Exclusive Fluorescent Memory":
+    "Includes Plane exclusive Fluorescent Memories and gameplay exclusive Fluorescent Memories",
+  "Gold Fluorescent Creation Crystal":
+    "特殊的造物晶体，掉落数量大幅提升，激活后立刻激活该造物机中所有的造物晶体",
+  "Catalyst Creation Engine":
+    "A special Creation Engine that grants a Drop Quantity Bonus corresponding to the type of the activated Creation Crystal",
+  "Prosperity Creation Engine":
+    "A special Creation Engine that has a higher Drop Quantity",
+  "Record Creation Engine":
+    "A special Creation Engine that records all settled Creation Crystals in this stage. When it settles, it additionally settles all recorded rewards. The more Crystals recorded, the stronger the guardians become.\nWhen a Record Creation Engine is present, the Drop Quantity of all Creation Engines are reduced.",
+  "Creation Incarnation":
+    "Activates 1 Creation Crystal(s) immediately when defeated",
+  "Whim Creation Crystal":
+    "A special Creation Crystal that cannot be activated through conventional methods. Whim Creation Crystals are automatically activated when 2 Creation Crystals of the same type are activated from the same Creation Engine\nHas a chance to drop Creation-exclusive Legendary gear",
+  "Additionally Added":
+    "Additionally added Surgical Protocols do not provide any Drop Quantity or Ultimate Activity bonuses",
+  "Light Vorax":
+    "Increases Attack, Cast, and Movement Speed and Skill Area. You will only be infected for a short time, while monsters will be infected permanently.",
   "Whisper of Wealth":
     "Whisper of Wealth typically increases the drop quantity of Hero Memory enhancement materials in Void Sea Treasures",
   "Whisper of Armament":
@@ -1231,11 +1379,14 @@ export const Hyperlinks: Record<string, string> = {
     "Meteors keep falling around you. Cooldown of each wave of meteors: 20s (each wave is calculated independently). Up to 20 wave(s) of meteors may be present at the same time",
   "Scorch (Female Knight 2)":
     "A special Ignite status. Deals 10 Fire Damage Over Time. Reduces all Resistances by 25%. Fixed Duration: 4s",
+  "Hardened Tenacity": "-65% additional damage taken",
+  Legacy: "-12% additional damage taken",
+  Burden: "-6% additional damage dealt",
   "Shadows Palace":
     "The final stage of the main story. Complete it to unlock the Netherrealm",
   Bard: "In the Bard state, Attack Channeled Skills and Attack Mobility Skills cannot be used\nIn the Bard state, it is possible to move while casting Spell Channeled Skills\nIn the Bard state, the Main Skill is auto channeled while moving\nIn the Bard state, all non-instant and non-Mobility Skills will channel Bard Song instead",
   "Loud Song":
-    "In the Loud Song state, -20% additional Attack and Cast Speed, -20% additional Movement Speed, and +50% additional Tide Effect",
+    "In the Loud Song state, -20% additional Attack and Cast Speed, -20% additional Movement Speed, and +80% additional Tide Effect",
   "Bard Song":
     "Base channeling Interval: 0.8s.\nWhen the corresponding skill is a Spell Skill, it is affected by Cast Speed bonuses and additional bonuses.\nWhen the corresponding skill is an Attack Skill, it is affected by Weapon Attack Speed, Attack Speed bonuses, and additional bonuses.\nMax channeled stacks: 4. Loses all channeled stacks after reaching max stacks and casts a bubble. This bubble bursts upon making contact with an enemy, using the corresponding skill once at the location",
   Tide: "While on the Tide, ignore physical collisions with enemies and +15% additional damage\nUp to 3 Tide(s) can be placed at the same time\n50% of the increase/decrease on Skill Area is also applied to Tide Area\n100% of the Skill Effect Duration bonus is also applied to the Tide Duration bonus",
@@ -1249,11 +1400,11 @@ export const Hyperlinks: Record<string, string> = {
     "+15% additional Erosion Damage taken (multiplies) for each stack of Desecration. Initial max stacks: 3. Lasts for 5s. Can only affect 1 target",
   "Sacrificial Pawn":
     "-10% additional damage dealt and +10% additional Erosion Damage taken. This is considered a Crowd Control Effect",
-  "Mountain of Sins": "Reduces Erosion Resistance by 10%",
+  "Mountain of Sins": "Reduces Erosion Resistance by 20%",
   "Mystic Mercury":
     "Attempts to consume 10% of Unsealed Max Mana when using a non-Channeled Attack Skill. If the Mana is consumed successfully, grants 10 Mercury Pts. When there is insufficient Mana, consumes 1% of Unsealed Max Mana and grants 5 Mercury. This effect does not apply to Burst.",
   "Realm of Mercury":
-    "For every 10% Unsealed Max Mana you have, +2% additional Attack Speed and +2% additional Elemental Damage\nRestores 16% of Unsealed Max Mana when using a non-Channeled Attack Skill. This effect does not apply to Burst.",
+    "For every 10% Unsealed Max Mana you have, +2% additional Attack Speed and +2% additional Elemental Damage\nRestores 15% of Unsealed Max Mana when using a non-Channeled Attack Skill. This effect does not apply to Burst.",
   "Mercury Baptism":
     "Deals True Damage based on the damage recorded by Realm of Mercury to all enemies within it once and clears the record",
   "Whimsy Explosion":
@@ -1265,13 +1416,13 @@ export const Hyperlinks: Record<string, string> = {
     "Your Main Skill is automatically cast, and the Base Cast Frequency is equal to 100% of Cast Speed. Unable to move for 5s",
   Whimsy: "+5% additional Spell Damage (multiplies) for 10s",
   Vendetta:
-    "Teleports to a random enemy within 9m, then triggers the Main Skill 1 time and +40% additional attack damage for the triggered skill. Cooldown: 3s",
+    "Teleports to a random enemy within 9m, then triggers the Main Skill 1 time and +30% additional attack damage for the triggered skill. Cooldown: 3s",
   Incisive:
-    "+10% additional Attack Damage\nWithin 5m, damage dealt increases the closer you are to the enemy, up to +20% additional Attack Damage at 2m\nLasts for 3s",
+    "Within 5m, damage dealt increases the closer you are to the enemy, up to +20% additional Attack Damage at 2m\nLasts for 3s",
   "Endless Vendetta":
     "Repeatedly casts Vendetta, targeting a random enemy within a 15m radius each time. Starts with -30% additional Attack Speed, +5% additional Attack Speed per repeat cast. Repeat limit: 30 time(s). Cooldown: 10s",
   "Condensed Frost":
-    "+0.25% additional Cold Damage taken for each point of Frostbite Rating exceeding 100, up to +25%\n-10% additional Attack and Cast Speed to enemies (not affected by Condensed Frost)",
+    "+0.35% additional Cold Damage taken for each point of Frostbite Rating exceeding 120, up to +28%\n-10% additional Attack and Cast Speed to enemies (not affected by Condensed Frost)",
   Momentum:
     "+30% additional Attack Damage for the next Main Skill every 0.5s. Refreshes this interval on defeat.",
   Tenacity:
@@ -1287,7 +1438,7 @@ export const Hyperlinks: Record<string, string> = {
   "Joined Force":
     "Off-Hand Weapons do not participate in attacks while Dual Wielding\nAdds 60% of the damage of the Off-Hand Weapon to the Main-Hand Weapon instead",
   "Well Matched":
-    "Deals up to +25% additional attack damage to enemies in proximity, and this effect reduces as the distance from the enemy grows\n-15% additional damage taken from enemies in proximity, and this effect reduces as the distance from the enemy grows",
+    'Deals up to +25% additional attack damage to enemies in ProximityWithin 4m">proximity, and this effect reduces as the distance from the enemy grows\n-15% additional damage taken from enemies in ProximityWithin 4m">proximity, and this effect reduces as the distance from the enemy grows',
   "Ember Armor": "+25% Armor Effective Rate for Non-Physical Damage",
   Formless: "Warcry is cast immediately\n+25% additional Melee Damage",
   Sweep:
@@ -1296,7 +1447,7 @@ export const Hyperlinks: Record<string, string> = {
   Sacrifice:
     "Changes the base effect of Tenacity Blessing to: +8% additional damage",
   "No Loose Ends":
-    "+50% additional Attack Damage at Low Life\nYour Max Energy Shield is fixed at 0",
+    "+40% additional Attack Damage at Low Life\nYour Max Energy Shield is fixed at 0",
   "Life Path":
     "Life Regain doubles\nLife Regain is only effective when Life is lower than 50%",
   "Survival Will":
@@ -1334,7 +1485,7 @@ export const Hyperlinks: Record<string, string> = {
   Static:
     "+10% additional damage every 0.5s while standing still, up to +40% additional damage\nRemoves the effect when no longer standing still",
   Transition:
-    "When casting a skill, 50% chance for the skill +16% additional damage\nWhen casting a skill, 25% chance for the skill +32% additional damage\nWhen casting a skill, 10% chance for the skill +80% additional damage",
+    "When casting a skill, 50% chance to +16% additional damage for that cast\nWhen casting a skill, 25% chance to +32% additional damage for that cast\nWhen casting a skill, 10% chance to +80% additional damage for that cast",
   "Queer Angle": "You and Minions deal Lucky Damage against Numbed enemies",
   "Quick Advancement":
     "Multistrikes deal 55% increasing damage\nMinions' Multistrikes deal 55% increasing damage",
@@ -1467,7 +1618,7 @@ export const Hyperlinks: Record<string, string> = {
   "Dirty Tricks":
     "Guaranteed to inflict all types of Ailments on hit.\nUpon inflicting damage, +6% additional damage for every type of Ailment the enemy has (multiplies)",
   "Stab In The Back":
-    "While Blur is active, loses Blur after casting a Main Skill, and the skill +40% additional damage",
+    "While Blur is active, loses Blur after casting a Main Skill, and +40% additional damage for that cast",
   Orders:
     "+20% additional Minion Damage\n+50% additional Summon Skill Cast Speed",
   Sentry:
@@ -1487,7 +1638,7 @@ export const Hyperlinks: Record<string, string> = {
   "Co-resonance":
     "+25% additional Sentry Damage\n100% of the bonus and additional bonus to Attack Speed is also applied to Attack Sentries' Cast Frequency\n100% of the bonus and additional bonus to Cast Speed is also applied to Spell Sentries' Cast Frequency",
   "United Stand":
-    "-5% additional damage taken for every nearby Synthetic Troop Minion within 10m\n-10% Minion Aggressiveness",
+    '-5% additional damage taken for every nearby Synthetic Troop Minion within 10m\n-10% Minion AggressivenessMinions become more aggressive and will target enemies within a greater area">Aggressiveness',
   Reflection:
     "+5% additional damage for each type of Aura you are affected by\n+5% additional damage for each type of Aura Minions are affected by",
   Resistance:
@@ -1535,15 +1686,19 @@ export const Hyperlinks: Record<string, string> = {
   "Hidden Mastery":
     "Unable to evade\nGains Attack Aggression when casting an Attack Skill\n+15% Attack Speed, and +15% additional Attack Damage when having Attack Aggression",
   "Third time's a charm":
-    "Has Hasten\nWhen having Hasten, +7% Attack Speed and Cast Speed for every 3m moved recently. Stacks up to 3 time(s)",
+    'Has Hasten\nWhen having QuicknessAdditionally increases Attack Speed, Cast Speed, Movement Speed, and Mobility Skill Cooldown Recovery Time by 8%">Hasten, +7% Attack Speed and Cast Speed for every 3m moved recently. Stacks up to 3 time(s)',
   "Steady Accumulation":
     "+40% additional Hit Damage\n-30% additional Skill Effect Duration",
   "Preemptive Strike":
     "+1 to Initial Multistrike Count\n-20% Attack Speed during Multistrike",
   Thunderclap:
-    "Consumes 1 stack(s) of Agility Blessing when casting a Main Skill. +35% additional Lightning Damage dealt by this skill",
+    "Consumes 1 stack(s) of Agility Blessing when casting a Main Skill. +35% additional Lightning Damage for that cast",
   "Quick Wits":
     "+25% additional Spell Damage when the Energy Shield is not low\n-20% additional damage taken when the Energy Shield is low",
+  "Inexorable Doom":
+    'Inflicts 1 additional stack(s) of Ill OmenInflicts enemies affected by Ominous Curse with 1 stack of Ill Omen whenever the damage they take from Damage Over Time or Reaping Damage reaches a certain percentage of their Max Life (7% for non-Elite enemies and 5% for Elite enemies)\nMaximum stacks of Ill Omen: 10\nUpon reaching max stacks, eliminates non-Elite enemies and deals True Damage equal to 20% of Max Life to Elite enemies">Ill Omen when inflicting Ill OmenInflicts enemies affected by Ominous Curse with 1 stack of Ill Omen whenever the damage they take from Damage Over Time or Reaping Damage reaches a certain percentage of their Max Life (7% for non-Elite enemies and 5% for Elite enemies)\nMaximum stacks of Ill Omen: 10\nUpon reaching max stacks, eliminates non-Elite enemies and deals True Damage equal to 20% of Max Life to Elite enemies">Ill Omen for the first time\nWhen triggering Ill OmenInflicts enemies affected by Ominous Curse with 1 stack of Ill Omen whenever the damage they take from Damage Over Time or Reaping Damage reaches a certain percentage of their Max Life (7% for non-Elite enemies and 5% for Elite enemies)\nMaximum stacks of Ill Omen: 10\nUpon reaching max stacks, eliminates non-Elite enemies and deals True Damage equal to 20% of Max Life to Elite enemies">Ill Omen, inflicts 3 stack(s) of Ill OmenInflicts enemies affected by Ominous Curse with 1 stack of Ill Omen whenever the damage they take from Damage Over Time or Reaping Damage reaches a certain percentage of their Max Life (7% for non-Elite enemies and 5% for Elite enemies)\nMaximum stacks of Ill Omen: 10\nUpon reaching max stacks, eliminates non-Elite enemies and deals True Damage equal to 20% of Max Life to Elite enemies">Ill Omen on 1 NearbyWithin 6m">Nearby non-EliteElite monsters include rare monsters and bosses">Elite enemy',
+  "Tailored Remedy":
+    "The Restoration Effect from Elixir Skills cannot be removed\nWhen equipped with no more than 1 Elixir Skill(s), -50% additional Elixir Skill Effect Duration\nWhen equipped with no more than 2 Elixir Skills, +50% additional Elixir Skill Effect",
   "Shared Fate":
     "Triggers the Sentry Main Skill when there are no Sentries within 10m. Interval: 1s\nDeployable Sentries Each Time is equal to the Max Sentry Quantity\n+25% additional Sentry Damage",
   "Extreme Power":
@@ -1563,13 +1718,13 @@ export const Hyperlinks: Record<string, string> = {
   "Keen Intellect":
     "Gains different buffs based on the number of different Spell Skills equipped: For every Empower Skill equipped, +13% additional Spell Damage (multiplies)\nFor every Curse Skill equipped, +6% Elemental and Erosion Resistance Penetration and +6% Armor DMG Mitigation Penetration\nFor every Defensive Skill equipped, +13% additional Max Mana (multiplies)\nFor every Mobility Skill equipped, +13% additional Cast Speed (multiplies)",
   "Towering Presence":
-    "Adds 100% of Main-Hand Weapon's Damage to Spells\nAdds 75% of Main-Hand Weapon's Critical Strike Rating to the Base Critical Strike Rating of Spell Skills\n-99% additional Ailment Damage",
+    "Adds 100% of Main-Hand WeaponThe weapon held in the Character's right hand is the Main-Hand Weapon\">Main-Hand Weapon's Damage to Spells\nAdds 75% of Main-Hand WeaponThe weapon held in the Character's right hand is the Main-Hand Weapon\">Main-Hand Weapon's Critical Strike Rating to the Base Critical Strike Rating of Spell Skills\n-99% additional Ailment Damage",
   "Spell Ripple":
     "Spell Skills on hit have a 50% chance to spawn a Pulse, dealing True Damage equal to 150% of Hit Damage. Interval: 0.03s",
   Juggernaut:
     "Reduces 10% Armor and 2% Elemental and Erosion Resistance for enemies on Critical Strike for 8s. Stacks up to 10 time(s)",
   "Adaptive Defense":
-    "If you haven't been hit recently, +40% Injury Buffer. This effect lasts for 4s longer when you are hit\nIf you have been hit recently, gains 1 stack of Deflection every 0.5s",
+    "If you haven't been hit recently, +40% Injury Buffer. This effect lasts for 4s longer when you are hit\nIf you have been hit recently, gains 1 stack of DeflectionReduces additional damage taken by 8% for every stack of Deflection, up to 3 stack(s). When hit, consumes all stacks of Deflection\">Deflection every 0.5s",
   "Unmatched Valor": "Has 130 point(s) of fixed Fervor Rating",
   "Self-Delusion":
     "+12% additional Erosion Damage to an enemy for each type of Crowd Control Effect they are under\nCrowd Control Effects inflicted are reflected back onto you",
@@ -1582,7 +1737,7 @@ export const Hyperlinks: Record<string, string> = {
   "Circle of Life":
     "Gains Growth equal to 80% of the nearest Spirit Magus every 1s, and Growth gains Return Speed equal to Command\nFor every 10 Growth, +1% additional damage for Spirit Magi, +0.1% additional Physique and +0.5% Skill Area for yourself",
   "Miraculous Touch":
-    "Triggers Miraculous Gain when casting a Restoration Skill\nRestoration Skills gain 1 Charging Progress every second",
+    "释放灵药技能时，触发Miraculous GainRandomly triggers one of the following effects for 6s. This effect can be triggered up to 4 times within 1s:\nTriggers a Lv. 20 Empower Skill or Defensive Skill that might be useful\nGains 5 stacks of God of War's Blessing\nTriggers the Main Active Skill 10 times. Interval: 0.2s\nGains max stacks of Tenacity Blessing, Agility Blessing, and Focus Blessing.\nTriggers Frigid Transmission and -20% additional damage taken\n\">妙手偶得\n灵药技能每秒获得 1 充能进度",
   "Dark Advance":
     "Moves in the target direction when casting Dark Gate\n+3 Max Charges for Dark Gate\n+50% additional Cooldown Recovery Speed for Dark Gate\n+30% additional Minion Damage if a Dark Gate has been cast recently",
   "Effortless Command": "+1000 Max Energy",
@@ -1593,9 +1748,9 @@ export const Hyperlinks: Record<string, string> = {
   "Storm's Command":
     "For each different Warcry cast, +35% additional Attack Damage for 8s\n-100% additional Empower Skill and Defensive Skill Effect",
   "Fire's Allure":
-    "Inflicts Scorch instead of Ignite\nNearby enemies within 10m -10% Fire Resistance for each stack of Scorch on them",
+    'Inflicts Scorch (Female Knight 2)A special Ignite status. Deals 10 Fire Damage Over Time. Reduces all Resistances by 25%. Fixed Duration: 4s">Scorch instead of IgniteAn Ailment that may be triggered on hit, dealing Fire Damage per second for 4s based on Base Ignite Damage. Unable to stack\nIgnite cannot be inflicted when Base Ignite Damage is 0">Ignite\nNearby enemies within 10m -10% Fire Resistance for each stack of Scorch (Female Knight 2)A special Ignite status. Deals 10 Fire Damage Over Time. Reduces all Resistances by 25%. Fixed Duration: 4s">Scorch on them',
   "Fiery Fantasy":
-    "+3% additional Ignite Damage, up to +150%, for every +1% Ignite Chance above 100%\n+3% additional Wilt Damage, up to +150%, for every +1% Wilt Chance above 100%\n+3% additional Trauma Damage, up to +150%, for every +1% Trauma Chance above 100%",
+    '+3% additional IgniteAn Ailment that may be triggered on hit, dealing Fire Damage per second for 4s based on Base Ignite Damage. Unable to stack\nIgnite cannot be inflicted when Base Ignite Damage is 0">Ignite Damage, up to +150%, for every +1% IgniteAn Ailment that may be triggered on hit, dealing Fire Damage per second for 4s based on Base Ignite Damage. Unable to stack\nIgnite cannot be inflicted when Base Ignite Damage is 0">Ignite Chance above 100%\n+3% additional WiltAn Ailment that may be triggered on hit, dealing Erosion Damage per second for 1.5s based on Base Wilt Damage. Stacks up to 30 time(s)\nWilt cannot be inflicted when Base Wilt Damage is 0">Wilt Damage, up to +150%, for every +1% WiltAn Ailment that may be triggered on hit, dealing Erosion Damage per second for 1.5s based on Base Wilt Damage. Stacks up to 30 time(s)\nWilt cannot be inflicted when Base Wilt Damage is 0">Wilt Chance above 100%\n+3% additional TraumaAn Ailment that may be triggered on hit, dealing Physical Damage per second for 4s based on Base Trauma Damage. Unable to stack\nTrauma cannot be inflicted when Base Trauma Damage is 0">Trauma Damage, up to +150%, for every +1% TraumaAn Ailment that may be triggered on hit, dealing Physical Damage per second for 4s based on Base Trauma Damage. Unable to stack\nTrauma cannot be inflicted when Base Trauma Damage is 0">Trauma Chance above 100%',
   "Life Corrosion":
     "Consumes 2% of Life to restore 8% of Max Life when you are hit. Interval: 0.2s.",
   "Corrosion Shield":
@@ -1621,7 +1776,7 @@ export const Hyperlinks: Record<string, string> = {
   "Pure Heart":
     "+5% additional Attack Damage dealt to nearby enemies (multiplies) for every stack of Pure Heart. Stacks up to 5 time(s). Lasts for 10s.\nThe duration of each stack of Pure Heart is calculated separately.",
   Squidnova:
-    "+16% additional Hit Damage for skills cast by Spell Burst for 10s.",
+    '+16% additional Hit Damage for skills cast by Spell BurstAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst for 10s.',
   "Feline Stimulant":
     "+5% additional Attack Damage (multiplies) for every stack of Feline Stimulant. Stacks up to 3 time(s). Lasts for 9s.",
   "White - Common":
@@ -2003,7 +2158,7 @@ export const Hyperlinks: Record<string, string> = {
   Awakened:
     "When a monster awakens, its rarity changes, and it gains an Activity bonus based on its new rarity (Normal monsters +30 Activity, Magic monsters +60 Activity, Rare monsters and Bosses +120 Activity)",
   Mutation:
-    "Transform the target monster into a group of monsters with random a Name, Archetype, and Rarity, while retaining the original Activity and Quantity\nActive Mechanics: Mutation",
+    "Transform the target monster into a group of monsters with a random Name, Archetype, and Rarity, while retaining the original Activity and Quantity\nActive Mechanics: Mutation",
   Fuse: "Removes multiple monster groups and adds a new group whose Activity and Quantity are the sum of those removed.\nActive Mechanics: Removal, Addition, Fusion",
   "Mutate into an Aemberon":
     "Takes effect if the target monster Archetype is Aemberon",
@@ -2040,21 +2195,131 @@ export const Hyperlinks: Record<string, string> = {
   "Dissection Infusion: Morbid Corpse":
     "Gain 1 group(s) of Boss Bone Sentries. If the Incubation Tank is full, mutates the monsters with the highest Total Activity into Bone Sentries. 1 additional special Potion(s) will be granted in the next round",
   "Dissection I: Vermectomy":
-    "When you have at least 1 group(s) of Bone Sentries, remove all Pests, +99 to other monsters' Quantity, grants 1 additional special Potion(s) will be granted in the next round",
+    "When you have at least 1 group(s) of Bone Sentries, remove all Pests, +199 to other monsters' Quantity, grants 1 additional special Potion(s) will be granted in the next round",
   "Dissection II: Daemonectomy":
-    "When you have at least 1 group(s) of Bone Sentries, remove all Aemberons, +99 to other monsters' Activity, and 1 additional special Potion(s) will be granted in the next round",
+    "When you have at least 1 group(s) of Bone Sentries, remove all Aemberons, +199 to other monsters' Activity, and 1 additional special Potion(s) will be granted in the next round",
   "Dissection III: Craniotomy":
-    "When you have at least 1 group(s) of Bone Sentries, remove all Agitoes, +99 to other monsters' Quantity, and replace the Potions in the next round with 1 special Potion(s)",
+    "When you have at least 1 group(s) of Bone Sentries, remove all Agitoes, +199 to other monsters' Quantity, and replace the Potions in the next round with 1 special Potion(s)",
   "Dissection Infusion: Intact Skeleton":
     "Remove all monsters that are not Bone Sentries. Gain 1 group(s) of Boss Bone Sentries, then fill empty Incubation Tanks with random Bone Sentries. For every 1 group(s) of Bone Sentries you have, +199 to all Bone Sentries' Activity and +199 to their Quantity",
   "Xenopanacea: Osteotrophy":
-    "Mutate 1 random group(s) of monsters into Aemberons, and +199 to their Activity. If any non-Aemberon monsters remain, replace the Potions in the next round with 2 special Potion(s)",
+    "Mutate 1 random group(s) of monsters into Aemberons, and +333 to their Activity. If any non-Aemberon monsters remain, replace the Potions in the next round with 2 special Potion(s)",
   "Xenopanacea: Brood":
-    "Mutate 1 random group(s) of monsters into Aemberons and +199 to their Quantity. If any non-Aemberon monsters remain, replace the Potions in the next round with 2 special Potion(s)",
+    "Mutate 1 random group(s) of monsters into Aemberons and +333 to their Quantity. If any non-Aemberon monsters remain, replace the Potions in the next round with 2 special Potion(s)",
   "Surgical Risk: Low":
     "When you defeat a Vorax monster, that monster's Activity +5%. For each time you are defeated, the Ultimate Activity -1%",
   "Surgical Risk: Medium":
     "When you defeat a Vorax monster, that monster's Activity +10%. For each time you are defeated, the Ultimate Activity -2%",
   "Surgical Risk: High":
     "When you defeat a Vorax monster, that monster's Activity +20%. For each time you are defeated, the Ultimate Activity -5%",
+  "Cumulative Effect Count":
+    "The Cumulative Effect Count is equal to the number of times a Consultation Vorax Compass takes effect in this round of the Vorax gameplay. Affixes will be multiplied together when calculating their effect.",
+  "Base Stat Revival":
+    "Has a chance to increase the Base Stats of a Memory. The displayed values are the final result, with the increase shown in parentheses.",
+  "Base Trait Slot":
+    "Memory slots that affect a Hero's Base Traits, provided by the Revived Affixes of Hero Memories.",
+  Rarity: "Ultimate: Red\nEpic: Yellow\nRare: Purple",
+  "Memory Type":
+    "Memory of Origin: Installable in Slot 1\nMemory of Discipline: Installable in Slot 2\nMemory of Progress: Installable in Slot 3",
+  Origin: "Memory of Origin: Installable in Slot 1",
+  Discipline: "Memory of Discipline: Installable in Slot 2",
+  Progress: "Memory of Progress: Installable in Slot 3",
+  "Lunar Essence":
+    "弹奏月琴所需的能量，通过击败月族怪物获得。月能达到上限时，月琴获得一次弹奏次数。",
+  "Lunar Ring":
+    "月琴所影响的圆形范围区域，位于角色脚下，跟随角色移动。弹奏时，月轮内所有塑像会被同时激活。月轮范围可以通过安装月弦来提升。",
+  "Nascent Moon": "特殊的月族怪物，掉落等同于月族稀有怪物，但不受重奏加成。",
+  Rhapsody:
+    'A special gameplay theme reshapes the "rhythm" you play and delivers generous drop rewards.',
+  "Damage Boost Program: Physical":
+    "+15% additional Physical Damage for Minions summoned by this skill",
+  "Damage Boost Program: Cold":
+    "+15% additional Cold Damage for Minions summoned by this skill",
+  "Damage Boost Program: Fire":
+    "+15% additional Fire Damage for Minions summoned by this skill",
+  "Damage Boost Program: Lightning":
+    "+15% additional Lightning Damage for Minions summoned by this skill",
+  "Damage Boost Program: Erosion":
+    "+15% additional Erosion Damage for Minions summoned by this skill",
+  "Critical Strike Program": "该技能召唤的召唤物 +100% 暴击值、+100% 暴击伤害",
+  "Transience Program":
+    "该技能召唤的召唤物额外 -20% 最小伤害、额外 +30% 最大伤害",
+  "Fury Program":
+    "+25% additional damage when a Minion summoned by this skill is at Low Life",
+  "Spell Program":
+    '+1 Max Spell BurstAutomatically uses a Spell Skill a certain number of times.\nWhen Spell Burst is fully charged, the next Spell Skill used will activate Spell Burst, which will consume all stacks charged and automatically use the Spell Skill the same number of times.\nSkills that have a cooldown, Triggered Skills, Sentry Skills, Channeled Skills, and Combo Skills cannot activate Spell Burst.">Spell Burst and +5% additional Spell Damage for Minions summoned by this skill',
+  "Fearless Program":
+    "+10% additional Melee Damage and +30% Melee Skill Area for Minions summoned by this skill",
+  "Cold Protocol":
+    'Inflicts Cold InfiltrationAdditionally increases Cold Damage taken by 13%. Reduces Movement Speed by 5%">Cold Infiltration when Minions summoned by this skill deal Cold Damage',
+  "Fire Protocol":
+    'Inflicts Fire InfiltrationAdditionally increases Fire Damage taken by 13%. Reduces Skill Area by 8%">Fire Infiltration when Minions summoned by this skill deal Fire Damage',
+  "Lightning Protocol":
+    'Inflicts Lightning InfiltrationAdditionally increases Lightning Damage taken by 13%. Reduces Attack Speed by 5%">Lightning Infiltration when Minions summoned by this skill deal Lightning Damage',
+  "Erosion Protocol":
+    '+30% DeteriorationLasts for 1s. When the duration ends, deals True Damage equal to 60% of the Hit Erosion Damage dealt. Stacks up to 99 times. Each stack is calculated independently">Deterioration Chance for Minions summoned by this skill',
+  "Armor Break Protocol":
+    "+12% Armor DMG Mitigation Penetration for Minions summoned by this skill",
+  "Life Protocol":
+    "Minions summoned by this skill grant +10% additional Max Life to you and allies",
+  "Energy Shield Protocol":
+    "Minions summoned by this skill grant +10% additional Max Energy Shield to you and allies",
+  "Haste Protocol":
+    "+20% Attack, Cast, and Movement Speed for Minions summoned by this skill\nMinions summoned by this skill grant +20% Movement Speed to you and allies",
+  "Projectile Protocol":
+    "+2% Projectile Quantity and +2 Horizontal Projectile piercing counter for Minions summoned by this skill\nMinions summoned by this skill grant +90% Projectile Speed to you and allies",
+  "Area Protocol":
+    "+10% additional Area Damage for Minions summoned by this skill\nMinions summoned by this skill grant +60% Skill Area to you and allies",
+  "Resistance Protocol":
+    "+12% additional Elemental Damage for Minions summoned by this skill\nMinions summoned by this skill grant +10% Elemental Resistance to you and allies",
+  "Ailment Protocol":
+    'When Minions summoned by this skill deal damage, +3% additional damage for every type of AilmentTrauma, Ignite, Frostbite, Freeze, Numbed, and Wilt">Ailment the enemy has (multiplies)\nMinions summoned by this skill grant +12% Ailment Damage to you and allies',
+  "Block Protocol":
+    "+100% Attack and Spell Block Chance for Minions summoned by this skill. Minions taunt enemies when blocking",
+  "Knockback Protocol":
+    '+100% KnockbackForced to move back by a short distance">Knockback Chance for Minions summoned by this skill. Inflicts ParalysisIncreases damage taken by 15%">Paralysis when knocking back enemies',
+  "Restoration Protocol":
+    '+10% Life RegainBased on the Missing Life (including Sealed Life), restores a portion of Life on hit. This effect has a 0.5s interval.">Life Regain and Shield regainBased on the Missing Energy Shield, restores a portion of Energy Shield on hit. This effect may only appear once every 0.5s.">Shield Regain for Minions summoned by this skill\nMinions summoned by this skill grant 3% Life Regeneration to you and allies',
+  "Agile Protocol":
+    "Minions summoned by this skill grant +30% Attack and Cast Speed to you and allies",
+  "Elemental Protocol":
+    '该技能召唤的召唤物附加 5% 物理伤害的随机ElementalFire, Cold, and Lightning">元素伤害，并且 +100% Elemental AilmentIgnite, Frostbite, Freeze, and Numbed">元素异常几率',
+  "Aura Overwrite: Weapon Amplification":
+    "Minions summoned by this skill grant a Lv. 1 Precise: Weapon Amplification to you and allies",
+  "Aura Overwrite: Charged Flames":
+    "Minions summoned by this skill grant a Lv. 1 Precise: Charged Flames to you and allies",
+  "Aura Overwrite: Electric Conversion":
+    "Minions summoned by this skill grant a Lv. 1 Precise: Electric Conversion to you and allies",
+  "Aura Overwrite: Erosion Amplification":
+    "Minions summoned by this skill grant a Lv. 1 Precise: Erosion Amplification to you and allies",
+  "Aura Overwrite: Frigid Domain":
+    "Minions summoned by this skill grant a Lv. 1 Precise: Frigid Domain to you and allies",
+  "Aura Overwrite: Steadfast":
+    "Minions summoned by this skill grant a Lv. 1 Precise: Steadfast to you and allies",
+  "Aura Overwrite: Nimbleness":
+    "Minions summoned by this skill grant a Lv. 1 Precise: Nimbleness to you and allies",
+  "Aura Overwrite: Energy Fortress":
+    "Minions summoned by this skill grant a Lv. 1 Precise: Energy Fortress to you and allies",
+  "Aura Overwrite: Elemental Resistance":
+    "Minions summoned by this skill grant a Lv. 1 Precise: Elemental Resistance to you and allies",
+  "Aura Overwrite: Swiftness":
+    "Minions summoned by this skill grant a Lv. 1 Precise: Swiftness to you and allies",
+  "Source Code: Tenacity Pulse":
+    'When Minions summoned by this skill hit, +50% chance to grant you and allies 1 stack of Tenacity BlessingEvery stack of Tenacity Blessing grants an additional 4% damage reduction (multiplies). Initial max stacks: 4.">Tenacity Blessing',
+  "Source Code: Agility Pulse":
+    'When Minions summoned by this skill hit, +50% chance to grant you and allies 1 stack of Agility BlessingEvery stack of Agility Blessing grants +4% Attack and Cast Speed and +2% additional damage. Initial max stacks: 4">Agility Blessing',
+  "Source Code: Focus Pulse":
+    'When Minions summoned by this skill hit, +50% chance to grant you and allies 1 stack of Focus BlessingEvery stack of Focus Blessing grants +5% additional damage. Initial max stacks: 4">Focus Blessing',
+  "Source Code: Condensation":
+    '每 +1 FrostbiteEnemies are inflicted with a fixed amount of Frostbite Rating when they are Frostbitten. This can be increased by raising Max Frostbite Rating. The Max Frostbite Rating is 120.">冰结值上限，该技能召唤的召唤物 +1 FrostbiteEnemies are inflicted with a fixed amount of Frostbite Rating when they are Frostbitten. This can be increased by raising Max Frostbite Rating. The Max Frostbite Rating is 120.">冰结值上限\n该技能召唤的召唤物使召唤者 +30 冰结值上限',
+  "Source Code: Meltdown":
+    "该技能召唤的召唤物攻击或者法术击败敌人时有 20% 几率爆炸，对半径 6 米内的敌人造成被击败的敌人最大生命 250% 的真实伤害",
+  "Source Code: Power Surge":
+    "该技能召唤的召唤物 +500% 移动速度\n该技能召唤的召唤物如果最近移动了超过 10 米，使自身和友军额外 +20% 闪电伤害",
+  "Source Code: Breakpoint":
+    "When you or allies deal damage through Minions summoned by this skill, eliminates enemies with less than 18% Life",
+  "Source Code: Dimensional Collapse":
+    "Minions summoned by this skill fix the Erosion Resistance of nearby enemies within 10m at 10",
+  "Source Code: Overclock Composition":
+    "+20% additional Cooldown Recovery Speed for Minions summoned by this skill\nMinions summoned by this skill grant +20% Cooldown Recovery Speed and +20% Injury Buffer to you and allies",
 };

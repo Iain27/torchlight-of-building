@@ -9,30 +9,6 @@ export const BOOTS_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Regenerates 4% of Life per second while moving",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (STR)",
-    affixType: "Suffix",
-    craftingPool: "Basic",
-    tier: "1",
-    craftableAffix: "Regenerates 3% of Life per second while moving",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (STR)",
-    affixType: "Suffix",
-    craftingPool: "Basic",
-    tier: "2",
-    craftableAffix: "Regenerates 2% of Life per second while moving",
-  },
-  {
-    equipmentSlot: "Boots",
-    equipmentType: "Boots (STR)",
-    affixType: "Suffix",
-    craftingPool: "Basic",
-    tier: "0",
     craftableAffix: "+(25-35)% Fire Resistance",
   },
   {
@@ -266,6 +242,38 @@ export const BOOTS_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Basic",
     tier: "4",
     craftableAffix: "+(30-44)% Critical Strike Rating",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (STR)",
+    affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "0",
+    craftableAffix: "+(11-13)% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (STR)",
+    affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "1",
+    craftableAffix: "+(8-10)% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (STR)",
+    affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "2",
+    craftableAffix: "+(6-7)% Life Regain and Energy Shield Regain",
+  },
+  {
+    equipmentSlot: "Boots",
+    equipmentType: "Boots (STR)",
+    affixType: "Suffix",
+    craftingPool: "Basic",
+    tier: "3",
+    craftableAffix: "+5% Life Regain and Energy Shield Regain",
   },
   {
     equipmentSlot: "Boots",
@@ -586,7 +594,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "0",
     craftableAffix:
-      "Triggers Lv. (11-20) Blurry Steps upon starting to move. Interval: 1 s",
+      "Triggers Lv. (11-20) Brisk Wind upon starting to move. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",
@@ -595,7 +603,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "1",
     craftableAffix:
-      "Triggers Lv. (6-10) Blurry Steps upon starting to move. Interval: 1 s",
+      "Triggers Lv. (6-10) Brisk Wind upon starting to move. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",
@@ -604,7 +612,7 @@ export const BOOTS_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     craftingPool: "Ultimate",
     tier: "2",
     craftableAffix:
-      "Triggers Lv. (1-5) Blurry Steps upon starting to move. Interval: 1 s",
+      "Triggers Lv. (1-5) Brisk Wind upon starting to move. Interval: 1 s",
   },
   {
     equipmentSlot: "Boots",

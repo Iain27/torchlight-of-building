@@ -9,7 +9,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "Regenerates (121-156) Life per second",
+    craftableAffix: "Regenerates (341-442) Life per second",
   },
   {
     equipmentSlot: "Helmet",
@@ -17,7 +17,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "Regenerates (85-120) Life per second",
+    craftableAffix: "Regenerates (239-340) Life per second",
   },
   {
     equipmentSlot: "Helmet",
@@ -25,7 +25,7 @@ export const HELMET_STR_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "2",
-    craftableAffix: "Regenerates (61-84) Life per second",
+    craftableAffix: "Regenerates (171-238) Life per second",
   },
   {
     equipmentSlot: "Helmet",

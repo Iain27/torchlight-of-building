@@ -54,7 +54,7 @@ export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(19-23)% Life Regain",
+    craftableAffix: "+(16-20)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -62,7 +62,7 @@ export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(14-18)% Life Regain",
+    craftableAffix: "+(12-15)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -70,7 +70,7 @@ export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "2",
-    craftableAffix: "+(10-13)% Life Regain",
+    craftableAffix: "+(9-11)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -78,7 +78,7 @@ export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "3",
-    craftableAffix: "+(8-9)% Life Regain",
+    craftableAffix: "+(7-8)% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -86,7 +86,7 @@ export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "4",
-    craftableAffix: "+7% Life Regain",
+    craftableAffix: "+6% Life Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -94,7 +94,7 @@ export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "0",
-    craftableAffix: "+(19-23)% Energy Shield Regain",
+    craftableAffix: "+(16-20)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -102,7 +102,7 @@ export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "1",
-    craftableAffix: "+(14-18)% Energy Shield Regain",
+    craftableAffix: "+(12-15)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -110,7 +110,7 @@ export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "2",
-    craftableAffix: "+(10-13)% Energy Shield Regain",
+    craftableAffix: "+(9-11)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -118,7 +118,7 @@ export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "3",
-    craftableAffix: "+(8-9)% Energy Shield Regain",
+    craftableAffix: "+(7-8)% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
@@ -126,7 +126,7 @@ export const CLAW_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Basic",
     tier: "4",
-    craftableAffix: "+7% Energy Shield Regain",
+    craftableAffix: "+6% Energy Shield Regain",
   },
   {
     equipmentSlot: "One-Handed",
