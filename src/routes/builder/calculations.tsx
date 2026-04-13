@@ -388,7 +388,7 @@ function CalculationsPage(): React.ReactNode {
     | undefined;
 
   const offenseResults = useOffenseResults();
-  const { skills, resourcePool, defenses } = offenseResults;
+  const { skills, resourcePool, defenses, errors } = offenseResults;
   const offenseSummary =
     selectedSkill !== undefined ? skills[selectedSkill] : undefined;
 
@@ -416,6 +416,19 @@ function CalculationsPage(): React.ReactNode {
           onSkillChange={setCalculationsSelectedSkill}
         />
       </div>
+
+      {errors.length > 0 && (
+        <div className="rounded-lg border border-red-500/50 bg-red-950/30 p-3">
+          <div className="mb-1 text-sm font-semibold text-red-400">
+            Calculation Warnings
+          </div>
+          <ul className="space-y-0.5 text-sm text-red-300">
+            {errors.map((error, i) => (
+              <li key={i}>{error}</li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {hasDamageStats && offenseSummary !== undefined && (
         <>

@@ -2895,6 +2895,10 @@ const calcDualWieldDps = (
   if (offhandAtk === undefined || disableOffhand) {
     return mainhandAtk.aspd * mainhandAtk.avgHitWithCrit;
   }
+  if (mainhandAtk.aspd === 0 || offhandAtk.aspd === 0) {
+    console.error("Zero attack speed in dual wield calculation");
+    return 0;
+  }
   const mainhandAtkInterval = 1 / mainhandAtk.aspd;
   const offhandAtkInterval = 1 / offhandAtk.aspd;
   const fullInterval = mainhandAtkInterval + offhandAtkInterval;
@@ -3390,6 +3394,10 @@ const calcAvgSpellDps = (
   }
   const { avg, castTime } = spellHit;
 
+  if (castTime === 0) {
+    console.error("Zero cast time in spell DPS calculation");
+    return undefined;
+  }
   const cspdMult = calcEffMult(mods, "CspdPct");
   const cspd = (1 / castTime) * cspdMult;
   const critChance = calculateCritChance(mods, skill);

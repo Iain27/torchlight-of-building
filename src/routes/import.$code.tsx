@@ -1,6 +1,6 @@
 import { createFileRoute, redirect } from "@tanstack/react-router";
 import { decodeBuildCode } from "../lib/build-code";
-import { importBuild } from "../lib/import-utils";
+import { importBuildAsNew } from "../lib/import-utils";
 
 export const Route = createFileRoute("/import/$code")({
   component: ImportPage,
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/import/$code")({
       throw redirect({ to: "/", search: { importError: "invalid" } });
     }
 
-    const result = importBuild(decoded);
+    const result = importBuildAsNew(decoded);
     if (result === undefined) {
       throw redirect({ to: "/", search: { importError: "save_failed" } });
     }

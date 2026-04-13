@@ -6,19 +6,24 @@ import {
   ModalDescription,
 } from "../ui/Modal";
 
+export type ImportMode = "new" | "replace";
+
 interface ImportModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onImport: (buildCode: string) => boolean;
+  onImport: (buildCode: string, mode: ImportMode) => boolean;
+  hasActiveBuild: boolean;
 }
 
 export const ImportModal = ({
   isOpen,
   onClose,
   onImport,
+  hasActiveBuild,
 }: ImportModalProps) => {
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState<string | undefined>();
+  const [mode, setMode] = useState<ImportMode>("new");
 
   const handleImport = () => {
     const trimmed = inputValue.trim();
@@ -27,7 +32,7 @@ export const ImportModal = ({
       return;
     }
 
-    const success = onImport(trimmed);
+    const success = onImport(trimmed, mode);
     if (success) {
       setInputValue("");
       setError(undefined);
@@ -41,8 +46,9 @@ export const ImportModal = ({
     if (isOpen) {
       setInputValue("");
       setError(undefined);
+      setMode(hasActiveBuild ? "replace" : "new");
     }
-  }, [isOpen]);
+  }, [isOpen, hasActiveBuild]);
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Import Loadout">
@@ -65,7 +71,36 @@ export const ImportModal = ({
         }}
       />
 
-      {error && <p className="text-sm text-red-500 mt-2">{error}</p>}
+      {hasActiveBuild && (
+        <div className="flex gap-2 mt-3">
+          <button
+            type="button"
+            onClick={() => setMode("replace")}
+            className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+              mode === "replace"
+                ? "bg-amber-500 text-zinc-950"
+                : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700"
+            }`}
+          >
+            Replace Current Build
+          </button>
+          <button
+            type="button"
+            onClick={() => setMode("new")}
+            className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+              mode === "new"
+                ? "bg-amber-500 text-zinc-950"
+                : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700"
+            }`}
+          >
+            Create New Build
+          </button>
+        </div>
+      )}
+
+      {error !== undefined && (
+        <p className="text-sm text-red-500 mt-2">{error}</p>
+      )}
 
       <ModalActions>
         <ModalButton onClick={handleImport} fullWidth>

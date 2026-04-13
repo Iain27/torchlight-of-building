@@ -13,12 +13,9 @@ export interface ImportResult {
   metadata: SaveMetadata;
 }
 
-/**
- * Imports decoded SaveData as a new save.
- * Creates a new save with "Imported Build" name and updates the saves index.
- * Returns the result with saveId and metadata, or undefined on failure.
- */
-export const importBuild = (saveData: SaveData): ImportResult | undefined => {
+export const importBuildAsNew = (
+  saveData: SaveData,
+): ImportResult | undefined => {
   const now = Date.now();
   const newSaveId = generateSaveId();
   const newMetadata: SaveMetadata = {
@@ -41,4 +38,29 @@ export const importBuild = (saveData: SaveData): ImportResult | undefined => {
   saveSavesIndex(newIndex);
 
   return { saveId: newSaveId, metadata: newMetadata };
+};
+
+export const importBuildReplace = (
+  saveId: string,
+  saveData: SaveData,
+): ImportResult | undefined => {
+  const success = saveSaveData(saveId, saveData);
+  if (!success) {
+    return undefined;
+  }
+
+  const currentIndex = loadSavesIndex();
+  const existingMeta = currentIndex.saves.find((s) => s.id === saveId);
+  if (existingMeta === undefined) {
+    return undefined;
+  }
+
+  const updatedMeta: SaveMetadata = { ...existingMeta, updatedAt: Date.now() };
+  const newIndex: SavesIndex = {
+    ...currentIndex,
+    saves: currentIndex.saves.map((s) => (s.id === saveId ? updatedMeta : s)),
+  };
+  saveSavesIndex(newIndex);
+
+  return { saveId, metadata: updatedMeta };
 };

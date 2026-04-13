@@ -4,6 +4,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { z } from "zod";
 import { AboutModal } from "../components/modals/AboutModal";
+import type { ImportMode } from "../components/modals/ImportModal";
 import { ImportModal } from "../components/modals/ImportModal";
 import { decodeBuildCode } from "../lib/build-code";
 import {
@@ -12,7 +13,7 @@ import {
   SUPPORTED_LOCALES,
   setStoredLocale,
 } from "../lib/i18n";
-import { importBuild } from "../lib/import-utils";
+import { importBuildAsNew, importBuildReplace } from "../lib/import-utils";
 import {
   deleteSaveData,
   generateSaveId,
@@ -292,18 +293,20 @@ function SavesPage(): React.ReactNode {
     setSavesIndex(newIndex);
   };
 
-  const handleImportBuild = (code: string): boolean => {
+  const handleImportBuild = (code: string, mode: ImportMode): boolean => {
     const decoded = decodeBuildCode(code);
     if (decoded === null) {
       return false;
     }
 
-    const result = importBuild(decoded);
+    const result =
+      mode === "replace" && savesIndex.currentSaveId !== undefined
+        ? importBuildReplace(savesIndex.currentSaveId, decoded)
+        : importBuildAsNew(decoded);
     if (result === undefined) {
       return false;
     }
 
-    // Refresh local state from storage (importBuild already updated storage)
     setSavesIndex(loadSavesIndex());
     navigate({ to: "/builder", search: { id: result.saveId } });
     return true;
@@ -449,6 +452,7 @@ function SavesPage(): React.ReactNode {
         isOpen={importModalOpen}
         onClose={() => setImportModalOpen(false)}
         onImport={handleImportBuild}
+        hasActiveBuild={savesIndex.currentSaveId !== undefined}
       />
 
       <AboutModal
