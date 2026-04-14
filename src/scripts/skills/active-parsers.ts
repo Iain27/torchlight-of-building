@@ -597,3 +597,60 @@ export const berserkingBladeParser: SupportLevelParser = (input) => {
     steepStrikeChancePct: createConstantLevels(steepStrikeChancePct),
   };
 };
+
+export const lightningShotParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const addedDmgEffCol = findColumn(
+    progressionTable,
+    "effectiveness of added damage",
+    skillName,
+  );
+  const damageCol = progressionTable.find(
+    (col) => col.header.toLowerCase() === "damage",
+  );
+  if (damageCol === undefined) {
+    throw new Error(`${skillName}: no "damage" column found`);
+  }
+
+  const weaponAtkDmgPct: Record<number, number> = {};
+  const addedDmgEffPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(addedDmgEffCol.rows)) {
+    const level = Number(levelStr);
+    if (level <= 20 && text !== "") {
+      addedDmgEffPct[level] = parseNumericValue(text);
+    }
+  }
+
+  for (const [levelStr, text] of Object.entries(damageCol.rows)) {
+    const level = Number(levelStr);
+    if (level <= 20 && text !== "") {
+      const dmgMatch = findMatch(
+        text,
+        ts("deals {value:dec%} weapon attack damage"),
+        skillName,
+      );
+      weaponAtkDmgPct[level] = dmgMatch.value;
+    }
+  }
+
+  const level20WeaponDmg = weaponAtkDmgPct[20];
+  const level20AddedDmgEff = addedDmgEffPct[20];
+
+  if (level20WeaponDmg === undefined || level20AddedDmgEff === undefined) {
+    throw new Error(
+      `${skillName}: level 20 values missing, cannot fallback for levels 21-40`,
+    );
+  }
+
+  for (let level = 21; level <= 40; level++) {
+    weaponAtkDmgPct[level] = level20WeaponDmg;
+    addedDmgEffPct[level] = level20AddedDmgEff;
+  }
+
+  validateAllLevels(weaponAtkDmgPct, skillName);
+  validateAllLevels(addedDmgEffPct, skillName);
+
+  return { weaponAtkDmgPct, addedDmgEffPct };
+};

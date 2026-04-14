@@ -4,6 +4,7 @@ import {
   chargingWarcryParser,
   frostSpikeParser,
   iceLancesParser,
+  lightningShotParser,
   mindControlParser,
   spectralSlashParser,
 } from "./active-parsers";
@@ -53,6 +54,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Berserking Blade",
     categories: ["active"],
     parser: berserkingBladeParser,
+  },
+  {
+    skillName: "Lightning Shot",
+    categories: ["active"],
+    parser: lightningShotParser,
   },
 ];
 

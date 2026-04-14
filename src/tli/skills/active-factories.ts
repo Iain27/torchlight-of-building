@@ -72,6 +72,15 @@ export const activeSkillModFactories: Partial<
       { type: "SteepStrikeChancePct", value: v(vals.steepStrikeChancePct, l) },
     ],
   }),
+  "Lightning Shot": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+    mods: [
+      { type: "ConvertDmgPct", value: 100, from: "physical", to: "lightning" },
+    ],
+  }),
   "Thunder Spike": (l, vals) => ({
     offense: {
       weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
