@@ -2901,10 +2901,24 @@ export const allParsers = [
     "{value:+dec%} aura effect per {amt:+dec%} sealed mana compensation",
   ).outputNone(),
 
-  // Dormant Entanglement (Malign Embrace legendary)
+  // Dormant Entanglement (Malign Embrace legendary): per-active-tangle scaling
   t(
     "dormant entanglement gains an additional effect: {critRating:+int} spell critical strike rating and {dmgPct:+dec%} additional damage on critical strike for each activated tangle",
-  ).outputNone(),
+  ).outputMany([
+    spec((c) => ({
+      type: "FlatCritRating",
+      value: c.critRating,
+      modType: "spell",
+      per: { stackable: "active_tangle" },
+    })),
+    spec((c) => ({
+      type: "CritDmgPct",
+      value: c.dmgPct,
+      addn: true,
+      modType: "global",
+      per: { stackable: "active_tangle" },
+    })),
+  ]),
 
   // Nearby enemies critical
   t("nearby enemies are guaranteed to land critical strikes").outputNone(),

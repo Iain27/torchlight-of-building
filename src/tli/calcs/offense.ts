@@ -1890,6 +1890,7 @@ const resolveModsForOffenseSkill = (
     normalize("seconds_with_elite_nearby", config.numSecondsWithEliteNearby);
     normalize("enemy_numbed_stacks", config.enemyNumbedStacks ?? 10);
     normalize("enemy_curse_count", config.enemyCurseCount);
+    normalize("active_tangle", config.numActiveTangles);
     normalize("dance_of_frost", config.danceOfFrostStacks ?? 0);
     normalize("frostbite_rating", config.enemyFrostbittenPoints ?? 0);
     normalize("twisted_spacetime", config.twistedSpacetimeStacks ?? 5);
