@@ -598,6 +598,23 @@ export const berserkingBladeParser: SupportLevelParser = (input) => {
   };
 };
 
+export const shacklesOfMaliceParser: SupportLevelParser = () => {
+  // Shackles of Malice has no progression /40 table — values are constants
+  // derived from the skill description. Source: tlidb.com/en/Shackles_of_Malice
+  // - 667-667 Spell Erosion Damage (chain hit)
+  // - Effectiveness of added damage: 124%
+  // - Cast Speed: 1s
+  // - Chain jumps: 2
+  // - Per-curse explosion bonus (25% per curse) NOT yet modeled
+  return {
+    addedDmgEffPct: createConstantLevels(124),
+    spellDmgMin: createConstantLevels(667),
+    spellDmgMax: createConstantLevels(667),
+    castTime: createConstantLevels(1),
+    jump: createConstantLevels(2),
+  };
+};
+
 export const lightningShotParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 

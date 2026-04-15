@@ -6,6 +6,7 @@ import {
   iceLancesParser,
   lightningShotParser,
   mindControlParser,
+  shacklesOfMaliceParser,
   spectralSlashParser,
 } from "./active-parsers";
 import {
@@ -59,6 +60,11 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Lightning Shot",
     categories: ["active"],
     parser: lightningShotParser,
+  },
+  {
+    skillName: "Shackles of Malice",
+    categories: ["active"],
+    parser: shacklesOfMaliceParser,
   },
 ];
 

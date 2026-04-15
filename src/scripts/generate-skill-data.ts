@@ -841,7 +841,10 @@ const extractSkillFromTlidbHtml = (file: TlidbSkillFile): RawSkill => {
   // Most skills with missing progression tables are covered by
   // FALLBACK_LEVEL_VALUES instead of this set. This set is for skills whose
   // parsers intentionally read from description text rather than progression.
-  const SKILLS_WITHOUT_PROGRESSION_TABLE = new Set(["Charging Warcry"]);
+  const SKILLS_WITHOUT_PROGRESSION_TABLE = new Set([
+    "Charging Warcry",
+    "Shackles of Malice",
+  ]);
 
   // Only run parser for non-support skills (support skills use the new approach)
   if (parser !== undefined && skillType !== "Support") {

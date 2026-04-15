@@ -72,6 +72,17 @@ export const activeSkillModFactories: Partial<
       { type: "SteepStrikeChancePct", value: v(vals.steepStrikeChancePct, l) },
     ],
   }),
+  "Shackles of Malice": (l, vals) => ({
+    offense: {
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+      spellDmg: {
+        value: { min: v(vals.spellDmgMin, l), max: v(vals.spellDmgMax, l) },
+        dmgType: "erosion",
+        castTime: v(vals.castTime, l),
+      },
+    },
+    mods: [{ type: "Jump", value: v(vals.jump, l) }],
+  }),
   "Lightning Shot": (l, vals) => ({
     offense: {
       weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
