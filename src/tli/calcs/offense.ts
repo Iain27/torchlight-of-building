@@ -1889,14 +1889,26 @@ const resolveModsForOffenseSkill = (
     );
     normalize("seconds_with_elite_nearby", config.numSecondsWithEliteNearby);
     normalize("enemy_numbed_stacks", config.enemyNumbedStacks ?? 10);
-    // Auto-derive curse counts from gear (1 base curse + sum of AddnCurse).
-    // Manual override takes precedence if > 0.
+    // Auto-derive curse counts:
+    // - max curse cap = 1 base + sum of AddnCurse mods
+    // - active curses on enemy = distinct curse skills from TriggersSkill mods
+    //   (Triggers Lv X CurseName Curse on hit) that are tagged "Curse",
+    //   capped by max curse cap. Manual override takes precedence if > 0.
     const autoMaxCurses = 1 + sumByValue(filterMods(mods, "AddnCurse"));
+    const triggeredCurseNames = new Set<string>();
+    for (const m of filterMods(mods, "TriggersSkill")) {
+      const skill = ActiveSkills.find((s) => s.name === m.skillName);
+      if (skill?.tags?.includes("Curse" as never)) {
+        triggeredCurseNames.add(m.skillName);
+      }
+    }
+    const autoEnemyCurses = Math.min(triggeredCurseNames.size, autoMaxCurses);
     const effectiveEnemyCurses =
-      config.enemyCurseCount > 0 ? config.enemyCurseCount : autoMaxCurses;
+      config.enemyCurseCount > 0 ? config.enemyCurseCount : autoEnemyCurses;
     normalize("enemy_curse_count", effectiveEnemyCurses);
-    // Self-curse count (Keen Intellect prism auto-curses player on curse-skill hit)
-    normalize("self_curse_count", autoMaxCurses);
+    // Self-curse count: assume same number of self curses as enemy
+    // (Keen Intellect prism auto-curses player on curse-skill hit)
+    normalize("self_curse_count", effectiveEnemyCurses);
 
     // Active tangles: derive from gear (capped by per-enemy limit) when user
     // hasn't manually set a value. Manual override takes precedence if > 1.
