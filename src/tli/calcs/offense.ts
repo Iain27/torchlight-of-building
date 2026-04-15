@@ -1890,7 +1890,15 @@ const resolveModsForOffenseSkill = (
     normalize("seconds_with_elite_nearby", config.numSecondsWithEliteNearby);
     normalize("enemy_numbed_stacks", config.enemyNumbedStacks ?? 10);
     normalize("enemy_curse_count", config.enemyCurseCount);
-    normalize("active_tangle", config.numActiveTangles);
+    // Active tangles: derive from gear (capped by per-enemy limit) when user
+    // hasn't manually set a value. Manual override takes precedence if > 1.
+    const autoMaxTangles = 2 + sumByValue(filterMods(mods, "MaxTangleQuant"));
+    const autoMaxTanglesPerEnemy =
+      1 + sumByValue(filterMods(mods, "MaxTangleQuantPerEnemy"));
+    const autoActiveTangles = Math.min(autoMaxTangles, autoMaxTanglesPerEnemy);
+    const effectiveActiveTangles =
+      config.numActiveTangles > 1 ? config.numActiveTangles : autoActiveTangles;
+    normalize("active_tangle", effectiveActiveTangles);
     normalize("dance_of_frost", config.danceOfFrostStacks ?? 0);
     normalize("frostbite_rating", config.enemyFrostbittenPoints ?? 0);
     normalize("twisted_spacetime", config.twistedSpacetimeStacks ?? 5);
@@ -2342,12 +2350,16 @@ const resolveModsForOffenseSkill = (
     const maxTangles = 2 + sumByValue(filterMods(mods, "MaxTangleQuant"));
     const maxTanglesPerEnemy =
       1 + sumByValue(filterMods(mods, "MaxTangleQuantPerEnemy"));
-    if (config.numActiveTangles > 1) {
+    // Auto-derive active tangles from gear unless user override > 1
+    const autoActive = Math.min(maxTangles, maxTanglesPerEnemy);
+    const activeTangles =
+      config.numActiveTangles > 1 ? config.numActiveTangles : autoActive;
+    if (activeTangles > 1) {
       mods.push({
         type: "DmgPct",
         dmgModType: "global",
         addn: true,
-        value: (config.numActiveTangles - 1) * 100,
+        value: (activeTangles - 1) * 100,
         src: "Tangle",
       });
     }
