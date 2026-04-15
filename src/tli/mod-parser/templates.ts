@@ -2901,6 +2901,17 @@ export const allParsers = [
     "{value:+dec%} aura effect per {amt:+dec%} sealed mana compensation",
   ).outputNone(),
 
+  // Dormant Entanglement (Malign Embrace legendary)
+  t(
+    "dormant entanglement gains an additional effect: {critRating:+int} spell critical strike rating and {dmgPct:+dec%} additional damage on critical strike for each activated tangle",
+  ).outputNone(),
+
+  // Nearby enemies critical
+  t("nearby enemies are guaranteed to land critical strikes").outputNone(),
+
+  // Curse effect against you (defensive)
+  t("{value:+dec%} curse effect against you").outputNone(),
+
   // Eternal stack generators
   t(
     "{value:+dec%} chance to gain {stacks:int} stacks of eternal {stackName:words} on defeat",
