@@ -12,7 +12,9 @@ import {
 } from "@/src/data/hyperlink";
 import { Legendaries } from "@/src/data/legendary/legendaries";
 import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
+import { lookupAffixTier } from "@/src/lib/affix-tier-lookup";
 import { craft } from "@/src/tli/crafting/craft";
+import type { EquipmentType } from "@/src/tli/gear-data-types";
 import type { Pactspirit } from "@/src/data/pactspirit/types";
 import { SupportSkills as SupportSkillsData } from "@/src/data/skill/support";
 import { MagnificentSupportSkills } from "@/src/data/skill/support-magnificent";
@@ -179,6 +181,7 @@ const convertAffix = (
   affixTextParam: string,
   src: string | undefined,
   isVorax = false,
+  equipmentType?: EquipmentType,
 ): Affix => {
   const divinityText = "(Max Divinity Effect: 1)";
   const maxDivinity = affixTextParam.endsWith(divinityText) ? 1 : undefined;
@@ -236,12 +239,20 @@ const convertAffix = (
     return { text: lineText, mods: mods?.map((mod) => ({ ...mod, src })) };
   });
 
+  // Reverse-lookup tier from the rolled first line (best effort).
+  // For multi-line affixes (e.g. dual mods) only the first line is checked.
+  const tier =
+    equipmentType !== undefined && affixLines[0] !== undefined
+      ? lookupAffixTier(affixLines[0].text, equipmentType)
+      : undefined;
+
   return {
     specialName: bracketName,
     voraxLegendaryName,
     affixLines,
     src,
     maxDivinity,
+    tier,
   };
 };
 
@@ -249,9 +260,10 @@ const convertAffixArray = (
   affixes: string[] | undefined,
   src: string | undefined,
   isVorax = false,
+  equipmentType?: EquipmentType,
 ): Affix[] | undefined => {
   if (!affixes || affixes.length === 0) return undefined;
-  return affixes.map((text) => convertAffix(text, src, isVorax));
+  return affixes.map((text) => convertAffix(text, src, isVorax, equipmentType));
 };
 
 const convertCoreTalent = (
@@ -287,6 +299,7 @@ export const convertGear = (
   src: string | undefined,
 ): Gear => {
   const isVorax = gear.equipmentType === "Vorax Gear";
+  const et = gear.equipmentType;
   return {
     equipmentType: gear.equipmentType,
     equipmentSlot: gear.equipmentSlot,
@@ -297,20 +310,20 @@ export const convertGear = (
     baseStats: gear.baseStats
       ? convertBaseStats(gear.baseStats, gear.baseGearName, src)
       : undefined,
-    baseAffixes: convertAffixArray(gear.baseAffixes, src),
-    prefixes: convertAffixArray(gear.prefixes, src, isVorax),
-    suffixes: convertAffixArray(gear.suffixes, src, isVorax),
+    baseAffixes: convertAffixArray(gear.baseAffixes, src, false, et),
+    prefixes: convertAffixArray(gear.prefixes, src, isVorax, et),
+    suffixes: convertAffixArray(gear.suffixes, src, isVorax, et),
     blendAffix: gear.blendAffix
-      ? convertAffix(gear.blendAffix, src)
+      ? convertAffix(gear.blendAffix, src, false, et)
       : undefined,
     sweetDreamAffix: gear.sweetDreamAffix
-      ? convertAffix(gear.sweetDreamAffix, src)
+      ? convertAffix(gear.sweetDreamAffix, src, false, et)
       : undefined,
     towerSequenceAffix: gear.towerSequenceAffix
-      ? convertAffix(gear.towerSequenceAffix, src)
+      ? convertAffix(gear.towerSequenceAffix, src, false, et)
       : undefined,
-    legendaryAffixes: convertAffixArray(gear.legendaryAffixes, src),
-    customAffixes: convertAffixArray(gear.customAffixes, src, isVorax),
+    legendaryAffixes: convertAffixArray(gear.legendaryAffixes, src, false, et),
+    customAffixes: convertAffixArray(gear.customAffixes, src, isVorax, et),
   };
 };
 

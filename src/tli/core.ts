@@ -22,6 +22,10 @@ export interface Affix {
   affixLines: AffixLine[];
   maxDivinity?: number;
   src?: string;
+  // Best-guess tier inferred from reverse-lookup against BaseGearAffix pool.
+  // Format: "0"–"4" (lower is better). undefined when no match (custom affix,
+  // legendary, vorax blend, etc.).
+  tier?: string;
 }
 
 export interface SupportMod {
