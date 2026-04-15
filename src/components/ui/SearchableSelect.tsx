@@ -125,8 +125,14 @@ export const SearchableSelect = <T extends string | number>({
   };
 
   const allOptions = useMemo(() => {
+    // Include flat options in addition to grouped options so the currently-
+    // selected value still resolves even when it isn't in any offered group
+    // (e.g. legacy data with a Magnificent support in the wrong slot).
     if (groups) {
-      return groups.flatMap((g) => g.options);
+      const groupOptions = groups.flatMap((g) => g.options);
+      const seen = new Set(groupOptions.map((o) => o.value));
+      const extras = options.filter((o) => !seen.has(o.value));
+      return [...groupOptions, ...extras];
     }
     return options;
   }, [options, groups]);
