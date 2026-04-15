@@ -851,9 +851,15 @@ const extractSkillFromTlidbHtml = (file: TlidbSkillFile): RawSkill => {
     const parserProgressionTable = extractProgressionTable($);
     const fallback = FALLBACK_LEVEL_VALUES[name];
 
-    if (parserProgressionTable === undefined && fallback !== undefined) {
+    if (
+      parserProgressionTable === undefined &&
+      fallback !== undefined &&
+      !SKILLS_WITHOUT_PROGRESSION_TABLE.has(name)
+    ) {
       // tlidb removed this skill's progression table; use the cached values
       // from the last successful scrape instead of running the parser.
+      // Skills in SKILLS_WITHOUT_PROGRESSION_TABLE always use the parser
+      // as the source of truth (parser reads from description text).
       parsedLevelModValues = fallback;
     } else {
       if (
