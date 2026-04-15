@@ -1123,6 +1123,56 @@ const convertSupportSkillSlot = (
       const level = slot.level ?? 20;
       const affixes = buildSupportSkillAffixes(slot.name, level);
 
+      // Fallback: handle legacy short names for magnificent/noble supports
+      // (e.g. "Vendetta" stored as type "support" but actually
+      // "Shackles of Malice: Vendetta (Magnificent)")
+      if (affixes.length === 0) {
+        const magName = MagnificentSupportSkills.find((s) =>
+          s.name.endsWith(`: ${slot.name} (Magnificent)`),
+        )?.name;
+        if (magName !== undefined) {
+          const skill = MagnificentSupportSkills.find((s) => s.name === magName);
+          const affixTexts = buildSpecialSupportAffixTexts(
+            skill?.description ?? [],
+            "",
+            5,
+          );
+          const parsedMods = parseSupportAffixes(affixTexts);
+          return {
+            skillType: "magnificent_support",
+            name: magName as MagnificentSupportSkillName,
+            tier: undefined,
+            rank: undefined,
+            affixes: affixTexts.map((text, i) => ({
+              text,
+              mods: parsedMods[i],
+            })),
+          };
+        }
+        const nobleName = NobleSupportSkills.find((s) =>
+          s.name.endsWith(`: ${slot.name} (Noble)`),
+        )?.name;
+        if (nobleName !== undefined) {
+          const skill = NobleSupportSkills.find((s) => s.name === nobleName);
+          const affixTexts = buildSpecialSupportAffixTexts(
+            skill?.description ?? [],
+            "",
+            5,
+          );
+          const parsedMods = parseSupportAffixes(affixTexts);
+          return {
+            skillType: "noble_support",
+            name: nobleName as NobleSupportSkillName,
+            tier: undefined,
+            rank: undefined,
+            affixes: affixTexts.map((text, i) => ({
+              text,
+              mods: parsedMods[i],
+            })),
+          };
+        }
+      }
+
       return {
         skillType: "support",
         name: slot.name as SupportSkillName,
