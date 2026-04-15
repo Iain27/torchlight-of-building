@@ -24,7 +24,9 @@ const interpolateValue = (
 };
 
 // Pattern to match range values like (17-24), (-6--4), or (0.13-0.18)
-const RANGE_PATTERN = /\((-?\d+(?:\.\d+)?)-(-?\d+(?:\.\d+)?)\)/g;
+// Accept both ASCII hyphen "-" and en-dash "–" between range bounds.
+// Special support data (magnificent/noble) uses en-dash; gear affixes use hyphen.
+const RANGE_PATTERN = /\((-?\d+(?:\.\d+)?)[-–](-?\d+(?:\.\d+)?)\)/g;
 
 const interpolateRange = (
   minStr: string,

@@ -1,6 +1,6 @@
 import type { SupportMod } from "../core";
 import type { Mod } from "../mod";
-import { spec, t } from "../mod-parser";
+import { parseMod, spec, t } from "../mod-parser";
 
 const GLOBAL = "global" as const;
 
@@ -416,6 +416,14 @@ const parseSupportAffix = (text: string): SupportMod[] | undefined => {
     if (mods !== undefined) {
       return mods.map((mod) => ({ mod }));
     }
+  }
+
+  // Fallback: try general gear/talent parser. Lets magnificent/noble
+  // support bonuses (like Spite per-curse) match templates defined for the
+  // broader gear affix pool without duplicating them here.
+  const generalMods = parseMod(text);
+  if (generalMods !== undefined) {
+    return generalMods.map((mod) => ({ mod }));
   }
   return undefined;
 };

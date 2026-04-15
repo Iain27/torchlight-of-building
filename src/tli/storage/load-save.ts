@@ -12,6 +12,7 @@ import {
 } from "@/src/data/hyperlink";
 import { Legendaries } from "@/src/data/legendary/legendaries";
 import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
+import { craft } from "@/src/tli/crafting/craft";
 import type { Pactspirit } from "@/src/data/pactspirit/types";
 import { SupportSkills as SupportSkillsData } from "@/src/data/skill/support";
 import { MagnificentSupportSkills } from "@/src/data/skill/support-magnificent";
@@ -1125,24 +1126,42 @@ const convertSupportSkillSlot = (
 
       // Fallback: handle legacy short names for magnificent/noble supports
       // (e.g. "Vendetta" stored as type "support" but actually
-      // "Shackles of Malice: Vendetta (Magnificent)")
+      // "Shackles of Malice: Vendetta (Magnificent)").
+      // For special supports with a single bonus option, default craftedAffix
+      // to that bonus (rolled at midpoint via craft()).
       if (affixes.length === 0) {
+        const buildSpecial = (
+          name: string,
+          desc: readonly string[] | undefined,
+        ): { texts: string[] } => {
+          // Most magnificent/noble supports list the chooseable bonus in
+          // description[1] (or description[2] when there's a fixed line at [1]).
+          const bonusDesc =
+            desc?.length === 2
+              ? desc[1]
+              : desc?.length === 3
+                ? desc[2]
+                : undefined;
+          const craftedAffix =
+            bonusDesc !== undefined
+              ? craft({ craftableAffix: bonusDesc }, 50)
+              : "";
+          return {
+            texts: buildSpecialSupportAffixTexts(desc ?? [], craftedAffix, 1),
+          };
+        };
         const magName = MagnificentSupportSkills.find((s) =>
           s.name.endsWith(`: ${slot.name} (Magnificent)`),
         )?.name;
         if (magName !== undefined) {
           const skill = MagnificentSupportSkills.find((s) => s.name === magName);
-          const affixTexts = buildSpecialSupportAffixTexts(
-            skill?.description ?? [],
-            "",
-            5,
-          );
+          const { texts: affixTexts } = buildSpecial(magName, skill?.description);
           const parsedMods = parseSupportAffixes(affixTexts);
           return {
             skillType: "magnificent_support",
             name: magName as MagnificentSupportSkillName,
             tier: undefined,
-            rank: undefined,
+            rank: 1,
             affixes: affixTexts.map((text, i) => ({
               text,
               mods: parsedMods[i],
@@ -1154,17 +1173,13 @@ const convertSupportSkillSlot = (
         )?.name;
         if (nobleName !== undefined) {
           const skill = NobleSupportSkills.find((s) => s.name === nobleName);
-          const affixTexts = buildSpecialSupportAffixTexts(
-            skill?.description ?? [],
-            "",
-            5,
-          );
+          const { texts: affixTexts } = buildSpecial(nobleName, skill?.description);
           const parsedMods = parseSupportAffixes(affixTexts);
           return {
             skillType: "noble_support",
             name: nobleName as NobleSupportSkillName,
             tier: undefined,
-            rank: undefined,
+            rank: 1,
             affixes: affixTexts.map((text, i) => ({
               text,
               mods: parsedMods[i],
