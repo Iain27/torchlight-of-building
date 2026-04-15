@@ -2804,19 +2804,48 @@ export const allParsers = [
   // Life/ES regain
   t("{value:+dec%} life regain and energy shield regain").outputNone(),
 
-  // Focus damage (new mechanic)
-  t("{value:+dec%} focus damage enhancement").outputNone(),
+  // Focus Damage Enhancement — multiplicative damage while Focus Blessing active.
+  // S12 mechanic: "Focus" is the blessing stack; treating as gated on
+  // has_focus_blessing is a reasonable first approximation until we have
+  // explicit Focus stacks modeled.
+  t("{value:+dec%} focus damage enhancement").output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: "global",
+    addn: true,
+    cond: "has_focus_blessing",
+  })),
 
-  // Combo damage (combo finisher mechanic)
+  // Combo Damage Enhancement — conditional multiplicative for combo skills
+  // when finisher cast recently with N+ combo points. Gated on combo skill
+  // context via cond (the condition check can be refined later).
   t(
     "{value:+dec%} combo damage enhancement if the combo finisher cast recently consumes at least {threshold:int} combo point(s)",
-  ).outputNone(),
+  ).output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: "global",
+    addn: true,
+    cond: "is_combo_finisher",
+  })),
 
-  // Ailment damage
-  t("{value:+dec%} ailment damage enhancement").outputNone(),
+  // Ailment Damage Enhancement — multiplicative bonus to ailment damage
+  // (trauma/ignite/wilt). Uses damage_over_time dmgModType since ailments
+  // apply as DoT.
+  t("{value:+dec%} ailment damage enhancement").output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: "damage_over_time",
+    addn: true,
+  })),
 
-  // Deterioration (DoT mechanic)
-  t("{value:+dec%} additional deterioration damage").outputNone(),
+  // Deterioration Damage — DoT mechanic bonus
+  t("{value:+dec%} additional deterioration damage").output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: "damage_over_time",
+    addn: true,
+  })),
   t(
     "{value:dec%} chance to inflict {stacks:int} additional stack(s) of deterioration",
   ).outputNone(),

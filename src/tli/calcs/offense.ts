@@ -978,6 +978,15 @@ const filterModsByCond = (
       )
       .with("at_low_life", () => config.currentLifePct < 35)
       .with("is_tangle_skill", () => modExists(mods, "IsTangle"))
+      .with("is_combo_finisher", () => {
+        // True if any active skill slot has the "Combo" tag.
+        const activeSlots = Object.values(loadout.skillPage.activeSkills);
+        return activeSlots.some((slot) => {
+          if (slot === undefined || slot.skillName === undefined) return false;
+          const skill = ActiveSkills.find((s) => s.name === slot.skillName);
+          return skill?.tags?.includes("Combo" as never) === true;
+        });
+      })
       .exhaustive();
   });
 };

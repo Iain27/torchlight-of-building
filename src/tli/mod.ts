@@ -260,6 +260,7 @@ export const Conditions = [
   "frostbitten_heart_is_active",
   "at_low_life",
   "is_tangle_skill",
+  "is_combo_finisher",
 ] as const;
 
 export type Condition = (typeof Conditions)[number];
