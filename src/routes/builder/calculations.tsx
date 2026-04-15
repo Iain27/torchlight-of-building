@@ -791,8 +791,10 @@ function CalculationsPage(): React.ReactNode {
 
       {hasDamageStats &&
         offenseSummary !== undefined &&
-        offenseSummary.unmetConditionMods.length > 0 && (
-          <UnmetConditionsSection mods={offenseSummary.unmetConditionMods} />
+        (offenseSummary.unmetConditionMods?.length ?? 0) > 0 && (
+          <UnmetConditionsSection
+            mods={offenseSummary.unmetConditionMods ?? []}
+          />
         )}
     </div>
   );
