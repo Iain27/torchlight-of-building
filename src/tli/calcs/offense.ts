@@ -2742,14 +2742,6 @@ const calcAvgPersistentDps = (
   const { mods, perSkillContext, skillLevel, config } = input;
   const skill = perSkillContext.skill as BaseActiveSkill;
 
-  const implementedPersistentSkills: ActiveSkillName[] = [
-    "[Test] Simple Persistent Spell",
-    "Mind Control",
-  ];
-  if (!implementedPersistentSkills.includes(skill.name as ActiveSkillName)) {
-    return undefined;
-  }
-
   const skillMods = getActiveSkillMods(
     skill.name as ActiveSkillName,
     skillLevel,
@@ -3318,16 +3310,6 @@ const calcSpellHit = (
   derivedCtx: DerivedCtx,
   config: Configuration,
 ): CalcSpellHitOutput | undefined => {
-  const implementedSpells: ActiveSkillName[] = [
-    "[Test] Simple Spell",
-    "Chain Lightning",
-    "Ice Lances",
-    "Shackles of Malice",
-  ];
-  if (!implementedSpells.includes(skill.name as ActiveSkillName)) {
-    return undefined;
-  }
-
   const skillMods = getActiveSkillMods(skill.name as ActiveSkillName, level);
   const spellDmg = skillMods.offense?.spellDmg;
   if (spellDmg === undefined) {
