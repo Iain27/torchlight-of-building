@@ -228,7 +228,10 @@ const convertAffix = (
   }
 
   const affixLines: AffixLine[] = lines.map((lineText) => {
-    const mods = parseMod(lineText);
+    // Strip per-line bracket prefix (e.g. blendAffix has "[Malign Embrace] ..."
+    // on every line, but extractBracketPrefix above only removed it from the first).
+    const { text: cleanedLine } = extractBracketPrefix(lineText);
+    const mods = parseMod(cleanedLine);
     return { text: lineText, mods: mods?.map((mod) => ({ ...mod, src })) };
   });
 
