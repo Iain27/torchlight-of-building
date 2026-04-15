@@ -107,6 +107,8 @@ export interface Configuration {
   targetEnemyMarked: boolean;
   // default to true if you have a curse skill, false otherwise
   targetEnemyIsCursed?: boolean;
+  // default to 0 — number of curse effects on target enemy
+  enemyCurseCount: number;
   // default to 0
   numEnemiesNearby: number;
   // default to 0
@@ -266,6 +268,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   targetEnemyHasWhimsySignal: false,
   targetEnemyMarked: false,
   targetEnemyIsCursed: undefined,
+  enemyCurseCount: 0,
   numEnemiesNearby: 0,
   numEnemiesAffectedByWarcry: 0,
   hasBlockedRecently: false,

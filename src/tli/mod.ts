@@ -138,6 +138,7 @@ export const Stackables = [
   "num_enemies_affected_by_warcry",
   "num_enemies_nearby",
   "enemy_numbed_stacks",
+  "enemy_curse_count",
   "level",
   "max_spell_burst",
   "spell_burst_charge_speed_bonus_pct",

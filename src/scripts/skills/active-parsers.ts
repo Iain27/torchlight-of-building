@@ -612,6 +612,7 @@ export const shacklesOfMaliceParser: SupportLevelParser = () => {
     spellDmgMax: createConstantLevels(667),
     castTime: createConstantLevels(1),
     jump: createConstantLevels(2),
+    dmgPctPerCurse: createConstantLevels(25),
   };
 };
 

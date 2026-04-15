@@ -81,7 +81,20 @@ export const activeSkillModFactories: Partial<
         castTime: v(vals.castTime, l),
       },
     },
-    mods: [{ type: "Jump", value: v(vals.jump, l) }],
+    mods: [
+      { type: "Jump", value: v(vals.jump, l) },
+      // Explosion bonus: 25% additional hit damage per curse on enemy (multiplicative).
+      // Note: this approximates the explosion bonus by applying it to all hits.
+      // True modeling would require separate chain-hit vs explosion-hit DPS paths.
+      {
+        type: "DmgPct",
+        value: v(vals.dmgPctPerCurse, l),
+        dmgModType: "global",
+        addn: true,
+        per: { stackable: "enemy_curse_count", multiplicative: true },
+        cond: "enemy_is_cursed",
+      },
+    ],
   }),
   "Lightning Shot": (l, vals) => ({
     offense: {
