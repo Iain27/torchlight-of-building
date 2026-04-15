@@ -788,6 +788,52 @@ function CalculationsPage(): React.ReactNode {
             </div>
           </div>
         )}
+
+      {hasDamageStats &&
+        offenseSummary !== undefined &&
+        offenseSummary.unmetConditionMods.length > 0 && (
+          <UnmetConditionsSection mods={offenseSummary.unmetConditionMods} />
+        )}
     </div>
   );
 }
+
+const UnmetConditionsSection = ({
+  mods,
+}: {
+  mods: import("@/src/tli/mod").Mod[];
+}): React.ReactNode => {
+  // Group mods by their condition
+  const byCondition = new Map<string, typeof mods>();
+  for (const m of mods) {
+    if (m.cond === undefined) continue;
+    const list = byCondition.get(m.cond) ?? [];
+    list.push(m);
+    byCondition.set(m.cond, list);
+  }
+  const entries = [...byCondition.entries()].sort(
+    (a, b) => b[1].length - a[1].length,
+  );
+  return (
+    <div className="rounded-lg border border-amber-500/30 bg-zinc-900 p-3">
+      <div className="mb-1 text-sm font-semibold text-amber-400">
+        Inactive Conditional Mods
+      </div>
+      <p className="mb-2 text-xs text-zinc-500">
+        These mods exist on your build but aren't contributing because their
+        conditions aren't met. Enable in the Configuration tab or adjust
+        gear/skills to activate.
+      </p>
+      <div className="space-y-1 text-xs text-zinc-400">
+        {entries.map(([cond, list]) => (
+          <div key={cond} className="flex items-baseline gap-2">
+            <span className="font-mono text-amber-300/80">{cond}</span>
+            <span className="text-zinc-500">
+              ({list.length} mod{list.length === 1 ? "" : "s"})
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};

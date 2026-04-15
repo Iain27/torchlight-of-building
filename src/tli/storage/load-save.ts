@@ -1147,7 +1147,11 @@ const convertSupportSkillSlot = (
               ? craft({ craftableAffix: bonusDesc }, 50)
               : "";
           return {
-            texts: buildSpecialSupportAffixTexts(desc ?? [], craftedAffix, 1),
+            texts: buildSpecialSupportAffixTexts(
+              [...(desc ?? [])],
+              craftedAffix,
+              1,
+            ),
           };
         };
         const magName = MagnificentSupportSkills.find((s) =>
@@ -1160,7 +1164,7 @@ const convertSupportSkillSlot = (
           return {
             skillType: "magnificent_support",
             name: magName as MagnificentSupportSkillName,
-            tier: undefined,
+            tier: 0,
             rank: 1,
             affixes: affixTexts.map((text, i) => ({
               text,
@@ -1178,7 +1182,7 @@ const convertSupportSkillSlot = (
           return {
             skillType: "noble_support",
             name: nobleName as NobleSupportSkillName,
-            tier: undefined,
+            tier: 0,
             rank: 1,
             affixes: affixTexts.map((text, i) => ({
               text,

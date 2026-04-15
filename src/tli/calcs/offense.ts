@@ -143,6 +143,9 @@ interface OffenseSummary {
   movementSpeedBonusPct: number;
   tangleSummary?: TangleSummary;
   resolvedMods: Mod[];
+  // Mods that didn't apply because their condition wasn't met. Lets the UI
+  // show "could gain X damage if you enable Y" hints.
+  unmetConditionMods: Mod[];
 }
 
 // === Stats Types and Calculations ===
@@ -983,6 +986,7 @@ interface FilteredMods {
   mods: Mod[];
   resolvedCondMods: Mod[];
   condThresholdMods: Mod[];
+  unmetConditionMods: Mod[];
 }
 
 const applyModFilters = (
@@ -994,6 +998,12 @@ const applyModFilters = (
   // Drop (and log) mods that violate resolvedCond mutual-exclusion invariant.
   const validMods = inputMods.filter(assertModInvariants);
   const condFiltered = filterModsByCond(validMods, loadout, config, derivedCtx);
+  // Track mods dropped by filterModsByCond so the UI can show "could contribute
+  // X damage if you enable Y" hints.
+  const keptSet = new Set(condFiltered);
+  const unmetConditionMods = validMods.filter(
+    (m) => m.cond !== undefined && !keptSet.has(m),
+  );
   const resolvedCondMods = condFiltered.filter(
     (m) => m.resolvedCond !== undefined,
   );
@@ -1005,7 +1015,13 @@ const applyModFilters = (
     (m) => m.condThreshold !== undefined,
   );
   const mods = nonPerMods.filter((m) => m.condThreshold === undefined);
-  return { prenormMods, mods, resolvedCondMods, condThresholdMods };
+  return {
+    prenormMods,
+    mods,
+    resolvedCondMods,
+    condThresholdMods,
+    unmetConditionMods,
+  };
 };
 
 const listActiveSkillSlots = (loadout: Loadout): SkillSlot[] => {
@@ -1745,6 +1761,7 @@ interface DerivedOffenseCtx {
   tangleSummary?: TangleSummary;
   mods: Mod[];
   errors: string[];
+  unmetConditionMods: Mod[];
 }
 
 // over-engineered way to get type safety on self-referential associative graph
@@ -1807,6 +1824,7 @@ const resolveModsForOffenseSkill = (
     mods: baseMods,
     resolvedCondMods,
     condThresholdMods,
+    unmetConditionMods,
   } = applyModFilters(prenormModsFromParam, loadout, config, derivedCtx);
   const mods = [...baseMods, ...calculateSkillLevelDmgMods(skillLevel)];
   const steps: ModStep[] = [];
@@ -2491,6 +2509,7 @@ const resolveModsForOffenseSkill = (
     multistrikeIncDmgPct,
     tangleSummary,
     spellBurstChargeSpeedBonusPct,
+    unmetConditionMods,
   };
 };
 
@@ -3675,6 +3694,7 @@ export const calculateOffense = (input: OffenseInput): OffenseResults => {
       movementSpeedBonusPct,
       tangleSummary,
       resolvedMods: mods,
+      unmetConditionMods: derivedOffenseCtx.unmetConditionMods,
     };
   }
 
