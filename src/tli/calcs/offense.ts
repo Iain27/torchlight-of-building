@@ -977,6 +977,7 @@ const filterModsByCond = (
         () => config.frostbittenHeartIsActive,
       )
       .with("at_low_life", () => config.currentLifePct < 35)
+      .with("is_tangle_skill", () => modExists(mods, "IsTangle"))
       .exhaustive();
   });
 };

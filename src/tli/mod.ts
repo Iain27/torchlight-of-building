@@ -259,6 +259,7 @@ export const Conditions = [
   "has_squidnova",
   "frostbitten_heart_is_active",
   "at_low_life",
+  "is_tangle_skill",
 ] as const;
 
 export type Condition = (typeof Conditions)[number];

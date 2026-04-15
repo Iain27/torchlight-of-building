@@ -2884,8 +2884,15 @@ export const allParsers = [
     "adds {value:dec%} of {fromType:DmgType} damage as {toType:DmgType} damage",
   ).outputNone(),
 
-  // Tangle damage
-  t("{value:+dec%} tangle damage enhancement").outputNone(),
+  // Tangle Damage Enhancement — multiplicative damage bonus when
+  // the current skill is a Tangle (e.g. via Spell Tangle support).
+  t("{value:+dec%} tangle damage enhancement").output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: "global",
+    addn: true,
+    cond: "is_tangle_skill",
+  })),
 
   // Intimidating
   t("{value:+dec%} intimidating effect").outputNone(),
