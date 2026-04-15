@@ -2796,4 +2796,88 @@ export const allParsers = [
   t(
     "activates the following effects when there are 2 of this kismet on the same pact page:",
   ).outputNone(),
+
+  // === Noise-removal templates: parse-only, no calc effect yet ===
+  // These mods exist in gear data but aren't modeled in the calc engine.
+  // outputNone() suppresses "Mod not supported" warnings without affecting DPS.
+
+  // Life/ES regain
+  t("{value:+dec%} life regain and energy shield regain").outputNone(),
+
+  // Focus damage (new mechanic)
+  t("{value:+dec%} focus damage enhancement").outputNone(),
+
+  // Combo damage (combo finisher mechanic)
+  t(
+    "{value:+dec%} combo damage enhancement if the combo finisher cast recently consumes at least {threshold:int} combo point(s)",
+  ).outputNone(),
+
+  // Ailment damage
+  t("{value:+dec%} ailment damage enhancement").outputNone(),
+
+  // Deterioration (DoT mechanic)
+  t("{value:+dec%} additional deterioration damage").outputNone(),
+  t(
+    "{value:dec%} chance to inflict {stacks:int} additional stack(s) of deterioration",
+  ).outputNone(),
+
+  // Profane (minion mechanic)
+  t("has profane. minions have profane").outputNone(),
+
+  // Spell burst charge generation
+  t(
+    "{value:+dec%} chance to immediately gain {stacks:int} stack(s) of spell burst charge when using a skill. interval: {interval:dec}s",
+  ).outputNone(),
+
+  // Blur regen
+  t("gains blur for {dur:dec} s after losing blur").outputNone(),
+
+  // Curse cap
+  t("you can cast {value:int} additional curses").outputNone(),
+
+  // On-defeat explode (visual fluff, not in calcs)
+  t(
+    "enemies have a {value:dec%} chance to explode when defeated by an attack or spell, dealing true damage equal to {dmgPct:dec%} of their max life to enemies within a {radius:dec} m radius",
+  ).outputNone(),
+
+  // Parabolic projectile
+  t("{value:+int} parabolic projectile split quantity").outputNone(),
+
+  // Paralyze on hit
+  t("{value:+dec%} chance to paralyze the target on hit").outputNone(),
+
+  // Warcry charges
+  t("{value:+int} max warcry skill charges").outputNone(),
+
+  // Demolisher charge
+  t("{value:+dec%} demolisher charge restoration speed").outputNone(),
+
+  // Trigger main spell skill
+  t(
+    "{value:+dec%} chance to trigger the main spell skill {stacks:int} additional time when using it",
+  ).outputNone(),
+
+  // Armor effective rate
+  t(
+    "{value:+dec%} armor effective rate for non-physical damage",
+  ).outputNone(),
+
+  // Returning projectiles
+  t(
+    "after reaching their max range, projectiles will return and travel an additional {value:dec%} of that distance, hitting the enemies on their path again",
+  ).outputNone(),
+
+  // Trauma reap
+  t(
+    "reaps {value:dec} s of damage over time when inflicting trauma. the effect has a {recovery:dec} s recovery time against the same target",
+  ).outputNone(),
+
+  // Deterioration
+  t("{value:+dec%} deterioration chance").outputNone(),
+  t("{value:+dec%} deterioration damage").outputNone(),
+
+  // Adds X% of one element as another (variant of existing)
+  t(
+    "adds {value:dec%} of {fromType:DmgType} damage as {toType:DmgType} damage",
+  ).outputNone(),
 ];
