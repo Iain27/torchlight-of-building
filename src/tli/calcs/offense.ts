@@ -1889,7 +1889,15 @@ const resolveModsForOffenseSkill = (
     );
     normalize("seconds_with_elite_nearby", config.numSecondsWithEliteNearby);
     normalize("enemy_numbed_stacks", config.enemyNumbedStacks ?? 10);
-    normalize("enemy_curse_count", config.enemyCurseCount);
+    // Auto-derive curse counts from gear (1 base curse + sum of AddnCurse).
+    // Manual override takes precedence if > 0.
+    const autoMaxCurses = 1 + sumByValue(filterMods(mods, "AddnCurse"));
+    const effectiveEnemyCurses =
+      config.enemyCurseCount > 0 ? config.enemyCurseCount : autoMaxCurses;
+    normalize("enemy_curse_count", effectiveEnemyCurses);
+    // Self-curse count (Keen Intellect prism auto-curses player on curse-skill hit)
+    normalize("self_curse_count", autoMaxCurses);
+
     // Active tangles: derive from gear (capped by per-enemy limit) when user
     // hasn't manually set a value. Manual override takes precedence if > 1.
     const autoMaxTangles = 2 + sumByValue(filterMods(mods, "MaxTangleQuant"));

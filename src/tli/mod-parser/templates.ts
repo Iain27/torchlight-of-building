@@ -2832,8 +2832,11 @@ export const allParsers = [
   // Blur regen
   t("gains blur for {dur:dec} s after losing blur").outputNone(),
 
-  // Curse cap
-  t("you can cast {value:int} additional curses").outputNone(),
+  // Curse cap (variant without "(s)" suffix)
+  t("you can cast {value:int} additional curses").output((c) => ({
+    type: "AddnCurse",
+    value: c.value,
+  })),
 
   // On-defeat explode (visual fluff, not in calcs)
   t(
@@ -2900,6 +2903,17 @@ export const allParsers = [
   t(
     "{value:+dec%} aura effect per {amt:+dec%} sealed mana compensation",
   ).outputNone(),
+
+  // Shackles of Malice: Spite (Noble) — per-self-curse damage on explosion
+  t(
+    "when the chain hits and explodes, the explosion deals {value:+dec%} additional hit damage (multiplies) for every curse affecting you",
+  ).output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: "global",
+    addn: true,
+    per: { stackable: "self_curse_count", multiplicative: true },
+  })),
 
   // Dormant Entanglement (Malign Embrace legendary): per-active-tangle scaling
   t(

@@ -140,6 +140,7 @@ export const Stackables = [
   "enemy_numbed_stacks",
   "enemy_curse_count",
   "active_tangle",
+  "self_curse_count",
   "level",
   "max_spell_burst",
   "spell_burst_charge_speed_bonus_pct",
