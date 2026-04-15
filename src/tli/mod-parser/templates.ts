@@ -2880,4 +2880,35 @@ export const allParsers = [
   t(
     "adds {value:dec%} of {fromType:DmgType} damage as {toType:DmgType} damage",
   ).outputNone(),
+
+  // Tangle damage
+  t("{value:+dec%} tangle damage enhancement").outputNone(),
+
+  // Intimidating
+  t("{value:+dec%} intimidating effect").outputNone(),
+  t(
+    "intimidated gains an additional base effect: {value:+dec%} additional spell and ailment damage taken for each type of crowd control effect the target is under. stacks up to {limit:int} times",
+  ).outputNone(),
+
+  // Granted skill (e.g. "You have a Lv. 20 Precise Spell Amplification.")
+  t("you have a lv. {level:int} {skillName:words}.").outputNone(),
+
+  // Aura effect conditionals
+  t(
+    "{value:+dec%} aura effect when affected by {threshold:int} or more auras",
+  ).outputNone(),
+  t(
+    "{value:+dec%} aura effect per {amt:+dec%} sealed mana compensation",
+  ).outputNone(),
+
+  // Eternal stack generators
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal {stackName:words} on defeat",
+  ).outputNone(),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal {stackName:words} upon defeating magic monsters",
+  ).outputNone(),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal {stackName:words} upon defeating an elite",
+  ).outputNone(),
 ];
