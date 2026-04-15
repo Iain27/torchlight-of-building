@@ -1,4 +1,4 @@
-import { ts } from "@/src/tli/mod-parser";
+import { type TemplateBuilder, ts } from "@/src/tli/mod-parser";
 import {
   findColumn,
   parseNumericValue,
@@ -10,6 +10,12 @@ import type {
   SupportParserInput,
 } from "./types";
 import { createConstantLevels, findMatch } from "./utils";
+
+// Declarative templates always extract a single {value:...} capture, but
+// `ts(runtimeString)` cannot infer that at the type level. Re-type the
+// builder so `findMatch` returns the known capture shape.
+const tsValue = (template: string): TemplateBuilder<{ value: number }> =>
+  ts(template) as unknown as TemplateBuilder<{ value: number }>;
 
 interface DescriptField {
   fieldName: string;
@@ -510,7 +516,7 @@ export const executeDeclarativeParser = (
 
       for (const [levelStr, text] of Object.entries(descriptCol.rows)) {
         const level = Number(levelStr);
-        const match = findMatch(text, ts(field.template), skillName);
+        const match = findMatch(text, tsValue(field.template), skillName);
         levels[level] = match.value;
       }
 
@@ -562,7 +568,7 @@ export const executeDeclarativeParser = (
     }
 
     for (const field of config.constantsFromDescript) {
-      const match = findMatch(level1Text, ts(field.template), skillName);
+      const match = findMatch(level1Text, tsValue(field.template), skillName);
       result[field.fieldName] = createConstantLevels(match.value);
     }
   }

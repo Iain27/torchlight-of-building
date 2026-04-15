@@ -1,4 +1,4 @@
-import { createContext, type ReactNode, useContext } from "react";
+import { createContext, type ReactNode, useContext, useMemo } from "react";
 import { calculateOffense, type OffenseResults } from "@/src/tli/calcs/offense";
 import { useConfiguration, useLoadout } from "../../stores/builderStore";
 
@@ -14,7 +14,10 @@ export const OffenseResultsProvider = ({
   const loadout = useLoadout();
   const configuration = useConfiguration();
 
-  const offenseResults = calculateOffense({ loadout, configuration });
+  const offenseResults = useMemo(
+    () => calculateOffense({ loadout, configuration }),
+    [loadout, configuration],
+  );
 
   return (
     <OffenseResultsContext value={offenseResults}>

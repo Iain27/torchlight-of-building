@@ -15,6 +15,7 @@ import type {
 import { useOffenseResults } from "../../components/builder/OffenseResultsContext";
 import { ModGroup } from "../../components/calculations/ModGroup";
 import { SkillSelector } from "../../components/calculations/SkillSelector";
+import { calculateConditionDeltas } from "../../lib/condition-deltas";
 import {
   formatStatValue,
   getStatCategoryDescription,
@@ -25,6 +26,7 @@ import {
 import {
   useBuilderActions,
   useCalculationsSelectedSkill,
+  useConfiguration,
   useLoadout,
 } from "../../stores/builderStore";
 
@@ -791,9 +793,11 @@ function CalculationsPage(): React.ReactNode {
 
       {hasDamageStats &&
         offenseSummary !== undefined &&
+        selectedSkill !== undefined &&
         (offenseSummary.unmetConditionMods?.length ?? 0) > 0 && (
           <UnmetConditionsSection
             mods={offenseSummary.unmetConditionMods ?? []}
+            skillName={selectedSkill}
           />
         )}
     </div>
@@ -802,20 +806,46 @@ function CalculationsPage(): React.ReactNode {
 
 const UnmetConditionsSection = ({
   mods,
+  skillName,
 }: {
   mods: import("@/src/tli/mod").Mod[];
+  skillName: string;
 }): React.ReactNode => {
+  const loadout = useLoadout();
+  const configuration = useConfiguration();
   // Group mods by their condition
-  const byCondition = new Map<string, typeof mods>();
-  for (const m of mods) {
-    if (m.cond === undefined) continue;
-    const list = byCondition.get(m.cond) ?? [];
-    list.push(m);
-    byCondition.set(m.cond, list);
-  }
-  const entries = [...byCondition.entries()].sort(
-    (a, b) => b[1].length - a[1].length,
+  const byCondition = useMemo(() => {
+    const map = new Map<string, typeof mods>();
+    for (const m of mods) {
+      if (m.cond === undefined) continue;
+      const list = map.get(m.cond) ?? [];
+      list.push(m);
+      map.set(m.cond, list);
+    }
+    return map;
+  }, [mods]);
+
+  const deltas = useMemo(() => {
+    const conds = [...byCondition.keys()] as import("@/src/tli/mod").Condition[];
+    return calculateConditionDeltas(loadout, configuration, conds, skillName);
+  }, [loadout, configuration, byCondition, skillName]);
+  const deltaByCondition = useMemo(() => {
+    const map = new Map<string, (typeof deltas)[number]>();
+    for (const d of deltas) map.set(d.condition, d);
+    return map;
+  }, [deltas]);
+
+  const entries = useMemo(
+    () =>
+      [...byCondition.entries()].sort((a, b) => {
+        const aPct = deltaByCondition.get(a[0])?.dpsPct ?? 0;
+        const bPct = deltaByCondition.get(b[0])?.dpsPct ?? 0;
+        if (bPct !== aPct) return bPct - aPct;
+        return b[1].length - a[1].length;
+      }),
+    [byCondition, deltaByCondition],
   );
+
   return (
     <div className="rounded-lg border border-amber-500/30 bg-zinc-900 p-3">
       <div className="mb-1 text-sm font-semibold text-amber-400">
@@ -823,18 +853,28 @@ const UnmetConditionsSection = ({
       </div>
       <p className="mb-2 text-xs text-zinc-500">
         These mods exist on your build but aren't contributing because their
-        conditions aren't met. Enable in the Configuration tab or adjust
-        gear/skills to activate.
+        conditions aren't met. "+X%" is the DPS gain if the condition were
+        enabled.
       </p>
       <div className="space-y-1 text-xs text-zinc-400">
-        {entries.map(([cond, list]) => (
-          <div key={cond} className="flex items-baseline gap-2">
-            <span className="font-mono text-amber-300/80">{cond}</span>
-            <span className="text-zinc-500">
-              ({list.length} mod{list.length === 1 ? "" : "s"})
-            </span>
-          </div>
-        ))}
+        {entries.map(([cond, list]) => {
+          const delta = deltaByCondition.get(cond);
+          return (
+            <div key={cond} className="flex items-baseline gap-2">
+              {delta !== undefined && delta.dpsPct >= 0.1 ? (
+                <span className="w-16 font-mono text-green-400">
+                  +{delta.dpsPct.toFixed(1)}%
+                </span>
+              ) : (
+                <span className="w-16 font-mono text-zinc-600">—</span>
+              )}
+              <span className="font-mono text-amber-300/80">{cond}</span>
+              <span className="text-zinc-500">
+                ({list.length} mod{list.length === 1 ? "" : "s"})
+              </span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

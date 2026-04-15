@@ -50,3 +50,6 @@ src/routeTree.gen.ts
 
 # lingui compiled files
 src/locales/**/*.ts
+
+# serena MCP server local state
+/.serena/
