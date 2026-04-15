@@ -3322,6 +3322,7 @@ const calcSpellHit = (
     "[Test] Simple Spell",
     "Chain Lightning",
     "Ice Lances",
+    "Shackles of Malice",
   ];
   if (!implementedSpells.includes(skill.name as ActiveSkillName)) {
     return undefined;
