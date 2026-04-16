@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import type { ImplementedActiveSkillName } from "@/src/data/skill/types";
 import type {
   CritChance,
@@ -829,10 +829,14 @@ const UnmetConditionsSection = ({
     return map;
   }, [mods]);
 
+  // Delta calc is expensive (N × calculateOffense). Compute lazily on demand
+  // rather than on every render to avoid memory/CPU spikes.
+  const [showDeltas, setShowDeltas] = useState(false);
   const deltas = useMemo(() => {
+    if (!showDeltas) return [];
     const conds = [...byCondition.keys()] as import("@/src/tli/mod").Condition[];
     return calculateConditionDeltas(loadout, configuration, conds, skillName);
-  }, [loadout, configuration, byCondition, skillName]);
+  }, [showDeltas, loadout, configuration, byCondition, skillName]);
   const deltaByCondition = useMemo(() => {
     const map = new Map<string, (typeof deltas)[number]>();
     for (const d of deltas) map.set(d.condition, d);
@@ -855,11 +859,20 @@ const UnmetConditionsSection = ({
       <div className="mb-1 text-sm font-semibold text-amber-400">
         Inactive Conditional Mods
       </div>
-      <p className="mb-2 text-xs text-zinc-500">
-        These mods exist on your build but aren't contributing because their
-        conditions aren't met. "+X%" is the DPS gain if enabled. Click a row
-        to flip the corresponding config flag.
-      </p>
+      <div className="mb-2 flex items-center gap-2">
+        <p className="text-xs text-zinc-500">
+          Mods not contributing — conditions unmet. Click a row to toggle.
+        </p>
+        {!showDeltas && (
+          <button
+            type="button"
+            onClick={() => setShowDeltas(true)}
+            className="shrink-0 rounded bg-zinc-800 px-2 py-0.5 text-xs text-amber-400 hover:bg-zinc-700"
+          >
+            Show DPS impact
+          </button>
+        )}
+      </div>
       <div className="space-y-1 text-xs text-zinc-400">
         {entries.map(([cond, list]) => {
           const delta = deltaByCondition.get(cond);

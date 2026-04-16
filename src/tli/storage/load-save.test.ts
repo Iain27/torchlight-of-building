@@ -359,7 +359,7 @@ const mainHandSave = (
     suffixes: string[];
     legendaryAffixes: string[];
     blendAffix: string;
-    rarity: "common" | "rare" | "legendary";
+    rarity: "rare" | "legendary" | "vorax";
     legendaryName: string;
   }>,
 ): SaveData =>
