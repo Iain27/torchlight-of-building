@@ -36,6 +36,11 @@ export const GearTooltipContent: React.FC<{ item: Gear }> = ({ item }) => {
               {affix.tier !== undefined && (
                 <div className="text-[10px] text-zinc-500 mb-0.5">
                   Tier {affix.tier}
+                  {affix.quality !== undefined && (
+                    <span className="ml-1 text-zinc-600">
+                      • {affix.quality.toFixed(0)}% roll
+                    </span>
+                  )}
                 </div>
               )}
               {affix.affixLines.map((line, lineIdx) => (

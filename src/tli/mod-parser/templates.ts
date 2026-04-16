@@ -56,7 +56,7 @@ export const allParsers = [
     }),
   ]),
   t(
-    "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks and spells",
+    "adds {min:?int} - {max:?int} {dmgType:DmgChunkType} damage to attacks and spells",
   ).outputMany([
     spec((c) => ({
       type: "FlatDmgToAtks",
@@ -1139,14 +1139,14 @@ export const allParsers = [
     value: c.value,
   })),
   t(
-    "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks",
+    "adds {min:?int} - {max:?int} {dmgType:DmgChunkType} damage to attacks",
   ).output((c) => ({
     type: "FlatDmgToAtks",
     value: { min: c.min, max: c.max },
     dmgType: c.dmgType,
   })),
   t(
-    "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to spells",
+    "adds {min:?int} - {max:?int} {dmgType:DmgChunkType} damage to spells",
   ).output((c) => ({
     type: "FlatDmgToSpells",
     value: { min: c.min, max: c.max },
@@ -2908,6 +2908,17 @@ export const allParsers = [
   t("{value:+dec%} deterioration chance").outputNone(),
   t("{value:+dec%} deterioration damage").outputNone(),
 
+  // Blessing generators on hit (Unholy Prayer legendary etc.)
+  t(
+    "gains {stacks:int} stack of focus blessing upon inflicting damage. interval: {interval:dec} s",
+  ).output(() => ({ type: "GeneratesFocusBlessing" })),
+  t(
+    "gains {stacks:int} stack of agility blessing upon inflicting damage. interval: {interval:dec} s",
+  ).output(() => ({ type: "GeneratesAgilityBlessing" })),
+  t(
+    "gains {stacks:int} stack of tenacity blessing upon inflicting damage. interval: {interval:dec} s",
+  ).output(() => ({ type: "GeneratesTenacityBlessing" })),
+
   // Adds X% of one element as another (variant of existing)
   t(
     "adds {value:dec%} of {fromType:DmgType} damage as {toType:DmgType} damage",
@@ -2976,7 +2987,47 @@ export const allParsers = [
   // Curse effect against you (defensive)
   t("{value:+dec%} curse effect against you").outputNone(),
 
-  // Eternal stack generators
+  // Eternal stack generators — emit marker mods so the resolver can
+  // activate the corresponding per-stack buff effects. Per-Eternal-name
+  // templates (rather than a single templated dispatcher) so each can
+  // output its own typed mod; Guard/Simulacra are parsed-but-no-op for DPS.
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal morale on defeat",
+  ).output(() => ({ type: "GeneratesEternalMorale" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal morale upon defeating magic monsters",
+  ).output(() => ({ type: "GeneratesEternalMorale" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal morale upon defeating an elite",
+  ).output(() => ({ type: "GeneratesEternalMorale" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal nightmare on defeat",
+  ).output(() => ({ type: "GeneratesEternalNightmare" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal nightmare upon defeating magic monsters",
+  ).output(() => ({ type: "GeneratesEternalNightmare" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal nightmare upon defeating an elite",
+  ).output(() => ({ type: "GeneratesEternalNightmare" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal shadow on defeat",
+  ).output(() => ({ type: "GeneratesEternalShadow" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal shadow upon defeating magic monsters",
+  ).output(() => ({ type: "GeneratesEternalShadow" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal shadow upon defeating an elite",
+  ).output(() => ({ type: "GeneratesEternalShadow" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal reign on defeat",
+  ).output(() => ({ type: "GeneratesEternalReign" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal reign upon defeating magic monsters",
+  ).output(() => ({ type: "GeneratesEternalReign" })),
+  t(
+    "{value:+dec%} chance to gain {stacks:int} stacks of eternal reign upon defeating an elite",
+  ).output(() => ({ type: "GeneratesEternalReign" })),
+  // Guard / Simulacra / other Eternals: parse-only (no-op for DPS).
   t(
     "{value:+dec%} chance to gain {stacks:int} stacks of eternal {stackName:words} on defeat",
   ).outputNone(),

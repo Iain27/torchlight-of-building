@@ -82,10 +82,39 @@ const computeDistance = (
   return total;
 };
 
+export interface AffixTierMatch {
+  tier: string;
+  /**
+   * Roll quality as a 0-100 percentage: where the rolled values land within
+   * the tier's range. Averaged across all ranges in the template. Omitted
+   * when no in-range match (the tier was picked by closest-distance instead).
+   */
+  quality?: number;
+}
+
+const computeQuality = (
+  values: number[],
+  ranges: Array<[number, number]>,
+): number | undefined => {
+  if (values.length !== ranges.length || ranges.length === 0) return undefined;
+  let sum = 0;
+  for (let i = 0; i < values.length; i++) {
+    const v = values[i];
+    const [lo, hi] = ranges[i];
+    if (hi === lo) {
+      sum += 100;
+      continue;
+    }
+    if (v < lo || v > hi) return undefined;
+    sum += ((v - lo) / (hi - lo)) * 100;
+  }
+  return sum / ranges.length;
+};
+
 export const lookupAffixTier = (
   text: string,
   equipmentType: EquipmentType,
-): string | undefined => {
+): AffixTierMatch | undefined => {
   const trimmed = text.trim();
   if (trimmed === "") return undefined;
   const candidates = indexByType.get(equipmentType);
@@ -97,10 +126,12 @@ export const lookupAffixTier = (
     if (m === null) continue;
     const values = m.slice(1).map((s) => parseFloat(s));
     const distance = computeDistance(values, ranges);
-    if (distance === 0) return affix.tier;
+    if (distance === 0) {
+      return { tier: affix.tier, quality: computeQuality(values, ranges) };
+    }
     if (best === undefined || distance < best.distance) {
       best = { affix, distance };
     }
   }
-  return best?.affix.tier;
+  return best !== undefined ? { tier: best.affix.tier } : undefined;
 };

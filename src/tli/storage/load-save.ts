@@ -241,7 +241,7 @@ const convertAffix = (
 
   // Reverse-lookup tier from the rolled first line (best effort).
   // For multi-line affixes (e.g. dual mods) only the first line is checked.
-  const tier =
+  const tierMatch =
     equipmentType !== undefined && affixLines[0] !== undefined
       ? lookupAffixTier(affixLines[0].text, equipmentType)
       : undefined;
@@ -252,7 +252,8 @@ const convertAffix = (
     affixLines,
     src,
     maxDivinity,
-    tier,
+    tier: tierMatch?.tier,
+    quality: tierMatch?.quality,
   };
 };
 

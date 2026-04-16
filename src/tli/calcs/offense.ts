@@ -1947,6 +1947,76 @@ const resolveModsForOffenseSkill = (
     const effectiveActiveTangles =
       config.numActiveTangles > 1 ? config.numActiveTangles : autoActiveTangles;
     normalize("active_tangle", effectiveActiveTangles);
+    // Eternal stack generators — assume max stacks if the player has a
+    // generator on gear (modeling typical map-clearing uptime).
+    if (modExists(mods, "GeneratesEternalMorale")) {
+      normalize("eternal_morale", 50);
+      mods.push(
+        {
+          type: "DmgPct",
+          dmgModType: "global",
+          addn: true,
+          value: 5,
+          per: { stackable: "eternal_morale" },
+          src: "Eternal Morale (5% dmg per stack)",
+        },
+        {
+          type: "AspdPct",
+          addn: true,
+          value: 1,
+          per: { stackable: "eternal_morale" },
+          src: "Eternal Morale (1% aspd per stack)",
+        },
+        {
+          type: "CspdPct",
+          addn: true,
+          value: 1,
+          per: { stackable: "eternal_morale" },
+          src: "Eternal Morale (1% cspd per stack)",
+        },
+      );
+    }
+    if (modExists(mods, "GeneratesEternalNightmare")) {
+      normalize("eternal_nightmare", 50);
+      mods.push(
+        {
+          type: "CritRatingPct",
+          modType: "global",
+          value: 5,
+          per: { stackable: "eternal_nightmare" },
+          src: "Eternal Nightmare (5% crit rating per stack)",
+        },
+        {
+          type: "CritDmgPct",
+          addn: true,
+          modType: "global",
+          value: 1,
+          per: { stackable: "eternal_nightmare" },
+          src: "Eternal Nightmare (1% crit dmg per stack)",
+        },
+      );
+    }
+    if (modExists(mods, "GeneratesEternalShadow")) {
+      normalize("eternal_shadow", 50);
+      mods.push({
+        type: "MovementSpeedPct",
+        addn: true,
+        value: 1,
+        per: { stackable: "eternal_shadow" },
+        src: "Eternal Shadow (1% ms per stack)",
+      });
+    }
+    if (modExists(mods, "GeneratesEternalReign")) {
+      normalize("eternal_reign", 10);
+      mods.push({
+        type: "DmgPct",
+        dmgModType: "global",
+        addn: true,
+        value: 10,
+        per: { stackable: "eternal_reign", multiplicative: true },
+        src: "Eternal Reign (10% more dmg per stack)",
+      });
+    }
     normalize("dance_of_frost", config.danceOfFrostStacks ?? 0);
     normalize("frostbite_rating", config.enemyFrostbittenPoints ?? 0);
     normalize("twisted_spacetime", config.twistedSpacetimeStacks ?? 5);

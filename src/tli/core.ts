@@ -26,6 +26,9 @@ export interface Affix {
   // Format: "0"–"4" (lower is better). undefined when no match (custom affix,
   // legendary, vorax blend, etc.).
   tier?: string;
+  // Roll quality 0-100 (% position within tier range). undefined when
+  // out-of-range or single-value template.
+  quality?: number;
 }
 
 export interface SupportMod {

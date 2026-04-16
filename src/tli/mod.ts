@@ -141,6 +141,10 @@ export const Stackables = [
   "enemy_curse_count",
   "active_tangle",
   "self_curse_count",
+  "eternal_morale",
+  "eternal_nightmare",
+  "eternal_shadow",
+  "eternal_reign",
   "level",
   "max_spell_burst",
   "spell_burst_charge_speed_bonus_pct",
@@ -468,6 +472,10 @@ interface ModDefinitions {
   ManaBeforeLifePct: { value: number };
   HasHasten: object;
   GeneratesHasten: object;
+  GeneratesEternalMorale: object;
+  GeneratesEternalNightmare: object;
+  GeneratesEternalShadow: object;
+  GeneratesEternalReign: object;
   MovementSpeedPct: { value: number; addn?: boolean };
   MobilitySkillCdrPct: { value: number; addn?: boolean };
   SpellDmgBonusAppliesToAtkDmg: object;
