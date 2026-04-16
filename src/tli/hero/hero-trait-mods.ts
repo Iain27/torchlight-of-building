@@ -98,6 +98,34 @@ const heroTraitModFactories: Partial<Record<HeroTraitName, ModFactory>> = {
       value: [15, 19, 23, 27, 31][i],
     },
   ],
+  // Scent Weaver Sage: Licorice Note (#1)
+  // Artificial Moon sub-effect: +12/13/14/15/16% Elixir Skill Effect from scent
+  // bottles. Stub mod — not consumed by any DPS path yet.
+  "Licorice Note": (i) => [
+    {
+      type: "ElixirSkillEffectPct",
+      value: [12, 13, 14, 15, 16][i],
+      addn: true,
+    },
+  ],
+  // Assumes max temporary life/mana stacks — the per-stack bonus caps at
+  // +10/+15/+20/+25/+30% across the 5 trait levels.
+  "Elixir of Immortality": (i) => [
+    {
+      type: "DmgPct",
+      value: [10, 15, 20, 25, 30][i],
+      dmgModType: "global",
+      addn: true,
+    },
+  ],
+  // Assumes max-stacks condition ("after casting 6/6/5/4/3 elixir skills").
+  "Scent of Ambition": (i) => [
+    {
+      type: "ElixirSkillEffectPct",
+      value: [24, 27, 30, 33, 36][i],
+      addn: true,
+    },
+  ],
   // Oracle Thea: Blasphemer (#3)
   Blasphemer: () => [{ type: "Blasphemer" }],
   "Unholy Baptism": (i) => [

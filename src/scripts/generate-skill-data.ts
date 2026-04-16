@@ -68,7 +68,7 @@ const SKILL_TYPES = [
     listPath: "Active_Skill",
     outputDir: "active",
     tabId: "ActiveSkillTag",
-    expectedCount: 197,
+    expectedCount: 198,
   },
   {
     name: "Support",
@@ -844,6 +844,7 @@ const extractSkillFromTlidbHtml = (file: TlidbSkillFile): RawSkill => {
   const SKILLS_WITHOUT_PROGRESSION_TABLE = new Set([
     "Charging Warcry",
     "Shackles of Malice",
+    "Fire Burst",
   ]);
 
   // Only run parser for non-support skills (support skills use the new approach)
@@ -1209,6 +1210,332 @@ const createTestComboAttackSkill = (): BaseActiveSkill => {
   };
 };
 
+// === Modularization skills (new summoning system) ===
+// TLIDB does not publish damage/aspd/crit tables for these yet, so they are
+// hand-authored here WITHOUT levelValues. That keeps them out of
+// ImplementedActiveSkillName — the DPS pipeline will skip them while the UI
+// still surfaces them in the skill selector.
+interface ModularizationModuleDef {
+  minionName: string;
+  subSkills: string[];
+  tags: SkillTag[];
+  mainStats: ("str" | "dex" | "int")[];
+  conversion?: { from: string; to: string };
+  scaling?: string;
+  uniqueMechanic?: string;
+}
+
+const MODULARIZATION_MODULES: ModularizationModuleDef[] = [
+  {
+    minionName: "Goblin Priest",
+    subSkills: ["Frostclaw", "Firebird"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Cold",
+      "Fire",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    mainStats: ["str", "int"],
+  },
+  {
+    minionName: "Trog 2nd General",
+    subSkills: ["Earthshatter"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    mainStats: ["str", "int"],
+    scaling:
+      "+1% additional damage for Minions summoned by this skill for every 5 Strength",
+  },
+  {
+    minionName: "Dwarven Automaton",
+    subSkills: ["Molten Barrage", "All-Out Volley"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Fire",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    mainStats: ["str", "int"],
+    conversion: { from: "Physical", to: "Fire" },
+    scaling: "+1 Horizontal Projectile Penetration for every 10 Command",
+  },
+  {
+    minionName: "Trog Mage",
+    subSkills: ["Rockfall"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Intelligence",
+    ],
+    mainStats: ["int"],
+    scaling:
+      "+1 to Barrage Skill Total Waves for Minions summoned by this skill",
+  },
+  {
+    minionName: "Goblin Priest of Elements",
+    subSkills: ["Thunderfall"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Lightning",
+      "Synthetic Troop",
+      "Intelligence",
+    ],
+    mainStats: ["int"],
+  },
+  {
+    minionName: "Medium Ember Automaton",
+    subSkills: ["Kinetic Thrust", "Groundslam"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    mainStats: ["str", "int"],
+    scaling:
+      "0.5% Skill Area for Minions summoned by this skill for every 1 Command",
+  },
+  {
+    minionName: "Huge Ember Automaton",
+    subSkills: ["Overstrike", "Searing Crush"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Fire",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    mainStats: ["str", "int"],
+    conversion: { from: "Physical", to: "Fire" },
+    scaling:
+      "0.5% Skill Area for Minions summoned by this skill for every 1 Command",
+  },
+  {
+    minionName: "Ent Great Elder",
+    subSkills: ["Sweep", "Rootsurge"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Erosion",
+      "Synthetic Troop",
+      "Intelligence",
+    ],
+    mainStats: ["int"],
+    uniqueMechanic:
+      "Minions summoned by this skill gain Profane on hit. Interval: 1s",
+  },
+  {
+    minionName: "Ratlin Stormer Captain",
+    subSkills: ["Blitz Strike", "Burst Hammer"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Fire",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    mainStats: ["str", "int"],
+    conversion: { from: "Physical", to: "Fire" },
+  },
+  {
+    minionName: "Chief Machinist",
+    subSkills: ["Firebomb", "Pyromania"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Fire",
+      "Synthetic Troop",
+      "Intelligence",
+    ],
+    mainStats: ["int"],
+  },
+  {
+    minionName: "Lean Phantom",
+    subSkills: ["Flickering Shadow", "Sin of the Fallen"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Erosion",
+      "Synthetic Troop",
+      "Dexterity",
+      "Intelligence",
+    ],
+    mainStats: ["dex", "int"],
+    conversion: { from: "Physical", to: "Erosion" },
+  },
+  {
+    minionName: "God of Swords",
+    subSkills: ["Blade of Glory", "High Court Covenant"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Dexterity",
+      "Intelligence",
+    ],
+    mainStats: ["dex", "int"],
+    scaling:
+      "+3% Attack Speed for every Critical Strike landed by Minions summoned by this skill recently. Stacks up to 30 time(s)",
+  },
+  {
+    minionName: "Tyrant",
+    subSkills: ["Ravaging Slash"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    mainStats: ["str", "int"],
+    scaling:
+      "+1% additional damage for Minions summoned by this skill for every +1% Steep Strike chance the summoner has",
+  },
+  {
+    minionName: "Ichi Storm",
+    subSkills: ["Auric Shot"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Dexterity",
+      "Intelligence",
+    ],
+    mainStats: ["dex", "int"],
+    scaling:
+      "+1% Projectile Speed for Minions summoned by this skill for every +1% Projectile Speed; 45% of that Projectile Speed bonus is also applied to the Minions' additional Projectile Damage",
+  },
+  {
+    minionName: "Sand Giant",
+    subSkills: ["Gravelshot"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    mainStats: ["str", "int"],
+    scaling:
+      "+2 to Parabolic Projectile Split Quantity for Minions summoned by this skill",
+  },
+  {
+    minionName: "Einherjar Elder Sage",
+    subSkills: ["Divine Judgment", "Javelin of Judgment"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Lightning",
+      "Synthetic Troop",
+      "Intelligence",
+    ],
+    mainStats: ["int"],
+  },
+  {
+    minionName: "Aember Winged Beast",
+    subSkills: ["Spikeburst", "Tailsweep"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Cold",
+      "Synthetic Troop",
+      "Dexterity",
+      "Intelligence",
+    ],
+    mainStats: ["dex", "int"],
+    conversion: { from: "Physical", to: "Cold" },
+  },
+  {
+    minionName: "Punisher",
+    subSkills: ["Impaling Thrust", "Twinstrike"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    mainStats: ["str", "int"],
+    scaling:
+      "+2% additional damage for every +5% Skill Area of Minions summoned by this skill",
+  },
+];
+
+const buildModularizationDescription = (m: ModularizationModuleDef): string => {
+  const parts: string[] = [];
+  const subSkillsStr =
+    m.subSkills.length === 1
+      ? m.subSkills[0]
+      : `${m.subSkills.slice(0, -1).join(", ")} and ${m.subSkills.at(-1)}`;
+  parts.push(
+    `Summons up to 2 ${m.minionName}(s). The ${m.minionName} uses ${subSkillsStr}.`,
+  );
+  if (m.conversion !== undefined) {
+    parts.push(
+      `Converts 100% of ${m.conversion.from} Damage dealt by Minions summoned by this skill to ${m.conversion.to} Damage.`,
+    );
+  }
+  if (m.scaling !== undefined) parts.push(m.scaling);
+  if (m.uniqueMechanic !== undefined) parts.push(m.uniqueMechanic);
+  return parts.join("\n");
+};
+
+const createModularizationSkills = (): BaseActiveSkill[] =>
+  MODULARIZATION_MODULES.map((m) => ({
+    type: "Active" as const,
+    name: `Module: ${m.minionName}`,
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: m.tags,
+    description: [buildModularizationDescription(m)],
+    mainStats: m.mainStats,
+  }));
+
 const generateActiveSkillFile = (
   constName: string,
   skills: BaseActiveSkill[],
@@ -1570,6 +1897,13 @@ const main = async (options: Options): Promise<void> => {
   activeSkillGroups.get("Active")?.push(testSimpleSpell);
   activeSkillGroups.get("Active")?.push(testSlashStrikeSkill);
   activeSkillGroups.get("Active")?.push(testComboAttackSkill);
+
+  // Modularization skills — TLIDB does not expose HTML pages or damage tables
+  // for these yet, so they are hand-authored with no levelValues. Visible in
+  // the skill selector, not calculated for DPS.
+  for (const module of createModularizationSkills()) {
+    activeSkillGroups.get("Active")?.push(module);
+  }
 
   // Generate active skill files
   for (const [skillType, skills] of activeSkillGroups) {

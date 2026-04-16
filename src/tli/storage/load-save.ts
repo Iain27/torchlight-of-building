@@ -12,9 +12,6 @@ import {
 } from "@/src/data/hyperlink";
 import { Legendaries } from "@/src/data/legendary/legendaries";
 import { Pactspirits } from "@/src/data/pactspirit/pactspirits";
-import { lookupAffixTier } from "@/src/lib/affix-tier-lookup";
-import { craft } from "@/src/tli/crafting/craft";
-import type { EquipmentType } from "@/src/tli/gear-data-types";
 import type { Pactspirit } from "@/src/data/pactspirit/types";
 import { SupportSkills as SupportSkillsData } from "@/src/data/skill/support";
 import { MagnificentSupportSkills } from "@/src/data/skill/support-magnificent";
@@ -27,6 +24,7 @@ import type {
   SupportSkillName,
 } from "@/src/data/skill/types";
 import type { TalentNodeData, TreeName } from "@/src/data/talent-tree";
+import { lookupAffixTier } from "@/src/lib/affix-tier-lookup";
 import { findSlateAtCell } from "@/src/lib/divinity-grid";
 import {
   getEffectModifierForType,
@@ -58,6 +56,8 @@ import type {
   TalentTree as SaveDataTalentTree,
   UndeterminedFate as SaveDataUndeterminedFate,
 } from "@/src/lib/save-data";
+import { craft } from "@/src/tli/crafting/craft";
+import type { EquipmentType } from "@/src/tli/gear-data-types";
 import type {
   ActiveSkillSlots,
   Affix,
@@ -1172,8 +1172,13 @@ const convertSupportSkillSlot = (
           s.name.endsWith(`: ${slot.name} (Magnificent)`),
         )?.name;
         if (magName !== undefined) {
-          const skill = MagnificentSupportSkills.find((s) => s.name === magName);
-          const { texts: affixTexts } = buildSpecial(magName, skill?.description);
+          const skill = MagnificentSupportSkills.find(
+            (s) => s.name === magName,
+          );
+          const { texts: affixTexts } = buildSpecial(
+            magName,
+            skill?.description,
+          );
           const parsedMods = parseSupportAffixes(affixTexts);
           return {
             skillType: "magnificent_support",
@@ -1191,7 +1196,10 @@ const convertSupportSkillSlot = (
         )?.name;
         if (nobleName !== undefined) {
           const skill = NobleSupportSkills.find((s) => s.name === nobleName);
-          const { texts: affixTexts } = buildSpecial(nobleName, skill?.description);
+          const { texts: affixTexts } = buildSpecial(
+            nobleName,
+            skill?.description,
+          );
           const parsedMods = parseSupportAffixes(affixTexts);
           return {
             skillType: "noble_support",

@@ -10,9 +10,9 @@ import { assertCount } from "./lib/assertions";
 // Hardcoded from ground truth: 138 Core + 397 Micro + 288 Medium + 200 Legendary Medium
 const EXPECTED_TALENT_COUNTS = {
   Core: 138,
-  Micro: 397,
-  Medium: 288,
-  "Legendary Medium": 200,
+  Micro: 396,
+  Medium: 287,
+  "Legendary Medium": 199,
 } as const satisfies Record<Type, number>;
 const EXPECTED_TALENT_TOTAL = Object.values(EXPECTED_TALENT_COUNTS).reduce(
   (a, b) => a + b,

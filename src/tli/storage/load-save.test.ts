@@ -542,10 +542,7 @@ describe("convertSupportSkillSlot legacy magnificent/noble fallback", () => {
             skillName: "Shackles of Malice",
             enabled: true,
             supportSkills: {
-              1: {
-                skillType: "support",
-                name: "Nonexistent Support" as never,
-              },
+              1: { skillType: "support", name: "Nonexistent Support" as never },
             },
           },
         },
@@ -684,16 +681,12 @@ describe("buildSupportSkillAffixes", () => {
 
   test("level 20 Added Fire Damage uses levelValues[19] = 73", () => {
     const affixes = buildSupportSkillAffixes("Added Fire Damage", 20);
-    expect(affixes[0].text).toBe(
-      "The supported skill adds 73 - 3 Fire Damage",
-    );
+    expect(affixes[0].text).toBe("The supported skill adds 73 - 3 Fire Damage");
   });
 
   test("clamps level above 40 to top-tier value (level 999 → idx 39 = 89)", () => {
     const affixes = buildSupportSkillAffixes("Added Fire Damage", 999);
-    expect(affixes[0].text).toBe(
-      "The supported skill adds 89 - 3 Fire Damage",
-    );
+    expect(affixes[0].text).toBe("The supported skill adds 89 - 3 Fire Damage");
   });
 
   test("clamps level below 1 to level-1 value", () => {

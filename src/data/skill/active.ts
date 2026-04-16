@@ -221,6 +221,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["str", "dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        82, 84, 86, 88, 90, 92, 94, 96, 98, 100, 102, 104, 106, 108, 110, 112,
+        114, 116, 118, 121, 121, 121, 121, 121, 121, 121, 121, 121, 121, 121,
+        121, 121, 121, 121, 121, 121, 121, 121, 121, 121,
+      ],
+      addedDmgEffPct: [
+        82, 84, 86, 88, 90, 92, 94, 96, 98, 100, 102, 104, 106, 108, 110, 112,
+        114, 116, 118, 121, 121, 121, 121, 121, 121, 121, 121, 121, 121, 121,
+        121, 121, 121, 121, 121, 121, 121, 121, 121, 121,
+      ],
+    },
   },
   {
     type: "Active",
@@ -297,6 +309,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        184, 187, 191, 194, 198, 201, 204, 208, 211, 214, 218, 221, 225, 228,
+        231, 235, 238, 242, 245, 248, 248, 248, 248, 248, 248, 248, 248, 248,
+        248, 248, 248, 248, 248, 248, 248, 248, 248, 248, 248, 248,
+      ],
+      addedDmgEffPct: [
+        184, 187, 191, 194, 198, 201, 204, 208, 211, 214, 218, 221, 225, 228,
+        231, 235, 238, 242, 245, 248, 248, 248, 248, 248, 248, 248, 248, 248,
+        248, 248, 248, 248, 248, 248, 248, 248, 248, 248, 248, 248,
+      ],
+    },
   },
   {
     type: "Active",
@@ -375,6 +399,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        175, 179, 183, 187, 191, 195, 199, 204, 208, 212, 216, 221, 225, 229,
+        234, 238, 242, 247, 251, 256, 256, 256, 256, 256, 256, 256, 256, 256,
+        256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256,
+      ],
+      addedDmgEffPct: [
+        175, 179, 183, 187, 191, 195, 199, 204, 208, 212, 216, 221, 225, 229,
+        234, 238, 242, 247, 251, 256, 256, 256, 256, 256, 256, 256, 256, 256,
+        256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256,
+      ],
+    },
   },
   {
     type: "Active",
@@ -382,7 +418,7 @@ export const ActiveSkills = [
     tags: ["Attack", "Physical", "Fire", "Area", "Melee"],
     description: [
       "Casts this skill and generates 3 consecutive waves of explosions in a circular area in front, dealing Attack Fire Damage equal to 64% of Base Damage on hit. If you have at least 1 stack of Tenacity Blessing, this skill consumes 1 stack of Tenacity Blessing to deal additional damage.",
-      "Burst Hammer:\nDeals Attack Fire Damage equal to 64% of Base Damage\nIf the summoner has Tenacity Blessing stacks when casting this skill, consumes 1 stack of Tenacity Blessing to make this skill deal +30% additional damage\nThe pummel and explosion caused by this skill can hit the same enemy.\nThis skill's Shotgun Effect falloff coefficient is 64%",
+      "Burst Hammer:\nDeals Attack Fire Damage equal to 64% of Base Damage\nIf the summoner has Tenacity Blessing stacks when casting this skill, consumes 1 stack of Tenacity Blessing to make this cast deal +30% additional damage\nThe pummel and explosion caused by this skill can hit the same enemy.\nThis skill's Shotgun Effect falloff coefficient is 64%",
     ],
     mainStats: ["str", "int"],
     kinds: ["hit_enemies"],
@@ -467,6 +503,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["str"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        150, 160, 171, 183, 195, 207, 220, 234, 248, 262, 277, 293, 309, 325,
+        343, 361, 379, 398, 417, 438, 438, 438, 438, 438, 438, 438, 438, 438,
+        438, 438, 438, 438, 438, 438, 438, 438, 438, 438, 438, 438,
+      ],
+      addedDmgEffPct: [
+        150, 160, 171, 183, 195, 207, 220, 234, 248, 262, 277, 293, 309, 325,
+        343, 361, 379, 398, 417, 438, 438, 438, 438, 438, 438, 438, 438, 438,
+        438, 438, 438, 438, 438, 438, 438, 438, 438, 438, 438, 438,
+      ],
+    },
   },
   {
     type: "Active",
@@ -497,7 +545,7 @@ export const ActiveSkills = [
       "Horizontal",
     ],
     description: [
-      "Casts this skill and fires 3 auto-tracing shots, dealing 592-1100 Spell Damage.\n10% chance for enemies to explode once when defeated by this skill, dealing True Damage equal to 25% of their Max Life.\nEach time this skill is used, forcibly converts all damage dealt by the next skill to a randomly selected type of Elemental Damage.\nShots fired by this skill can hit the same enemy.",
+      "Casts this skill and fires 3 auto-tracing shots, dealing 592-1100 Spell Damage.\n10% chance for enemies to explode once when defeated by this skill, dealing True Damage equal to 25% of their Max Life.\nEach time this skill is cast, forcibly converts all damage dealt by the next skill to a randomly selected type of Elemental Damage.\nShots fired by this skill can hit the same enemy.",
       "Chromatic Shot:\nDeals 592-1100 Spell Damage\nThis skill fires 1 Projectile in its base state.\nProjectile Quantity of this skill +2\nWhen this skill is cast, selects a random Elemental type, forcibly converting the damage of the next use of this skill to that type\n10% chance for enemies to explode when defeated by this skill, dealing True Damage equal to 25% of their Max Life to enemies within a 5 m radius\nThe Projectiles shot by this skill can hit the same enemy.\nThis skill's Shotgun Effect falloff coefficient is 70%",
     ],
     mainStats: ["str", "dex", "int"],
@@ -595,7 +643,6 @@ export const ActiveSkills = [
     tags: ["Spell", "Persistent", "Summon", "Empower"],
     description: [
       "Casts the skill, teleports all Minions to the character\nCasts the skill and gains Euphoria: The character gains 10 Command, 10% Command Return Speed, 4% additional Minion Damage, and Minions 20% Movement Speed for 3s.",
-      "Casts the skill and teleports all Minions to the character",
       "Casts the skill and gains Euphoria:\nGains 19.5 Command\n+10% Command Return Speed per Second while the skill lasts\n7.8% additional Minion Damage while the skill lasts\n+20% Minion Movement Speed while the skill lasts",
     ],
     kinds: ["summon_minions"],
@@ -627,7 +674,7 @@ export const ActiveSkills = [
     description: [
       "Casts the skill and gains a defensive effect: additionally -12% Physical and Elemental Damage taken for 5s.\nWhen having at least 4 stack(s) of Tenacity Blessing upon casting the skill, consumes 4 stack(s) of Tenacity Blessing, additionally -1% Physical and Elemental Damage taken.",
       "Casts the skill and gains defensive effect:\n-12% additional Physical Damage taken while the skill lasts\n-12% additional Elemental Damage taken while the skill lasts\nLasts 5s.",
-      "If at least 4 stack(s) of Tenacity Blessing are active when casting the skill, loses all 4 stack(s) of Tenacity Blessing and gains additional Defense:\n-10.5% additional Physical Damage taken while the skill lasts\n-10.5% additional Elemental Damage taken while the skill lasts",
+      "If at least 4 stack(s) of Tenacity Blessing are active when casting the skill, loses all 4 stack(s) of Tenacity Blessing and gains additional Defense:",
     ],
     kinds: [],
   },
@@ -679,8 +726,8 @@ export const ActiveSkills = [
     name: "Earthshatter",
     tags: ["Attack", "Physical", "Area", "Melee"],
     description: [
-      "Casts this skill to attack in a fan-shaped area in front, dealing Attack Physical Damage equal to 94% of Base Damage on hit.",
-      "Earthshatter:\nDeals Attack Physical Damage equal to 94% of Base Damage",
+      "Casts this skill to attack in a fan-shaped area in front, dealing Attack Physical Damage equal to 63% of Base Damage on hit.",
+      "Earthshatter:\nDeals Attack Physical Damage equal to 63% of Base Damage",
     ],
     mainStats: ["str", "int"],
     kinds: ["hit_enemies"],
@@ -695,6 +742,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        206, 211, 216, 221, 226, 230, 235, 240, 245, 250, 255, 260, 265, 271,
+        276, 281, 286, 291, 297, 302, 302, 302, 302, 302, 302, 302, 302, 302,
+        302, 302, 302, 302, 302, 302, 302, 302, 302, 302, 302, 302,
+      ],
+      addedDmgEffPct: [
+        206, 211, 216, 221, 226, 230, 235, 240, 245, 250, 255, 260, 265, 271,
+        276, 281, 286, 291, 297, 302, 302, 302, 302, 302, 302, 302, 302, 302,
+        302, 302, 302, 302, 302, 302, 302, 302, 302, 302, 302, 302,
+      ],
+    },
   },
   {
     type: "Active",
@@ -781,6 +840,28 @@ export const ActiveSkills = [
     ],
     mainStats: ["str", "int"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      spellDmgMin: [
+        607, 607, 607, 607, 607, 607, 607, 607, 607, 607, 607, 607, 607, 607,
+        607, 607, 607, 607, 607, 607, 607, 607, 607, 607, 607, 607, 607, 607,
+        607, 607, 607, 607, 607, 607, 607, 607, 607, 607, 607, 607,
+      ],
+      spellDmgMax: [
+        1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128,
+        1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128,
+        1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128, 1128,
+        1128, 1128, 1128, 1128,
+      ],
+      addedDmgEffPct: [
+        100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
+        100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
+        100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
+      ],
+      castTime: [
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+      ],
+    },
   },
   {
     type: "Active",
@@ -873,6 +954,28 @@ export const ActiveSkills = [
     ],
     mainStats: ["str"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      sweepWeaponAtkDmgPct: [
+        120, 132, 144, 156, 168, 180, 191, 203, 215, 227, 239, 251, 263, 275,
+        287, 299, 311, 323, 334, 346, 346, 346, 346, 346, 346, 346, 346, 346,
+        346, 346, 346, 346, 346, 346, 346, 346, 346, 346, 346, 346,
+      ],
+      sweepAddedDmgEffPct: [
+        120, 132, 144, 156, 168, 180, 191, 203, 215, 227, 239, 251, 263, 275,
+        287, 299, 311, 323, 334, 346, 346, 346, 346, 346, 346, 346, 346, 346,
+        346, 346, 346, 346, 346, 346, 346, 346, 346, 346, 346, 346,
+      ],
+      steepWeaponAtkDmgPct: [
+        150, 160, 171, 181, 191, 202, 212, 222, 233, 243, 253, 264, 274, 284,
+        295, 305, 315, 326, 336, 346, 346, 346, 346, 346, 346, 346, 346, 346,
+        346, 346, 346, 346, 346, 346, 346, 346, 346, 346, 346, 346,
+      ],
+      steepAddedDmgEffPct: [
+        150, 160, 171, 181, 191, 202, 212, 222, 233, 243, 253, 264, 274, 284,
+        295, 305, 315, 326, 336, 346, 346, 346, 346, 346, 346, 346, 346, 346,
+        346, 346, 346, 346, 346, 346, 346, 346, 346, 346, 346, 346,
+      ],
+    },
   },
   {
     type: "Active",
@@ -896,6 +999,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        216, 221, 226, 231, 236, 241, 246, 251, 256, 261, 267, 272, 277, 283,
+        288, 293, 299, 304, 310, 315, 315, 315, 315, 315, 315, 315, 315, 315,
+        315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315,
+      ],
+      addedDmgEffPct: [
+        216, 221, 226, 231, 236, 241, 246, 251, 256, 261, 267, 272, 277, 283,
+        288, 293, 299, 304, 310, 315, 315, 315, 315, 315, 315, 315, 315, 315,
+        315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315, 315,
+      ],
+    },
   },
   {
     type: "Active",
@@ -1148,7 +1263,7 @@ export const ActiveSkills = [
     name: "Groundslam",
     tags: ["Attack", "Physical", "Area", "Melee"],
     description: [
-      "释放该技能时向前跃起，落地时打击圆形区域，造成90% 基础伤害的AttackPhysical伤害，并使周围一定范围内的敌人造成的伤害额外降低。",
+      "Casts this skill and leaps forward to attack in a circular area when landing, dealing Attack Physical Damage equal to 90% of Base Damage on hit, and additionally reducing the damage dealt by enemies within a certain area nearby.",
       "Groundslam:\nDeals Attack Physical Damage equal to 90% of Base Damage\nGains a buff when casting this skill: -25% additional damage dealt by enemies within 10m nearby. Lasts for 5 s",
     ],
     mainStats: ["str", "int"],
@@ -1193,8 +1308,8 @@ export const ActiveSkills = [
     name: "Haunting Abomination",
     tags: ["Spell", "Erosion", "Area", "Persistent", "Terra"],
     description: [
-      "Casts the skill and deals 405-405 Spell Erosion Damage to the target enemy and generates a Haunting Terra to follow the enemy around.\nHaunting Terra deals 405-405 Spell Erosion Damage to the enemies within it every 0.65s.\nTerra Charge grants additional damage to the skill.",
-      "Haunting Abomination:\nDeals 405-405 Spell Erosion Damage.",
+      "释放该技能时对指定敌人造成 202-202 SpellErosion伤害，并生成跟随该敌人的恶煞地面。\n恶煞地面每 0.65 秒对其中的敌人造成 405-405 SpellErosion伤害。\n地面蓄能使该技能的伤害额外增加。",
+      "Haunting Abomination:\nDeals 202-202 Spell Erosion Damage.",
       "Haunting Terra:\nHaunting Terra lasts 4s.\nDeals 405-405 Spell Erosion Damage to enemies within it every 0.65s. Bonuses and additional bonuses for Cast Speed are also applied to the Interval.\nHaunting Terra expands gradually over its duration, gaining +20% additional Skill Area per second.",
       "The maximum stacks of Terra Charge are 1.\nGain 1 stack of Terra Charge every 0.5s.\n+26% additional damage for the skill for every Terra Charge consumed",
       "This skill's max base Terra quantity is 1.",
@@ -1350,6 +1465,28 @@ export const ActiveSkills = [
     ],
     mainStats: ["str", "int"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      sweepWeaponAtkDmgPct: [
+        81, 84, 87, 90, 93, 96, 99, 102, 105, 108, 111, 114, 118, 121, 125, 128,
+        131, 135, 139, 142, 142, 142, 142, 142, 142, 142, 142, 142, 142, 142,
+        142, 142, 142, 142, 142, 142, 142, 142, 142, 142,
+      ],
+      sweepAddedDmgEffPct: [
+        81, 84, 87, 90, 93, 96, 99, 102, 105, 108, 111, 114, 118, 121, 125, 128,
+        131, 135, 139, 142, 142, 142, 142, 142, 142, 142, 142, 142, 142, 142,
+        142, 142, 142, 142, 142, 142, 142, 142, 142, 142,
+      ],
+      steepWeaponAtkDmgPct: [
+        81, 84, 87, 90, 93, 96, 99, 102, 105, 108, 111, 114, 118, 121, 125, 128,
+        131, 135, 139, 142, 142, 142, 142, 142, 142, 142, 142, 142, 142, 142,
+        142, 142, 142, 142, 142, 142, 142, 142, 142, 142,
+      ],
+      steepAddedDmgEffPct: [
+        81, 84, 87, 90, 93, 96, 99, 102, 105, 108, 111, 114, 118, 121, 125, 128,
+        131, 135, 139, 142, 142, 142, 142, 142, 142, 142, 142, 142, 142, 142,
+        142, 142, 142, 142, 142, 142, 142, 142, 142, 142,
+      ],
+    },
   },
   {
     type: "Active",
@@ -1417,6 +1554,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["str"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        130, 134, 139, 143, 148, 153, 158, 163, 168, 173, 178, 183, 189, 194,
+        199, 205, 211, 216, 222, 228, 228, 228, 228, 228, 228, 228, 228, 228,
+        228, 228, 228, 228, 228, 228, 228, 228, 228, 228, 228, 228,
+      ],
+      addedDmgEffPct: [
+        130, 134, 139, 143, 148, 153, 158, 163, 168, 173, 178, 183, 189, 194,
+        199, 205, 211, 216, 222, 228, 228, 228, 228, 228, 228, 228, 228, 228,
+        228, 228, 228, 228, 228, 228, 228, 228, 228, 228, 228, 228,
+      ],
+    },
   },
   {
     type: "Active",
@@ -1441,6 +1590,26 @@ export const ActiveSkills = [
     ],
     mainStats: ["int"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      spellDmgMin: [
+        0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 3, 4, 4, 5, 6, 9, 10, 14, 21, 25, 25, 25,
+        25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25,
+      ],
+      spellDmgMax: [
+        7, 7, 10, 13, 17, 21, 24, 30, 38, 47, 60, 70, 85, 100, 118, 166, 196,
+        269, 402, 480, 480, 480, 480, 480, 480, 480, 480, 480, 480, 480, 480,
+        480, 480, 480, 480, 480, 480, 480, 480, 480,
+      ],
+      addedDmgEffPct: [
+        47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47,
+        47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47,
+        47, 47, 47, 47,
+      ],
+      castTime: [
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+      ],
+    },
   },
   {
     type: "Active",
@@ -1681,9 +1850,9 @@ export const ActiveSkills = [
     name: "Nimbleness Dew",
     tags: ["Persistent", "Elixir"],
     description: [
-      "Casts this skill and gains an Elixir Effect: 2200 Evasion. Lasts for 3s.",
+      "Casts this skill and gains an Elixir Effect: 2600 Evasion. Lasts for 3s.",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
-      "Casts this skill and gains an Elixir Effect:\n+6000 Evasion\nLasts for 3s",
+      "Casts this skill and gains an Elixir Effect:\n+4500 Evasion\nLasts for 3s",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
     ],
     kinds: [],
@@ -1828,6 +1997,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        99, 101, 103, 105, 106, 108, 110, 112, 114, 115, 117, 119, 121, 123,
+        125, 126, 128, 130, 132, 134, 134, 134, 134, 134, 134, 134, 134, 134,
+        134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134,
+      ],
+      addedDmgEffPct: [
+        99, 101, 103, 105, 106, 108, 110, 112, 114, 115, 117, 119, 121, 123,
+        125, 126, 128, 130, 132, 134, 134, 134, 134, 134, 134, 134, 134, 134,
+        134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134,
+      ],
+    },
   },
   {
     type: "Active",
@@ -1936,6 +2117,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["str"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        164, 167, 170, 173, 176, 179, 182, 185, 188, 191, 194, 197, 200, 203,
+        206, 209, 212, 215, 218, 221, 221, 221, 221, 221, 221, 221, 221, 221,
+        221, 221, 221, 221, 221, 221, 221, 221, 221, 221, 221, 221,
+      ],
+      addedDmgEffPct: [
+        164, 167, 170, 173, 176, 179, 182, 185, 188, 191, 194, 197, 200, 203,
+        206, 209, 212, 215, 218, 221, 221, 221, 221, 221, 221, 221, 221, 221,
+        221, 221, 221, 221, 221, 221, 221, 221, 221, 221, 221, 221,
+      ],
+    },
   },
   {
     type: "Active",
@@ -1984,7 +2177,7 @@ export const ActiveSkills = [
     description: [
       "Casts this skill and gains an Elixir Effect: 8.2% of damage taken is transferred to a random Minion, and 25% chance for enemies to explode when defeated by Minions' Attacks or Spells, dealing True Damage equal to 250% of their Max Life to enemies within a 6m radius. Lasts for 3s.",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
-      "Casts this skill and gains an Elixir Effect:\n召唤物的攻击或者法术击败敌人时 25% 几率爆炸，对半径 6 米内的敌人造成被击败的敌人最大生命 250% 的真实伤害（不受灵药技能效果影响）\n12% of damage taken is transferred to a random Minion\nLasts for 3s",
+      "Casts this skill and gains an Elixir Effect:\n25% chance for enemies to explode when defeated by Minions' Attacks or Spells, dealing True Damage equal to 6 of their Max Life to enemies within a 250% m radius (not affected by the effects of Elixir Skills)\n12% of damage taken is transferred to a random Minion\nLasts for 3s",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
     ],
     kinds: [],
@@ -2002,6 +2195,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["str", "dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        32, 34, 35, 36, 37, 38, 39, 41, 42, 43, 45, 46, 47, 49, 50, 51, 53, 54,
+        56, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57,
+        57, 57, 57, 57,
+      ],
+      addedDmgEffPct: [
+        32, 34, 35, 36, 37, 38, 39, 41, 42, 43, 45, 46, 47, 49, 50, 51, 53, 54,
+        56, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57,
+        57, 57, 57, 57,
+      ],
+    },
   },
   {
     type: "Active",
@@ -2056,7 +2261,7 @@ export const ActiveSkills = [
     description: [
       "Casts this skill and gains an Elixir Effect: 1 Projectile Quantity, 10.5% Skill Area, and 10.5% Movement Speed for 3s.",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
-      "Casts this skill and gains an Elixir Effect:\nProjectile Quantity +1\n+20% Skill Area\n+20% Movement Speed\nLasts for 3s",
+      "Casts this skill and gains an Elixir Effect:\nProjectile Quantity +1\n+20% Skill Area\n+20% Movement Speed, up to +125%\nLasts for 3s",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
     ],
     kinds: [],
@@ -2239,7 +2444,7 @@ export const ActiveSkills = [
     tags: ["Attack", "Melee", "Area", "Physical", "Combo", "Persistent"],
     description: [
       "Combo Starter 1: Launches a Steep Strike forward, dealing 406% Weapon Attack Damage to the first enemy hit and inflicting Mark.",
-      "Combo Starter 2: Launches a Steep Strike forward, dealing 406% Weapon Attack Damage and spreading the enemy's Mark.",
+      "连携起手2：向前斩击，造成 406% 武器攻击伤害，并扩散敌人身上的印记。",
       "Combo Finisher: Pummels the ground ahead, dealing 127% Weapon Attack Damage, and generates several clones that launch a Steep Strike to enemies with Mark, dealing 127% Weapon Attack Damage.",
       "Combo Starter 1:\nDeals 406% Weapon Attack Damage\nThis skill can only hit 1 enemy\nOn hit, inflicts Mark to the enemy\nWhen defeating an enemy, this skill directly spreads the target's Mark to other enemies within 8m",
       "Combo Starter 2:\nDeals 406% Weapon Attack Damage\nOn hit, spreads the target's Mark to other enemies within 8m (affected by Skill Area)",
@@ -2338,6 +2543,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        237, 243, 248, 254, 259, 265, 271, 276, 282, 288, 294, 299, 305, 311,
+        317, 323, 329, 335, 341, 347, 347, 347, 347, 347, 347, 347, 347, 347,
+        347, 347, 347, 347, 347, 347, 347, 347, 347, 347, 347, 347,
+      ],
+      addedDmgEffPct: [
+        237, 243, 248, 254, 259, 265, 271, 276, 282, 288, 294, 299, 305, 311,
+        317, 323, 329, 335, 341, 347, 347, 347, 347, 347, 347, 347, 347, 347,
+        347, 347, 347, 347, 347, 347, 347, 347, 347, 347, 347, 347,
+      ],
+    },
   },
   {
     type: "Active",
@@ -2354,9 +2571,9 @@ export const ActiveSkills = [
     name: "Steadfast Dew",
     tags: ["Persistent", "Elixir"],
     description: [
-      "Casts this skill and gains an Elixir Effect: 2200 Armor. Lasts for 3s.",
+      "Casts this skill and gains an Elixir Effect: 2600 Armor. Lasts for 3s.",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
-      "Casts this skill and gains an Elixir Effect:\n+6000 Armor\nLasts for 3s",
+      "Casts this skill and gains an Elixir Effect:\n+4500 Armor\nLasts for 3s",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
     ],
     kinds: [],
@@ -2424,6 +2641,18 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      weaponAtkDmgPct: [
+        154, 160, 165, 170, 176, 182, 188, 193, 199, 205, 212, 218, 224, 230,
+        237, 244, 250, 257, 264, 271, 271, 271, 271, 271, 271, 271, 271, 271,
+        271, 271, 271, 271, 271, 271, 271, 271, 271, 271, 271, 271,
+      ],
+      addedDmgEffPct: [
+        154, 160, 165, 170, 176, 182, 188, 193, 199, 205, 212, 218, 224, 230,
+        237, 244, 250, 257, 264, 271, 271, 271, 271, 271, 271, 271, 271, 271,
+        271, 271, 271, 271, 271, 271, 271, 271, 271, 271, 271, 271,
+      ],
+    },
   },
   {
     type: "Active",
@@ -2432,7 +2661,7 @@ export const ActiveSkills = [
     description: [
       "Casts this skill and gains an Elixir Effect: 22.5% Movement Speed. Lasts 3s.",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
-      "Casts this skill and gains an Elixir Effect:\n+32% Movement Speed while the skill lasts\nLasts for 3s",
+      "Casts this skill and gains an Elixir Effect:\n+32% Movement Speed, up to +200%\nLasts for 3s",
       "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
     ],
     kinds: [],
@@ -2462,6 +2691,18 @@ export const ActiveSkills = [
   },
   {
     type: "Active",
+    name: "Thirst Dew",
+    tags: ["Persistent", "Elixir"],
+    description: [
+      "Casts this skill and gains an Elixir Effect: 92% Critical Strike Rating and 36% Damage. Lasts for 3s.",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+      "Casts this skill and gains an Elixir Effect:\n+130% Critical Strike Rating\n+55% damage\nLasts for 3s",
+      "Defeating enemies can increase the Charging Progress of this skill. At 15 Charging Progress, gains 1 Charge. Defeating a Normal/Magic/Rare/Boss enemy grants 1/3/6/100 Charging Progress.",
+    ],
+    kinds: [],
+  },
+  {
+    type: "Active",
     name: "Thunder Core",
     tags: ["Spell", "Lightning", "Persistent", "Sentry", "Chain", "Area"],
     description: [
@@ -2485,6 +2726,28 @@ export const ActiveSkills = [
     ],
     mainStats: ["dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      sweepWeaponAtkDmgPct: [
+        120, 124, 128, 133, 137, 141, 146, 150, 155, 160, 164, 169, 174, 179,
+        184, 189, 194, 200, 205, 210, 210, 210, 210, 210, 210, 210, 210, 210,
+        210, 210, 210, 210, 210, 210, 210, 210, 210, 210, 210, 210,
+      ],
+      sweepAddedDmgEffPct: [
+        120, 124, 128, 133, 137, 141, 146, 150, 155, 160, 164, 169, 174, 179,
+        184, 189, 194, 200, 205, 210, 210, 210, 210, 210, 210, 210, 210, 210,
+        210, 210, 210, 210, 210, 210, 210, 210, 210, 210, 210, 210,
+      ],
+      steepWeaponAtkDmgPct: [
+        240, 248, 257, 265, 274, 283, 292, 301, 310, 319, 329, 339, 348, 358,
+        368, 379, 389, 400, 410, 421, 421, 421, 421, 421, 421, 421, 421, 421,
+        421, 421, 421, 421, 421, 421, 421, 421, 421, 421, 421, 421,
+      ],
+      steepAddedDmgEffPct: [
+        240, 248, 257, 265, 274, 283, 292, 301, 310, 319, 329, 339, 348, 358,
+        368, 379, 389, 400, 410, 421, 421, 421, 421, 421, 421, 421, 421, 421,
+        421, 421, 421, 421, 421, 421, 421, 421, 421, 421, 421, 421,
+      ],
+    },
   },
   {
     type: "Active",
@@ -2561,7 +2824,7 @@ export const ActiveSkills = [
     tags: ["Spell", "Lightning", "Persistent", "Area"],
     description: [
       "Casts this skill to make multiple bolts of lightning rain down in a circular area at the target location, dealing Spell Lightning Damage equal to 83% of Base Damage. The location of the lightning strikes will gradually move forward.",
-      "Thunderfall:\nDeals Spell Lightning Damage equal to 83% of Base Damage",
+      "Thunderfall:\nDeals Spell Lightning Damage equal to 83% of Base Damage\nThe lightning bolts caused by this skill can hit the same enemy.\nThis skill's Shotgun Effect falloff coefficient is 95%",
     ],
     kinds: ["hit_enemies"],
   },
@@ -2685,6 +2948,28 @@ export const ActiveSkills = [
     ],
     mainStats: ["str", "dex"],
     kinds: ["deal_damage", "hit_enemies"],
+    levelValues: {
+      sweepWeaponAtkDmgPct: [
+        47, 49, 50, 52, 54, 55, 57, 59, 61, 63, 65, 66, 68, 70, 72, 74, 76, 78,
+        80, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83,
+        83, 83, 83, 83,
+      ],
+      sweepAddedDmgEffPct: [
+        47, 49, 50, 52, 54, 55, 57, 59, 61, 63, 65, 66, 68, 70, 72, 74, 76, 78,
+        80, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83, 83,
+        83, 83, 83, 83,
+      ],
+      steepWeaponAtkDmgPct: [
+        78, 81, 84, 87, 90, 92, 95, 98, 101, 104, 108, 111, 114, 117, 120, 124,
+        127, 131, 134, 138, 138, 138, 138, 138, 138, 138, 138, 138, 138, 138,
+        138, 138, 138, 138, 138, 138, 138, 138, 138, 138,
+      ],
+      steepAddedDmgEffPct: [
+        78, 81, 84, 87, 90, 92, 95, 98, 101, 104, 108, 111, 114, 117, 120, 124,
+        127, 131, 134, 138, 138, 138, 138, 138, 138, 138, 138, 138, 138, 138,
+        138, 138, 138, 138, 138, 138, 138, 138, 138, 138,
+      ],
+    },
   },
   {
     type: "Active",
@@ -2910,5 +3195,330 @@ export const ActiveSkills = [
         30, 30, 30, 30,
       ],
     },
+  },
+  {
+    type: "Active",
+    name: "Module: Goblin Priest",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Cold",
+      "Fire",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Goblin Priest(s). The Goblin Priest uses Frostclaw and Firebird.",
+    ],
+    mainStats: ["str", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Trog 2nd General",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Trog 2nd General(s). The Trog 2nd General uses Earthshatter.\n+1% additional damage for Minions summoned by this skill for every 5 Strength",
+    ],
+    mainStats: ["str", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Dwarven Automaton",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Fire",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Dwarven Automaton(s). The Dwarven Automaton uses Molten Barrage and All-Out Volley.\nConverts 100% of Physical Damage dealt by Minions summoned by this skill to Fire Damage.\n+1 Horizontal Projectile Penetration for every 10 Command",
+    ],
+    mainStats: ["str", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Trog Mage",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Trog Mage(s). The Trog Mage uses Rockfall.\n+1 to Barrage Skill Total Waves for Minions summoned by this skill",
+    ],
+    mainStats: ["int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Goblin Priest of Elements",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Lightning",
+      "Synthetic Troop",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Goblin Priest of Elements(s). The Goblin Priest of Elements uses Thunderfall.",
+    ],
+    mainStats: ["int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Medium Ember Automaton",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Medium Ember Automaton(s). The Medium Ember Automaton uses Kinetic Thrust and Groundslam.\n0.5% Skill Area for Minions summoned by this skill for every 1 Command",
+    ],
+    mainStats: ["str", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Huge Ember Automaton",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Fire",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Huge Ember Automaton(s). The Huge Ember Automaton uses Overstrike and Searing Crush.\nConverts 100% of Physical Damage dealt by Minions summoned by this skill to Fire Damage.\n0.5% Skill Area for Minions summoned by this skill for every 1 Command",
+    ],
+    mainStats: ["str", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Ent Great Elder",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Erosion",
+      "Synthetic Troop",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Ent Great Elder(s). The Ent Great Elder uses Sweep and Rootsurge.\nMinions summoned by this skill gain Profane on hit. Interval: 1s",
+    ],
+    mainStats: ["int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Ratlin Stormer Captain",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Fire",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Ratlin Stormer Captain(s). The Ratlin Stormer Captain uses Blitz Strike and Burst Hammer.\nConverts 100% of Physical Damage dealt by Minions summoned by this skill to Fire Damage.",
+    ],
+    mainStats: ["str", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Chief Machinist",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Fire",
+      "Synthetic Troop",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Chief Machinist(s). The Chief Machinist uses Firebomb and Pyromania.",
+    ],
+    mainStats: ["int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Lean Phantom",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Erosion",
+      "Synthetic Troop",
+      "Dexterity",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Lean Phantom(s). The Lean Phantom uses Flickering Shadow and Sin of the Fallen.\nConverts 100% of Physical Damage dealt by Minions summoned by this skill to Erosion Damage.",
+    ],
+    mainStats: ["dex", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: God of Swords",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Dexterity",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 God of Swords(s). The God of Swords uses Blade of Glory and High Court Covenant.\n+3% Attack Speed for every Critical Strike landed by Minions summoned by this skill recently. Stacks up to 30 time(s)",
+    ],
+    mainStats: ["dex", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Tyrant",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Tyrant(s). The Tyrant uses Ravaging Slash.\n+1% additional damage for Minions summoned by this skill for every +1% Steep Strike chance the summoner has",
+    ],
+    mainStats: ["str", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Ichi Storm",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Dexterity",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Ichi Storm(s). The Ichi Storm uses Auric Shot.\n+1% Projectile Speed for Minions summoned by this skill for every +1% Projectile Speed; 45% of that Projectile Speed bonus is also applied to the Minions' additional Projectile Damage",
+    ],
+    mainStats: ["dex", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Sand Giant",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Sand Giant(s). The Sand Giant uses Gravelshot.\n+2 to Parabolic Projectile Split Quantity for Minions summoned by this skill",
+    ],
+    mainStats: ["str", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Einherjar Elder Sage",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Lightning",
+      "Synthetic Troop",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Einherjar Elder Sage(s). The Einherjar Elder Sage uses Divine Judgment and Javelin of Judgment.",
+    ],
+    mainStats: ["int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Aember Winged Beast",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Cold",
+      "Synthetic Troop",
+      "Dexterity",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Aember Winged Beast(s). The Aember Winged Beast uses Spikeburst and Tailsweep.\nConverts 100% of Physical Damage dealt by Minions summoned by this skill to Cold Damage.",
+    ],
+    mainStats: ["dex", "int"],
+  },
+  {
+    type: "Active",
+    name: "Module: Punisher",
+    kinds: ["summon_minions", "summon_synthetic_troops"],
+    tags: [
+      "Spell",
+      "Summon",
+      "Persistent",
+      "Physical",
+      "Synthetic Troop",
+      "Strength",
+      "Intelligence",
+    ],
+    description: [
+      "Summons up to 2 Punisher(s). The Punisher uses Impaling Thrust and Twinstrike.\n+2% additional damage for every +5% Skill Area of Minions summoned by this skill",
+    ],
+    mainStats: ["str", "int"],
   },
 ] as const satisfies readonly BaseActiveSkill[];

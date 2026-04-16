@@ -131,10 +131,10 @@ export const SupportSkills = [
     templates: [
       {
         template:
-          "For each stack of Ignite an enemy has, the supported skill deals 2.7% additional Ignite Damage to the enemy, up to 10.8% .",
+          "For each stack of Ignite an enemy has, the supported skill deals {value}% additional Ignite Damage to the enemy, up to 10.8% .",
         levelValues: [
-          27, 2.9, 3.1, 3.3, 3.5, 3.7, 3.9, 4.1, 4.3, 4.5, 4.7, 4.9, 5.1, 5.3,
-          5.5, 5.7, 5.9, 6.1, 6.3, 6.5, 67, 6.8, 6.9, 7, 7.1, 7.2, 7.3, 7.4,
+          2.7, 2.9, 3.1, 3.3, 3.5, 3.7, 3.9, 4.1, 4.3, 4.5, 4.7, 4.9, 5.1, 5.3,
+          5.5, 5.7, 5.9, 6.1, 6.3, 6.5, 6.7, 6.8, 6.9, 7, 7.1, 7.2, 7.3, 7.4,
           7.5, 7.6, 7.7, 7.8, 7.9, 8, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6,
         ],
       },
@@ -981,13 +981,15 @@ export const SupportSkills = [
     name: "Fire Explosion",
     tags: ["Fire"],
     description: [
-      "Supports skills that deal damage.\n15.5% additional Fire Damage for the supported skill\n若最近被辅助技能造成了伤害，+25 每秒施加加剧值",
-      "15.5% additional Fire Damage for the supported skill\n若最近被辅助技能造成了伤害，+25 每秒施加加剧值",
+      "Supports skills that deal damage.\n15.5% additional Fire Damage for the supported skill\n+25 Affliction inflicted per second if the supported skill has dealt damage recently",
+      "15.5% additional Fire Damage for the supported skill\n+25 Affliction inflicted per second if the supported skill has dealt damage recently",
     ],
     supportTargets: ["deal_damage"],
     cannotSupportTargets: [],
     manaCostMultiplierPct: 110,
-    fixedAffixes: ["若最近被辅助技能造成了伤害，+25 每秒施加加剧值"],
+    fixedAffixes: [
+      "+25 Affliction inflicted per second if the supported skill has dealt damage recently",
+    ],
     templates: [
       {
         template: "{value}% additional Fire Damage for the supported skill",
@@ -1586,14 +1588,14 @@ export const SupportSkills = [
     name: "Maniacal Army",
     tags: ["Summon", "Synthetic Troop"],
     description: [
-      "Supports skills that summon Synthetic Troops.\n被辅助技能召唤的召唤物造成伤害时，使角色自身每秒获得 15 点统御值，持续 5 秒，间隔 1 秒\n-11% additional damage for Minions summoned by the supported skill",
-      "被辅助技能召唤的召唤物造成伤害时，使角色自身每秒获得 15 点统御值，持续 5 秒，间隔 1 秒\n-11% additional damage for Minions summoned by the supported skill",
+      "Supports skills that summon Synthetic Troops.\nWhenever a Minion summoned by the supported skill deals damage, gains 15 Command per second for 5 s. Interval: 1 s\n-11% additional damage for Minions summoned by the supported skill",
+      "Whenever a Minion summoned by the supported skill deals damage, gains 15 Command per second for 5 s. Interval: 1 s\n-11% additional damage for Minions summoned by the supported skill",
     ],
     supportTargets: ["summon_synthetic_troops"],
     cannotSupportTargets: [],
     manaCostMultiplierPct: 110,
     fixedAffixes: [
-      "被辅助技能召唤的召唤物造成伤害时，使角色自身每秒获得 15 点统御值，持续 5 秒，间隔 1 秒",
+      "Whenever a Minion summoned by the supported skill deals damage, gains 15 Command per second for 5 s. Interval: 1 s",
     ],
     templates: [
       {
@@ -1637,8 +1639,8 @@ export const SupportSkills = [
     name: "Mass Effect",
     tags: ["Empower"],
     description: [
-      "Supports Empower Skills.\n+1 Max Charges for the supported skill\n10.5% effect for the supported skill for every +1 Charge",
-      "+1 Max Charges for the supported skill\n10.5% effect for the supported skill for every +1 Charge",
+      "Supports Empower Skills.\n+1 Max Charges for the supported skill\n10.5% effect for the supported skill for every +1 Charge, up to 31.5%",
+      "+1 Max Charges for the supported skill\n10.5% effect for the supported skill for every +1 Charge, up to 31.5%",
     ],
     supportTargets: [{ tags: ["Empower"] }],
     cannotSupportTargets: [],
@@ -1646,7 +1648,8 @@ export const SupportSkills = [
     fixedAffixes: ["+1 Max Charges for the supported skill"],
     templates: [
       {
-        template: "{value}% effect for the supported skill for every +1 Charge",
+        template:
+          "{value}% effect for the supported skill for every +1 Charge, up to 31.5%",
         levelValues: [
           10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17,
           17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24,

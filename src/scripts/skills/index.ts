@@ -7,7 +7,11 @@ import {
   lightningShotParser,
   mindControlParser,
   shacklesOfMaliceParser,
+  simpleSpellParser,
+  simpleWeaponAttackParser,
+  slashStrikeParser,
   spectralSlashParser,
+  spellDescOnlyParser,
 } from "./active-parsers";
 import {
   DECLARATIVE_PARSERS,
@@ -65,6 +69,88 @@ export const SKILL_PARSERS: SkillParserEntry[] = [
     skillName: "Shackles of Malice",
     categories: ["active"],
     parser: shacklesOfMaliceParser,
+  },
+  {
+    skillName: "Leap Attack",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Rocket Jump",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Swift Shadow Raid",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Blink Arrow",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Burning Shot",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Electrifying Shot",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Rain of Arrows",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Charged Pummel",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Focused Shot",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Blazing Bullet",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Split Shot",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Savage Charge",
+    categories: ["active"],
+    parser: simpleWeaponAttackParser,
+  },
+  {
+    skillName: "Flame Slash",
+    categories: ["active"],
+    parser: slashStrikeParser,
+  },
+  {
+    skillName: "Thunder Slash",
+    categories: ["active"],
+    parser: slashStrikeParser,
+  },
+  { skillName: "Icy Blade", categories: ["active"], parser: slashStrikeParser },
+  { skillName: "Whirlwind", categories: ["active"], parser: slashStrikeParser },
+  {
+    skillName: "Lightning Beam",
+    categories: ["active"],
+    parser: simpleSpellParser,
+  },
+  {
+    skillName: "Fire Burst",
+    categories: ["active"],
+    parser: spellDescOnlyParser,
   },
 ];
 

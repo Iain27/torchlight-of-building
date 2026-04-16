@@ -1,16 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { decodeBuildCode } from "../lib/build-code";
-import {
-  calculateOffense,
-  type OffenseResults,
-} from "../tli/calcs/offense";
+import { calculateOffense, type OffenseResults } from "../tli/calcs/offense";
 import { DEFAULT_CONFIGURATION } from "../tli/core";
 import { loadSave } from "../tli/storage/load-save";
 
-export const Route = createFileRoute("/compare")({
-  component: ComparePage,
-});
+export const Route = createFileRoute("/compare")({ component: ComparePage });
 
 interface DecodedBuild {
   results: OffenseResults;
@@ -26,8 +21,11 @@ const decode = (code: string, label: string): DecodedBuild | string => {
     const loadout = loadSave(saveData);
     const config = {
       ...DEFAULT_CONFIGURATION,
-      ...(saveData as unknown as { configurationPage?: typeof DEFAULT_CONFIGURATION })
-        .configurationPage,
+      ...(
+        saveData as unknown as {
+          configurationPage?: typeof DEFAULT_CONFIGURATION;
+        }
+      ).configurationPage,
     };
     const results = calculateOffense({ loadout, configuration: config });
     return { results, label };
@@ -74,10 +72,7 @@ function ComparePage(): React.ReactNode {
       <div className="mx-auto max-w-5xl">
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-2xl font-bold">Build Compare</h1>
-          <a
-            href="/"
-            className="text-sm text-zinc-400 hover:text-zinc-200"
-          >
+          <a href="/" className="text-sm text-zinc-400 hover:text-zinc-200">
             ← Home
           </a>
         </div>
@@ -214,11 +209,7 @@ const StatCard = ({
 }): React.ReactNode => {
   const delta = a === 0 ? 0 : ((b - a) / a) * 100;
   const color =
-    delta > 0
-      ? "text-green-400"
-      : delta < 0
-        ? "text-red-400"
-        : "text-zinc-500";
+    delta > 0 ? "text-green-400" : delta < 0 ? "text-red-400" : "text-zinc-500";
   return (
     <div className="rounded-lg border border-zinc-700 bg-zinc-900 p-3">
       <div className="text-xs text-zinc-500">{label}</div>

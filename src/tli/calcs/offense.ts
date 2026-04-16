@@ -961,6 +961,7 @@ const filterModsByCond = (
       )
       .with("has_moved_recently", () => config.hasMovedRecently)
       .with("is_moving", () => config.isMoving)
+      .with("not_hit_recently", () => config.notHitRecently)
       .with("has_cast_curse_recently", () => config.hasCastCurseRecently)
       .with("is_dual_wielding", () => derivedCtx.dualWielding)
       .with("has_one_handed_weapon", () => {

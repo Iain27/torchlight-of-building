@@ -1696,6 +1696,14 @@ export const allParsers = [
     cond: "has_used_mobility_skill_recently",
   })),
   t(
+    "{value:?dec%} movement speed if you have cast a curse skill recently",
+  ).output((c) => ({
+    type: "MovementSpeedPct",
+    value: c.value,
+    addn: false,
+    cond: "has_cast_curse_recently",
+  })),
+  t(
     "{value:+dec%} movement speed when an elite is nearby, up to {limit:+dec%}",
   ).output((c) => ({
     type: "MovementSpeedPct",
@@ -1704,6 +1712,14 @@ export const allParsers = [
     per: { stackable: "seconds_with_elite_nearby", valueLimit: c.limit },
     cond: "has_elites_nearby",
   })),
+  t("{value:+dec%} movement speed if you haven't been hit recently").output(
+    (c) => ({
+      type: "MovementSpeedPct",
+      value: c.value,
+      addn: false,
+      cond: "not_hit_recently",
+    }),
+  ),
   t("{value:+dec%} [additional] movement speed").output((c) => ({
     type: "MovementSpeedPct",
     value: c.value,
@@ -1713,6 +1729,36 @@ export const allParsers = [
     type: "MovementSpeedPct",
     value: c.value,
     addn: false,
+  })),
+  t("{value:+dec%} [additional] elixir skill effect").output((c) => ({
+    type: "ElixirSkillEffectPct",
+    value: c.value,
+    addn: c.additional !== undefined,
+  })),
+  t("{value:+dec%} ill omen cumulative efficiency").output((c) => ({
+    type: "IllOmenEfficiencyPct",
+    value: c.value,
+  })),
+  t("{value:+dec%} ill omen accumulation efficiency").output((c) => ({
+    type: "IllOmenEfficiencyPct",
+    value: c.value,
+  })),
+  t("{value:+dec%} tangle damage").output((c) => ({
+    type: "TangleDmgPct",
+    value: c.value,
+  })),
+  t("{value:+dec%} [additional] tangle duration").output((c) => ({
+    type: "TangleDurationPct",
+    value: c.value,
+    addn: c.additional !== undefined,
+  })),
+  t("{value:+dec%} tangle attach range").output((c) => ({
+    type: "TangleAttachRangePct",
+    value: c.value,
+  })),
+  t("creates {value:int} additional tangle[s]").output((c) => ({
+    type: "AdditionalTangleOnTrigger",
+    value: c.value,
   })),
   t("{value:+dec%} [additional] projectile speed").output((c) => ({
     type: "ProjSpdPct",
@@ -2233,6 +2279,24 @@ export const allParsers = [
   t("the main stat base no longer additionally increases damage").output(
     () => ({ type: "DisableMainStatDmg" }),
   ),
+  t("the base main stat no longer additionally increases damage").output(
+    () => ({ type: "DisableMainStatDmg" }),
+  ),
+  t(
+    "the base main stat no longer additionally increases damage. {value:+dec%} additional {stat1:StatWord} and {stat2:StatWord}",
+  ).outputMany([
+    spec(() => ({ type: "DisableMainStatDmg" })),
+    spec((c) => ({
+      type: "StatPct",
+      value: c.value,
+      statModType: c.stat1 as "str" | "dex" | "int",
+    })),
+    spec((c) => ({
+      type: "StatPct",
+      value: c.value,
+      statModType: c.stat2 as "str" | "dex" | "int",
+    })),
+  ]),
   t(
     "randomly selects a type of elemental damage on hit, and only elemental damage of this type can be dealt. other elements cannot deal damage. the lower the flat damage percentage of an elemental damage, the higher the chance of it being chosen",
   ).output(() => ({ type: "TrinitySingleElement" })),
@@ -2495,6 +2559,29 @@ export const allParsers = [
         per: { stackable: c.statModType, amt: c.amt },
       })),
     ]),
+  t(
+    "{value:+dec%} additional damage per {amt:int} armor, up to {limit:+dec%}",
+  ).output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: "global",
+    addn: true,
+    per: { stackable: "armor", amt: c.amt, valueLimit: c.limit },
+  })),
+  t("{value:+dec%} additional damage per {amt:int} armor").output((c) => ({
+    type: "DmgPct",
+    value: c.value,
+    dmgModType: "global",
+    addn: true,
+    per: { stackable: "armor", amt: c.amt },
+  })),
+  t(
+    "{value:+dec%} movement speed for every {amt:int} {stat:StatWord}, up to {limit:+dec%}",
+  ).output((c) => ({
+    type: "MovementSpeedPct",
+    value: c.value,
+    per: { stackable: c.stat, amt: c.amt, valueLimit: c.limit },
+  })),
   t(
     "adds {min:int} - {max:int} {dmgType:DmgChunkType} damage to attacks per {amt:int} armor",
   ).output((c) => ({
@@ -2890,9 +2977,7 @@ export const allParsers = [
   ).outputNone(),
 
   // Armor effective rate
-  t(
-    "{value:+dec%} armor effective rate for non-physical damage",
-  ).outputNone(),
+  t("{value:+dec%} armor effective rate for non-physical damage").outputNone(),
 
   // Returning projectiles
   t(

@@ -485,8 +485,7 @@ export const CoreTalents = [
   {
     name: "Full Defense",
     tree: "Sentinel",
-    affix:
-      "+25% additional Defense gained from Shield\n-1% additional Damage Over Time taken for every 1% Block Ratio",
+    affix: "-1% additional Damage Over Time taken for every 1% Block Ratio",
   },
   {
     name: "Last Stand",
@@ -572,7 +571,7 @@ export const CoreTalents = [
     name: "Reap Purification",
     tree: "Psychic",
     affix:
-      "Ill Omen Effect becomes: Enemies take True Damage equal to 4% of Max Life when gaining 1 stack of Ill Omen",
+      "Ill Omen Effect becomes: Enemies take True Damage equal to 2% of Max Life when gaining 1 stack of Ill Omen",
   },
   {
     name: "Verbal Abuse",

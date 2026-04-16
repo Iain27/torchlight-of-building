@@ -1,5 +1,5 @@
-import type { Configuration, Loadout } from "@/src/tli/core";
 import { calculateOffense } from "@/src/tli/calcs/offense";
+import type { Configuration, Loadout } from "@/src/tli/core";
 import type { Condition } from "@/src/tli/mod";
 
 /**
@@ -46,6 +46,7 @@ export const CONDITION_TO_CONFIG_FLIP: Partial<
   enemy_is_cursed: (c) => ({ ...c, targetEnemyIsCursed: true }),
   has_moved_recently: (c) => ({ ...c, hasMovedRecently: true }),
   is_moving: (c) => ({ ...c, isMoving: true }),
+  not_hit_recently: (c) => ({ ...c, notHitRecently: true }),
   has_used_mobility_skill_recently: (c) => ({
     ...c,
     hasUsedMobilitySkillRecently: true,

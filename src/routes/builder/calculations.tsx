@@ -16,16 +16,16 @@ import { useOffenseResults } from "../../components/builder/OffenseResultsContex
 import { ModGroup } from "../../components/calculations/ModGroup";
 import { SkillSelector } from "../../components/calculations/SkillSelector";
 import {
-  CONDITION_TO_CONFIG_FLIP,
-  calculateConditionDeltas,
-} from "../../lib/condition-deltas";
-import {
   formatStatValue,
   getStatCategoryDescription,
   getStatCategoryLabel,
   groupModsByEffect,
   STAT_CATEGORIES,
 } from "../../lib/calculations-utils";
+import {
+  CONDITION_TO_CONFIG_FLIP,
+  calculateConditionDeltas,
+} from "../../lib/condition-deltas";
 import {
   useBuilderActions,
   useCalculationsSelectedSkill,
@@ -834,7 +834,9 @@ const UnmetConditionsSection = ({
   const [showDeltas, setShowDeltas] = useState(false);
   const deltas = useMemo(() => {
     if (!showDeltas) return [];
-    const conds = [...byCondition.keys()] as import("@/src/tli/mod").Condition[];
+    const conds = [
+      ...byCondition.keys(),
+    ] as import("@/src/tli/mod").Condition[];
     return calculateConditionDeltas(loadout, configuration, conds, skillName);
   }, [showDeltas, loadout, configuration, byCondition, skillName]);
   const deltaByCondition = useMemo(() => {
@@ -876,9 +878,8 @@ const UnmetConditionsSection = ({
       <div className="space-y-1 text-xs text-zinc-400">
         {entries.map(([cond, list]) => {
           const delta = deltaByCondition.get(cond);
-          const flip = CONDITION_TO_CONFIG_FLIP[
-            cond as import("@/src/tli/mod").Condition
-          ];
+          const flip =
+            CONDITION_TO_CONFIG_FLIP[cond as import("@/src/tli/mod").Condition];
           const clickable = flip !== undefined;
           return (
             <button

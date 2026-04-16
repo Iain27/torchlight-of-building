@@ -1,8 +1,5 @@
 import { ALL_GEAR_AFFIXES } from "@/src/tli/all-affixes";
-import type {
-  BaseGearAffix,
-  EquipmentType,
-} from "@/src/tli/gear-data-types";
+import type { BaseGearAffix, EquipmentType } from "@/src/tli/gear-data-types";
 
 /**
  * Reverse-lookup for gear affix tiers.
@@ -45,11 +42,7 @@ const compile = (affix: BaseGearAffix): CompiledTemplate | undefined => {
   }
   pattern += escapeRegex(template.slice(lastIndex));
   try {
-    return {
-      regex: new RegExp(`^${pattern}$`, "i"),
-      ranges,
-      affix,
-    };
+    return { regex: new RegExp(`^${pattern}$`, "i"), ranges, affix };
   } catch {
     return undefined;
   }

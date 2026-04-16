@@ -334,14 +334,6 @@ export const ONE_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(23-29)% Attack and Spell Block Chance",
-  },
-  {
-    equipmentSlot: "One-Handed",
-    equipmentType: "One-Handed Sword",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "0",
     craftableAffix: "+(101-130)% Gear Physical Damage",
   },
   {

@@ -1461,7 +1461,7 @@ export const ActivationMediumSkills = [
       "Supports Active Spell Skills.\nCannot support Channeled Skills, Sentry Skills or skills that summon Minions.\nThis skill can only be installed in the first Support Skill Slot of each Active Skill.\nThe supported skill is cast as a Spell Tangle",
       "The supported skill is cast as a Spell Tangle",
       "+(11–15)% additional damage for the supported skill",
-      "10 米内的纠缠数量未达到上限时，触发被辅助技能，并以纠缠形式创建，间隔 0.4 秒\n额外创建 1 个纠缠",
+      "When the number of Tangles within 10 m is below the upper limit, triggers the supported skill, creating it in the form of a Tangle. Interval: 0.4 s\nCreates 1 additional Tangle",
       "+(91–120)% Tangle Attach Range",
     ],
     supportTargets: [{ skillType: "active", tags: ["Spell"] }],
