@@ -15,7 +15,10 @@ import type {
 import { useOffenseResults } from "../../components/builder/OffenseResultsContext";
 import { ModGroup } from "../../components/calculations/ModGroup";
 import { SkillSelector } from "../../components/calculations/SkillSelector";
-import { calculateConditionDeltas } from "../../lib/condition-deltas";
+import {
+  CONDITION_TO_CONFIG_FLIP,
+  calculateConditionDeltas,
+} from "../../lib/condition-deltas";
 import {
   formatStatValue,
   getStatCategoryDescription,
@@ -813,6 +816,7 @@ const UnmetConditionsSection = ({
 }): React.ReactNode => {
   const loadout = useLoadout();
   const configuration = useConfiguration();
+  const { updateConfiguration } = useBuilderActions();
   // Group mods by their condition
   const byCondition = useMemo(() => {
     const map = new Map<string, typeof mods>();
@@ -853,26 +857,49 @@ const UnmetConditionsSection = ({
       </div>
       <p className="mb-2 text-xs text-zinc-500">
         These mods exist on your build but aren't contributing because their
-        conditions aren't met. "+X%" is the DPS gain if the condition were
-        enabled.
+        conditions aren't met. "+X%" is the DPS gain if enabled. Click a row
+        to flip the corresponding config flag.
       </p>
       <div className="space-y-1 text-xs text-zinc-400">
         {entries.map(([cond, list]) => {
           const delta = deltaByCondition.get(cond);
+          const flip = CONDITION_TO_CONFIG_FLIP[
+            cond as import("@/src/tli/mod").Condition
+          ];
+          const clickable = flip !== undefined;
           return (
-            <div key={cond} className="flex items-baseline gap-2">
+            <button
+              key={cond}
+              type="button"
+              disabled={!clickable}
+              onClick={() => {
+                if (flip === undefined) return;
+                const updated = flip(configuration);
+                updateConfiguration(updated);
+              }}
+              className={`flex w-full items-baseline gap-2 rounded px-1 py-0.5 text-left ${
+                clickable
+                  ? "cursor-pointer hover:bg-zinc-800"
+                  : "cursor-not-allowed opacity-60"
+              }`}
+              title={
+                clickable
+                  ? "Click to enable this condition"
+                  : "Not toggleable via config"
+              }
+            >
               {delta !== undefined && delta.dpsPct >= 0.1 ? (
-                <span className="w-16 font-mono text-green-400">
+                <span className="w-16 shrink-0 font-mono text-green-400">
                   +{delta.dpsPct.toFixed(1)}%
                 </span>
               ) : (
-                <span className="w-16 font-mono text-zinc-600">—</span>
+                <span className="w-16 shrink-0 font-mono text-zinc-600">—</span>
               )}
               <span className="font-mono text-amber-300/80">{cond}</span>
               <span className="text-zinc-500">
                 ({list.length} mod{list.length === 1 ? "" : "s"})
               </span>
-            </div>
+            </button>
           );
         })}
       </div>

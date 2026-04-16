@@ -340,6 +340,12 @@ function SavesPage(): React.ReactNode {
               ))}
             </select>
             <button
+              onClick={() => navigate({ to: "/compare" })}
+              className="px-3 py-1.5 bg-zinc-800 text-zinc-400 rounded-lg border border-zinc-700 text-sm hover:bg-zinc-700 hover:text-zinc-200 transition-colors"
+            >
+              Compare
+            </button>
+            <button
               onClick={() => setAboutModalOpen(true)}
               className="px-3 py-1.5 bg-zinc-800 text-zinc-400 rounded-lg border border-zinc-700 text-sm hover:bg-zinc-700 hover:text-zinc-200 transition-colors"
             >

@@ -8,7 +8,7 @@ import type { Condition } from "@/src/tli/mod";
  * state, or have no simple config flip are omitted — those can't be "toggled"
  * without changing the build itself.
  */
-const CONDITION_TO_CONFIG_FLIP: Partial<
+export const CONDITION_TO_CONFIG_FLIP: Partial<
   Record<Condition, (config: Configuration) => Configuration>
 > = {
   enemy_frostbitten: (c) => ({ ...c, enemyFrostbittenEnabled: true }),
