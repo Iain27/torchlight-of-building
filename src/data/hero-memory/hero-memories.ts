@@ -492,13 +492,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Origin",
-    affix: "+(30–42)% Armor",
+    affix: "+(26–30)% Armor",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Origin",
-    affix: "+(20–28)% Armor",
+    affix: "+(20–25)% Armor",
     tier: 2,
   },
   {
@@ -510,13 +510,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Origin",
-    affix: "+(30–42)% Evasion",
+    affix: "+(26–30)% Evasion",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Origin",
-    affix: "+(20–28)% Evasion",
+    affix: "+(20–25)% Evasion",
     tier: 2,
   },
   {
@@ -948,13 +948,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+(30–42)% Armor",
+    affix: "+(26–30)% Armor",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+(20–28)% Armor",
+    affix: "+(20–25)% Armor",
     tier: 2,
   },
   {
@@ -966,13 +966,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+(30–42)% Evasion",
+    affix: "+(26–30)% Evasion",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Discipline",
-    affix: "+(20–28)% Evasion",
+    affix: "+(20–25)% Evasion",
     tier: 2,
   },
   {
@@ -1404,13 +1404,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+(30–42)% Armor",
+    affix: "+(26–30)% Armor",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+(20–28)% Armor",
+    affix: "+(20–25)% Armor",
     tier: 2,
   },
   {
@@ -1422,13 +1422,13 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+(30–42)% Evasion",
+    affix: "+(26–30)% Evasion",
     tier: 1,
   },
   {
     type: "Fixed Affix",
     item: "Memory of Progress",
-    affix: "+(20–28)% Evasion",
+    affix: "+(20–25)% Evasion",
     tier: 2,
   },
   {
@@ -2160,19 +2160,19 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(21–31)% Attack Block Chance",
+    affix: "+(25–31)% Attack Block Chance",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(16–24)% Attack Block Chance",
+    affix: "+(17–24)% Attack Block Chance",
     tier: 1,
   },
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(11–16)% Attack Block Chance",
+    affix: "+(12–16)% Attack Block Chance",
     tier: 2,
   },
   {
@@ -2184,19 +2184,19 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(21–31)% Spell Block Chance",
+    affix: "+(25–31)% Spell Block Chance",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(16–24)% Spell Block Chance",
+    affix: "+(17–24)% Spell Block Chance",
     tier: 1,
   },
   {
     type: "Random Affix",
     item: "Memory of Origin",
-    affix: "+(11–16)% Spell Block Chance",
+    affix: "+(12–16)% Spell Block Chance",
     tier: 2,
   },
   {
@@ -3004,19 +3004,19 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(21–31)% Attack Block Chance",
+    affix: "+(25–31)% Attack Block Chance",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(16–24)% Attack Block Chance",
+    affix: "+(17–24)% Attack Block Chance",
     tier: 1,
   },
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(11–16)% Attack Block Chance",
+    affix: "+(12–16)% Attack Block Chance",
     tier: 2,
   },
   {
@@ -3028,19 +3028,19 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(21–31)% Spell Block Chance",
+    affix: "+(25–31)% Spell Block Chance",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(16–24)% Spell Block Chance",
+    affix: "+(17–24)% Spell Block Chance",
     tier: 1,
   },
   {
     type: "Random Affix",
     item: "Memory of Discipline",
-    affix: "+(11–16)% Spell Block Chance",
+    affix: "+(12–16)% Spell Block Chance",
     tier: 2,
   },
   {
@@ -3848,19 +3848,19 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(21–31)% Attack Block Chance",
+    affix: "+(25–31)% Attack Block Chance",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(16–24)% Attack Block Chance",
+    affix: "+(17–24)% Attack Block Chance",
     tier: 1,
   },
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(11–16)% Attack Block Chance",
+    affix: "+(12–16)% Attack Block Chance",
     tier: 2,
   },
   {
@@ -3872,19 +3872,19 @@ export const HeroMemories: readonly HeroMemory[] = [
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(21–31)% Spell Block Chance",
+    affix: "+(25–31)% Spell Block Chance",
     tier: 0,
   },
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(16–24)% Spell Block Chance",
+    affix: "+(17–24)% Spell Block Chance",
     tier: 1,
   },
   {
     type: "Random Affix",
     item: "Memory of Progress",
-    affix: "+(11–16)% Spell Block Chance",
+    affix: "+(12–16)% Spell Block Chance",
     tier: 2,
   },
   {

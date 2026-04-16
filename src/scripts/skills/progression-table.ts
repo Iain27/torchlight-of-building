@@ -92,7 +92,10 @@ export const validateAllLevels = (
 };
 
 export const parseNumericValue = (value: string): number => {
-  const cleaned = value.replace(/^\+/, "").trim();
+  // Some cells contain multiple comma-separated values (e.g. Mass Effect's
+  // "21/2,63/2" packs per-charge + cap columns together). Take the first.
+  const firstField = value.split(",")[0] ?? value;
+  const cleaned = firstField.replace(/^\+/, "").trim();
 
   // Handle fraction notation (e.g., "31/2" = 15.5)
   const fractionMatch = cleaned.match(/^(\d+(?:\.\d+)?)\/(\d+(?:\.\d+)?)$/);

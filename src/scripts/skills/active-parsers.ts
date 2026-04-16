@@ -616,7 +616,12 @@ export const shacklesOfMaliceParser: SupportLevelParser = () => {
   };
 };
 
-export const lightningShotParser: SupportLevelParser = (input) => {
+/**
+ * Generic parser for single-hit weapon-attack skills with a "damage" progression
+ * column of form "Deals X% Weapon Attack Damage" plus an "Effectiveness of Added
+ * Damage" column. Used by Lightning Shot, Leap Attack, Rocket Jump, etc.
+ */
+export const simpleWeaponAttackParser: SupportLevelParser = (input) => {
   const { skillName, progressionTable } = input;
 
   const addedDmgEffCol = findColumn(
@@ -671,4 +676,172 @@ export const lightningShotParser: SupportLevelParser = (input) => {
   validateAllLevels(addedDmgEffPct, skillName);
 
   return { weaponAtkDmgPct, addedDmgEffPct };
+};
+
+export const lightningShotParser = simpleWeaponAttackParser;
+
+/**
+ * Generic parser for spells with a "damage" progression column of form
+ * "Deals MIN-MAX Spell <type> Damage" plus an "Effectiveness of added damage"
+ * column. Defaults castTime=1 (constant). Used by Lightning Beam, etc.
+ */
+export const simpleSpellParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const addedDmgEffCol = findColumn(
+    progressionTable,
+    "effectiveness of added damage",
+    skillName,
+  );
+  const damageCol = progressionTable.find(
+    (c) => c.header.toLowerCase() === "damage",
+  );
+  if (damageCol === undefined) {
+    throw new Error(`${skillName}: no "damage" column found`);
+  }
+
+  const spellDmgMin: Record<number, number> = {};
+  const spellDmgMax: Record<number, number> = {};
+  const addedDmgEffPct: Record<number, number> = {};
+
+  for (const [levelStr, text] of Object.entries(addedDmgEffCol.rows)) {
+    const level = Number(levelStr);
+    if (level <= 20 && text !== "") {
+      addedDmgEffPct[level] = parseNumericValue(text);
+    }
+  }
+
+  for (const [levelStr, text] of Object.entries(damageCol.rows)) {
+    const level = Number(levelStr);
+    if (level <= 20 && text !== "") {
+      const match = findMatch(
+        text,
+        ts("deals {min:int}-{max:int} spell"),
+        skillName,
+      );
+      spellDmgMin[level] = match.min;
+      spellDmgMax[level] = match.max;
+    }
+  }
+
+  const l20Min = spellDmgMin[20];
+  const l20Max = spellDmgMax[20];
+  const l20Ead = addedDmgEffPct[20];
+  if (l20Min === undefined || l20Max === undefined || l20Ead === undefined) {
+    throw new Error(`${skillName}: Lv20 missing, cannot fallback`);
+  }
+  for (let l = 21; l <= 40; l++) {
+    spellDmgMin[l] = l20Min;
+    spellDmgMax[l] = l20Max;
+    addedDmgEffPct[l] = l20Ead;
+  }
+
+  validateAllLevels(spellDmgMin, skillName);
+  validateAllLevels(spellDmgMax, skillName);
+  validateAllLevels(addedDmgEffPct, skillName);
+
+  return {
+    spellDmgMin,
+    spellDmgMax,
+    addedDmgEffPct,
+    castTime: createConstantLevels(1),
+  };
+};
+
+/**
+ * Parser for spells without a progression table — reads min/max damage from
+ * the level-1 description text. All 40 levels get the same values.
+ */
+export const spellDescOnlyParser: SupportLevelParser = (input) => {
+  const { skillName, description } = input;
+  const desc = description[1] ?? description[0] ?? "";
+  const match = findMatch(
+    desc,
+    ts("deals {min:int}-{max:int} spell"),
+    skillName,
+  );
+  return {
+    spellDmgMin: createConstantLevels(match.min),
+    spellDmgMax: createConstantLevels(match.max),
+    addedDmgEffPct: createConstantLevels(100),
+    castTime: createConstantLevels(1),
+  };
+};
+
+/**
+ * Parses slash-strike skills (Flame Slash, Thunder Slash, Icy Blade, Whirlwind).
+ * Progression table has TWO pairs of "Effectiveness of added damage" + "damage"
+ * columns — first pair is Sweep Slash, second is Steep Strike.
+ */
+export const slashStrikeParser: SupportLevelParser = (input) => {
+  const { skillName, progressionTable } = input;
+
+  const addedDmgEffCols = progressionTable.filter(
+    (c) => c.header.toLowerCase() === "effectiveness of added damage",
+  );
+  const damageCols = progressionTable.filter(
+    (c) => c.header.toLowerCase() === "damage",
+  );
+
+  if (addedDmgEffCols.length < 2 || damageCols.length < 2) {
+    throw new Error(
+      `${skillName}: expected 2 EAD and 2 damage columns, got ${addedDmgEffCols.length} + ${damageCols.length}`,
+    );
+  }
+
+  const sweepWeaponAtkDmgPct: Record<number, number> = {};
+  const sweepAddedDmgEffPct: Record<number, number> = {};
+  const steepWeaponAtkDmgPct: Record<number, number> = {};
+  const steepAddedDmgEffPct: Record<number, number> = {};
+
+  const extractDmg = (text: string): number =>
+    findMatch(text, ts("deals {value:dec%} weapon attack damage"), skillName)
+      .value;
+
+  for (let level = 1; level <= 20; level++) {
+    const sweepEad = addedDmgEffCols[0]?.rows[level];
+    const steepEad = addedDmgEffCols[1]?.rows[level];
+    const sweepDmg = damageCols[0]?.rows[level];
+    const steepDmg = damageCols[1]?.rows[level];
+    if (
+      sweepEad === undefined ||
+      steepEad === undefined ||
+      sweepDmg === undefined ||
+      steepDmg === undefined ||
+      sweepEad === "" ||
+      steepEad === "" ||
+      sweepDmg === "" ||
+      steepDmg === ""
+    ) {
+      continue;
+    }
+    sweepAddedDmgEffPct[level] = parseNumericValue(sweepEad);
+    steepAddedDmgEffPct[level] = parseNumericValue(steepEad);
+    sweepWeaponAtkDmgPct[level] = extractDmg(sweepDmg);
+    steepWeaponAtkDmgPct[level] = extractDmg(steepDmg);
+  }
+
+  const fb20 = (rec: Record<number, number>, name: string): void => {
+    const l20 = rec[20];
+    if (l20 === undefined) {
+      throw new Error(`${skillName}: Lv20 ${name} missing, cannot fallback`);
+    }
+    for (let l = 21; l <= 40; l++) rec[l] = l20;
+  };
+  fb20(sweepAddedDmgEffPct, "sweepAddedDmgEffPct");
+  fb20(steepAddedDmgEffPct, "steepAddedDmgEffPct");
+  fb20(sweepWeaponAtkDmgPct, "sweepWeaponAtkDmgPct");
+  fb20(steepWeaponAtkDmgPct, "steepWeaponAtkDmgPct");
+
+  validateAllLevels(sweepAddedDmgEffPct, skillName);
+  validateAllLevels(steepAddedDmgEffPct, skillName);
+  validateAllLevels(sweepWeaponAtkDmgPct, skillName);
+  validateAllLevels(steepWeaponAtkDmgPct, skillName);
+
+  return {
+    sweepWeaponAtkDmgPct,
+    sweepAddedDmgEffPct,
+    steepWeaponAtkDmgPct,
+    steepAddedDmgEffPct,
+  };
 };

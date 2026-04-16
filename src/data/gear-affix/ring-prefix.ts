@@ -616,7 +616,7 @@ export const RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(26-30)% Ill Omen Cumulative Efficiency",
+    craftableAffix: "+(55-65)% Ill Omen Cumulative Efficiency",
   },
   {
     equipmentSlot: "Trinket",
@@ -624,7 +624,7 @@ export const RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(21-25)% Ill Omen Cumulative Efficiency",
+    craftableAffix: "+(41-50)% Ill Omen Cumulative Efficiency",
   },
   {
     equipmentSlot: "Trinket",
@@ -632,7 +632,7 @@ export const RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "2",
-    craftableAffix: "+(16-20)% Ill Omen Cumulative Efficiency",
+    craftableAffix: "+(31-40)% Ill Omen Cumulative Efficiency",
   },
   {
     equipmentSlot: "Trinket",
@@ -640,7 +640,7 @@ export const RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "3",
-    craftableAffix: "+(11-15)% Ill Omen Cumulative Efficiency",
+    craftableAffix: "+(21-30)% Ill Omen Cumulative Efficiency",
   },
   {
     equipmentSlot: "Trinket",
@@ -648,7 +648,7 @@ export const RING_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "4",
-    craftableAffix: "+(5-10)% Ill Omen Cumulative Efficiency",
+    craftableAffix: "+(10-20)% Ill Omen Cumulative Efficiency",
   },
   {
     equipmentSlot: "Trinket",

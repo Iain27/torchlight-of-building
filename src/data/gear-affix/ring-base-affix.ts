@@ -138,7 +138,7 @@ export const RING_BASE_AFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Base Affix",
     craftingPool: "",
     tier: "0",
-    craftableAffix: "周围 15 米内敌人受到 20 级不祥诅咒",
+    craftableAffix: "Nearby enemies within 15 m are cursed by Lv. 20 Ominous",
   },
   {
     equipmentSlot: "Trinket",

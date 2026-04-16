@@ -105,6 +105,156 @@ export const activeSkillModFactories: Partial<
       { type: "ConvertDmgPct", value: 100, from: "physical", to: "lightning" },
     ],
   }),
+  "Leap Attack": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+  }),
+  "Rocket Jump": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+    mods: [{ type: "ConvertDmgPct", value: 100, from: "physical", to: "fire" }],
+  }),
+  "Swift Shadow Raid": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+  }),
+  "Blink Arrow": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+  }),
+  "Burning Shot": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+    mods: [{ type: "ConvertDmgPct", value: 100, from: "physical", to: "fire" }],
+  }),
+  "Electrifying Shot": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+    mods: [
+      { type: "ConvertDmgPct", value: 100, from: "physical", to: "lightning" },
+    ],
+  }),
+  "Rain of Arrows": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+    mods: [
+      { type: "BaseProjectileQuant", value: 1 },
+      { type: "Projectile", value: 14 },
+    ],
+  }),
+  "Charged Pummel": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+  }),
+  "Focused Shot": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+  }),
+  "Blazing Bullet": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+    mods: [{ type: "ConvertDmgPct", value: 100, from: "physical", to: "fire" }],
+  }),
+  "Split Shot": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+    mods: [
+      { type: "BaseProjectileQuant", value: 1 },
+      { type: "Projectile", value: 2 },
+    ],
+  }),
+  "Savage Charge": (l, vals) => ({
+    offense: {
+      weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+    },
+  }),
+  "Flame Slash": (l, vals) => ({
+    offense: {
+      sweepWeaponAtkDmgPct: { value: v(vals.sweepWeaponAtkDmgPct, l) },
+      sweepAddedDmgEffPct: { value: v(vals.sweepAddedDmgEffPct, l) },
+      steepWeaponAtkDmgPct: { value: v(vals.steepWeaponAtkDmgPct, l) },
+      steepAddedDmgEffPct: { value: v(vals.steepAddedDmgEffPct, l) },
+    },
+    mods: [
+      { type: "ConvertDmgPct", value: 100, from: "physical", to: "fire" },
+      { type: "SteepStrikeChancePct", value: 20 },
+    ],
+  }),
+  "Thunder Slash": (l, vals) => ({
+    offense: {
+      sweepWeaponAtkDmgPct: { value: v(vals.sweepWeaponAtkDmgPct, l) },
+      sweepAddedDmgEffPct: { value: v(vals.sweepAddedDmgEffPct, l) },
+      steepWeaponAtkDmgPct: { value: v(vals.steepWeaponAtkDmgPct, l) },
+      steepAddedDmgEffPct: { value: v(vals.steepAddedDmgEffPct, l) },
+    },
+    mods: [
+      { type: "ConvertDmgPct", value: 100, from: "physical", to: "lightning" },
+    ],
+  }),
+  "Icy Blade": (l, vals) => ({
+    offense: {
+      sweepWeaponAtkDmgPct: { value: v(vals.sweepWeaponAtkDmgPct, l) },
+      sweepAddedDmgEffPct: { value: v(vals.sweepAddedDmgEffPct, l) },
+      steepWeaponAtkDmgPct: { value: v(vals.steepWeaponAtkDmgPct, l) },
+      steepAddedDmgEffPct: { value: v(vals.steepAddedDmgEffPct, l) },
+    },
+    mods: [
+      { type: "ConvertDmgPct", value: 100, from: "physical", to: "cold" },
+      { type: "SteepStrikeChancePct", value: 20 },
+    ],
+  }),
+  Whirlwind: (l, vals) => ({
+    offense: {
+      sweepWeaponAtkDmgPct: { value: v(vals.sweepWeaponAtkDmgPct, l) },
+      sweepAddedDmgEffPct: { value: v(vals.sweepAddedDmgEffPct, l) },
+      steepWeaponAtkDmgPct: { value: v(vals.steepWeaponAtkDmgPct, l) },
+      steepAddedDmgEffPct: { value: v(vals.steepAddedDmgEffPct, l) },
+    },
+    mods: [{ type: "SteepStrikeChancePct", value: 20 }],
+  }),
+  "Fire Burst": (l, vals) => ({
+    offense: {
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+      spellDmg: {
+        value: { min: v(vals.spellDmgMin, l), max: v(vals.spellDmgMax, l) },
+        dmgType: "fire",
+        castTime: v(vals.castTime, l),
+      },
+    },
+  }),
+  "Lightning Beam": (l, vals) => ({
+    offense: {
+      addedDmgEffPct: { value: v(vals.addedDmgEffPct, l) },
+      spellDmg: {
+        value: { min: v(vals.spellDmgMin, l), max: v(vals.spellDmgMax, l) },
+        dmgType: "lightning",
+        castTime: v(vals.castTime, l),
+      },
+    },
+  }),
   "Thunder Spike": (l, vals) => ({
     offense: {
       weaponAtkDmgPct: { value: v(vals.weaponAtkDmgPct, l) },

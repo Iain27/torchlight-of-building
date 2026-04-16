@@ -233,9 +233,9 @@ export const NobleSupportSkills = [
     name: "Chromatic Shot: Splendor (Noble)",
     tags: ["Cold", "Fire", "Lightning"],
     description: [
-      "Supports Chromatic Shot.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe supported skill now only selects damage types in a fixed order: Cold, Fire, and Lightning\nWhen the supported skill deals Elemental Hit Damage, inflicts the corresponding Elemental Ailment",
-      "The supported skill now only selects damage types in a fixed order: Cold, Fire, and Lightning\nWhen the supported skill deals Elemental Hit Damage, inflicts the corresponding Elemental Ailment",
-      "The supported skill deals +(28–30)% additional Hit Damage to enemies with Elemental Ailments",
+      "Supports Chromatic Shot.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe supported skill now selects damage types in a fixed order: Cold, Fire, and Lightning\nWhen the supported skill deals Elemental Hit Damage, inflicts Frostbite, Numbed, or Ignite based",
+      "The supported skill now selects damage types in a fixed order: Cold, Fire, and Lightning\nWhen the supported skill deals Elemental Hit Damage, inflicts Frostbite, Numbed, or Ignite based",
+      "The supported skill deals +(28–30)% additional Hit Damage to enemies with all the following three Elemental Ailments: Frostbite, Numbed, and Ignite",
     ],
     supportTarget: "Chromatic Shot",
     manaCostMultiplierPct: 110,
@@ -330,7 +330,7 @@ export const NobleSupportSkills = [
     tags: ["Physical"],
     description: [
       "Supports Double Thrusts.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
-      "Reaps (0.060–0.062) s of Damage Over Time when the supported skill hits. Only Reaps Trauma Damage dealt by the supported skill",
+      "Reaps (0.053–0.055) s of Damage Over Time when the supported skill hits. Only Reaps Trauma Damage dealt by the supported skill",
     ],
     supportTarget: "Double Thrusts",
     manaCostMultiplierPct: 110,
@@ -609,8 +609,8 @@ export const NobleSupportSkills = [
     name: "Gale Slash: Soaring (Noble)",
     tags: ["Physical"],
     description: [
-      "Supports Gale Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\n被辅助技能的连携终结技的最大跳跃距离提高至 7 米\n被辅助技能的连携终结技现在会在短暂延迟后再造成一次伤害\n被辅助技能对攻击速度的加成不再有衰减\n被辅助技能不再基于攻击速度加成获得额外伤害",
-      "The movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\n被辅助技能的连携终结技的最大跳跃距离提高至 7 米\n被辅助技能的连携终结技现在会在短暂延迟后再造成一次伤害\n被辅助技能对攻击速度的加成不再有衰减\n被辅助技能不再基于攻击速度加成获得额外伤害",
+      "Supports Gale Slash.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nThe movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\nThe max jump distance of the supported skill's Combo Finisher is increased to 7 m\nThe supported skill's Combo Finisher now deals an instance of damage again after a brief delay\nThe Attack Speed bonus provided by the supported skill no longer falls off\nThe supported skill no longer deals additional damage based on Attack Speed bonus",
+      "The movement distance of the supported skill's Combo Starter 2 is increased to 3.5 m\nThe max jump distance of the supported skill's Combo Finisher is increased to 7 m\nThe supported skill's Combo Finisher now deals an instance of damage again after a brief delay\nThe Attack Speed bonus provided by the supported skill no longer falls off\nThe supported skill no longer deals additional damage based on Attack Speed bonus",
       "(-39.0–-38.0)% additional damage for the supported skill",
     ],
     supportTarget: "Gale Slash",
@@ -644,7 +644,7 @@ export const NobleSupportSkills = [
     tags: ["Physical"],
     description: [
       "Supports Groundshaker.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
-      "When the supported skill consumes Demolisher Charge, activates fissures that have spread to the max once. +(60–70)% additional Hit Damage for fissures activated in this way",
+      "When the supported skill consumes Demolisher Charge, activates the fissures that have spread to the maximum once. +(60–70)% additional Hit Damage for fissures activated in this way. Interval: 0.3 s",
     ],
     supportTarget: "Groundshaker",
     manaCostMultiplierPct: 110,
@@ -983,7 +983,7 @@ export const NobleSupportSkills = [
     tags: [],
     description: [
       "Supports Modularization Minion Skills.\nThis skill can only be installed in the fifth Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill",
-      "For each hit the summoner landed in the last 2 s, +(5.0–5.5)% damage for Minions summoned by the supported skill. Stacks up to 15 time(s)",
+      "For each hit the summoner landed in the last 2 s, +(5.0–5.5)% additional damage for Minions summoned by the supported skill. Stacks up to 15 time(s)",
     ],
     supportTarget: "Modularization Minion Skills",
     manaCostMultiplierPct: 110,

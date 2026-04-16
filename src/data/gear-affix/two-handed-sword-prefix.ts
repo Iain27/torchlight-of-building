@@ -334,14 +334,6 @@ export const TWO_HANDED_SWORD_PREFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Prefix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(46-59)% Attack and Spell Block Chance",
-  },
-  {
-    equipmentSlot: "Two-Handed",
-    equipmentType: "Two-Handed Sword",
-    affixType: "Prefix",
-    craftingPool: "Advanced",
-    tier: "0",
     craftableAffix: "+(81-104)% Gear Physical Damage",
   },
   {

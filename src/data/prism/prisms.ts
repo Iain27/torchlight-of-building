@@ -1058,7 +1058,7 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      "All Medium Talent within the area also gain: +6% Sealed Mana Compensation",
+      "All Legendary Medium Talent within the area also gain: +6% Sealed Mana Compensation",
   },
   {
     type: "Prism Gauge",
@@ -1420,7 +1420,7 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      "All Medium Talent within the area also gain: 10.5% Sealed Mana Compensation",
+      "All Legendary Medium Talent within the area also gain: 10.5% Sealed Mana Compensation",
   },
   {
     type: "Prism Gauge",
@@ -1779,7 +1779,7 @@ export const Prisms: readonly Prism[] = [
     type: "Prism Gauge",
     rarity: "Rare",
     affix:
-      "All Medium Talent within the area also gain: +6% Sealed Mana Compensation",
+      "All Legendary Medium Talent within the area also gain: +6% Sealed Mana Compensation",
   },
   {
     type: "Prism Gauge",

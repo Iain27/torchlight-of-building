@@ -81,7 +81,7 @@ export const DAGGER_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Tower Sequence",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+10% all stats",
+    craftableAffix: "+10% All Stats",
   },
   {
     equipmentSlot: "One-Handed",

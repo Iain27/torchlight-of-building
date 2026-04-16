@@ -256,6 +256,7 @@ export const Conditions = [
   "has_used_mobility_skill_recently",
   "has_moved_recently",
   "is_moving",
+  "not_hit_recently",
   "has_cast_curse_recently",
   "taking_damage_over_time",
   // pactspirits
@@ -542,6 +543,12 @@ interface ModDefinitions {
   HasDormantEntanglement: object;
   MaxTangleQuant: { value: number };
   MaxTangleQuantPerEnemy: { value: number };
+  // Tangle DPS path isn't modeled end-to-end yet — these parse but only the
+  // MaxTangleQuant variants contribute to active_tangle-derived bonuses.
+  TangleDmgPct: { value: number; addn?: boolean };
+  TangleDurationPct: { value: number; addn?: boolean };
+  TangleAttachRangePct: { value: number };
+  AdditionalTangleOnTrigger: { value: number };
   // infiltrations
   InflictsInfiltration: { infiltrationType: InfiltrationType };
   InfiltrationEffPct: {
@@ -608,6 +615,13 @@ interface ModDefinitions {
   TradeoffStrGteDexDmgPct: { value: number };
   // hero-specific mods
   Blasphemer: object;
+  // sage 1 (Scent Weaver): stub — not consumed by any damage calc path yet.
+  // Present so hero traits parse instead of showing "mod not supported".
+  ElixirSkillEffectPct: { value: number; addn?: boolean };
+  // Ill Omen: accumulated-damage trigger mechanic. Stub — the underlying
+  // threshold/trigger path isn't modeled, so this mod parses but does not
+  // affect DPS.
+  IllOmenEfficiencyPct: { value: number; addn?: boolean };
   // bing2
   WhimsyEssenceRecoverySpeedPct: { value: number };
   WhimsySignalEffPct: { value: number };

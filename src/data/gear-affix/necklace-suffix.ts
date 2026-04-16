@@ -394,7 +394,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "0",
-    craftableAffix: "+(11-13)% all stats",
+    craftableAffix: "+(11-13)% All Stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -402,7 +402,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "1",
-    craftableAffix: "+(8-10)% all stats",
+    craftableAffix: "+(8-10)% All Stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -410,7 +410,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "2",
-    craftableAffix: "+(6-7)% all stats",
+    craftableAffix: "+(6-7)% All Stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -418,7 +418,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "3",
-    craftableAffix: "+5% all stats",
+    craftableAffix: "+5% All Stats",
   },
   {
     equipmentSlot: "Trinket",
@@ -426,7 +426,7 @@ export const NECKLACE_SUFFIX_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Suffix",
     craftingPool: "Advanced",
     tier: "4",
-    craftableAffix: "+4% all stats",
+    craftableAffix: "+4% All Stats",
   },
   {
     equipmentSlot: "Trinket",

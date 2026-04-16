@@ -92,6 +92,7 @@ export const ConfigurationPageSchema = z
       .catch(d.hasUsedMobilitySkillRecently),
     hasMovedRecently: z.boolean().catch(d.hasMovedRecently),
     isMoving: z.boolean().catch(d.isMoving),
+    notHitRecently: z.boolean().catch(d.notHitRecently),
     takingDamageOverTime: z.boolean().catch(d.takingDamageOverTime),
     hasCastCurseRecently: z.boolean().catch(d.hasCastCurseRecently),
     hasAttackAggression: z.boolean().catch(d.hasAttackAggression),

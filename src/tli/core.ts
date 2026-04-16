@@ -185,6 +185,8 @@ export interface Configuration {
   // default to false
   isMoving: boolean;
   // default to false
+  notHitRecently: boolean;
+  // default to false
   takingDamageOverTime: boolean;
   // default to false
   hasCastCurseRecently: boolean;
@@ -310,6 +312,7 @@ export const DEFAULT_CONFIGURATION: Configuration = {
   hasUsedMobilitySkillRecently: false,
   hasMovedRecently: false,
   isMoving: false,
+  notHitRecently: false,
   takingDamageOverTime: false,
   hasCastCurseRecently: false,
   hasAttackAggression: false,

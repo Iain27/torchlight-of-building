@@ -7,17 +7,23 @@ interface SkillTooltipContentProps {
   skill: BaseSkill;
 }
 
+const isModularizationSkill = (skill: BaseSkill): boolean =>
+  skill.name.startsWith("Module: ") && skill.tags.includes("Synthetic Troop");
+
 export const SkillTooltipContent: React.FC<SkillTooltipContentProps> = ({
   skill,
 }) => {
   const implemented = isSkillImplemented(skill);
+  const isModule = isModularizationSkill(skill);
 
   return (
     <>
       <TooltipTitle>{skill.name}</TooltipTitle>
       {!implemented && (
         <div className="text-xs text-red-500 italic mb-2">
-          Skill not supported in TOB yet
+          {isModule
+            ? "Minion DPS not calculated — minion pipeline not implemented"
+            : "Skill not supported in TOB yet"}
         </div>
       )}
       {skill.tags.length > 0 && (

@@ -81,7 +81,7 @@ export const CUDGEL_TOWER_SEQUENCE_AFFIXES: readonly BaseGearAffix[] = [
     affixType: "Tower Sequence",
     craftingPool: "",
     tier: "1",
-    craftableAffix: "+16% all stats",
+    craftableAffix: "+16% All Stats",
   },
   {
     equipmentSlot: "One-Handed",

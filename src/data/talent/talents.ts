@@ -4687,8 +4687,7 @@ export const Talents: readonly Talent[] = [
     tree: "Ranger",
     type: "Legendary Medium",
     name: "",
-    effect:
-      "Restores 10 % of Missing Life on attack Critical Strike. Interval: 10 s (Max Divinity Effect: 1)",
+    effect: "攻击暴击时，回复 10% 已损生命，间隔 1 秒 (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -4735,7 +4734,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Full Defense",
     effect:
-      "+25% additional Defense gained from Shield\n-1% additional Damage Over Time taken for every 1% Block Ratio (Max Divinity Effect: 1)",
+      "-1% additional Damage Over Time taken for every 1% Block Ratio (Max Divinity Effect: 1)",
   },
   {
     god: "War",
@@ -4929,7 +4928,7 @@ export const Talents: readonly Talent[] = [
     tree: "Sentinel",
     type: "Legendary Medium",
     name: "",
-    effect: "+40% Defense from Shield",
+    effect: "+25% Defense from Shield",
   },
   {
     god: "War",
@@ -5090,7 +5089,7 @@ export const Talents: readonly Talent[] = [
     tree: "Goddess of Deception",
     type: "Micro",
     name: "",
-    effect: "+3% Ill Omen Cumulative Efficiency",
+    effect: "+6% Ill Omen Cumulative Efficiency",
   },
   {
     god: "Deception",
@@ -5125,7 +5124,7 @@ export const Talents: readonly Talent[] = [
     tree: "Goddess of Deception",
     type: "Legendary Medium",
     name: "",
-    effect: "+18% Ill Omen Cumulative Efficiency",
+    effect: "+30% Ill Omen Cumulative Efficiency",
   },
   {
     god: "Deception",
@@ -5468,7 +5467,7 @@ export const Talents: readonly Talent[] = [
     type: "Core",
     name: "Reap Purification",
     effect:
-      "Ill Omen Effect becomes: Enemies take True Damage equal to 4% of Max Life when gaining 1 stack of Ill Omen (Max Divinity Effect: 1)",
+      "Ill Omen Effect becomes: Enemies take True Damage equal to 2% of Max Life when gaining 1 stack of Ill Omen (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",
@@ -5622,13 +5621,6 @@ export const Talents: readonly Talent[] = [
   {
     god: "Deception",
     tree: "Psychic",
-    type: "Micro",
-    name: "",
-    effect: "+3% Ill Omen Cumulative Efficiency",
-  },
-  {
-    god: "Deception",
-    tree: "Psychic",
     type: "Medium",
     name: "",
     effect: "+12% Reaping Recovery Speed",
@@ -5657,13 +5649,6 @@ export const Talents: readonly Talent[] = [
   {
     god: "Deception",
     tree: "Psychic",
-    type: "Medium",
-    name: "",
-    effect: "+7% Ill Omen Cumulative Efficiency",
-  },
-  {
-    god: "Deception",
-    tree: "Psychic",
     type: "Legendary Medium",
     name: "",
     effect:
@@ -5683,14 +5668,6 @@ export const Talents: readonly Talent[] = [
     type: "Legendary Medium",
     name: "",
     effect: "+16% Blur Effect",
-  },
-  {
-    god: "Deception",
-    tree: "Psychic",
-    type: "Legendary Medium",
-    name: "",
-    effect:
-      "+10% Movement Speed if Ill Omen has been triggered recently (Max Divinity Effect: 1)",
   },
   {
     god: "Deception",

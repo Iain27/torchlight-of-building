@@ -196,8 +196,8 @@ export const MagnificentSupportSkills = [
     name: "Chromatic Shot: Lightchaser (Magnificent)",
     tags: ["Cold", "Fire", "Lightning"],
     description: [
-      "Supports Chromatic Shot.\nThis skill can only be installed in the third Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n+25% additional damage ratio granted by the supported skill's main stat\n+30% additional Projectile Speed for the supported skill\nEnhances the tracking ability of the supported skill. Affected by Projectile Speed",
-      "+25% additional damage ratio granted by the supported skill's main stat\n+30% additional Projectile Speed for the supported skill\nEnhances the tracking ability of the supported skill. Affected by Projectile Speed",
+      "Supports Chromatic Shot.\nThis skill can only be installed in the third Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\n+25% additional damage ratio granted by the supported skill's main attribute\n+30% additional Projectile Speed for the supported skill\nEnhances the tracking ability of the supported skill. Affected by Projectile Speed",
+      "+25% additional damage ratio granted by the supported skill's main attribute\n+30% additional Projectile Speed for the supported skill\nEnhances the tracking ability of the supported skill. Affected by Projectile Speed",
       "(-3–-1)% additional damage for the supported skill",
     ],
     supportTarget: "Chromatic Shot",
@@ -696,7 +696,7 @@ export const MagnificentSupportSkills = [
     description: [
       "Supports Ice Shot.\nThis skill can only be installed in the third Support Skill Slot of each Active Skill.\n+20% additional damage for the supported skill\nWhen a Projectile of the supported skill hits, for every 1 Frostbite Rating the enemy has, 0.2% base radius for the generated explosion, stacking up to 100 time(s)",
       "When a Projectile of the supported skill hits, for every 1 Frostbite Rating the enemy has, 0.2% base radius for the generated explosion, stacking up to 100 time(s)",
-      "被辅助技能发射的投射物击中时，敌人每 1 点冰结值，额外 (0.28–0.30)% 伤害，上限 +30%",
+      "When a Projectile of the supported skill hits, for every 1 Frostbite Rating the enemy has, (0.28–0.30)% additional damage, up to +30%",
     ],
     supportTarget: "Ice Shot",
     manaCostMultiplierPct: 110,
